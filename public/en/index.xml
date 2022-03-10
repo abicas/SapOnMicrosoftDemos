@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SAP on Microsoft - Tutorials</title>
+    <link>/en/</link>
+    <description>Recent content on SAP on Microsoft - Tutorials</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 09 Mar 2022 11:22:24 -0300</lastBuildDate><atom:link href="/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Remote Desktop Setup</title>
+      <link>/en/env_setup/datagwsetup/step1/</link>
+      <pubDate>Wed, 09 Mar 2022 11:22:24 -0300</pubDate>
+      
+      <guid>/en/env_setup/datagwsetup/step1/</guid>
+      <description>In this section we will install the required components for Azure and Microsoft be able to connect to your SAP environment.
+This section is a summary of the guide Install data gateway and Connect to SAP systems.
+Connect to the Remote Desktop as on the previous step and using a browser on the Bastion Host, download 3 pieces of software (links might have changed, please check above guides for the most up-to-date links):</description>
+    </item>
+    
+  </channel>
+</rss>

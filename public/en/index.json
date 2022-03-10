@@ -1,0 +1,92 @@
+[
+{
+	"uri": "/en/env_setup/azure_setup/",
+	"title": "Azure Setup for SAP CAL",
+	"tags": [],
+	"description": "",
+	"content": "In order to allow for SAP to deploy an S/4HANA environment in your Azure subscription, we need to setup permissions for it.\nWhat you will need  Azure subscription Admin access faith  "
+},
+{
+	"uri": "/en/env_setup/datagwsetup/step1/",
+	"title": "Remote Desktop Setup",
+	"tags": [],
+	"description": "",
+	"content": "In this section we will install the required components for Azure and Microsoft be able to connect to your SAP environment.\nThis section is a summary of the guide Install data gateway and Connect to SAP systems.\nConnect to the Remote Desktop as on the previous step and using a browser on the Bastion Host, download 3 pieces of software (links might have changed, please check above guides for the most up-to-date links):\n .Net Framework latest version On-premises data gateway SAP Connector  Install the .Net Framework following the standard process. Install the On-premises Data Gateway and configure it:\n   "
+},
+{
+	"uri": "/en/env_setup/sap_cal/accsetup/",
+	"title": "SAP CAL Account Setup",
+	"tags": [],
+	"description": "",
+	"content": "First you need to create a free SAP Cloud Appliance Library (CAL) account.\nGo to https://cal.sap.com/ and click on Log On.\nOn the Login page, select Register and fill the required information.\nOnce you got your approval e-mail from SAP, proceed to the SAP CAL website and Log On with your credentials, then follow the steps below:\n Go to Accounts and click on Create Account  Give it a name, select Microsoft Azure and fill the data with the information gathered.  Click on Test Connection to make sure the parameters are valid.   Alright, now we have the proper access to deploy a S/4HANA in your subscription.\nSAP CAL allows for a 30 day Trial of the Solutions available, where SAP licenses are waived for 30 days; only the cloud provider hosting fees apply. You can setup auto-shutdown and auto-terminate later on to make sure we keep costs low.\nIn order to deploy a Trial S/4HANA in you subscription:\n  Go to Solutions, pick the latest SAP S/4HANA Fully-Activated Appliance and click on Create Instance.   Select the newly created Account   Read and Accept the License terms of the Trial   Go to Advanced Mode so we can understand the parameters used on the deploy   Select your account.   Give your instance a name, description and validate the networking settings for the VNet. SAP will create a Default SAP CAL Network in case you have a new subscription. Select Public Static IP address so we can have remote access without the need for a VPN.   We won\u0026rsquo;t be deploying Business Objects so on the next step, you can desselect this VM. Later on you can change the VM types on azure to cheaper, smaller or newer ones. Scroll down and check all the parameters, ports, disk sizes so you can familiarize with the solution.   Provide a password for SAP Admin access that will be customized during the deployment. There will be local pre-defined users and admin users with this password. For more details see the Getting Started Guide for S/4HANA on SAP CAL with the default users and passwords.   Here we can adjust when the SAP will be available:\n By Schedule - Scheduled start and shutdown Suspend on an Exact Date - Scheduled to be running for XX number of days and then shutdown. Manual - If you do not plan to use it everyday. When you activate you can setup a shutdown time in hours in case you forget.  On the right side you can see the costs changing depending on the selection   Click Create on the bottom of the page, review the data and go grab lunch (it should take 2-3 hours for the deployment to be complete).   You can monitor the progress of the deployment in the Instances tab. Wait for Activated status.   When the solution is deployed and activated, click on the instance name and check the top menu, where you can control the SAP landscape (suspend/terminate/activate) as well as the remote desktop IP address used as Bastion Host for managing the environment on Azure. You can also access the Getting Started Guide under Solution Info tab as well make sure all the VMs are up and SAP was started properly and is communicating. All done ! You have an SAP S/4HANA running in your susbcription ! On the next section let\u0026rsquo;s see how we can access it and key users/passwords/parameters for conection that will be required later on.\n"
+},
+{
+	"uri": "/en/env_setup/sap_cal/",
+	"title": "SAP Cloud Appliance Library (CAL)",
+	"tags": [],
+	"description": "",
+	"content": "SAP Cloud Appliance Library (CAL) The SAP Cloud Appliance Library (CAL) offers a quick and easy way to consume the latest SAP solutions in the cloud, such as SAP S/4HANA, SAP HANA Express Edition, Industry Solutions etc.\nIt\u0026rsquo;s an online library of latest, preconfigured, ready-to-use SAP solutions that can be instantly deployed into your own public cloud accounts.\nIn this section we will create and account on SAP CAL, configure Azure permissions and deploy an S/4HANA environment on your subscription.\n"
+},
+{
+	"uri": "/en/env_setup/azure_setup/azuread/",
+	"title": "Create and Azure Active Directory application",
+	"tags": [],
+	"description": "",
+	"content": " Sign in to your Azure Account through the Azure Portal Select Azure Active Directory Select App Registrations  Select New Registration  Provide a name, accept defaults and select Register   Now let\u0026rsquo;s add a role to this application.\n"
+},
+{
+	"uri": "/en/env_setup/",
+	"title": "Environment Setup",
+	"tags": [],
+	"description": "",
+	"content": "Core components Azure setup.\nSAP CAL setup\n"
+},
+{
+	"uri": "/en/env_setup/sap_cal/rdpacc/",
+	"title": "Remote Desktop Access",
+	"tags": [],
+	"description": "",
+	"content": "Let\u0026rsquo;s connect to an RDP session on the Bastion Host.\nUse the Public IP for the Remote Desktop provided on the Instance tab.\n Default User: Administrator Default Password: The one used during the SAP deployment  Once connected you should see a screen similar to this. If the message says it is still under deployment, log off and wait a little bit longer. We will basically use 3 apps installed here:\n Web browser SAP Logon (GUI) HANA Studio  The connection information for the SAP GUI is:\n Client: 100 User: BPINST Password: Welcome1 SID: S4H   For SAP HANA Studio:\n Host: vhcalhdbdb (local hosts file) Instance Number: 02 Multiple Containers - Tenant Database: HDB Port: 30215 User: SAPHANADB Password: The one used during the SAP deployment  If not existant:\n Right click on the left pane and select Add System  Fill the connection info  Fill the user and password   Once connection is created, double click on the connection on the left pane to see the HANA status: Alright! SAP has been deployed, we are able to connect, and we are ready to start installing the Azure required components on the next section.\n"
+},
+{
+	"uri": "/en/env_setup/azure_setup/adrole/",
+	"title": "Assign Role to Application",
+	"tags": [],
+	"description": "",
+	"content": " Navigate to the level of scope you wish to assign the application to. For example, to assign a role at the subscription scope, select All services, General and Subscriptions.\n Select the particular subscription to assign the application to. Select Access control (IAM) Select Add role assignment  Select the role you wish to assign to the application. To allow the application to execute actions like reboot, start and stop instances, select the Contributor role.  On the Members tab, click on Select members and start typing the name of the App registration done on the previous step Select Review and Assign to finish assigning the role.  You will see your application in the list of users assigned to a role for that scope.\nYour service principal is set up. You can start using it to run your scripts or apps. The next section shows how to get values that are needed when signing in programmatically.\n"
+},
+{
+	"uri": "/en/env_setup/azure_setup/getinfo/",
+	"title": "Get required information",
+	"tags": [],
+	"description": "",
+	"content": "In order to allow for SAP CAL to access your subscription, you will need some parameters. This section will explain where to find them.\nCopy those values to a temp text document so you can easily copy and paste later on.\n Select Azure Active Directory. Select Properties. Copy Tenant ID.  Still on Azure Active Directory, go to App registrations and select your application. Copy Application (client) ID.  Select Certificates \u0026amp; secrets, then select New client secret.  Define a name for the secret and an expiration 3 Months. After adding the client secret, the value of the client secret is displayed. Copy this value now because you aren\u0026rsquo;t able to retrieve the client secret later. You will provide the client secret value (as application password) with the application ID to sign in as the application. If you missed this step, delete the existing secret and create a new one.  By that time you should have 3 pieces of info:\n Tenant ID Application (client) ID Secret Value  Now we will go to SAP CAL to setup the Azure access to deploy SAP S/4HANA in your subscription.\n"
+},
+{
+	"uri": "/en/env_setup/datagwsetup/",
+	"title": "Microsoft On-premises Data Gateway Installation",
+	"tags": [],
+	"description": "",
+	"content": "Intro\n"
+},
+{
+	"uri": "/en/",
+	"title": "SAP on Microsoft - Tutorials",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/en/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/en/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
