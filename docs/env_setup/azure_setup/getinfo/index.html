@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.93.3" />
+    <meta name="description" content="SAP on Microsoft - Tutorials">
+<meta name="author" content="Alexandre Bicas">
+
+    <link rel="icon" href="/SapOnMicrosoftDemos/public/images/favicon.png" type="image/png">
+
+    <title>Get required information :: SAP on Microsoft - Tutorials</title>
+
+    
+    <link href="/SapOnMicrosoftDemos/public/css/nucleus.css?1646940534" rel="stylesheet">
+    <link href="/SapOnMicrosoftDemos/public/css/fontawesome-all.min.css?1646940534" rel="stylesheet">
+    <link href="/SapOnMicrosoftDemos/public/css/hybrid.css?1646940534" rel="stylesheet">
+    <link href="/SapOnMicrosoftDemos/public/css/featherlight.min.css?1646940534" rel="stylesheet">
+    <link href="/SapOnMicrosoftDemos/public/css/perfect-scrollbar.min.css?1646940534" rel="stylesheet">
+    <link href="/SapOnMicrosoftDemos/public/css/auto-complete.css?1646940534" rel="stylesheet">
+    <link href="/SapOnMicrosoftDemos/public/css/atom-one-dark-reasonable.css?1646940534" rel="stylesheet">
+    <link href="/SapOnMicrosoftDemos/public/css/theme.css?1646940534" rel="stylesheet">
+    <link href="/SapOnMicrosoftDemos/public/css/tabs.css?1646940534" rel="stylesheet">
+    <link href="/SapOnMicrosoftDemos/public/css/hugo-theme.css?1646940534" rel="stylesheet">
+    
+    <link href="/SapOnMicrosoftDemos/public/css/theme-blue.css?1646940534" rel="stylesheet">
+    
+    
+
+    <script src="/SapOnMicrosoftDemos/public/js/jquery-3.3.1.min.js?1646940534"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/SapOnMicrosoftDemos/public/env_setup/azure_setup/getinfo/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <img src="/images/MSAzure-logo.png">
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/SapOnMicrosoftDemos/public/js/lunr.min.js?1646940534"></script>
+<script type="text/javascript" src="/SapOnMicrosoftDemos/public/js/auto-complete.js?1646940534"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/abicas.github.io\/SapOnMicrosoftDemos\/public\/";
+    
+</script>
+<script type="text/javascript" src="/SapOnMicrosoftDemos/public/js/search.js?1646940534"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href='/'><i class='fas fa-home'></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/SapOnMicrosoftDemos/public/env_setup/" title="Environment Setup" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/SapOnMicrosoftDemos/public/env_setup/">
+          Environment Setup
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/SapOnMicrosoftDemos/public/env_setup/azure_setup/" title="Azure Setup for SAP CAL" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/SapOnMicrosoftDemos/public/env_setup/azure_setup/">
+          <b> </b>Azure Setup for SAP CAL
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/SapOnMicrosoftDemos/public/env_setup/azure_setup/azuread/" title="Create and Azure Active Directory application" class="dd-item
+        
+        
+        
+        ">
+      <a href="/SapOnMicrosoftDemos/public/env_setup/azure_setup/azuread/">
+          <b>1. </b>Create and Azure Active Directory application
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/SapOnMicrosoftDemos/public/env_setup/azure_setup/adrole/" title="Assign Role to Application" class="dd-item
+        
+        
+        
+        ">
+      <a href="/SapOnMicrosoftDemos/public/env_setup/azure_setup/adrole/">
+          <b>2. </b>Assign Role to Application
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/SapOnMicrosoftDemos/public/env_setup/azure_setup/getinfo/" title="Get required information" class="dd-item
+        parent
+        active
+        
+        ">
+      <a href="/SapOnMicrosoftDemos/public/env_setup/azure_setup/getinfo/">
+          <b>3. </b>Get required information
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/SapOnMicrosoftDemos/public/env_setup/sap_cal/" title="SAP Cloud Appliance Library (CAL)" class="dd-item
+        
+        
+        
+        ">
+      <a href="/SapOnMicrosoftDemos/public/env_setup/sap_cal/">
+          SAP Cloud Appliance Library (CAL)
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/SapOnMicrosoftDemos/public/env_setup/sap_cal/accsetup/" title="SAP CAL Account Setup" class="dd-item
+        
+        
+        
+        ">
+      <a href="/SapOnMicrosoftDemos/public/env_setup/sap_cal/accsetup/">
+          <b>1. </b>SAP CAL Account Setup
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/SapOnMicrosoftDemos/public/env_setup/sap_cal/rdpacc/" title="Remote Desktop Access" class="dd-item
+        
+        
+        
+        ">
+      <a href="/SapOnMicrosoftDemos/public/env_setup/sap_cal/rdpacc/">
+          <b>2. </b>Remote Desktop Access
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/SapOnMicrosoftDemos/public/env_setup/datagwsetup/" title="Microsoft On-premises Data Gateway Installation" class="dd-item
+        
+        
+        
+        ">
+      <a href="/SapOnMicrosoftDemos/public/env_setup/datagwsetup/">
+          <b></b>Microsoft On-premises Data Gateway Installation
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/SapOnMicrosoftDemos/public/env_setup/datagwsetup/step1/" title="Remote Desktop Setup" class="dd-item ">
+        <a href="/SapOnMicrosoftDemos/public/env_setup/datagwsetup/step1/">
+        <b>1. </b>Remote Desktop Setup
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/SapOnMicrosoftDemos/public/env_setup/datagwsetup/step2/" title="Azure Data Gateway Setup" class="dd-item ">
+        <a href="/SapOnMicrosoftDemos/public/env_setup/datagwsetup/step2/">
+        <b>2. </b>Azure Data Gateway Setup
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/SapOnMicrosoftDemos/public/labs/" title="SAP on Microsoft Labs" class="dd-item
+        
+        
+        
+        ">
+      <a href="/SapOnMicrosoftDemos/public/labs/">
+          SAP on Microsoft Labs
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/SapOnMicrosoftDemos/public/labs/autoint/" title="Automation and Integration" class="dd-item
+        
+        
+        
+        ">
+      <a href="/SapOnMicrosoftDemos/public/labs/autoint/">
+          <b> </b>Automation and Integration
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/SapOnMicrosoftDemos/public/labs/autoint/logicapps/" title="Azure Logic Apps" class="dd-item
+        
+        
+        
+        ">
+      <a href="/SapOnMicrosoftDemos/public/labs/autoint/logicapps/">
+          <b> </b>Azure Logic Apps
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/SapOnMicrosoftDemos/public/labs/autoint/logicapps/step1/" title="Create a Logic App" class="dd-item ">
+        <a href="/SapOnMicrosoftDemos/public/labs/autoint/logicapps/step1/">
+        <b>1. </b>Create a Logic App
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/SapOnMicrosoftDemos/public/labs/autoint/logicapps/step2/" title="Create a Workflow" class="dd-item ">
+        <a href="/SapOnMicrosoftDemos/public/labs/autoint/logicapps/step2/">
+        <b>2. </b>Create a Workflow
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/SapOnMicrosoftDemos/public/labs/autoint/logicapps/step3/" title="Running the lab" class="dd-item ">
+        <a href="/SapOnMicrosoftDemos/public/labs/autoint/logicapps/step3/">
+        <b>3. </b>Running the lab
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/SapOnMicrosoftDemos/public/labs/autoint/virtualagents/" title="Power Virtual Agent" class="dd-item
+        
+        
+        
+        ">
+      <a href="/SapOnMicrosoftDemos/public/labs/autoint/virtualagents/">
+          <b> </b>Power Virtual Agent
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/SapOnMicrosoftDemos/public/labs/autoint/automate/" title="Power Automate" class="dd-item
+        
+        
+        
+        ">
+      <a href="/SapOnMicrosoftDemos/public/labs/autoint/automate/">
+          <b> </b>Power Automate
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/SapOnMicrosoftDemos/public/labs/autoint/powerapps/" title="Power Apps" class="dd-item
+        
+        
+        
+        ">
+      <a href="/SapOnMicrosoftDemos/public/labs/autoint/powerapps/">
+          <b> </b>Power Apps
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/SapOnMicrosoftDemos/public/labs/dataai/" title="Data &amp; AI" class="dd-item
+        
+        
+        
+        ">
+      <a href="/SapOnMicrosoftDemos/public/labs/dataai/">
+          <b> </b>Data &amp; AI
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/SapOnMicrosoftDemos/public/labs/security/" title="Security" class="dd-item
+        
+        
+        
+        ">
+      <a href="/SapOnMicrosoftDemos/public/labs/security/">
+          <b> </b>Security
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/SapOnMicrosoftDemos/public/labs/inframgmt/" title="Infrastructure and Management" class="dd-item
+        
+        
+        
+        ">
+      <a href="/SapOnMicrosoftDemos/public/labs/inframgmt/">
+          <b> </b>Infrastructure and Management
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://github.com/matcornic/hugo-theme-learn"><i class='fab fa-fw fa-github'></i> GitHub repo</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://abicas.github.io/SapOnMicrosoftDemos/public/showcase"><i class='fas fa-fw fa-camera'></i> Showcases</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://gohugo.io/"><i class='fas fa-fw fa-bookmark'></i> Hugo Documentation</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://abicas.github.io/SapOnMicrosoftDemos/public/credits"><i class='fas fa-fw fa-bullhorn'></i> Credits</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/SapOnMicrosoftDemos/public/'>SAP on Microsoft - Tutorials</a> > <a href='/SapOnMicrosoftDemos/public/env_setup/'>Environment Setup</a> > <a href='/SapOnMicrosoftDemos/public/env_setup/azure_setup/'>Azure Setup for SAP CAL</a> > Get required information
+          
+        
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents"></nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Get required information
+            </h1>
+          
+
+        
+
+
+
+	<p>In order to allow for SAP CAL to access your subscription, you will need some parameters. This section will explain where to find them.</p>
+<p>Copy those values to a temp text document so you can easily copy and paste later on.</p>
+<p>Go to your <a href="https://portal.azure.com">Azure Portal</a> and follow the steps below:</p>
+<ol>
+<li>Go to <strong>Subscriptions</strong> and copy the <strong>Subscription ID</strong>
+<img src="/images/getvalues0.png" alt="Get Tenant ID"></li>
+<li>Select <strong>Azure Active Directory</strong>.</li>
+<li>Select <strong>Properties</strong>.</li>
+<li>Copy <strong>Tenant ID</strong>.
+<img src="/images/getvalues1.png" alt="Get Tenant ID"></li>
+<li>Still on Azure Active Directory, go to <strong>App registrations</strong> and select your application.</li>
+<li>Copy <strong>Application (client) ID</strong>.
+<img src="/images/getvalues2.png" alt="Get Tenant ID"></li>
+<li>Select <strong>Certificates &amp; secrets</strong>, then select <strong>New client secret</strong>.
+<img src="/images/getvalues3.png" alt="Get Tenant ID"></li>
+<li>Define a <strong>name</strong> for the secret and an expiration <strong>3 Months</strong>.</li>
+<li>After adding the client secret, the value of the client secret is displayed. <strong>Copy this value now because you aren&rsquo;t able to retrieve the client secret later.</strong> You will provide the client secret value (as application password) with the application ID to sign in as the application. If you missed this step, delete the existing secret and create a new one.</li>
+</ol>
+<p>By that time you should have 4 pieces of info:</p>
+<ul>
+<li>Azure Subscription ID</li>
+<li>Tenant ID</li>
+<li>Application  (client) ID</li>
+<li>Secret Value</li>
+</ul>
+<p>Now we will go to SAP CAL to setup the Azure access to deploy SAP S/4HANA in your subscription.</p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/SapOnMicrosoftDemos/public/env_setup/azure_setup/adrole/" title="Assign Role to Application"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/SapOnMicrosoftDemos/public/env_setup/sap_cal/" title="SAP Cloud Appliance Library (CAL)" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/SapOnMicrosoftDemos/public/js/clipboard.min.js?1646940534"></script>
+    <script src="/SapOnMicrosoftDemos/public/js/perfect-scrollbar.min.js?1646940534"></script>
+    <script src="/SapOnMicrosoftDemos/public/js/perfect-scrollbar.jquery.min.js?1646940534"></script>
+    <script src="/SapOnMicrosoftDemos/public/js/jquery.sticky.js?1646940534"></script>
+    <script src="/SapOnMicrosoftDemos/public/js/featherlight.min.js?1646940534"></script>
+    <script src="/SapOnMicrosoftDemos/public/js/highlight.pack.js?1646940534"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/SapOnMicrosoftDemos/public/js/modernizr.custom-3.6.0.js?1646940534"></script>
+    <script src="/SapOnMicrosoftDemos/public/js/learn.js?1646940534"></script>
+    <script src="/SapOnMicrosoftDemos/public/js/hugo-learn.js?1646940534"></script>
+    
+        
+            <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>

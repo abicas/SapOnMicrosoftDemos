@@ -6,6 +6,7 @@ title = "SAP on Azure - Tutorials and Guides"
 theme = "hugo-theme-learn"
 themesdir = "themes"
 metaDataFormat = "yaml"
+publishDir = "docs"
 defaultContentLanguageInSubdir= true
 
 [params]
