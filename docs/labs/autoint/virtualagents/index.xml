@@ -7,5 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Thu, 10 Mar 2022 11:58:35 -0300</lastBuildDate><atom:link href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating our Chatbot</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step1/</link>
+      <pubDate>Thu, 10 Mar 2022 17:25:38 -0300</pubDate>
+      
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step1/</guid>
+      <description>In this section we will create our Chatbot on Microsoft Power Platform.
+Go to Office 365, authenticate and select Power Apps. </description>
+    </item>
+    
   </channel>
 </rss>

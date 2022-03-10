@@ -6,7 +6,17 @@
     <description>Recent content on SAP on Microsoft - Tutorials</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 10 Mar 2022 14:52:21 -0300</lastBuildDate><atom:link href="https://abicas.github.io/SapOnMicrosoftDemos/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Mar 2022 17:25:38 -0300</lastBuildDate><atom:link href="https://abicas.github.io/SapOnMicrosoftDemos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating our Chatbot</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step1/</link>
+      <pubDate>Thu, 10 Mar 2022 17:25:38 -0300</pubDate>
+      
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step1/</guid>
+      <description>In this section we will create our Chatbot on Microsoft Power Platform.
+Go to Office 365, authenticate and select Power Apps. </description>
+    </item>
+    
     <item>
       <title>Create a Logic App</title>
       <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/step1/</link>
