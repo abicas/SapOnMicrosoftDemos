@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://abicas.github.io/SapOnMicrosoftDemos/public/"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
