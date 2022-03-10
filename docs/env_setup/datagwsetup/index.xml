@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Microsoft On-premises Data Gateway Installation on SAP on Microsoft - Tutorials</title>
-    <link>https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/datagwsetup/</link>
+    <link>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/datagwsetup/</link>
     <description>Recent content in Microsoft On-premises Data Gateway Installation on SAP on Microsoft - Tutorials</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 09 Mar 2022 11:21:23 -0300</lastBuildDate><atom:link href="https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/datagwsetup/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Mar 2022 11:21:23 -0300</lastBuildDate><atom:link href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/datagwsetup/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Remote Desktop Setup</title>
-      <link>https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/datagwsetup/step1/</link>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/datagwsetup/step1/</link>
       <pubDate>Wed, 09 Mar 2022 11:22:24 -0300</pubDate>
       
-      <guid>https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/datagwsetup/step1/</guid>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/datagwsetup/step1/</guid>
       <description>In this section we will install the required components for Azure and Microsoft be able to connect to your SAP environment.
 This section is a summary of the guide Install data gateway and Connect to SAP systems.
 Connect to the Remote Desktop as on the previous step and using a browser on the Bastion Host, download 3 pieces of software (links might have changed, please check above guides for the most up-to-date links):</description>
@@ -20,10 +20,10 @@ Connect to the Remote Desktop as on the previous step and using a browser on the
     
     <item>
       <title>Azure Data Gateway Setup</title>
-      <link>https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/datagwsetup/step2/</link>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/datagwsetup/step2/</link>
       <pubDate>Wed, 09 Mar 2022 11:22:24 -0300</pubDate>
       
-      <guid>https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/datagwsetup/step2/</guid>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/datagwsetup/step2/</guid>
       <description>In this section we will create the endpoint on Azure for the installed on-premises data gateway.
 This section is a summary of the guide Install data gateway and Connect to SAP systems.
 Connect to the Azure Portal and follow the steps below:
