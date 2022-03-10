@@ -2,80 +2,80 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/env_setup/azure_setup/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/azure_setup/</loc>
     <lastmod>2022-03-08T16:34:27-03:00</lastmod>
   </url><url>
-    <loc>/labs/autoint/logicapps/step1/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/public/labs/autoint/logicapps/step1/</loc>
     <lastmod>2022-03-10T14:52:21-03:00</lastmod>
   </url><url>
-    <loc>/labs/autoint/logicapps/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/public/labs/autoint/logicapps/</loc>
     <lastmod>2022-03-10T11:58:35-03:00</lastmod>
   </url><url>
-    <loc>/labs/autoint/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/public/labs/autoint/</loc>
     <lastmod>2022-03-10T11:55:21-03:00</lastmod>
   </url><url>
-    <loc>/env_setup/datagwsetup/step1/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/datagwsetup/step1/</loc>
     <lastmod>2022-03-09T11:22:24-03:00</lastmod>
   </url><url>
-    <loc>/env_setup/sap_cal/accsetup/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/sap_cal/accsetup/</loc>
     <lastmod>2022-03-09T09:55:28-03:00</lastmod>
   </url><url>
-    <loc>/env_setup/sap_cal/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/sap_cal/</loc>
     <lastmod>2022-03-08T17:27:06-03:00</lastmod>
   </url><url>
-    <loc>/env_setup/azure_setup/azuread/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/azure_setup/azuread/</loc>
     <lastmod>2022-03-08T16:34:27-03:00</lastmod>
   </url><url>
-    <loc>/env_setup/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/</loc>
     <lastmod>2022-03-08T16:31:36-03:00</lastmod>
   </url><url>
-    <loc>/labs/autoint/logicapps/step2/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/public/labs/autoint/logicapps/step2/</loc>
     <lastmod>2022-03-10T14:52:21-03:00</lastmod>
   </url><url>
-    <loc>/labs/autoint/virtualagents/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/public/labs/autoint/virtualagents/</loc>
     <lastmod>2022-03-10T11:58:35-03:00</lastmod>
   </url><url>
-    <loc>/labs/dataai/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/public/labs/dataai/</loc>
     <lastmod>2022-03-10T11:55:21-03:00</lastmod>
   </url><url>
-    <loc>/env_setup/datagwsetup/step2/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/datagwsetup/step2/</loc>
     <lastmod>2022-03-09T11:22:24-03:00</lastmod>
   </url><url>
-    <loc>/env_setup/sap_cal/rdpacc/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/sap_cal/rdpacc/</loc>
     <lastmod>2022-03-09T09:55:28-03:00</lastmod>
   </url><url>
-    <loc>/env_setup/azure_setup/adrole/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/azure_setup/adrole/</loc>
     <lastmod>2022-03-08T16:49:27-03:00</lastmod>
   </url><url>
-    <loc>/env_setup/azure_setup/getinfo/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/azure_setup/getinfo/</loc>
     <lastmod>2022-03-08T16:49:27-03:00</lastmod>
   </url><url>
-    <loc>/labs/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/public/labs/</loc>
     <lastmod>2022-03-08T16:31:36-03:00</lastmod>
   </url><url>
-    <loc>/labs/autoint/logicapps/step3/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/public/labs/autoint/logicapps/step3/</loc>
     <lastmod>2022-03-10T14:52:21-03:00</lastmod>
   </url><url>
-    <loc>/labs/autoint/automate/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/public/labs/autoint/automate/</loc>
     <lastmod>2022-03-10T11:58:35-03:00</lastmod>
   </url><url>
-    <loc>/labs/security/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/public/labs/security/</loc>
     <lastmod>2022-03-10T11:55:39-03:00</lastmod>
   </url><url>
-    <loc>/env_setup/datagwsetup/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/datagwsetup/</loc>
     <lastmod>2022-03-09T11:21:23-03:00</lastmod>
   </url><url>
-    <loc>/labs/autoint/powerapps/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/public/labs/autoint/powerapps/</loc>
     <lastmod>2022-03-10T11:58:35-03:00</lastmod>
   </url><url>
-    <loc>/labs/inframgmt/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/public/labs/inframgmt/</loc>
     <lastmod>2022-03-10T11:55:46-03:00</lastmod>
   </url><url>
-    <loc>/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/public/</loc>
     <lastmod>2022-03-10T14:52:21-03:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/public/categories/</loc>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/public/tags/</loc>
   </url>
 </urlset>

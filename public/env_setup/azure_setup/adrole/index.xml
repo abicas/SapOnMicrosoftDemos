@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Assign Role to Application on SAP on Microsoft - Tutorials</title>
-    <link>/env_setup/azure_setup/adrole/</link>
+    <link>https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/azure_setup/adrole/</link>
     <description>Recent content in Assign Role to Application on SAP on Microsoft - Tutorials</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 08 Mar 2022 16:49:27 -0300</lastBuildDate><atom:link href="/env_setup/azure_setup/adrole/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Mar 2022 16:49:27 -0300</lastBuildDate><atom:link href="https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/azure_setup/adrole/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

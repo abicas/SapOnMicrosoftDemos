@@ -1,181 +1,181 @@
 [
 {
-	"uri": "/env_setup/azure_setup/",
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/azure_setup/",
 	"title": "Azure Setup for SAP CAL",
 	"tags": [],
 	"description": "",
 	"content": "In order to allow for SAP to deploy an S/4HANA environment in your Azure subscription, we need to setup permissions for it.\nWhat you will need  Azure subscription Admin access A text file to make note of the required information on the next step  Expected duration This section is estimated to last no longer than 10 minutes\n"
 },
 {
-	"uri": "/labs/autoint/logicapps/step1/",
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/public/labs/autoint/logicapps/step1/",
 	"title": "Create a Logic App",
 	"tags": [],
 	"description": "",
 	"content": "In this step we will create a Logic App on Azure Portal.\n Go to Logic Apps Click on Add Fill the required parameters as the picture below  Subscription and Resource Group Name: SAPDemo Region: East US (same one used on the previous steps) Plan type: Consumption     "
 },
 {
-	"uri": "/labs/autoint/logicapps/",
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/public/labs/autoint/logicapps/",
 	"title": "Azure Logic Apps",
 	"tags": [],
 	"description": "",
 	"content": "Azure Logic Apps What we will build In this lab we will build an API and receives a JSON payload with the Sales Order to be queries on SAP and sends the required information via Outlook using native SAP and Office 365 integrations.\nWhenever this API is used, it triggers a Logic App (built with no code) that will analyze the payload, run a BAPI on SAP, process the response, build an HTML table and send it by email alongside with the BAPI JSON.\nYou can see a sample of the lab below:\n  "
 },
 {
-	"uri": "/labs/autoint/",
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/public/labs/autoint/",
 	"title": "Automation and Integration",
 	"tags": [],
 	"description": "",
 	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
 },
 {
-	"uri": "/env_setup/datagwsetup/step1/",
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/datagwsetup/step1/",
 	"title": "Remote Desktop Setup",
 	"tags": [],
 	"description": "",
 	"content": "In this section we will install the required components for Azure and Microsoft be able to connect to your SAP environment.\nThis section is a summary of the guide Install data gateway and Connect to SAP systems.\nConnect to the Remote Desktop as on the previous step and using a browser on the Bastion Host, download 3 pieces of software (links might have changed, please check above guides for the most up-to-date links):\n .Net Framework latest version On-premises data gateway SAP Connector  Install the .Net Framework following the standard process.\nInstall the On-premises Data Gateway and configure it:\n Accept the default path and terms of use:  Once installation completes, we will register the gateway. Use the same email address of the Azure subscription. It will open a sign in window for you to complete authentication using your azure credentials.\n Select Register a new gateway:  Give it a name and define a recovery key:  Select the region. For this demos, East US is the prefered one:  Installation on the Remote DEsktop side is complete and you should see a screen similar to the one below, with both PowerBI and PowerApps showing up as Ready:   Now, let\u0026rsquo;s move to the Azure part, creating the Gateway on the cloud to interface with the on-premises data gateway.\n"
 },
 {
-	"uri": "/env_setup/sap_cal/accsetup/",
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/sap_cal/accsetup/",
 	"title": "SAP CAL Account Setup",
 	"tags": [],
 	"description": "",
 	"content": "First you need to create a free SAP Cloud Appliance Library (CAL) account.\nGo to https://cal.sap.com/ and click on Log On.\nOn the Login page, select Register and fill the required information.\nOnce you got your approval e-mail from SAP, proceed to the SAP CAL website and Log On with your credentials, then follow the steps below:\n Go to Accounts and click on Create Account  Give it a name, select Microsoft Azure and fill the data with the information gathered.  Click on Test Connection to make sure the parameters are valid.   Alright, now we have the proper access to deploy a S/4HANA in your subscription.\nSAP CAL allows for a 30 day Trial of the Solutions available, where SAP licenses are waived for 30 days; only the cloud provider hosting fees apply. You can setup auto-shutdown and auto-terminate later on to make sure we keep costs low.\nIn order to deploy a Trial S/4HANA in you subscription:\n  Go to Solutions, pick the latest SAP S/4HANA Fully-Activated Appliance and click on Create Instance.   Select the newly created Account   Read and Accept the License terms of the Trial   Go to Advanced Mode so we can understand the parameters used on the deploy   Select your account.   Give your instance a name, description and validate the networking settings for the VNet. SAP will create a Default SAP CAL Network in case you have a new subscription. Select Public Static IP address so we can have remote access without the need for a VPN.   We won\u0026rsquo;t be deploying Business Objects so on the next step, you can desselect this VM. Later on you can change the VM types on azure to cheaper, smaller or newer ones. Scroll down and check all the parameters, ports, disk sizes so you can familiarize with the solution.   Provide a password for SAP Admin access that will be customized during the deployment. There will be local pre-defined users and admin users with this password. For more details see the Getting Started Guide for S/4HANA on SAP CAL with the default users and passwords.   Here we can adjust when the SAP will be available:\n By Schedule - Scheduled start and shutdown Suspend on an Exact Date - Scheduled to be running for XX number of days and then shutdown. Manual - If you do not plan to use it everyday. When you activate you can setup a shutdown time in hours in case you forget.  On the right side you can see the costs changing depending on the selection   Click Create on the bottom of the page, review the data and go grab lunch (it should take 2-3 hours for the deployment to be complete).   You can monitor the progress of the deployment in the Instances tab. Wait for Activated status.   When the solution is deployed and activated, click on the instance name and check the top menu, where you can control the SAP landscape (suspend/terminate/activate) as well as the remote desktop IP address used as Bastion Host for managing the environment on Azure. You can also access the Getting Started Guide under Solution Info tab as well make sure all the VMs are up and SAP was started properly and is communicating. All done ! You have an SAP S/4HANA running in your susbcription ! On the next section let\u0026rsquo;s see how we can access it and key users/passwords/parameters for conection that will be required later on.\n"
 },
 {
-	"uri": "/env_setup/sap_cal/",
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/sap_cal/",
 	"title": "SAP Cloud Appliance Library (CAL)",
 	"tags": [],
 	"description": "",
 	"content": "The SAP Cloud Appliance Library (CAL) offers a quick and easy way to consume the latest SAP solutions in the cloud, such as SAP S/4HANA, SAP HANA Express Edition, Industry Solutions etc.\nIt\u0026rsquo;s an online library of latest, preconfigured, ready-to-use SAP solutions that can be instantly deployed into your own public cloud accounts.\nIn this section we will create and account on SAP CAL, configure Azure permissions and deploy an S/4HANA environment on your subscription.\nWhat you will need  Parameters from previous step  Expected duration This section is estimated to last around 2-3 hours, mostly depending on the SAP deployment itself.\n"
 },
 {
-	"uri": "/env_setup/azure_setup/azuread/",
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/azure_setup/azuread/",
 	"title": "Create and Azure Active Directory application",
 	"tags": [],
 	"description": "",
 	"content": " Sign in to your Azure Account through the Azure Portal Select Azure Active Directory Select App Registrations  Select New Registration  Provide a name, accept defaults and select Register   Now let\u0026rsquo;s add a role to this application.\n"
 },
 {
-	"uri": "/env_setup/",
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/",
 	"title": "Environment Setup",
 	"tags": [],
 	"description": "",
 	"content": "Before we start building our labs we need to have provisioned a few resources:\n An Azure subscription setup An S/4HANA environment Installation of gateway components  The following sections will guide you thru the steps to accomplish this and be ready to the labs.\n"
 },
 {
-	"uri": "/labs/autoint/logicapps/step2/",
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/public/labs/autoint/logicapps/step2/",
 	"title": "Create a Workflow",
 	"tags": [],
 	"description": "",
 	"content": "In this step we will create the Workflow on Azure Portal.\n Go to Logic Apps Click on your Logic App SAPDemo Go to Workflows and Add a new one as the parameters below:  Click on Designer and let\u0026rsquo;s start building the Workflow! As the first operation, which starts the flow, we will pick When a HTTP request is received  In order to customize the payload we expect, let\u0026rsquo;s Use a sample payload to generate schema  Sample payload: {\u0026quot;id\u0026quot;: \u0026quot;0000000728\u0026quot;}    This will generate a schema for the trigger  Now we will create our temp variable to hold the desired part of the SAP reponse. Add a new action and type \u0026ldquo;initialize\u0026rdquo; on the search box. Select Initialize Variables  In this step, we will create na empty array to store the data:  Name: outputArray Type: Array Value: []    Next we will invoke BAPI method in SAP by adding a new Action (make sure you select Azure ) called [BAPI] Call method in SAP  Now we need to link this BAPI call with the On-premises Data Gateway we installed on Bastion Host. Click on Change connection  An now we provide the connection information required so Logic Apps can communicate with SAP:  Connection Name: SAPS4CAL DataGateway: Select your Gateway, in this case SapDemoGW Client: 100 Auth: Basic User: BPINST Password: Welcome1 AS HOST: Public IP of your SAP HANA on SAP CAL (this IP will change if you shutdown SAP. You will have to follow the same procedure to manually update upon activation or resort to dynamic DNS) AS SERVICE: 50000 AS SYSTEM NUMBER: 00 Accept other defaults and click Create    Logic App will test the connection and you should see the Connected status  Now let\u0026rsquo;s setup the BAPI method to be invoked  Business Object: BUS2032:SalesOrder Method: GETSTATUS:Display Sales Order:BAPI_SALESORDER_GETSTATUS Input: \u0026lt;GETSTATUS xmlns=\u0026quot;http://Microsoft.LobServices.Sap/2007/03/Rfc/\u0026quot;\u0026gt;\u0026lt;SALESDOCUMENT\u0026gt;xxx\u0026lt;/SALESDOCUMENT\u0026gt;\u0026lt;/GETSTATUS\u0026gt; Replace xxx on the above Input with a Dynamic Content id extracted from the trigger on step 7. Make sure there are no spaces between SALESDOCUMENT    Add a new Parse JSON action  In content use JsonResponse that will be passed by BAPI  As we did on the initial step, select Use sample payload to generate schema and use the following JSON sample {\u0026quot;STATUSINFO\u0026quot;:[{\u0026quot;DOC_NUMBER\u0026quot;:\u0026quot;0000000728\u0026quot;,\u0026quot;DOC_DATE\u0026quot;:\u0026quot;2018-11-06\u0026quot;,\u0026quot;PURCH_NO\u0026quot;:\u0026quot;xcwer\u0026quot;,\u0026quot;PRC_STAT_H\u0026quot;:\u0026quot;C\u0026quot;,\u0026quot;DLV_STAT_H\u0026quot;:\u0026quot;C\u0026quot;,\u0026quot;REQ_DATE_H\u0026quot;:\u0026quot;2018-11-06\u0026quot;,\u0026quot;DLV_BLOCK\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;ITM_NUMBER\u0026quot;:\u0026quot;000010\u0026quot;,\u0026quot;MATERIAL\u0026quot;:\u0026quot;CM-FL-V01\u0026quot;,\u0026quot;SHORT_TEXT\u0026quot;:\u0026quot;Forklift\u0026quot;,\u0026quot;REQ_DATE\u0026quot;:\u0026quot;2018-11-21\u0026quot;,\u0026quot;REQ_QTY\u0026quot;:1.0,\u0026quot;CUM_CF_QTY\u0026quot;:1.0,\u0026quot;SALES_UNIT\u0026quot;:\u0026quot;ST\u0026quot;,\u0026quot;NET_VALUE\u0026quot;:8000.0,\u0026quot;CURRENCY\u0026quot;:\u0026quot;USD\u0026quot;,\u0026quot;NET_PRICE\u0026quot;:8000.0,\u0026quot;COND_P_UNT\u0026quot;:1.0,\u0026quot;COND_UNIT\u0026quot;:\u0026quot;ST\u0026quot;,\u0026quot;DLV_STAT_I\u0026quot;:\u0026quot;C\u0026quot;,\u0026quot;DELIV_NUMB\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;DELIV_ITEM\u0026quot;:\u0026quot;000000\u0026quot;,\u0026quot;DELIV_DATE\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;DLV_QTY\u0026quot;:0.0,\u0026quot;REF_QTY\u0026quot;:0.0,\u0026quot;S_UNIT_ISO\u0026quot;:\u0026quot;PCE\u0026quot;,\u0026quot;CD_UNT_ISO\u0026quot;:\u0026quot;PCE\u0026quot;,\u0026quot;CURR_ISO\u0026quot;:\u0026quot;USD\u0026quot;,\u0026quot;MATERIAL_EXTERNAL\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;MATERIAL_GUID\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;MATERIAL_VERSION\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;PO_ITM_NO\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;CREATION_DATE\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;CREATION_TIME\u0026quot;:\u0026quot;00:00:00\u0026quot;,\u0026quot;S_UNIT_DLV\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;DLV_UNIT_ISO\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;REA_FOR_RE\u0026quot;:\u0026quot;70\u0026quot;,\u0026quot;PURCH_NO_C\u0026quot;:\u0026quot;xcwer\u0026quot;,\u0026quot;MATERIAL_LONG\u0026quot;:\u0026quot;CM-FL-V01\u0026quot;},{\u0026quot;DOC_NUMBER\u0026quot;:\u0026quot;0000000728\u0026quot;,\u0026quot;DOC_DATE\u0026quot;:\u0026quot;2018-11-06\u0026quot;,\u0026quot;PURCH_NO\u0026quot;:\u0026quot;xcwer\u0026quot;,\u0026quot;PRC_STAT_H\u0026quot;:\u0026quot;C\u0026quot;,\u0026quot;DLV_STAT_H\u0026quot;:\u0026quot;C\u0026quot;,\u0026quot;REQ_DATE_H\u0026quot;:\u0026quot;2018-11-06\u0026quot;,\u0026quot;DLV_BLOCK\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;ITM_NUMBER\u0026quot;:\u0026quot;000020\u0026quot;,\u0026quot;MATERIAL\u0026quot;:\u0026quot;CM-FL-V00\u0026quot;,\u0026quot;SHORT_TEXT\u0026quot;:\u0026quot;Forklift\u0026quot;,\u0026quot;REQ_DATE\u0026quot;:\u0026quot;2018-11-06\u0026quot;,\u0026quot;REQ_QTY\u0026quot;:7.0,\u0026quot;CUM_CF_QTY\u0026quot;:0.0,\u0026quot;SALES_UNIT\u0026quot;:\u0026quot;ST\u0026quot;,\u0026quot;NET_VALUE\u0026quot;:58800.0,\u0026quot;CURRENCY\u0026quot;:\u0026quot;USD\u0026quot;,\u0026quot;NET_PRICE\u0026quot;:8400.0,\u0026quot;COND_P_UNT\u0026quot;:1.0,\u0026quot;COND_UNIT\u0026quot;:\u0026quot;ST\u0026quot;,\u0026quot;DLV_STAT_I\u0026quot;:\u0026quot;C\u0026quot;,\u0026quot;DELIV_NUMB\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;DELIV_ITEM\u0026quot;:\u0026quot;000000\u0026quot;,\u0026quot;DELIV_DATE\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;DLV_QTY\u0026quot;:0.0,\u0026quot;REF_QTY\u0026quot;:0.0,\u0026quot;S_UNIT_ISO\u0026quot;:\u0026quot;PCE\u0026quot;,\u0026quot;CD_UNT_ISO\u0026quot;:\u0026quot;PCE\u0026quot;,\u0026quot;CURR_ISO\u0026quot;:\u0026quot;USD\u0026quot;,\u0026quot;MATERIAL_EXTERNAL\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;MATERIAL_GUID\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;MATERIAL_VERSION\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;PO_ITM_NO\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;CREATION_DATE\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;CREATION_TIME\u0026quot;:\u0026quot;00:00:00\u0026quot;,\u0026quot;S_UNIT_DLV\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;DLV_UNIT_ISO\u0026quot;:\u0026quot;\u0026quot;,\u0026quot;REA_FOR_RE\u0026quot;:\u0026quot;70\u0026quot;,\u0026quot;PURCH_NO_C\u0026quot;:\u0026quot;xcwer\u0026quot;,\u0026quot;MATERIAL_LONG\u0026quot;:\u0026quot;CM-FL-V00\u0026quot;}]}  SAP Sales Order can have multiple Line Items, so we have to iterate in them. Add na For Each action and as parameter, STATUSINFO from Parse JSON previous action.  Inside the For Each loop add a Compose action. It will allow for us to pick desired fields for each line and build a JSON that suits our needs.  Build the desired JSON using the sample JSON below and replacing fields enclosed by \u0026lt;\u0026gt; using Dynamic Inputs as inputs (make sure you keep the commas) { \u0026quot;Order\u0026quot;: \u0026lt;DOC_NUMBER\u0026gt;, \u0026quot;Date\u0026quot;: \u0026lt;DOC_DATE\u0026gt;, \u0026quot;Item\u0026quot;: \u0026lt;MATERIAL\u0026gt;, \u0026quot;Description\u0026quot;: \u0026lt;SHORT_TEXT\u0026gt;, \u0026quot;Quantity\u0026quot;: \u0026lt;REQ_QTY\u0026gt;, \u0026quot;Price\u0026quot;: \u0026lt;NET_PRICE\u0026gt; }   Inside the For Each loop, after Compose, add na action Append to array variable. Select outputArray previously initialized as empty and for Value Outputs from Compose action  Once For Each runs and populates outputArray with the desired data, we will convert it to an HTML table. Add a Create HTML table Action and use the outputArray as the data for the table.  Finally, we will add an action Send an email from Office 365 Outlook. You may need to connect Logic Apps with Office 365, by clicking on Change connection as did previously for SAP.  Let\u0026rsquo;s now build the email template that will be used on every invocation  To: Destination email Subject: Details for order  (replace with dynamic content) Body: as picture below    As the API response we will add a Response action and return  Status Code: 200 Body: JsonResponse from Dynamic inputs    Don\u0026rsquo;t forget to click SAVE !!!! ;)   If everything wen\u0026rsquo;t fine, we are ready to test the lab we just built, with NO CODE at all !\n"
 },
 {
-	"uri": "/labs/autoint/virtualagents/",
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/public/labs/autoint/virtualagents/",
 	"title": "Power Virtual Agent",
 	"tags": [],
 	"description": "",
 	"content": "Power Virtual Agent What we will build   "
 },
 {
-	"uri": "/labs/dataai/",
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/public/labs/dataai/",
 	"title": "Data &amp; AI",
 	"tags": [],
 	"description": "",
 	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
 },
 {
-	"uri": "/env_setup/datagwsetup/step2/",
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/datagwsetup/step2/",
 	"title": "Azure Data Gateway Setup",
 	"tags": [],
 	"description": "",
 	"content": "In this section we will create the endpoint on Azure for the installed on-premises data gateway.\nThis section is a summary of the guide Install data gateway and Connect to SAP systems.\nConnect to the Azure Portal and follow the steps below:\n Go to On-premises Data Gateways:  Select Add  Fill the required parameters. Make sure to Select the same region as used on the installation (East US) and Select the name of the gateway previously created that should be populated on the drop-down box.   Congratulations, you just finished the setup of the environment for our labs to be created !\nNow select the desired lab on the left to continue.\n"
 },
 {
-	"uri": "/env_setup/sap_cal/rdpacc/",
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/sap_cal/rdpacc/",
 	"title": "Remote Desktop Access",
 	"tags": [],
 	"description": "",
 	"content": "Let\u0026rsquo;s connect to an RDP session on the Bastion Host.\nUse the Public IP for the Remote Desktop provided on the Instance tab.\n Default User: Administrator Default Password: The one used during the SAP deployment  Once connected you should see a screen similar to this. If the message says it is still under deployment, log off and wait a little bit longer. We will basically use 3 apps installed here:\n Web browser SAP Logon (GUI) HANA Studio  The connection information for the SAP GUI is:\n Client: 100 User: BPINST Password: Welcome1 SID: S4H   For SAP HANA Studio:\n Host: vhcalhdbdb (local hosts file) Instance Number: 02 Multiple Containers - Tenant Database: HDB Port: 30215 User: SAPHANADB Password: The one used during the SAP deployment  If not existant:\n Right click on the left pane and select Add System  Fill the connection info  Fill the user and password   Once connection is created, double click on the connection on the left pane to see the HANA status: Alright! SAP has been deployed, we are able to connect, and we are ready to start installing the Azure required components on the next section.\n"
 },
 {
-	"uri": "/env_setup/azure_setup/adrole/",
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/azure_setup/adrole/",
 	"title": "Assign Role to Application",
 	"tags": [],
 	"description": "",
 	"content": " Navigate to the level of scope you wish to assign the application to. For example, to assign a role at the subscription scope, select All services, General and Subscriptions.\n Select the particular subscription to assign the application to. Select Access control (IAM) Select Add role assignment  Select the role you wish to assign to the application. To allow the application to execute actions like reboot, start and stop instances, select the Contributor role.  On the Members tab, click on Select members and start typing the name of the App registration done on the previous step Select Review and Assign to finish assigning the role.  You will see your application in the list of users assigned to a role for that scope.\nYour service principal is set up. You can start using it to run your scripts or apps. The next section shows how to get values that are needed when signing in programmatically.\n"
 },
 {
-	"uri": "/env_setup/azure_setup/getinfo/",
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/azure_setup/getinfo/",
 	"title": "Get required information",
 	"tags": [],
 	"description": "",
 	"content": "In order to allow for SAP CAL to access your subscription, you will need some parameters. This section will explain where to find them.\nCopy those values to a temp text document so you can easily copy and paste later on.\nGo to your Azure Portal and follow the steps below:\n Go to Subscriptions and copy the Subscription ID  Select Azure Active Directory. Select Properties. Copy Tenant ID.  Still on Azure Active Directory, go to App registrations and select your application. Copy Application (client) ID.  Select Certificates \u0026amp; secrets, then select New client secret.  Define a name for the secret and an expiration 3 Months. After adding the client secret, the value of the client secret is displayed. Copy this value now because you aren\u0026rsquo;t able to retrieve the client secret later. You will provide the client secret value (as application password) with the application ID to sign in as the application. If you missed this step, delete the existing secret and create a new one.  By that time you should have 4 pieces of info:\n Azure Subscription ID Tenant ID Application (client) ID Secret Value  Now we will go to SAP CAL to setup the Azure access to deploy SAP S/4HANA in your subscription.\n"
 },
 {
-	"uri": "/labs/",
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/public/labs/",
 	"title": "SAP on Microsoft Labs",
 	"tags": [],
 	"description": "",
 	"content": "The following sections will be divided in different labs integrating several Microsoft services with SAP, such as:\n Automation and Integration  Azure Logic Apps Power Platform - Power Virtual Agents Power Platform - Power Automate Power Platform - Power Apps   Data \u0026amp; AI  Office 365 Integration Azure Synapse Power Platform - Power BI Azure Machine Learning   Security  Azure Sentinel Azure AD   Infra \u0026amp; Management  Azure Monitoring Azure Backup High-Availability    The following sections will guide you thru the steps to accomplish this and be ready to the labs.\n"
 },
 {
-	"uri": "/labs/autoint/logicapps/step3/",
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/public/labs/autoint/logicapps/step3/",
 	"title": "Running the lab",
 	"tags": [],
 	"description": "",
 	"content": "In this step we will execute the Workflow created previously\nGo back to Overview, Enable Debug mode (will be used in the future) and copy the Workflow URL provided We need to invoke the API, so we can use an externall tool like Postman or use the embeded Run Trigger tool.\nFor Postman:\n Method: POST URL: copied on the previous step Body: raw - JSON Body content: {\u0026quot;id\u0026quot;: \u0026quot;0000000728\u0026quot;} or {\u0026quot;id\u0026quot;: \u0026quot;0000001575\u0026quot;}  Note: SAP compares strings so have that in mind with leading zeroes and 10 total chars   Hit Send.   For Run Trigger tool:\n Click on Run Trigger with payload  Fill the request:  Method: POST Content-Type: application/json Body content: {\u0026quot;id\u0026quot;: \u0026quot;0000000728\u0026quot;} or {\u0026quot;id\u0026quot;: \u0026quot;0000001575\u0026quot;}  Note: SAP compares strings so have that in mind with leading zeroes and 10 total chars   Click Run    When your workflow runs, you should receive an Output status = 200  You can see the run status on the Run History tab  And by selecting the desired Run, you can see step-by-step inputs and outputs of your workflow for debug.  For a sucessful Run you can also see the details and the time it took on every step:   Now go check your email inbox because you should have something similar to the one below: If you need to check or compare a Sales Order on SAP, go to the Bastion Host via Remote Desktop, open SAP GUI and follow the steps below:\n Logon with BPINST/Welcome1  Go to TCODE VA03 (Display Sales Orders)\nSearch for the order number used on VA03\n Order: 728 or 1575 (here SAP compared numbers and don\u0026rsquo;t care about leading zeroes) Hit Search and you should see the details (to return to the previous screen, use the green arrow by the TCODE)   Congratulations ! You just finished the first lab and was able to create an API that will query SAP Sales Order and send an email, all with ZERO LINES of CODE !\n"
 },
 {
-	"uri": "/labs/autoint/automate/",
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/public/labs/autoint/automate/",
 	"title": "Power Automate",
 	"tags": [],
 	"description": "",
 	"content": "Power Automate What we will build   "
 },
 {
-	"uri": "/labs/security/",
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/public/labs/security/",
 	"title": "Security",
 	"tags": [],
 	"description": "",
 	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
 },
 {
-	"uri": "/env_setup/datagwsetup/",
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/public/env_setup/datagwsetup/",
 	"title": "Microsoft On-premises Data Gateway Installation",
 	"tags": [],
 	"description": "",
 	"content": "Once SAP is installed and access is working, we need to install the required components to allow for Microsoft services to interact with SAP S/4HANA environments.\nWhat you will need  Sucessfull deployment of S/4HANA and access ready  Expected duration This section is estimated to last no longer than 30 minutes\n"
 },
 {
-	"uri": "/labs/autoint/powerapps/",
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/public/labs/autoint/powerapps/",
 	"title": "Power Apps",
 	"tags": [],
 	"description": "",
 	"content": "Power Apps What we will build   "
 },
 {
-	"uri": "/labs/inframgmt/",
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/public/labs/inframgmt/",
 	"title": "Infrastructure and Management",
 	"tags": [],
 	"description": "",
 	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
 },
 {
-	"uri": "/",
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/public/",
 	"title": "SAP on Microsoft - Tutorials",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "/categories/",
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/public/categories/",
 	"title": "Categories",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "/tags/",
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/public/tags/",
 	"title": "Tags",
 	"tags": [],
 	"description": "",
