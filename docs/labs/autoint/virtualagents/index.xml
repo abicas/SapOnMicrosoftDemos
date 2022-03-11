@@ -14,7 +14,29 @@
       
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step1/</guid>
       <description>In this section we will create our Chatbot on Microsoft Power Platform.
-Go to Office 365, authenticate and select Power Apps. </description>
+Go to Office 365, authenticate and select Power Apps. On Power Apps, expand Chatbots, select Create and click on the Basic conversational bot button. Fill the information to create the bot:
+ Name: SAP Bot Language: Deisred language (examples in Brazilian Portuguese with translation) Environment: US   Once the bot is created, go to Topics and click on New Topic Let&amp;rsquo;s rename the newly created topic from Untitled to PO Details (en-US) / Detalhes do Pedido (pt-BR) The bot needs know which phrases trigger this topic, so we will add some examples of questions users may pose to accomplish what they need:</description>
+    </item>
+    
+    <item>
+      <title>Testing our Chatbot</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step2/</link>
+      <pubDate>Thu, 10 Mar 2022 17:25:38 -0300</pubDate>
+      
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step2/</guid>
+      <description>In this section we will test and debug our Chatbot on Microsoft Power Platform.
+On the left side of the screen go to the Test bot and simulate a user conversation.
+ IMPORTANT:  SAP expects a 10 char stirng with leading zeroes, so if you want to check order 728 you need to type 0000000728 Once we are doing a lab, we are not treating the input so type just the PO number with no other information, leading/trailing spaces, words, once we are passing the whole input to SAP.</description>
+    </item>
+    
+    <item>
+      <title>Publishing to Teams</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step3/</link>
+      <pubDate>Thu, 10 Mar 2022 17:25:38 -0300</pubDate>
+      
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step3/</guid>
+      <description>In this section we will publish our Chatbot to Teams and test it.
+On the left side of the screen go to the Publish Publish the latest version. Once the bot is public, we will add it to our org&amp;rsquo;s Teams. Click on Go to Channels and then turn on Teams Channel After the publishing and channel activations succeeds, you should see the option to Open bot directly on Teams. On Teams, Add the Bot Run the same simulations as in the test bot.</description>
     </item>
     
   </channel>
