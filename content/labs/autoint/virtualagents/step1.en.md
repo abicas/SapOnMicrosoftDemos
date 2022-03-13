@@ -92,7 +92,7 @@ Let's now teach the Flow how to interpret SAP's response:
 - Add a **Parse JSON** action
 - Generate Schema based on the JSON sample below by clicking on **Generate from Sample** and pasting it.
 - Once the Schema is generated, define Content parameter as  **STATUSINFO** from Dynamic Values
-```JSON
+```json
 [
     {
       "DOC_NUMBER": "0000000728",

@@ -32,7 +32,7 @@
 	"title": "Power Virtual Agent",
 	"tags": [],
 	"description": "",
-	"content": "Power Virtual Agent What we will build In this lab we will build an API and receives a JSON payload with the Sales Order to be queries on SAP and sends the required information via Outlook using native SAP and Office 365 integrations.\nWhenever this API is used, it triggers a Logic App (built with no code) that will analyze the payload, run a BAPI on SAP, process the response, build an HTML table and send it by email alongside with the BAPI JSON.\nYou can see a sample of the lab below:\n  "
+	"content": "Power Virtual Agent What we will build In this lab we will build an chatbot that answers Sales Order details, using Power Virtual Agents and publishing the bot to Microsoft Teams.\nWhenever this bot is invoked, it triggers a a flow that will call an SAP BAPI based on user inputs process the response, build an HTML table and send it back to the chatbot.\nYou can see a sample of the lab below:\n  "
 },
 {
 	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/",

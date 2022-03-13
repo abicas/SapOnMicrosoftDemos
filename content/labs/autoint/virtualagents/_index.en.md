@@ -11,10 +11,10 @@ pre = "<b> </b>"
 
 ### What we will build
 
-In this lab we will build an API and receives a JSON payload with the Sales Order to be queries on SAP and sends the required information via Outlook using native SAP and Office 365 integrations. 
+In this lab we will build an chatbot that answers Sales Order details, using Power Virtual Agents and publishing the bot to Microsoft Teams. 
 
-Whenever this API is used, it triggers a Logic App (built with no code) that will analyze the payload, run a BAPI on SAP, process the response, build an HTML table and send it by email alongside with the BAPI JSON. 
+Whenever this bot is invoked, it triggers a a flow that will call an SAP BAPI based on user inputs process the response, build an HTML table and send it back to the chatbot. 
 
 You can see a sample of the lab below: 
 
-{{< youtube wqMKEuQEmIA >}}
+{{< youtube I9FuhBlQgpo >}}
