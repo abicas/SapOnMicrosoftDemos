@@ -6,7 +6,18 @@
     <description>Recent content on SAP on Microsoft - Tutorials</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 10 Mar 2022 17:25:38 -0300</lastBuildDate><atom:link href="https://abicas.github.io/SapOnMicrosoftDemos/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Mar 2022 14:22:13 -0300</lastBuildDate><atom:link href="https://abicas.github.io/SapOnMicrosoftDemos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting up Azure Monitor for SAP</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step1/</link>
+      <pubDate>Mon, 14 Mar 2022 14:22:13 -0300</pubDate>
+      
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step1/</guid>
+      <description>In order to have SAP monitoring, we need to spin up an instance of Azure Monitoring.
+This section will show the steps required for that to be accomplished:
+ Log on to the Azure Portal and look for Azure Monitor for SAP  Create a new instance and provide the required information. Select the same region, vNet and subnet as SAP was deployed:   Region: East US vNET: SAPCALDefault-eastus Subnet: default   Do not worry about defining providers at this moment.</description>
+    </item>
+    
     <item>
       <title>Creating our Chatbot</title>
       <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step1/</link>
@@ -37,6 +48,27 @@ Go to Office 365, authenticate and select Power Apps. On Power Apps, expand Chat
       <description>In this section we will install the required components for Azure and Microsoft be able to connect to your SAP environment.
 This section is a summary of the guide Install data gateway and Connect to SAP systems.
 Connect to the Remote Desktop as on the previous step and using a browser on the Bastion Host, download 3 pieces of software (links might have changed, please check above guides for the most up-to-date links):</description>
+    </item>
+    
+    <item>
+      <title>HANA Provider</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step2/</link>
+      <pubDate>Mon, 14 Mar 2022 14:22:13 -0300</pubDate>
+      
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step2/</guid>
+      <description>Let&amp;rsquo;s add a HANA Provider to collect metrics for us:
+ On the Azure Monitor for SAP, go to Providers  Click Add  Let&amp;rsquo;s fill the required data:   Type: SAP HANA IP Address: SAP HANA Private IP Address Database tenant: SYSTEMDB SQL Port: 30215 Username: SAPHANADB Password: Password defined during deploy of SAP CAL   Wait for the Provider to be created and the data validated.  It takes about 10-15 minutes for information to be initially available on Azure Monitor.</description>
+    </item>
+    
+    <item>
+      <title>Linux Provider</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step3/</link>
+      <pubDate>Mon, 14 Mar 2022 14:22:13 -0300</pubDate>
+      
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step3/</guid>
+      <description>Let&amp;rsquo;s add a HANA Provider to collect metrics for us:
+Node Exporter Agent Before we start, we need to add an agent to the monitored VM.
+ Go to the Azure Portal and open a Cloud Shell. In the examples we used BASH as the interpreter.  Now we will upload the key that SAP CAL generated on the deployment so we can log on to the Linux OS. Click on the File Transfer icon and then Upload  Select the key which will be a *.</description>
     </item>
     
     <item>

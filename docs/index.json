@@ -7,6 +7,20 @@
 	"content": "In order to allow for SAP to deploy an S/4HANA environment in your Azure subscription, we need to setup permissions for it.\nWhat you will need  Azure subscription Admin access A text file to make note of the required information on the next step  Expected duration This section is estimated to last no longer than 10 minutes\n"
 },
 {
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step1/",
+	"title": "Setting up Azure Monitor for SAP",
+	"tags": [],
+	"description": "",
+	"content": "In order to have SAP monitoring, we need to spin up an instance of Azure Monitoring.\nThis section will show the steps required for that to be accomplished:\n Log on to the Azure Portal and look for Azure Monitor for SAP  Create a new instance and provide the required information. Select the same region, vNet and subnet as SAP was deployed:   Region: East US vNET: SAPCALDefault-eastus Subnet: default   Do not worry about defining providers at this moment. Click on Review + Create  Once the deployment is complete Go to Resource and let\u0026rsquo;s start configuring the data Providers   Next steps will be divided by data provider.\n"
+},
+{
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/",
+	"title": "Monitoring SAP",
+	"tags": [],
+	"description": "",
+	"content": "Azure Monitoring for SAP One of the benefits of monitoring SAP on Azure is the integrated view of both Infrastructure metrics (like CPU, RAM and Disk) alongside HANA database metrics (like memory usage and memory growth), and Netweaver metrics like concurrent sessions and locks.\nThis allows for a rapid response in case of an incident response as well as provinding a simpler and more integrated way of having the whole SAP performance picture in a glance.\nThis lab is based on the Azure Monitor for SAP Quickstart guide.\nWhat we will build   "
+},
+{
 	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step1/",
 	"title": "Creating our Chatbot",
 	"tags": [],
@@ -75,6 +89,20 @@
 	"tags": [],
 	"description": "",
 	"content": "Before we start building our labs we need to have provisioned a few resources:\n An Azure subscription setup An S/4HANA environment Installation of gateway components  The following sections will guide you thru the steps to accomplish this and be ready to the labs.\n"
+},
+{
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step2/",
+	"title": "HANA Provider",
+	"tags": [],
+	"description": "",
+	"content": "Let\u0026rsquo;s add a HANA Provider to collect metrics for us:\n On the Azure Monitor for SAP, go to Providers  Click Add  Let\u0026rsquo;s fill the required data:   Type: SAP HANA IP Address: SAP HANA Private IP Address Database tenant: SYSTEMDB SQL Port: 30215 Username: SAPHANADB Password: Password defined during deploy of SAP CAL   Wait for the Provider to be created and the data validated.  It takes about 10-15 minutes for information to be initially available on Azure Monitor. Once this time has passed, go to Monitoring -\u0026gt; SAP HANA on the left blade.  Select the desired HANA instance (you can monitor several instances like DEV/QAS/PRD on so on\u0026hellip;)   An from here on, you should be able to see collected data directly from SAP HANA:\nOverview with peak CPU and RAM, HANA services status and licenses) Historic utilization data for CPU and Memory Data size and growth And more data like Backups and System Checks for Save Points and Delta Merges Next step we will add operating system counter to the Azure Monitor for SAP.\n"
+},
+{
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step3/",
+	"title": "Linux Provider",
+	"tags": [],
+	"description": "",
+	"content": "Let\u0026rsquo;s add a HANA Provider to collect metrics for us:\nNode Exporter Agent Before we start, we need to add an agent to the monitored VM.\n Go to the Azure Portal and open a Cloud Shell. In the examples we used BASH as the interpreter.  Now we will upload the key that SAP CAL generated on the deployment so we can log on to the Linux OS. Click on the File Transfer icon and then Upload  Select the key which will be a *.pem file, downladed from SAP CAL. If you do not remember or cannot find the file, go to SAP CAL, select your instance, click on Download Key and download it again.  Let\u0026rsquo;s add permissions to the .PEM file uploaded on the Azure Cloud Shell (in this example the key is called demosap.pem)  chmod 400 demosap.pem With the key setup done, we can connect to the SAP HANA instance, usign the key as password for root:  ssh -i demosap.pem root@\u0026lt;PUBLIC IP of HANA\u0026gt; Let\u0026rsquo;s download the agent. Go to Prometheus Download Page and copy the address for the latest Node Exporter for Linux  Back to Azure Cloud Shell, we will download, extract the agent and copy it to /usr/bin.  sid-hdb-s4h:~ # wget https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz sid-hdb-s4h:~ # tar xvzf node_exporter-1.3.1.linux-amd64.tar.gz  node_exporter-1.3.1.linux-amd64/ node_exporter-1.3.1.linux-amd64/LICENSE node_exporter-1.3.1.linux-amd64/NOTICE node_exporter-1.3.1.linux-amd64/node_exporter sid-hdb-s4h:~ # cd node_exporter-1.3.1.linux-amd64/ sid-hdb-s4h:~/node_exporter-1.3.1.linux-amd64 # cp -pr node_exporter /usr/bin/ Let\u0026rsquo;s test the agent by invoking it:  sid-hdb-s4h:~ # node_exporter ts=2022-03-14T18:58:29.764Z caller=node_exporter.go:182 level=info msg=\u0026#34;Starting node_exporter\u0026#34; version=\u0026#34;(version=1.3.1, branch=HEAD, revision=a2321e7b940ddcff26873612bccdf7cd4c42b6b6)\u0026#34; ts=2022-03-14T18:58:29.764Z caller=node_exporter.go:183 level=info msg=\u0026#34;Build context\u0026#34; build_context=\u0026#34;(go=go1.17.3, user=root@243aafa5525c, date=20211205-11:09:49)\u0026#34; ts=2022-03-14T18:58:29.764Z caller=node_exporter.go:185 level=warn msg=\u0026#34;Node Exporter is running as root user. This exporter is designed to run as unpriviledged user, root is not required.\u0026#34; ts=2022-03-14T18:58:29.765Z caller=filesystem_common.go:111 level=info collector=filesystem msg=\u0026#34;Parsed flag --collector.filesystem.mount-points-exclude\u0026#34; flag=^/(dev|proc|run/credentials/.+|sys|var/lib/docker/.+)($|/) ts=2022-03-14T18:58:29.765Z caller=filesystem_common.go:113 level=info collector=filesystem msg=\u0026#34;Parsed flag --collector.filesystem.fs-types-exclude\u0026#34; flag=^(autofs|binfmt_misc|bpf|cgroup2?|configfs|debugfs|devpts|devtmpfs|fusectl|hugetlbfs|iso9660|mqueue|nsfs|overlay|proc|procfs|pstore|rpc_pipefs|securityfs|selinuxfs|squashfs|sysfs|tracefs)$ ts=2022-03-14T18:58:29.765Z caller=node_exporter.go:108 level=info msg=\u0026#34;Enabled collectors\u0026#34; ts=2022-03-14T18:58:29.765Z caller=node_exporter.go:115 level=info collector=arp ts=2022-03-14T18:58:29.765Z caller=node_exporter.go:115 level=info collector=bcache On the Bastion Host, go to http://\u0026laquo;SAP HANA Private IP\u0026raquo;:9100/metrics  Kill the node_exporter process with CTRL+C and start it in background  nohup node_exporter \u0026amp; The agent is installed and communicating internally on the vNET. Let\u0026rsquo;s add the provider now\nLinux Provider  On the Azure Monitor for SAP, go to Providers  Click Add  Let\u0026rsquo;s fill the required data:   Type: OS Linux Endpoint: http://internal_ip_address:9100/metrics   Wait until the provider is created and give it 10-15 minutes for data to start to flow.  Go to Monitoring, select OS (Linux), and pick the host.   Congratulations, you just installed and finished the OS Linux Agent install.\nFrom here on, you should be able to see collected data directly from Linux:\nOverview with peak CPU and RAM, disk usage Historic CPU Monitoring Disk size and growth "
 },
 {
 	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step2/",
