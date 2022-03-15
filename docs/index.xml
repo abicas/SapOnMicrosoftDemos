@@ -6,7 +6,19 @@
     <description>Recent content on SAP on Microsoft - Tutorials</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 14 Mar 2022 14:22:13 -0300</lastBuildDate><atom:link href="https://abicas.github.io/SapOnMicrosoftDemos/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Mar 2022 15:55:06 -0300</lastBuildDate><atom:link href="https://abicas.github.io/SapOnMicrosoftDemos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup Azure Backup</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step1/</link>
+      <pubDate>Tue, 15 Mar 2022 15:55:06 -0300</pubDate>
+      
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step1/</guid>
+      <description>In order to have Azure Backup backing up SAP HANA databases, we need to setup the Azure Backup as well as the HANA Database Server.
+This section will show the steps required for that to be accomplished:
+SAP HANA Setup We need to connect to the SAP HANA Server and run a script that will prepare the database for Azure Backup.
+ Log on to the Azure Portal and open a Cloud Shell (BASH)  We need to SSH to the server, using the SAP provided certificate key (can be downloaded from SAP CAL again), previously uploaded to the CloudShell and having permission as 400).</description>
+    </item>
+    
     <item>
       <title>Setting up Azure Monitor for SAP</title>
       <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step1/</link>
@@ -48,6 +60,15 @@ Go to Office 365, authenticate and select Power Apps. On Power Apps, expand Chat
       <description>In this section we will install the required components for Azure and Microsoft be able to connect to your SAP environment.
 This section is a summary of the guide Install data gateway and Connect to SAP systems.
 Connect to the Remote Desktop as on the previous step and using a browser on the Bastion Host, download 3 pieces of software (links might have changed, please check above guides for the most up-to-date links):</description>
+    </item>
+    
+    <item>
+      <title>Run a Backup</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step2/</link>
+      <pubDate>Tue, 15 Mar 2022 15:55:06 -0300</pubDate>
+      
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step2/</guid>
+      <description>Chapter X Some Chapter title Lorem Ipsum.</description>
     </item>
     
     <item>
@@ -102,6 +123,15 @@ On the left side of the screen go to the Test bot and simulate a user conversati
 This section is a summary of the guide Install data gateway and Connect to SAP systems.
 Connect to the Azure Portal and follow the steps below:
  Go to On-premises Data Gateways:  Select Add  Fill the required parameters. Make sure to Select the same region as used on the installation (East US) and Select the name of the gateway previously created that should be populated on the drop-down box.</description>
+    </item>
+    
+    <item>
+      <title>Run a Restore</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step3/</link>
+      <pubDate>Tue, 15 Mar 2022 15:55:06 -0300</pubDate>
+      
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step3/</guid>
+      <description>Chapter X Some Chapter title Lorem Ipsum.</description>
     </item>
     
     <item>

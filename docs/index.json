@@ -7,6 +7,13 @@
 	"content": "In order to allow for SAP to deploy an S/4HANA environment in your Azure subscription, we need to setup permissions for it.\nWhat you will need  Azure subscription Admin access A text file to make note of the required information on the next step  Expected duration This section is estimated to last no longer than 10 minutes\n"
 },
 {
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step1/",
+	"title": "Setup Azure Backup",
+	"tags": [],
+	"description": "",
+	"content": "In order to have Azure Backup backing up SAP HANA databases, we need to setup the Azure Backup as well as the HANA Database Server.\nThis section will show the steps required for that to be accomplished:\nSAP HANA Setup We need to connect to the SAP HANA Server and run a script that will prepare the database for Azure Backup.\n Log on to the Azure Portal and open a Cloud Shell (BASH)  We need to SSH to the server, using the SAP provided certificate key (can be downloaded from SAP CAL again), previously uploaded to the CloudShell and having permission as 400).  mod@Azure:~$ ssh -i \u0026lt;KEYNAME\u0026gt;.pem root@\u0026lt;HANA PUBLIC IP\u0026gt; sid-hdb-s4h:~ #  Then we will change the user to the HANA administrator hdbadm, store the database password in a secure storage, and return to root.  sid-hdb-s4h:~ # sudo su - hdbadm sid-hdb-s4h:HDB:hdbadm /usr/sap/HDB/HDB02 2\u0026gt; hdbuserstore set azure_key localhost:30213 SYSTEM \u0026#39;\u0026lt;YOUR SAP DEFINED PASSWORD\u0026gt;\u0026#39; sid-hdb-s4h:HDB:hdbadm /usr/sap/HDB/HDB02 4\u0026gt; exit logout sid-hdb-s4h:~ #  As root, we will download and run the setup script:  sid-hdb-s4h:~ # wget https://go.microsoft.com/fwlink/?linkid=2173610 -O pre-script.sh --2022-03-14 19:44:01-- https://go.microsoft.com/fwlink/?linkid=2173610 Resolving go.microsoft.com (go.microsoft.com)... 184.50.50.164, 2600:1408:c400:e82::2c1a, 2600:1408:c400:e80::2c1a Connecting to go.microsoft.com (go.microsoft.com)|184.50.50.164|:443... connected. HTTP request sent, awaiting response... 302 Moved Temporarily Location: https://download.microsoft.com/download/B/2/E/B2E01EF8-C247-42A6-BCC7-E45B78F20C99/msawb-plugin-config-com-sap-hana.sh [following] --2022-03-14 19:44:01-- https://download.microsoft.com/download/B/2/E/B2E01EF8-C247-42A6-BCC7-E45B78F20C99/msawb-plugin-config-com-sap-hana.sh Resolving download.microsoft.com (download.microsoft.com)... 204.79.197.219 Connecting to download.microsoft.com (download.microsoft.com)|204.79.197.219|:443... connected. HTTP request sent, awaiting response... 200 OK Length: 87552 (86K) [application/octet-stream] Saving to: ‘pre-script.sh’  sid-hdb-s4h:~ # chmod +x pre-script.sh sid-hdb-s4h:~ # ./pre-script.sh --system-key azure_key  [2022-03-14T19:45:08+00:00] [INFO] Checking if \u0026#39;root\u0026#39;. [2022-03-14T19:45:08+00:00] [PASS] Running as \u0026#39;root\u0026#39;. [2022-03-14T19:45:08+00:00] [INFO] Checking OS support. [2022-03-14T19:45:08+00:00] [PASS] Found supported OS_NAME_VERSION = \u0026#39;SLES-15.1\u0026#39;. [2022-03-14T19:45:08+00:00] [INFO] Checking for free space in \u0026#39;/opt\u0026#39;. [2022-03-14T19:45:08+00:00] [PASS] Found at least 2 GiB space on \u0026#39;/opt\u0026#39;. [2022-03-14T19:45:08+00:00] [INFO] Checking HOSTNAMES. [2022-03-14T19:45:08+00:00] [PASS] Found HOSTNAMES = [ [2022-03-14T19:45:08+00:00] [INFO] \u0026#39;::1\u0026#39; [2022-03-14T19:45:08+00:00] [INFO] \u0026#39;10.0.0.166\u0026#39; [2022-03-14T19:45:08+00:00] [INFO] \u0026#39;127.0.0.1\u0026#39; [2022-03-14T19:45:08+00:00] [INFO] \u0026#39;fe80::222:48ff:fe2e:bde7\u0026#39; ... [2022-03-15T17:56:40+00:00] [INFO] Checking login for BACKUP_KEY_USER = \u0026#39;AZUREWLBACKUPHANAUSER\u0026#39;. [2022-03-15T17:56:40+00:00] [PASS] Checked login. [2022-03-15T17:56:40+00:00] [INFO] Granting privilege \u0026#39;DATABASE ADMIN\u0026#39; to \u0026#39;AZUREWLBACKUPHANAUSER\u0026#39;. [2022-03-15T17:56:40+00:00] [PASS] Granted privilege. [2022-03-15T17:56:40+00:00] [INFO] Granting privilege \u0026#39;CATALOG READ\u0026#39; to \u0026#39;AZUREWLBACKUPHANAUSER\u0026#39;. [2022-03-15T17:56:40+00:00] [PASS] Granted privilege. [2022-03-15T17:56:40+00:00] [INFO] Granting privilege \u0026#39;INIFILE ADMIN\u0026#39; to \u0026#39;AZUREWLBACKUPHANAUSER\u0026#39;. [2022-03-15T17:56:40+00:00] [PASS] Granted privilege. [2022-03-15T17:56:40+00:00] [INFO] Granting privilege \u0026#39;BACKUP ADMIN\u0026#39; to \u0026#39;AZUREWLBACKUPHANAUSER\u0026#39;. [2022-03-15T17:56:40+00:00] [PASS] Granted privilege. [2022-03-15T17:56:40+00:00] [INFO] Checking privilege \u0026#39;CATALOG READ\u0026#39; on \u0026#39;AZUREWLBACKUPHANAUSER\u0026#39;. [2022-03-15T17:56:40+00:00] [PASS] Checked privilege. [2022-03-15T17:56:40+00:00] [INFO] Checking privilege \u0026#39;BACKUP ADMIN\u0026#39; on \u0026#39;AZUREWLBACKUPHANAUSER\u0026#39;. [2022-03-15T17:56:41+00:00] [PASS] Checked privilege. [2022-03-15T17:56:41+00:00] [INFO] Checking privilege \u0026#39;INIFILE ADMIN\u0026#39; on \u0026#39;AZUREWLBACKUPHANAUSER\u0026#39;. [2022-03-15T17:56:41+00:00] [PASS] Checked privilege. [2022-03-15T17:56:41+00:00] [INFO] Checking privilege \u0026#39;DATABASE ADMIN\u0026#39; on \u0026#39;AZUREWLBACKUPHANAUSER\u0026#39;. [2022-03-15T17:56:41+00:00] [PASS] Checked privilege. [2022-03-15T17:56:41+00:00] [INFO] Adding user \u0026#39;hdbadm\u0026#39; to group \u0026#39;msawb\u0026#39;. [2022-03-15T17:56:41+00:00] [PASS] Successfully added user. [2022-03-15T17:56:41+00:00] [INFO] Writing to configuration. [2022-03-15T17:56:41+00:00] [PASS] Writing complete. [2022-03-15T17:56:41+00:00] [INFO] Writing to environment file. [2022-03-15T17:56:41+00:00] [PASS] Writing complete. [2022-03-15T17:56:41+00:00] [SUCC] Done. At this point our HANA database is ready to be accessed by Azure backup and Backint (SAP Native Backup Agent) has been configured to send data to Azure.\nAzure Backup Setup  Log on to the Azure Portal and open Backup Center  On Backup Center we will create a Vault to store the backup data  For Vault Type select Recovery Services Vault  Provide the Vault details:   Region: East US (Same as HANA database deployment)   Once the Vault is created, let\u0026rsquo;s configure the Backup targets inside the Vault.  Change the backup type to SAP HANA on Azure VM and click on Start Discovery.  Select the HANA VM \u0026laquo;instance name-SAP1 and click on Discover DB at the bottom of the page  Azure will start a deployment for the agent. Wait until you see the sucessfull message on Notifications  Back to the Backup page, you should now have a View Details button. Click it so we can see the discovered Databases.  Here you can see the discovered databases. Check the info and then close then window to go back to Backup  Click on Configure Backup  You can accept the default policy, select an existing one or Edit the current policy.  In this lab we will create a simpler policy, called DemoPolicy. Click on Edit besides each item and configure it so it matches the example below.  Now let\u0026rsquo;s add the discovered HANA databases. Click in Add and on the window that will open, select the DBs.  Click on Enable Backup once you have selected the HDB and SYSTEMDB databases.  Now, let\u0026rsquo;s make sure the items were correctly added and prepare for the first backup. Click on Backup items and then SAP HANA in Azure VM  You should see a screen similar to this, with a Warning (initial backup pending) message   Congratulations, you have configured the HANA Backup using Azure Backup. Now let\u0026rsquo;s move to the next section and run our first manual backup.\n"
+},
+{
 	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step1/",
 	"title": "Setting up Azure Monitor for SAP",
 	"tags": [],
@@ -91,6 +98,13 @@
 	"content": "Before we start building our labs we need to have provisioned a few resources:\n An Azure subscription setup An S/4HANA environment Installation of gateway components  The following sections will guide you thru the steps to accomplish this and be ready to the labs.\n"
 },
 {
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step2/",
+	"title": "Run a Backup",
+	"tags": [],
+	"description": "",
+	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
+},
+{
 	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step2/",
 	"title": "HANA Provider",
 	"tags": [],
@@ -161,6 +175,13 @@
 	"content": "The following sections will be divided in different labs integrating several Microsoft services with SAP, such as:\n Automation and Integration  Azure Logic Apps Power Platform - Power Virtual Agents Power Platform - Power Automate Power Platform - Power Apps   Data \u0026amp; AI  Office 365 Integration Azure Synapse Power Platform - Power BI Azure Machine Learning   Security  Azure Sentinel Azure AD   Infra \u0026amp; Management  Azure Monitoring Azure Backup High-Availability    The following sections will guide you thru the steps to accomplish this and be ready to the labs.\n"
 },
 {
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step3/",
+	"title": "Run a Restore",
+	"tags": [],
+	"description": "",
+	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
+},
+{
 	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step3/",
 	"title": "Publishing to Teams",
 	"tags": [],
@@ -208,6 +229,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
+},
+{
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/",
+	"title": "Azure Backup for HANA",
+	"tags": [],
+	"description": "",
+	"content": "Azure Backup for HANA What we will build   "
 },
 {
 	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/",
