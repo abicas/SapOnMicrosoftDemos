@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://abicas.github.io/SapOnMicrosoftDemos/images/favicon.png" type="image/png">
 
-    <title>Categories :: SAP on Microsoft - Tutorials</title>
+    <title>Setup Azure Backup :: SAP on Microsoft - Tutorials</title>
 
     
     <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1647443228" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="https://abicas.github.io/SapOnMicrosoftDemos/categories/">
+  <body class="" data-url="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step1/">
     <nav id="sidebar" class="">
 
 
@@ -409,7 +409,7 @@
   
     
     <li data-nav-id="/labs/" title="SAP on Microsoft Labs" class="dd-item
-        
+        parent
         
         
         ">
@@ -778,7 +778,7 @@
   
     
     <li data-nav-id="/labs/inframgmt/" title="Infrastructure and Management" class="dd-item
-        
+        parent
         
         
         ">
@@ -906,7 +906,7 @@
   
     
     <li data-nav-id="/labs/inframgmt/backup/" title="Azure Backup for HANA" class="dd-item
-        
+        parent
         
         
         ">
@@ -932,7 +932,7 @@
  
   
     
-      <li data-nav-id="/labs/inframgmt/backup/step1/" title="Setup Azure Backup" class="dd-item ">
+      <li data-nav-id="/labs/inframgmt/backup/step1/" title="Setup Azure Backup" class="dd-item active">
         <a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step1/">
         <b>1. </b>Setup Azure Backup
         
@@ -1079,7 +1079,25 @@
             
           
           
-            <a href='https://abicas.github.io/SapOnMicrosoftDemos/'>SAP on Microsoft - Tutorials</a> > Categories
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='https://abicas.github.io/SapOnMicrosoftDemos/'>SAP on Microsoft - Tutorials</a> > <a href='https://abicas.github.io/SapOnMicrosoftDemos/labs/'>SAP on Microsoft Labs</a> > <a href='https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/'>Infrastructure and Management</a> > <a href='https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/'>Azure Backup for HANA</a> > Setup Azure Backup
+          
+        
+          
+        
+          
+        
           
         
           
@@ -1090,7 +1108,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1106,24 +1132,136 @@
           
             <h1>
               
-                category ::
-              
-              Categories
+              Setup Azure Backup
             </h1>
           
 
         
 
 
-
-
-
+<p>In order to have Azure Backup backing up SAP HANA databases, we need to setup the Azure Backup as well as the HANA Database Server.</p>
+<p>This section will show the steps required for that to be accomplished:</p>
+<h4 id="sap-hana-setup">SAP HANA Setup</h4>
+<p>We need to connect to the SAP HANA Server and run a script that will prepare the database for Azure Backup.</p>
+<ol>
+<li>Log on to the <a href="https://portal.azure.com">Azure Portal</a> and open a <strong>Cloud Shell</strong> (BASH)
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba00.png?height=100px" alt="monitoring1"></li>
+<li>We need to SSH to the server, using the SAP provided certificate key (can be downloaded from SAP CAL again), previously uploaded to the CloudShell and having permission as 400).</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mod@Azure:~$ ssh -i &lt;KEYNAME&gt;.pem root@&lt;HANA PUBLIC IP&gt;
+</span></span><span style="display:flex;"><span>sid-hdb-s4h:~ <span style="color:#75715e"># </span>
+</span></span></code></pre></div><ol start="3">
+<li>Then we will change the user to the HANA administrator <strong>hdbadm</strong>, store the database password in a secure storage, and return to root.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sid-hdb-s4h:~ <span style="color:#75715e"># sudo su - hdbadm</span>
+</span></span><span style="display:flex;"><span>sid-hdb-s4h:HDB:hdbadm /usr/sap/HDB/HDB02 2&gt; hdbuserstore set azure_key localhost:30213 SYSTEM <span style="color:#e6db74">&#39;&lt;YOUR SAP DEFINED PASSWORD&gt;&#39;</span>
+</span></span><span style="display:flex;"><span>sid-hdb-s4h:HDB:hdbadm /usr/sap/HDB/HDB02 4&gt; exit
+</span></span><span style="display:flex;"><span>logout
+</span></span><span style="display:flex;"><span>sid-hdb-s4h:~ <span style="color:#75715e"># </span>
+</span></span></code></pre></div><ol start="4">
+<li>As <strong>root</strong>, we will download and run the setup script:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sid-hdb-s4h:~ <span style="color:#75715e"># wget https://go.microsoft.com/fwlink/?linkid=2173610 -O pre-script.sh</span>
+</span></span><span style="display:flex;"><span>--2022-03-14 19:44:01--  https://go.microsoft.com/fwlink/?linkid<span style="color:#f92672">=</span><span style="color:#ae81ff">2173610</span>
+</span></span><span style="display:flex;"><span>Resolving go.microsoft.com <span style="color:#f92672">(</span>go.microsoft.com<span style="color:#f92672">)</span>... 184.50.50.164, 2600:1408:c400:e82::2c1a, 2600:1408:c400:e80::2c1a
+</span></span><span style="display:flex;"><span>Connecting to go.microsoft.com <span style="color:#f92672">(</span>go.microsoft.com<span style="color:#f92672">)</span>|184.50.50.164|:443... connected.
+</span></span><span style="display:flex;"><span>HTTP request sent, awaiting response... <span style="color:#ae81ff">302</span> Moved Temporarily
+</span></span><span style="display:flex;"><span>Location: https://download.microsoft.com/download/B/2/E/B2E01EF8-C247-42A6-BCC7-E45B78F20C99/msawb-plugin-config-com-sap-hana.sh <span style="color:#f92672">[</span>following<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>--2022-03-14 19:44:01--  https://download.microsoft.com/download/B/2/E/B2E01EF8-C247-42A6-BCC7-E45B78F20C99/msawb-plugin-config-com-sap-hana.sh
+</span></span><span style="display:flex;"><span>Resolving download.microsoft.com <span style="color:#f92672">(</span>download.microsoft.com<span style="color:#f92672">)</span>... 204.79.197.219
+</span></span><span style="display:flex;"><span>Connecting to download.microsoft.com <span style="color:#f92672">(</span>download.microsoft.com<span style="color:#f92672">)</span>|204.79.197.219|:443... connected.
+</span></span><span style="display:flex;"><span>HTTP request sent, awaiting response... <span style="color:#ae81ff">200</span> OK
+</span></span><span style="display:flex;"><span>Length: <span style="color:#ae81ff">87552</span> <span style="color:#f92672">(</span>86K<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>application/octet-stream<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>Saving to: ‘pre-script.sh’
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sid-hdb-s4h:~ <span style="color:#75715e"># chmod +x pre-script.sh</span>
+</span></span><span style="display:flex;"><span>sid-hdb-s4h:~ <span style="color:#75715e"># ./pre-script.sh --system-key azure_key </span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-14T19:45:08+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span> Checking <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;root&#39;</span>.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-14T19:45:08+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>PASS<span style="color:#f92672">]</span> Running as <span style="color:#e6db74">&#39;root&#39;</span>.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-14T19:45:08+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span> Checking OS support.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-14T19:45:08+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>PASS<span style="color:#f92672">]</span> Found supported OS_NAME_VERSION <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;SLES-15.1&#39;</span>.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-14T19:45:08+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span> Checking <span style="color:#66d9ef">for</span> free space in <span style="color:#e6db74">&#39;/opt&#39;</span>.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-14T19:45:08+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>PASS<span style="color:#f92672">]</span> Found at least <span style="color:#ae81ff">2</span> GiB space on <span style="color:#e6db74">&#39;/opt&#39;</span>.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-14T19:45:08+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span> Checking HOSTNAMES.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-14T19:45:08+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>PASS<span style="color:#f92672">]</span> Found HOSTNAMES <span style="color:#f92672">=</span> <span style="color:#f92672">[</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-14T19:45:08+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span>   <span style="color:#e6db74">&#39;::1&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-14T19:45:08+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span>   <span style="color:#e6db74">&#39;10.0.0.166&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-14T19:45:08+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span>   <span style="color:#e6db74">&#39;127.0.0.1&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-14T19:45:08+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span>   <span style="color:#e6db74">&#39;fe80::222:48ff:fe2e:bde7&#39;</span>
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-15T17:56:40+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span> Checking login <span style="color:#66d9ef">for</span> BACKUP_KEY_USER <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;AZUREWLBACKUPHANAUSER&#39;</span>.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-15T17:56:40+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>PASS<span style="color:#f92672">]</span> Checked login.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-15T17:56:40+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span> Granting privilege <span style="color:#e6db74">&#39;DATABASE ADMIN&#39;</span> to <span style="color:#e6db74">&#39;AZUREWLBACKUPHANAUSER&#39;</span>.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-15T17:56:40+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>PASS<span style="color:#f92672">]</span> Granted privilege.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-15T17:56:40+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span> Granting privilege <span style="color:#e6db74">&#39;CATALOG READ&#39;</span> to <span style="color:#e6db74">&#39;AZUREWLBACKUPHANAUSER&#39;</span>.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-15T17:56:40+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>PASS<span style="color:#f92672">]</span> Granted privilege.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-15T17:56:40+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span> Granting privilege <span style="color:#e6db74">&#39;INIFILE ADMIN&#39;</span> to <span style="color:#e6db74">&#39;AZUREWLBACKUPHANAUSER&#39;</span>.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-15T17:56:40+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>PASS<span style="color:#f92672">]</span> Granted privilege.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-15T17:56:40+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span> Granting privilege <span style="color:#e6db74">&#39;BACKUP ADMIN&#39;</span> to <span style="color:#e6db74">&#39;AZUREWLBACKUPHANAUSER&#39;</span>.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-15T17:56:40+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>PASS<span style="color:#f92672">]</span> Granted privilege.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-15T17:56:40+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span> Checking privilege <span style="color:#e6db74">&#39;CATALOG READ&#39;</span> on <span style="color:#e6db74">&#39;AZUREWLBACKUPHANAUSER&#39;</span>.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-15T17:56:40+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>PASS<span style="color:#f92672">]</span> Checked privilege.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-15T17:56:40+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span> Checking privilege <span style="color:#e6db74">&#39;BACKUP ADMIN&#39;</span> on <span style="color:#e6db74">&#39;AZUREWLBACKUPHANAUSER&#39;</span>.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-15T17:56:41+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>PASS<span style="color:#f92672">]</span> Checked privilege.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-15T17:56:41+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span> Checking privilege <span style="color:#e6db74">&#39;INIFILE ADMIN&#39;</span> on <span style="color:#e6db74">&#39;AZUREWLBACKUPHANAUSER&#39;</span>.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-15T17:56:41+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>PASS<span style="color:#f92672">]</span> Checked privilege.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-15T17:56:41+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span> Checking privilege <span style="color:#e6db74">&#39;DATABASE ADMIN&#39;</span> on <span style="color:#e6db74">&#39;AZUREWLBACKUPHANAUSER&#39;</span>.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-15T17:56:41+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>PASS<span style="color:#f92672">]</span> Checked privilege.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-15T17:56:41+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span> Adding user <span style="color:#e6db74">&#39;hdbadm&#39;</span> to group <span style="color:#e6db74">&#39;msawb&#39;</span>.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-15T17:56:41+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>PASS<span style="color:#f92672">]</span> Successfully added user.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-15T17:56:41+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span> Writing to configuration.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-15T17:56:41+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>PASS<span style="color:#f92672">]</span> Writing complete.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-15T17:56:41+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>INFO<span style="color:#f92672">]</span> Writing to environment file.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-15T17:56:41+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>PASS<span style="color:#f92672">]</span> Writing complete.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>2022-03-15T17:56:41+00:00<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>SUCC<span style="color:#f92672">]</span> Done.
+</span></span></code></pre></div><p>At this point our HANA database is ready to be accessed by Azure backup and Backint (SAP Native Backup Agent) has been configured to send data to Azure.</p>
+<h4 id="azure-backup-setup">Azure Backup Setup</h4>
+<ol>
+<li>Log on to the <a href="https://portal.azure.com">Azure Portal</a> and open <strong>Backup Center</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba01.png?height=200px" alt="bkp1"></li>
+<li>On Backup Center we will create a <strong>Vault</strong> to store the backup data
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba02.png?height=300px" alt="bkp1"></li>
+<li>For <strong>Vault Type</strong> select <strong>Recovery Services Vault</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba03.png?height=300px" alt="bkp1"></li>
+<li>Provide the Vault details:</li>
+</ol>
 <ul>
-	
+<li>Region: <strong>East US</strong> (Same as HANA database deployment)
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba04.png?height=300px" alt="bkp1"></li>
 </ul>
+<ol start="5">
+<li>Once the Vault is created, let&rsquo;s configure the <strong>Backup</strong> targets inside the Vault.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba05.png?height=300px" alt="bkp1"></li>
+<li>Change the backup type to <strong>SAP HANA on Azure VM</strong> and click on Start Discovery.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba06.png?height=300px" alt="bkp1"></li>
+<li>Select the HANA VM <strong>&laquo;instance name-SAP1</strong> and click on <strong>Discover DB</strong> at the bottom of the page
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba07.png?height=500px" alt="bkp1"></li>
+<li>Azure will start a deployment for the agent. Wait until you see the sucessfull message on Notifications
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba07b.png?height=200px" alt="bkp1"></li>
+<li>Back to the Backup page, you should now have a <strong>View Details</strong> button. Click it so we can see the discovered Databases.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba08.png?height=400px" alt="bkp1"></li>
+<li>Here you can see the discovered databases. Check the info and then close then window to go back to Backup
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba09.png" alt="bkp1"></li>
+<li>Click on <strong>Configure Backup</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba10.png" alt="bkp1"></li>
+<li>You can accept the default policy, select an existing one or Edit the current policy.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba11.png" alt="bkp1"></li>
+<li>In this lab we will create a simpler policy, called <strong>DemoPolicy</strong>. Click on <strong>Edit</strong> besides each item and configure it so it matches the example below.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba12.png" alt="bkp1"></li>
+<li>Now let&rsquo;s add the discovered HANA databases. Click in <strong>Add</strong> and on the window that will open, select the DBs.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba13.png" alt="bkp1">
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba14.png" alt="bkp1"></li>
+<li>Click on <strong>Enable Backup</strong> once you have selected the HDB and SYSTEMDB databases.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba14b.png?height=50px" alt="bkp1"></li>
+<li>Now, let&rsquo;s make sure the items were correctly added and prepare for the first backup. Click on <strong>Backup items</strong> and then <strong>SAP HANA in Azure VM</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba15.png?height=450px" alt="bkp1"></li>
+<li>You should see a screen similar to this, with a <strong>Warning (initial backup pending)</strong> message
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba16.png" alt="bkp1"></li>
+</ol>
+<p>Congratulations, you have configured the HANA Backup using Azure Backup. Now let&rsquo;s move to the next section and run our first manual backup.</p>
 
 
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -1343,20 +1481,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1373,200 +1497,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1675,6 +1607,225 @@
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1721,8 +1872,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/" title="Azure Backup for HANA"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/" title="Environment Setup" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step2/" title="Run a Backup" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1754,3 +1907,4 @@
 
   </body>
 </html>
+

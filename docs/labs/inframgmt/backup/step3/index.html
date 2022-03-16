@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://abicas.github.io/SapOnMicrosoftDemos/images/favicon.png" type="image/png">
 
-    <title>Categories :: SAP on Microsoft - Tutorials</title>
+    <title>Run a Restore :: SAP on Microsoft - Tutorials</title>
 
     
     <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1647443228" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="https://abicas.github.io/SapOnMicrosoftDemos/categories/">
+  <body class="" data-url="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step3/">
     <nav id="sidebar" class="">
 
 
@@ -409,7 +409,7 @@
   
     
     <li data-nav-id="/labs/" title="SAP on Microsoft Labs" class="dd-item
-        
+        parent
         
         
         ">
@@ -778,7 +778,7 @@
   
     
     <li data-nav-id="/labs/inframgmt/" title="Infrastructure and Management" class="dd-item
-        
+        parent
         
         
         ">
@@ -906,7 +906,7 @@
   
     
     <li data-nav-id="/labs/inframgmt/backup/" title="Azure Backup for HANA" class="dd-item
-        
+        parent
         
         
         ">
@@ -974,7 +974,7 @@
  
   
     
-      <li data-nav-id="/labs/inframgmt/backup/step3/" title="Run a Restore" class="dd-item ">
+      <li data-nav-id="/labs/inframgmt/backup/step3/" title="Run a Restore" class="dd-item active">
         <a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step3/">
         <b>3. </b>Run a Restore
         
@@ -1079,7 +1079,25 @@
             
           
           
-            <a href='https://abicas.github.io/SapOnMicrosoftDemos/'>SAP on Microsoft - Tutorials</a> > Categories
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='https://abicas.github.io/SapOnMicrosoftDemos/'>SAP on Microsoft - Tutorials</a> > <a href='https://abicas.github.io/SapOnMicrosoftDemos/labs/'>SAP on Microsoft Labs</a> > <a href='https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/'>Infrastructure and Management</a> > <a href='https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/'>Azure Backup for HANA</a> > Run a Restore
+          
+        
+          
+        
+          
+        
           
         
           
@@ -1090,7 +1108,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1106,24 +1132,78 @@
           
             <h1>
               
-                category ::
-              
-              Categories
+              Run a Restore
             </h1>
           
 
         
 
 
-
-
-
+<p>Let&rsquo;s change some data and then run a restore for a point-in-time previous to the change.</p>
+<p>This section will show the steps required for that to be accomplished:</p>
+<h4 id="changing-some-data">Changing some data</h4>
+<ol>
+<li>Go to the Bastion Host, and open the SAP GUI. Login with BPINST/Welcome1 default user.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/re01.png" alt="bkp3"></li>
+<li>On SAP GUI, go to TCODE MM02 to change a material.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/re02.png" alt="bkp3"></li>
+<li>For <strong>Material</strong> we will choose the <strong>CM-FL-V00</strong> a Forklift. Click on the Checkmark.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/re03.png" alt="bkp3"></li>
+<li>For <strong>Plant</strong> we will choose the <strong>1710</strong> a Forklift. Click on the Checkmark.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/re04.png" alt="bkp3"></li>
+<li>Change the description from <strong>Forklift</strong> to something else. Click on <strong>SAVE</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/re05.png" alt="bkp3"></li>
+</ol>
+<p>With the data changed, we now go to restore the database HDB to the previous state.</p>
+<h4 id="restoring-the-database">Restoring the Database</h4>
+<ol>
+<li>Go to <strong>Backup items</strong> and select <strong>SAP HANA on Azure VM</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba15.png" alt="bkp1"></li>
+<li>Right+Click the ellipsis for HDB and select <strong>Restore</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/re06.png" alt="bkp3"></li>
+<li>There will be 3 restore modes</li>
+</ol>
 <ul>
-	
+<li>Alternate Location - Restore to another HANA database on another host</li>
+<li>Overwrite DB - Restore on top of existing database</li>
+<li>Restore as Files - Restore to files on filesystem for manual recovery</li>
+<li>Select <strong>Overwrite DB</strong> and click on <strong>Select</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/re07.png?height=250px" alt="bkp3"></li>
 </ul>
+<ol start="4">
+<li>Let&rsquo;s pick 15-20 minutes prior to the time of change. In the example the change was 10:15, so we are selecting 9:59 as the point-in-time.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/re08.png?height=250px" alt="bkp3"></li>
+<li>make sure the Restore Point is right and click <strong>OK</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/re09.png?height=250px" alt="bkp3"></li>
+<li>It will trigger  a deployment.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/re10.png?height=100px" alt="bkp3"></li>
+<li>To monitor the jobs, click on <strong>Backup jobs</strong> and you will see restore job. It should be <strong>In Progress</strong> for now. It should take roughly the same it took for backup. In this example 30 minutes.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/re11.png" alt="bkp1"></li>
+<li>In the meantime, if you check HANA Studio on BAstion host you will see HDB offline, being restored. REstore will take the database offline, restore it, and bring it back online.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/re12.png" alt="bkp1"></li>
+<li>After 30 minutes, the jobs is showing up as completed on the Azure Portal.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/re13.png" alt="bkp1"></li>
+</ol>
+<p>Now let&rsquo;s check for the data restored</p>
+<h4 id="checking-sap-status">Checking SAP status</h4>
+<ol>
+<li>Go to the Bastion Host and check HANA Studio for HDB being open. Double click for details.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/re14.png" alt="bkp1"></li>
+<li>Open SAP GUI. Login with BPINST/Welcome1 default user.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/re01.png" alt="bkp3"></li>
+<li>On SAP GUI, go to TCODE MM02 to change a material.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/re02.png" alt="bkp3"></li>
+<li>For <strong>Material</strong> we will choose the <strong>CM-FL-V00</strong> a Forklift. Click on the Checkmark.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/re03.png" alt="bkp3"></li>
+<li>For <strong>Plant</strong> we will choose the <strong>1710</strong> a Forklift. Click on the Checkmark.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/re04.png" alt="bkp3"></li>
+<li>Description should be back to <strong>Forklift</strong> as it was before the change we did.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/re15.png" alt="bkp3"></li>
+</ol>
+<p>Congratulations, you have completed the Azure Backup for HANA Section !!!!</p>
 
 
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -1343,20 +1423,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1373,200 +1439,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1691,6 +1565,225 @@
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -1721,8 +1814,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step2/" title="Run a Backup"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/" title="Environment Setup" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step1/" title="Setup Azure Backup" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1754,3 +1849,4 @@
 
   </body>
 </html>
+
