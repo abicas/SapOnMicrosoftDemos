@@ -98,13 +98,6 @@
 	"content": "Before we start building our labs we need to have provisioned a few resources:\n An Azure subscription setup An S/4HANA environment Installation of gateway components  The following sections will guide you thru the steps to accomplish this and be ready to the labs.\n"
 },
 {
-	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step2/",
-	"title": "Run a Backup",
-	"tags": [],
-	"description": "",
-	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
-},
-{
 	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step2/",
 	"title": "HANA Provider",
 	"tags": [],
@@ -175,11 +168,11 @@
 	"content": "The following sections will be divided in different labs integrating several Microsoft services with SAP, such as:\n Automation and Integration  Azure Logic Apps Power Platform - Power Virtual Agents Power Platform - Power Automate Power Platform - Power Apps   Data \u0026amp; AI  Office 365 Integration Azure Synapse Power Platform - Power BI Azure Machine Learning   Security  Azure Sentinel Azure AD   Infra \u0026amp; Management  Azure Monitoring Azure Backup High-Availability    The following sections will guide you thru the steps to accomplish this and be ready to the labs.\n"
 },
 {
-	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step3/",
-	"title": "Run a Restore",
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step2/",
+	"title": "Run a Backup",
 	"tags": [],
 	"description": "",
-	"content": "Chapter X Some Chapter title Lorem Ipsum.\n"
+	"content": "With Azure BAckups configured and communicating with SAP HANA database, let\u0026rsquo;s execute a manual backup to test it.\nThis section will show the steps required for that to be accomplished:\n Log on to the Azure Portal and click on Backup items and then SAP HANA in Azure VM  You should see a screen similar to this, with a Warning (initial backup pending) message. Right+Click the elipsis and select Backup Now for both HDB and SYSTEMDB.  To monitor the jobs, click on Backup jobs and you will see both submitted jobs. They should be In Progress for now.  If you go to the Bastion Host and access HANA Studio, you can see the same jobs running from the SAP point of view. Double click Backup under HDB and see the right panel for details like estimated size, performance and status.  Double clicking on Backup for SYSTEMDB will bring another tab called Configuration. Here we can see the parameters set by the setup script we ran in the previous section. Backint is SAP\u0026rsquo;s backup agent for SAP, so having it configured means the agent is pushing data to Azure or other backup platform.  Wait until the backup is finished. In the example environment, it took 30 minutes to backup 251GB of data @ 142MB/s. Performance may vary depending on server usage and other conditions.  Same information can be seen on Azure Portal, by clicking on Backup Jobs and checking the status of the latest jobs:  By selecting Backup Items and checking the status SAP HANA Backups we will see SYSTEM and HDB. Click on View details for HDB.\n It will show the available point-in-time restore and backups made. Point-in-time restoers are a combination of Backups + Logs, allowing for the agent to reconstruct the database at a given point-in-time (In the picture below, we left it running during the night. In your environment you will see the green bar growing with time, depending of the Log Backups)   Congratulations, we are now ready to test the restore option. LEt\u0026rsquo;s move to the next section !\n"
 },
 {
 	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step3/",
@@ -215,6 +208,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Once SAP is installed and access is working, we need to install the required components to allow for Microsoft services to interact with SAP S/4HANA environments.\nWhat you will need  Sucessfull deployment of S/4HANA and access ready  Expected duration This section is estimated to last no longer than 30 minutes\n"
+},
+{
+	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step3/",
+	"title": "Run a Restore",
+	"tags": [],
+	"description": "",
+	"content": "Let\u0026rsquo;s change some data and then run a restore for a point-in-time previous to the change.\nThis section will show the steps required for that to be accomplished:\nChanging some data  Go to the Bastion Host, and open the SAP GUI. Login with BPINST/Welcome1 default user.  On SAP GUI, go to TCODE MM02 to change a material.  For Material we will choose the CM-FL-V00 a Forklift. Click on the Checkmark.  For Plant we will choose the 1710 a Forklift. Click on the Checkmark.  Change the description from Forklift to something else. Click on SAVE   With the data changed, we now go to restore the database HDB to the previous state.\nRestoring the Database  Go to Backup items and select SAP HANA on Azure VM  Right+Click the ellipsis for HDB and select Restore  There will be 3 restore modes   Alternate Location - Restore to another HANA database on another host Overwrite DB - Restore on top of existing database Restore as Files - Restore to files on filesystem for manual recovery Select Overwrite DB and click on Select   Let\u0026rsquo;s pick 15-20 minutes prior to the time of change. In the example the change was 10:15, so we are selecting 9:59 as the point-in-time.  make sure the Restore Point is right and click OK  It will trigger a deployment.  To monitor the jobs, click on Backup jobs and you will see restore job. It should be In Progress for now. It should take roughly the same it took for backup. In this example 30 minutes.  In the meantime, if you check HANA Studio on BAstion host you will see HDB offline, being restored. REstore will take the database offline, restore it, and bring it back online.  After 30 minutes, the jobs is showing up as completed on the Azure Portal.   Now let\u0026rsquo;s check for the data restored\nChecking SAP status  Go to the Bastion Host and check HANA Studio for HDB being open. Double click for details.  Open SAP GUI. Login with BPINST/Welcome1 default user.  On SAP GUI, go to TCODE MM02 to change a material.  For Material we will choose the CM-FL-V00 a Forklift. Click on the Checkmark.  For Plant we will choose the 1710 a Forklift. Click on the Checkmark.  Description should be back to Forklift as it was before the change we did.   Congratulations, you have completed the Azure Backup for HANA Section !!!!\n"
 },
 {
 	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/",

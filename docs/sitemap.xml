@@ -44,9 +44,6 @@
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/</loc>
     <lastmod>2022-03-08T16:31:36-03:00</lastmod>
   </url><url>
-    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step2/</loc>
-    <lastmod>2022-03-15T15:55:06-03:00</lastmod>
-  </url><url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step2/</loc>
     <lastmod>2022-03-14T14:22:13-03:00</lastmod>
   </url><url>
@@ -77,7 +74,7 @@
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/</loc>
     <lastmod>2022-03-08T16:31:36-03:00</lastmod>
   </url><url>
-    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step3/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step2/</loc>
     <lastmod>2022-03-15T15:55:06-03:00</lastmod>
   </url><url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step3/</loc>
@@ -94,6 +91,9 @@
   </url><url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/datagwsetup/</loc>
     <lastmod>2022-03-09T11:21:23-03:00</lastmod>
+  </url><url>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step3/</loc>
+    <lastmod>2022-03-15T15:55:06-03:00</lastmod>
   </url><url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/</loc>
     <lastmod>2022-03-10T11:58:35-03:00</lastmod>
