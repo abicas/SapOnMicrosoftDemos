@@ -12,22 +12,22 @@
     <title>Setup Azure Backup :: SAP on Microsoft - Tutorials</title>
 
     
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1647443228" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1647443228" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/hybrid.css?1647443228" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1647443228" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1647443228" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1647443228" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/atom-one-dark-reasonable.css?1647443228" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1647443228" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/tabs.css?1647443228" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/hugo-theme.css?1647443228" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1647453489" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1647453489" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/hybrid.css?1647453489" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1647453489" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1647453489" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1647453489" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/atom-one-dark-reasonable.css?1647453489" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1647453489" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/tabs.css?1647453489" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/hugo-theme.css?1647453489" rel="stylesheet">
     
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1647443228" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1647453489" rel="stylesheet">
     
     
 
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery-3.3.1.min.js?1647443228"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery-3.3.1.min.js?1647453489"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1647443228"></script>
-<script type="text/javascript" src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1647443228"></script>
+<script type="text/javascript" src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1647453489"></script>
+<script type="text/javascript" src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1647453489"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/abicas.github.io\/SapOnMicrosoftDemos\/";
     
 </script>
-<script type="text/javascript" src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1647443228"></script>
+<script type="text/javascript" src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1647453489"></script>
 
     
   </div>
@@ -1145,7 +1145,7 @@
 <p>We need to connect to the SAP HANA Server and run a script that will prepare the database for Azure Backup.</p>
 <ol>
 <li>Log on to the <a href="https://portal.azure.com">Azure Portal</a> and open a <strong>Cloud Shell</strong> (BASH)
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba00.png?height=100px" alt="monitoring1"></li>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba00.png?height=60px" alt="monitoring1"></li>
 <li>We need to SSH to the server, using the SAP provided certificate key (can be downloaded from SAP CAL again), previously uploaded to the CloudShell and having permission as 400).</li>
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mod@Azure:~$ ssh -i &lt;KEYNAME&gt;.pem root@&lt;HANA PUBLIC IP&gt;
@@ -1241,16 +1241,16 @@
 <li>Back to the Backup page, you should now have a <strong>View Details</strong> button. Click it so we can see the discovered Databases.
 <img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba08.png?height=400px" alt="bkp1"></li>
 <li>Here you can see the discovered databases. Check the info and then close then window to go back to Backup
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba09.png" alt="bkp1"></li>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba09.png?height=250px" alt="bkp1"></li>
 <li>Click on <strong>Configure Backup</strong>
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba10.png" alt="bkp1"></li>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba10.png?height=350px" alt="bkp1"></li>
 <li>You can accept the default policy, select an existing one or Edit the current policy.
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba11.png" alt="bkp1"></li>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba11.png?height=350px" alt="bkp1"></li>
 <li>In this lab we will create a simpler policy, called <strong>DemoPolicy</strong>. Click on <strong>Edit</strong> besides each item and configure it so it matches the example below.
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba12.png" alt="bkp1"></li>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba12.png?height=350px" alt="bkp1"></li>
 <li>Now let&rsquo;s add the discovered HANA databases. Click in <strong>Add</strong> and on the window that will open, select the DBs.
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba13.png" alt="bkp1">
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba14.png" alt="bkp1"></li>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba13.png?height=350px" alt="bkp1">
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba14.png?height=250px" alt="bkp1"></li>
 <li>Click on <strong>Enable Backup</strong> once you have selected the HDB and SYSTEMDB databases.
 <img src="https://abicas.github.io/SapOnMicrosoftDemos/images/ba14b.png?height=50px" alt="bkp1"></li>
 <li>Now, let&rsquo;s make sure the items were correctly added and prepare for the first backup. Click on <strong>Backup items</strong> and then <strong>SAP HANA in Azure VM</strong>
@@ -1885,16 +1885,16 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1647443228"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1647443228"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.jquery.min.js?1647443228"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.sticky.js?1647443228"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1647443228"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/highlight.pack.js?1647443228"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1647453489"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1647453489"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.jquery.min.js?1647453489"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.sticky.js?1647453489"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1647453489"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/highlight.pack.js?1647453489"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/modernizr.custom-3.6.0.js?1647443228"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/learn.js?1647443228"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/hugo-learn.js?1647443228"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/modernizr.custom-3.6.0.js?1647453489"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/learn.js?1647453489"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/hugo-learn.js?1647453489"></script>
     
         
             <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>

@@ -8,6 +8,9 @@ pre = "<b> </b>"
 
 ### Azure Logic Apps 
 
+### Estimated Time for this Lab
+
+This lab is estimated to take between 30 and 60 minutes. 
 
 ### What we will build
 

@@ -16,6 +16,10 @@ This allows for a rapid response in case of an incident response as well as prov
 This lab is based on the [Azure Monitor for SAP Quickstart](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/azure-monitor-sap-quickstart) guide. 
 
 
+### Estimated Time for this Lab
+
+This lab is estimated to take between 20 and 30 minutes.
+
 ### What we will build
 
 {{< youtube SGfpUqr8cao >}}

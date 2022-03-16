@@ -15,20 +15,20 @@ This section will show the steps required for that to be accomplished:
 1. Go to the Bastion Host, and open the SAP GUI. Login with BPINST/Welcome1 default user. 
 ![bkp3](/images/re01.png)
 2. On SAP GUI, go to TCODE MM02 to change a material. 
-![bkp3](/images/re02.png)
+![bkp3](/images/re02.png?height=250px)
 3. For **Material** we will choose the **CM-FL-V00** a Forklift. Click on the Checkmark.
-![bkp3](/images/re03.png)
+![bkp3](/images/re03.png?height=250px)
 4. For **Plant** we will choose the **1710** a Forklift. Click on the Checkmark.
-![bkp3](/images/re04.png)
+![bkp3](/images/re04.png?height=250px)
 5. Change the description from **Forklift** to something else. Click on **SAVE**
-![bkp3](/images/re05.png)
+![bkp3](/images/re05.png?height=350px)
 
 With the data changed, we now go to restore the database HDB to the previous state.
 
 #### Restoring the Database
 
 1. Go to **Backup items** and select **SAP HANA on Azure VM**
-![bkp1](/images/ba15.png)
+![bkp1](/images/ba15.png?height=450px)
 2. Right+Click the ellipsis for HDB and select **Restore**
 ![bkp3](/images/re06.png)
 3. There will be 3 restore modes 
@@ -46,7 +46,7 @@ With the data changed, we now go to restore the database HDB to the previous sta
 7. To monitor the jobs, click on **Backup jobs** and you will see restore job. It should be **In Progress** for now. It should take roughly the same it took for backup. In this example 30 minutes. 
 ![bkp1](/images/re11.png)
 8. In the meantime, if you check HANA Studio on BAstion host you will see HDB offline, being restored. REstore will take the database offline, restore it, and bring it back online. 
-![bkp1](/images/re12.png)
+![bkp1](/images/re12.png?height=250px)
 9. After 30 minutes, the jobs is showing up as completed on the Azure Portal. 
 ![bkp1](/images/re13.png)
 
@@ -55,16 +55,16 @@ Now let's check for the data restored
 #### Checking SAP status
 
 1. Go to the Bastion Host and check HANA Studio for HDB being open. Double click for details. 
-![bkp1](/images/re14.png)
+![bkp1](/images/re14.png?height=350px)
 2. Open SAP GUI. Login with BPINST/Welcome1 default user. 
 ![bkp3](/images/re01.png)
 2. On SAP GUI, go to TCODE MM02 to change a material. 
-![bkp3](/images/re02.png)
+![bkp3](/images/re02.png?height=250px)
 3. For **Material** we will choose the **CM-FL-V00** a Forklift. Click on the Checkmark.
-![bkp3](/images/re03.png)
+![bkp3](/images/re03.png?height=250px)
 4. For **Plant** we will choose the **1710** a Forklift. Click on the Checkmark.
-![bkp3](/images/re04.png)
+![bkp3](/images/re04.png?height=250px)
 5. Description should be back to **Forklift** as it was before the change we did. 
-![bkp3](/images/re15.png)
+![bkp3](/images/re15.png?height=350px)
 
 Congratulations, you have completed the Azure Backup for HANA Section !!!!

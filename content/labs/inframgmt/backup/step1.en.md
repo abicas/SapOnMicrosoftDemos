@@ -1,7 +1,7 @@
 +++
 title = "Setup Azure Backup"
 date = 2022-03-15T15:55:06-03:00
-weight = 5
+weight = 6
 chapter = false
 pre = "<b>1. </b>"
 +++
@@ -15,7 +15,7 @@ This section will show the steps required for that to be accomplished:
 We need to connect to the SAP HANA Server and run a script that will prepare the database for Azure Backup. 
 
 1. Log on to the [Azure Portal](https://portal.azure.com) and open a **Cloud Shell** (BASH)
-![monitoring1](/images/ba00.png?height=100px) 
+![monitoring1](/images/ba00.png?height=60px) 
 2. We need to SSH to the server, using the SAP provided certificate key (can be downloaded from SAP CAL again), previously uploaded to the CloudShell and having permission as 400). 
 ```bash
 mod@Azure:~$ ssh -i <KEYNAME>.pem root@<HANA PUBLIC IP>
@@ -109,16 +109,16 @@ At this point our HANA database is ready to be accessed by Azure backup and Back
 9. Back to the Backup page, you should now have a **View Details** button. Click it so we can see the discovered Databases. 
 ![bkp1](/images/ba08.png?height=400px) 
 10. Here you can see the discovered databases. Check the info and then close then window to go back to Backup
-![bkp1](/images/ba09.png) 
+![bkp1](/images/ba09.png?height=250px) 
 11. Click on **Configure Backup**
-![bkp1](/images/ba10.png) 
+![bkp1](/images/ba10.png?height=350px) 
 12. You can accept the default policy, select an existing one or Edit the current policy. 
-![bkp1](/images/ba11.png)
+![bkp1](/images/ba11.png?height=350px)
 13. In this lab we will create a simpler policy, called **DemoPolicy**. Click on **Edit** besides each item and configure it so it matches the example below.
-![bkp1](/images/ba12.png)
+![bkp1](/images/ba12.png?height=350px)
 14. Now let's add the discovered HANA databases. Click in **Add** and on the window that will open, select the DBs.
-![bkp1](/images/ba13.png)
-![bkp1](/images/ba14.png)
+![bkp1](/images/ba13.png?height=350px)
+![bkp1](/images/ba14.png?height=250px)
 15. Click on **Enable Backup** once you have selected the HDB and SYSTEMDB databases. 
 ![bkp1](/images/ba14b.png?height=50px)
 16. Now, let's make sure the items were correctly added and prepare for the first backup. Click on **Backup items** and then **SAP HANA in Azure VM**
