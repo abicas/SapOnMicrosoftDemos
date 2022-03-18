@@ -30,8 +30,11 @@ Install the **On-premises Data Gateway** and configure it:
 ![DG04](/images/dg04.png?height=350px)
 5. Select the region. For this demos, **East US** is the prefered one: 
 ![DG05](/images/dg05.png?height=350px)
-6. Installation on the Remote DEsktop side is complete and you should see a screen similar to the one below, with both PowerBI and PowerApps showing up as Ready:
+6. Installation on the Data gateway on the Bastion Host side is complete and you should see a screen similar to the one below, with both PowerBI and PowerApps showing up as Ready:
 ![DG06](/images/dg06.png?height=350px)
+
+Install the **SAP .NET Connector** and make sure you select **Register WMI provider provider and install Assemblies  to GAC** 
+![DG07](/images/dg_conn.png?height=350px)
 
 Now, let's move to the Azure part, creating the Gateway on the cloud to interface with the on-premises data gateway.
 
