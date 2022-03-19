@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://abicas.github.io/SapOnMicrosoftDemos/images/favicon.png" type="image/png">
 
-    <title>SAP CAL Account Setup :: SAP on Microsoft - Tutorials</title>
+    <title>Environment Cleanup :: SAP on Microsoft - Tutorials</title>
 
     
     <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1647692501" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/sap_cal/accsetup/">
+  <body class="" data-url="https://abicas.github.io/SapOnMicrosoftDemos/cleanup/">
     <nav id="sidebar" class="">
 
 
@@ -89,7 +89,7 @@
   
     
     <li data-nav-id="/env_setup/" title="Environment Setup" class="dd-item
-        parent
+        
         
         
         ">
@@ -234,7 +234,7 @@
   
     
     <li data-nav-id="/env_setup/sap_cal/" title="SAP Cloud Appliance Library (CAL)" class="dd-item
-        parent
+        
         
         
         ">
@@ -263,8 +263,8 @@
   
     
     <li data-nav-id="/env_setup/sap_cal/accsetup/" title="SAP CAL Account Setup" class="dd-item
-        parent
-        active
+        
+        
         
         ">
       <a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/sap_cal/accsetup/">
@@ -1021,8 +1021,8 @@
   
     
     <li data-nav-id="/cleanup/" title="Environment Cleanup" class="dd-item
-        
-        
+        parent
+        active
         
         ">
       <a href="https://abicas.github.io/SapOnMicrosoftDemos/cleanup/">
@@ -1091,8 +1091,6 @@
                         </a>
                     </span>
                   
-                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
-                  
                   <span class="links">
                  
                  
@@ -1103,19 +1101,7 @@
             
           
           
-            
-            
-          
-          
-            
-            
-          
-          
-            <a href='https://abicas.github.io/SapOnMicrosoftDemos/'>SAP on Microsoft</a> > <a href='https://abicas.github.io/SapOnMicrosoftDemos/env_setup/'>Environment Setup</a> > <a href='https://abicas.github.io/SapOnMicrosoftDemos/env_setup/sap_cal/'>SAP Cloud Appliance Library (CAL)</a> > SAP CAL Account Setup
-          
-        
-          
-        
+            <a href='https://abicas.github.io/SapOnMicrosoftDemos/'>SAP on Microsoft</a> > Environment Cleanup
           
         
           
@@ -1124,13 +1110,6 @@
                   </span>
                 </div>
                 
-                    <div class="progress">
-    <div class="wrapper">
-<nav id="TableOfContents"></nav>
-    </div>
-</div>
-
-                
               </div>
             </div>
             
@@ -1138,92 +1117,18 @@
         
         </div>
         
+          <div id="chapter">
+        
         <div id="body-inner">
-          
-            <h1>
-              
-              SAP CAL Account Setup
-            </h1>
           
 
         
 
 
 
-	<p>First you need to create a free <a href="https://cal.sap.com/">SAP Cloud Appliance Library (CAL)</a> account.</p>
-<p>Go to <a href="https://cal.sap.com/">https://cal.sap.com/</a> and click on <strong>Log On</strong>.</p>
-<p>On the Login page, select <strong>Register</strong> and fill the required information.</p>
-<p><img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sapcal01.png?height=250px" alt="Register"></p>
-<p>Once you got your approval e-mail from SAP, proceed to the SAP CAL website and Log On with your credentials, then follow the steps below:</p>
-<ol>
-<li>Go to <strong>Accounts</strong> and click on <strong>Create Account</strong>
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sapcal02.png?height=150px" alt="Accounts"></li>
-<li>Give it a name, select Microsoft Azure and fill the data with the information gathered.
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sapcal03.png?height=350px" alt="Accounts"></li>
-<li>Click on <strong>Test Connection</strong> to make sure the parameters are valid.
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sapcal04.png?height=150px" alt="Test"></li>
-</ol>
-<p>Alright, now we have the proper access to deploy a S/4HANA in your subscription.</p>
-<p>SAP CAL allows for a 30 day Trial of the Solutions available, where SAP licenses are waived for 30 days; only the cloud provider hosting fees apply. You can setup auto-shutdown and auto-terminate later on to make sure we keep costs low.</p>
-<p>In order to deploy a Trial S/4HANA in you subscription:</p>
-<ol>
-<li>
-<p>Go to <strong>Solutions</strong>, pick the latest <strong>SAP S/4HANA Fully-Activated Appliance</strong> and click on <strong>Create Instance</strong>.
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sapcal05.png" alt="Solution"></p>
-</li>
-<li>
-<p>Select the newly created <strong>Account</strong>
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sapcal07.png" alt="Solution"></p>
-</li>
-<li>
-<p>Read and Accept the License terms of the Trial
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sapcal08.png" alt="Solution"></p>
-</li>
-<li>
-<p>Go to <strong>Advanced Mode</strong> so we can understand the parameters used on the deploy
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sapcal09.png" alt="Solution"></p>
-</li>
-<li>
-<p>Select your account.
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sapcal10.png" alt="Solution"></p>
-</li>
-<li>
-<p>Give your instance a name, description and validate the networking settings for the VNet. SAP will create a <strong>Default SAP CAL Network</strong> in case you have a new subscription. Select <strong>Public Static IP address</strong> so we can have remote access without the need for a VPN.
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sapcal11.png" alt="Solution"></p>
-</li>
-<li>
-<p>We won&rsquo;t be deploying Business Objects so on the next step, you can desselect this VM. Later on you can change the VM types on azure to cheaper, smaller or newer ones. Scroll down and check all the parameters, ports, disk sizes so you can familiarize with the solution.
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sapcal12.png" alt="Solution"></p>
-</li>
-<li>
-<p>Provide a password for SAP Admin access that will be customized during the deployment. There will be local pre-defined users and admin users with this password.
-For more details see the <a href="https://caldocs.hana.ondemand.com/caldocs/help/b8a9077c-f0f7-47bd-977c-70aa6a6a2aa7_Getting_Started_Guide_v12.pdf">Getting Started Guide</a> for S/4HANA on SAP CAL with the default users and passwords.
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sapcal13.png" alt="Solution"></p>
-</li>
-<li>
-<p>Here we can adjust when the SAP will be available:</p>
-<ul>
-<li>By Schedule - Scheduled start and shutdown</li>
-<li>Suspend on an Exact Date - Scheduled to be running for XX number of days and then shutdown.</li>
-<li>Manual - If you do not plan to use it everyday. When you activate you can setup a shutdown time in hours in case you forget.</li>
-</ul>
-<p>On the right side you can see the costs changing depending on the selection
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sapcal14.png" alt="Solution"></p>
-</li>
-<li>
-<p>Click <strong>Create</strong> on the bottom of the page, review the data and go grab lunch (it should take 2-3 hours for the deployment to be complete).
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sapcal15.png?height=150px" alt="Solution"></p>
-</li>
-<li>
-<p>You can monitor the progress of the deployment in the <strong>Instances</strong> tab. Wait for Activated status.
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sapcal16.png" alt="Solution"></p>
-</li>
-</ol>
-<p>When the solution is deployed and activated, click on the instance name and check the top menu, where you can control the SAP landscape (suspend/terminate/activate) as well as the remote desktop IP address used as Bastion Host for managing the environment on Azure.
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sapcal17.png" alt="Solution"></p>
-<p>You can also access the <strong>Getting Started Guide</strong> under <strong>Solution Info</strong> tab as well make sure all the VMs are up and SAP was started properly and is communicating.
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sapcal18.png" alt="Solution"></p>
-<p>All done ! You have an SAP S/4HANA running in your susbcription ! On the next section let&rsquo;s see how we can access it and key users/passwords/parameters for conection that will be required later on.</p>
+	<h3 id="chapter-x">Chapter X</h3>
+<h1 id="some-chapter-title">Some Chapter title</h1>
+<p>Lorem Ipsum.</p>
 
 
 
@@ -1233,6 +1138,8 @@ For more details see the <a href="https://caldocs.hana.ondemand.com/caldocs/help
 	
 </footer>
 
+        
+            </div> 
         
         </div>
         
@@ -1264,22 +1171,6 @@ For more details see the <a href="https://caldocs.hana.ondemand.com/caldocs/help
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -1303,11 +1194,10 @@ For more details see the <a href="https://caldocs.hana.ondemand.com/caldocs/help
 
                     
                     
+                        
+                    
                     
 
-                    
-            
-        
                     
                         
             
@@ -1341,30 +1231,10 @@ For more details see the <a href="https://caldocs.hana.ondemand.com/caldocs/help
             
         
                     
-            
-        
-                    
                         
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -1377,13 +1247,44 @@ For more details see the <a href="https://caldocs.hana.ondemand.com/caldocs/help
             
         
                     
+            
+        
+                    
                         
             
             
                 
                     
+                
+                
+
+                    
+                    
                         
+                    
+                    
+
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -1828,6 +1729,7 @@ For more details see the <a href="https://caldocs.hana.ondemand.com/caldocs/help
             
             
                 
+                    
                     
                 
                 
@@ -1849,10 +1751,10 @@ For more details see the <a href="https://caldocs.hana.ondemand.com/caldocs/help
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/sap_cal/" title="SAP Cloud Appliance Library (CAL)"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step3/" title="Run a Restore"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/sap_cal/rdpacc/" title="Remote Desktop Access" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/" title="Environment Setup" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
