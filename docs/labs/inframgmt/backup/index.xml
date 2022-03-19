@@ -25,7 +25,7 @@ SAP HANA Setup We need to connect to the SAP HANA Server and run a script that w
       <pubDate>Tue, 15 Mar 2022 15:55:06 -0300</pubDate>
       
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step2/</guid>
-      <description>With Azure BAckups configured and communicating with SAP HANA database, let&amp;rsquo;s execute a manual backup to test it.
+      <description>With Azure Backups configured and communicating with SAP HANA database, let&amp;rsquo;s execute a manual backup to test it.
 This section will show the steps required for that to be accomplished:
  Log on to the Azure Portal and click on Backup items and then SAP HANA in Azure VM  You should see a screen similar to this, with a Warning (initial backup pending) message. Right+Click the elipsis and select Backup Now for both HDB and SYSTEMDB.</description>
     </item>

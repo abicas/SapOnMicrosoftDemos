@@ -6,7 +6,7 @@ chapter = false
 pre = "<b>2. </b>"
 +++
 
-With Azure BAckups configured and communicating with SAP HANA database, let's execute a manual backup to test it. 
+With Azure Backups configured and communicating with SAP HANA database, let's execute a manual backup to test it. 
 
 This section will show the steps required for that to be accomplished:
 

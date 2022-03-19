@@ -9,6 +9,10 @@ pre = "<b> </b>"
 ### Power Virtual Agent
 
 
+### Estimated Time for this Lab
+
+This lab is estimated to take between 30 and 60 minutes. 
+
 ### What we will build
 
 In this lab we will build an chatbot that answers Sales Order details, using Power Virtual Agents and publishing the bot to Microsoft Teams. 
