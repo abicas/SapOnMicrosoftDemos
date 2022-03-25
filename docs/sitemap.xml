@@ -8,8 +8,14 @@
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/</loc>
     <lastmod>2022-03-08T16:31:36-03:00</lastmod>
   </url><url>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step1/</loc>
+    <lastmod>2022-03-25T10:32:20-03:00</lastmod>
+  </url><url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step1/</loc>
     <lastmod>2022-03-14T14:22:13-03:00</lastmod>
+  </url><url>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/</loc>
+    <lastmod>2022-03-14T14:13:05-03:00</lastmod>
   </url><url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/</loc>
     <lastmod>2022-03-14T14:13:05-03:00</lastmod>
@@ -47,6 +53,9 @@
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/</loc>
     <lastmod>2022-03-08T16:31:36-03:00</lastmod>
   </url><url>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step2/</loc>
+    <lastmod>2022-03-25T10:32:20-03:00</lastmod>
+  </url><url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step1/</loc>
     <lastmod>2022-03-15T15:55:06-03:00</lastmod>
   </url><url>
@@ -80,6 +89,9 @@
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/</loc>
     <lastmod>2022-03-08T16:31:36-03:00</lastmod>
   </url><url>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step3/</loc>
+    <lastmod>2022-03-25T10:32:20-03:00</lastmod>
+  </url><url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step2/</loc>
     <lastmod>2022-03-15T15:55:06-03:00</lastmod>
   </url><url>
@@ -106,6 +118,9 @@
   </url><url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/</loc>
     <lastmod>2022-03-10T11:55:46-03:00</lastmod>
+  </url><url>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step4/</loc>
+    <lastmod>2022-03-25T10:32:20-03:00</lastmod>
   </url><url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/cleanup/</loc>
     <lastmod>2022-03-19T09:19:24-03:00</lastmod>

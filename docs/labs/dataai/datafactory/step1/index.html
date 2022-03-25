@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://abicas.github.io/SapOnMicrosoftDemos/images/favicon.png" type="image/png">
 
-    <title>SAP Cloud Appliance Library (CAL) :: SAP on Microsoft - Tutorials</title>
+    <title>Environment Preparation :: SAP on Microsoft - Tutorials</title>
 
     
     <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1648220029" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/sap_cal/">
+  <body class="" data-url="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step1/">
     <nav id="sidebar" class="">
 
 
@@ -89,7 +89,7 @@
   
     
     <li data-nav-id="/env_setup/" title="Environment Setup" class="dd-item
-        parent
+        
         
         
         ">
@@ -234,8 +234,8 @@
   
     
     <li data-nav-id="/env_setup/sap_cal/" title="SAP Cloud Appliance Library (CAL)" class="dd-item
-        parent
-        active
+        
+        
         
         ">
       <a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/sap_cal/">
@@ -409,7 +409,7 @@
   
     
     <li data-nav-id="/labs/" title="SAP on Microsoft Labs" class="dd-item
-        
+        parent
         
         
         ">
@@ -726,7 +726,7 @@
   
     
     <li data-nav-id="/labs/dataai/" title="Data &amp; AI" class="dd-item
-        
+        parent
         
         
         ">
@@ -755,7 +755,7 @@
   
     
     <li data-nav-id="/labs/dataai/datafactory/" title="Azure Data Factory" class="dd-item
-        
+        parent
         
         
         ">
@@ -781,7 +781,7 @@
  
   
     
-      <li data-nav-id="/labs/dataai/datafactory/step1/" title="Environment Preparation" class="dd-item ">
+      <li data-nav-id="/labs/dataai/datafactory/step1/" title="Environment Preparation" class="dd-item active">
         <a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step1/">
         <b>1. </b>Environment Preparation
         
@@ -1239,7 +1239,19 @@
             
           
           
-            <a href='https://abicas.github.io/SapOnMicrosoftDemos/'>SAP on Microsoft</a> > <a href='https://abicas.github.io/SapOnMicrosoftDemos/env_setup/'>Environment Setup</a> > SAP Cloud Appliance Library (CAL)
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='https://abicas.github.io/SapOnMicrosoftDemos/'>SAP on Microsoft</a> > <a href='https://abicas.github.io/SapOnMicrosoftDemos/labs/'>SAP on Microsoft Labs</a> > <a href='https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/'>Data & AI</a> > <a href='https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/'>Azure Data Factory</a> > Environment Preparation
+          
+        
+          
+        
           
         
           
@@ -1252,16 +1264,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#what-you-will-need">What you will need</a></li>
-        <li><a href="#expected-duration">Expected duration</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -1277,29 +1280,92 @@
           
             <h1>
               
-              SAP Cloud Appliance Library (CAL)
+              Environment Preparation
             </h1>
           
 
         
 
 
-
-	<p>The <a href="https://cal.sap.com/">SAP Cloud Appliance Library (CAL)</a> offers a quick and easy way to consume the latest SAP solutions in the cloud, such as SAP S/4HANA, SAP HANA Express Edition, Industry Solutions etc.</p>
-<p>It&rsquo;s an online library of latest, preconfigured, ready-to-use SAP solutions that can be instantly deployed into your own public cloud accounts.</p>
-<p>In this section we will create and account on SAP CAL, configure Azure permissions and deploy an S/4HANA environment on your subscription.</p>
-<h3 id="what-you-will-need">What you will need</h3>
+<p>Before we start extracting data from SAP, we need to create a repository to hold the extracted data.</p>
+<p>In this example we will be using Azure Data Factory to extract the data and store it in a Blob Storage of a Datalake.</p>
+<p>This section will show the steps required to prepare the environment for that:</p>
 <ol>
-<li>Parameters from previous step</li>
+<li>Log on to the <a href="https://portal.azure.com">Azure Portal</a> and look for <strong>Storage Accounts</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf01.png?height=250px" alt="monitoring1"></li>
+<li>Create a new Storage Account and provide the required information. Select the same region that SAP was deployed:</li>
 </ol>
-<h3 id="expected-duration">Expected duration</h3>
-<p>This section is estimated to last around 2-3 hours, mostly depending on the SAP deployment itself.</p>
+<ul>
+<li>Resource Group: <strong>SAP_ADF</strong> (create new RG)</li>
+<li>Storage Account Name: <strong>sapadfXXXX</strong> (must be unique on Azure, change XXXX by any set of 4 numbers)</li>
+<li>Region: <strong>East US</strong></li>
+<li>Redundancy: <strong>LRS</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf02.png?height=550px" alt="monitoring1"></li>
+</ul>
+<ol start="3">
+<li>On the newly created storage account, select <strong>Containers</strong> on the left pane and click on <strong>+ Container</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf03.png?height=450px" alt="monitoring1"></li>
+<li>Name it <strong>cntsapadf</strong> and accept the default security of <strong>Private</strong>, once we don&rsquo;t want to expose business data to the internet.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf04.png?height=250px" alt="monitoring1"></li>
+</ol>
+<p>With those 4 steps we have created a repository to store the data.</p>
+<p>Let&rsquo;s create the Azure Data Factory instance now:</p>
+<ol>
+<li>Log on to the <a href="https://portal.azure.com">Azure Portal</a> and look for <strong>Data factories</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf05.png?height=350px" alt="monitoring1"></li>
+<li>Create a new Data factory and provide the required information. Select the same region that SAP was deployed:</li>
+</ol>
+<ul>
+<li>Resource Group: <strong>SAP_ADF</strong></li>
+<li>Name: <strong>sapadfXXXX</strong> (change XXXX by any set of 4 numbers)</li>
+<li>Region: <strong>East US</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf06.png?height=550px" alt="monitoring1"></li>
+</ul>
+<ol start="3">
+<li>Click <strong>Next</strong> or select the tab <strong>Git configuration</strong> and check <strong>Configure Git later</strong> once we will not be storing our pipelines in a repository in this example. After this, click <strong>Create</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf07.png?height=350px" alt="monitoring1"></li>
+</ol>
+<p>Now we will configure the <strong>Integration Runtime</strong> on our Bastion Host to have access to the SAP data:</p>
+<ol>
+<li>On the Data Factory overview page, click on <strong>Open Azure Data Factory Studio</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf08.png?height=350px" alt="monitoring1"></li>
+<li>On the new tab that will open, create a <strong>New Pipeline</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf09.png?height=250px" alt="monitoring1"></li>
+<li>Name it <strong>adfsap_pipeline</strong> on the right tab that will open:
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf10.png?height=450px" alt="monitoring1"></li>
+<li>Click on the Toolbox icon on the left pane, then click on <strong>Integration runtimes</strong> and click on <strong>New</strong>. Select the <strong>Self Hosted</strong> option
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf11.png?height=400px" alt="monitoring1"></li>
+<li>On the Integration runtime setup step, select <strong>Self Hosted</strong> again
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf12.png?height=350px" alt="monitoring1"></li>
+<li>And name it <strong>SAPIntegrationRuntime</strong>; click <strong>Create</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf13.png?height=450px" alt="monitoring1"></li>
+<li>Once we are not performing those action on the Bastion host itself, we will choose <strong>Option 2: Manual Setup</strong>.</li>
+</ol>
+<ul>
+<li>Copy the <strong>Key 1</strong> Authentication Key that will be used on the runtime installation to some scratch area.</li>
+<li>Right click and <strong>Copy the URL</strong> from the <strong>Step 1</strong> (we will use it to download the software on the bastion host)
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf14.png?height=450px" alt="monitoring1"></li>
+</ul>
+<ol start="8">
+<li>Go to the <strong>Bastion Host via RDP and download</strong> the latest version, using the URL provided in the step #7:
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf15.png?height=450px" alt="monitoring1"></li>
+<li>Install the downloaded software:
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf16.png?height=350px" alt="monitoring1"></li>
+<li>On the setup phase, paste the <strong>Authentication Key</strong> from step #7, and click <strong>Register</strong>:
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf17.png?height=350px" alt="monitoring1"></li>
+<li>For this example, we will <strong>Enable remote access from intranet</strong> and click <strong>Next</strong>:
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf18.png?height=350px" alt="monitoring1"></li>
+<li>The Integration Runtime will contact the Data FActory using the Authentication Key provided and register itself. Click on <strong>Launch Configuration Manager</strong> and confirm that everything was OK:
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf19.png?height=350px" alt="monitoring1">
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf20.png?height=350px" alt="monitoring1"></li>
+<li>All set on the Bastion Host, we will go back to the <strong>Azure Portal</strong>. Let&rsquo;s make sure the Integration runtime is showing up on the Data Factory. Click on <strong>Refresh</strong> button and it should show the newly registered SAPIntegrationRuntime:
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf22.png?height=350px" alt="monitoring1"></li>
+</ol>
+<p>Now, finally, we are ready to start extracting data from SAP!</p>
+<p><strong>The next 2 steps will be similar, divided by data provider</strong>.</p>
 
 
-
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -1334,22 +1400,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -1373,11 +1423,10 @@
 
                     
                     
+                        
+                    
                     
 
-                    
-            
-        
                     
                         
             
@@ -1411,6 +1460,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1419,7 +1484,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1434,9 +1498,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1524,20 +1585,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1554,64 +1601,18 @@
             
                 
                     
+                        
+                        
+                    
                 
                 
 
                     
-                    
-                    
-
                     
                         
-            
-            
-                
-                    
-                
-                
-
-                    
                     
                     
 
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
                     
                         
             
@@ -1690,6 +1691,35 @@
                     
 
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -1722,23 +1752,11 @@
 
                     
                     
-                        
-                    
                     
 
                     
-                        
             
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
+        
                     
                         
             
@@ -1756,10 +1774,63 @@
             
         
                     
+            
+        
+                    
                         
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -2000,10 +2071,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/getinfo/" title="Get required information"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/" title="Azure Data Factory"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/sap_cal/accsetup/" title="SAP CAL Account Setup" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step2/" title="HANA Provider" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2035,3 +2106,4 @@
 
   </body>
 </html>
+

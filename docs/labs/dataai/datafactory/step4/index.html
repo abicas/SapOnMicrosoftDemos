@@ -9,7 +9,7 @@
 
     <link rel="icon" href="https://abicas.github.io/SapOnMicrosoftDemos/images/favicon.png" type="image/png">
 
-    <title>SAP Cloud Appliance Library (CAL) :: SAP on Microsoft - Tutorials</title>
+    <title>Extracting data :: SAP on Microsoft - Tutorials</title>
 
     
     <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1648220029" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/sap_cal/">
+  <body class="" data-url="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step4/">
     <nav id="sidebar" class="">
 
 
@@ -89,7 +89,7 @@
   
     
     <li data-nav-id="/env_setup/" title="Environment Setup" class="dd-item
-        parent
+        
         
         
         ">
@@ -234,8 +234,8 @@
   
     
     <li data-nav-id="/env_setup/sap_cal/" title="SAP Cloud Appliance Library (CAL)" class="dd-item
-        parent
-        active
+        
+        
         
         ">
       <a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/sap_cal/">
@@ -409,7 +409,7 @@
   
     
     <li data-nav-id="/labs/" title="SAP on Microsoft Labs" class="dd-item
-        
+        parent
         
         
         ">
@@ -726,7 +726,7 @@
   
     
     <li data-nav-id="/labs/dataai/" title="Data &amp; AI" class="dd-item
-        
+        parent
         
         
         ">
@@ -755,7 +755,7 @@
   
     
     <li data-nav-id="/labs/dataai/datafactory/" title="Azure Data Factory" class="dd-item
-        
+        parent
         
         
         ">
@@ -844,7 +844,7 @@
  
   
     
-      <li data-nav-id="/labs/dataai/datafactory/step4/" title="Extracting data" class="dd-item ">
+      <li data-nav-id="/labs/dataai/datafactory/step4/" title="Extracting data" class="dd-item active">
         <a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step4/">
         <b>4. </b>Extracting data
         
@@ -1239,7 +1239,19 @@
             
           
           
-            <a href='https://abicas.github.io/SapOnMicrosoftDemos/'>SAP on Microsoft</a> > <a href='https://abicas.github.io/SapOnMicrosoftDemos/env_setup/'>Environment Setup</a> > SAP Cloud Appliance Library (CAL)
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='https://abicas.github.io/SapOnMicrosoftDemos/'>SAP on Microsoft</a> > <a href='https://abicas.github.io/SapOnMicrosoftDemos/labs/'>SAP on Microsoft Labs</a> > <a href='https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/'>Data & AI</a> > <a href='https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/'>Azure Data Factory</a> > Extracting data
+          
+        
+          
+        
           
         
           
@@ -1252,16 +1264,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#what-you-will-need">What you will need</a></li>
-        <li><a href="#expected-duration">Expected duration</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -1277,29 +1280,70 @@
           
             <h1>
               
-              SAP Cloud Appliance Library (CAL)
+              Extracting data
             </h1>
           
 
         
 
 
-
-	<p>The <a href="https://cal.sap.com/">SAP Cloud Appliance Library (CAL)</a> offers a quick and easy way to consume the latest SAP solutions in the cloud, such as SAP S/4HANA, SAP HANA Express Edition, Industry Solutions etc.</p>
-<p>It&rsquo;s an online library of latest, preconfigured, ready-to-use SAP solutions that can be instantly deployed into your own public cloud accounts.</p>
-<p>In this section we will create and account on SAP CAL, configure Azure permissions and deploy an S/4HANA environment on your subscription.</p>
-<h3 id="what-you-will-need">What you will need</h3>
+<p>Let&rsquo;s add some steps on our pipeline to extract data to the Blob Storage:</p>
 <ol>
-<li>Parameters from previous step</li>
+<li>On the <strong>Data Factory Studio</strong>, click on the <strong>adfsap_pipeline</strong> on the left, open the <strong>Move &amp; Transform</strong> activity, and drag <strong>Copy data</strong> to the main panel:
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf30.png?height=550px" alt="monitoring1"></li>
+<li>For the Copy data activity, we will name it <strong>Hana2Blob</strong>, under General tab:
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf31.png?height=550px" alt="monitoring1"></li>
+<li>On the <strong>Source tab</strong> we will select the dataset we want to read data from. In this example the HANA one, but it could be the SAP Table one as well.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf32.png?height=250px" alt="monitoring1"></li>
+<li>For the Sink (destination) dataset, we will create a new one:
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf33.png?height=150px" alt="monitoring1"></li>
+<li>We will select <strong>Azure Blob Storage</strong> as the dataset type:
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf34.png?height=350px" alt="monitoring1"></li>
+<li>As Output format, we will select <strong>DelimitedText</strong> for the sake of visualization. For datalakes you will probably use other formats like Parquet that are more space efficient.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf35.png?height=350px" alt="monitoring1"></li>
+<li>Name the dataset <strong>HANAMATDOCS</strong> and click on <strong>New</strong> under Linked Services.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf36.png?height=350px" alt="monitoring1"></li>
+<li>We will link this dataset with our Storage Account created on step #1. Fill the required data for the linked service:</li>
 </ol>
-<h3 id="expected-duration">Expected duration</h3>
-<p>This section is estimated to last around 2-3 hours, mostly depending on the SAP deployment itself.</p>
+<ul>
+<li>Name: <strong>AzureBlobSAP</strong></li>
+<li>Integration Runtime: <strong>AutoResolveIntegrationRuntime</strong></li>
+<li>Authentication Method: <strong>Account Key</strong></li>
+<li>Subscription: <strong>Select your current subscription</strong></li>
+<li>Storage Account Name: <strong>sapadfXXXX</strong></li>
+<li>Click on <strong>Test connection</strong> and if successful, click on <strong>Apply</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf37.png?height=550px" alt="monitoring1"></li>
+</ul>
+<ol start="9">
+<li>Back on the properties screen, make sure the Linked service is <strong>AzureBlobSAP</strong> and that filepath is <strong>cntsapadf</strong> which is the name of the container we created on step #1. You can use the folder button and navigate to the container itself. Make sure other options match the picture:
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf38.png?height=450px" alt="monitoring1"></li>
+<li>Our simple pipeline, with one step, is ready. Let&rsquo;s Publish it so we can run it. On the top of the page, click on <strong>Publish</strong> and on the right panel <strong>Publish</strong> again:
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf39.png?height=450px" alt="monitoring1"></li>
+</ol>
+<p>Let&rsquo;s run the Pipeline manually for testing:</p>
+<ol>
+<li>On the <strong>Data Factory Studio</strong>, click on the <strong>adfsap_pipeline</strong> on the left, and select <strong>AddTrigger/Trigger now</strong> on the main panel:
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf40.png?height=350px" alt="monitoring1"></li>
+<li>You can monitor the run, by selecting the <strong>speed meter icon</strong> on the left, then <strong>Pipeline runs</strong> and refreshing for Status = <strong>Succeedded</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf41.png?height=250px" alt="monitoring1"></li>
+</ol>
+<p>Let&rsquo;s see the output !</p>
+<ol>
+<li>On the <strong>Azure Portal</strong>, go back to the sapadfXXXX Storage Account you created on step #1. There should be a container called <strong>cntadfsap</strong>. Click on it.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf42.png?height=350px" alt="monitoring1"></li>
+<li>Inside the container we can see a newly created txt file with ~28MB, named after the table we used to extract the data. Right click it and select <strong>Download</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf43.png?height=350px" alt="monitoring1"></li>
+<li>Open the downloaded file on your editor of choice (aka Visual Code :) ) and check the file contents:
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf44.png?height=550px" alt="monitoring1"></li>
+<li><strong>If</strong> you used the SAP TABLE provider (step 3), you should see a file named <strong>MATDOC.txt</strong>. Follow steps 2 &amp; 3 and open this file instead.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf53.png?height=250px" alt="monitoring1"></li>
+<li>Compare the extracted data with the content from HANA Studio, on the Bastion Host. Open <strong>HDB</strong>, go to <strong>Catalog</strong>, under <strong>SAPHANADB</strong> select <strong>Tables</strong> and run a query like &lsquo;SELECT TOP 1000 FROM &ldquo;SAPHANADB&rdquo;.&ldquo;MATDOC&rdquo;&rsquo;
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf55.png?height=550px" alt="monitoring1"></li>
+</ol>
+<p>Congratulations, you just learned how to integrate SAP with Azure Data Factory and include it in your pipelines.</p>
 
 
-
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -1334,22 +1378,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -1373,11 +1401,10 @@
 
                     
                     
+                        
+                    
                     
 
-                    
-            
-        
                     
                         
             
@@ -1411,6 +1438,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1419,7 +1462,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1434,9 +1476,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1524,20 +1563,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1554,64 +1579,18 @@
             
                 
                     
+                        
+                        
+                    
                 
                 
 
                     
-                    
-                    
-
                     
                         
-            
-            
-                
-                    
-                
-                
-
-                    
                     
                     
 
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
                     
                         
             
@@ -1690,72 +1669,6 @@
                     
 
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
             
             
@@ -1807,6 +1720,19 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -1814,6 +1740,132 @@
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -2000,10 +2052,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/getinfo/" title="Get required information"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step3/" title="SAP TABLE Provider"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/sap_cal/accsetup/" title="SAP CAL Account Setup" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/" title="Security" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2035,3 +2087,4 @@
 
   </body>
 </html>
+
