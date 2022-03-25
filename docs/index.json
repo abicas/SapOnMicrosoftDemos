@@ -32,7 +32,7 @@
 	"title": "Azure Data Factory",
 	"tags": [],
 	"description": "",
-	"content": "Extracting SAP DATA with Azure Data Factory One of the benefits of monitoring SAP on Azure is the integrated view of both Infrastructure metrics (like CPU, RAM and Disk) alongside HANA database metrics (like memory usage and memory growth), and Netweaver metrics like concurrent sessions and locks.\nThis allows for a rapid response in case of an incident response as well as provinding a simpler and more integrated way of having the whole SAP performance picture in a glance.\nThis lab is based on the Azure Monitor for SAP Quickstart guide.\nEstimated Time for this Lab This lab is estimated to take between 20 and 30 minutes.\nWhat we will build   "
+	"content": "Extracting SAP DATA with Azure Data Factory Estimated Time for this Lab This lab is estimated to take around 30 minutes.\nWhat we will build   "
 },
 {
 	"uri": "https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/",
