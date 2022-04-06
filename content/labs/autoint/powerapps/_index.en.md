@@ -1,13 +1,23 @@
 +++
 title = "Power Apps"
 date = 2022-03-10T11:58:35-03:00
-weight = 8
+weight = 7
 chapter = false
 pre = "<b> </b>"
 +++
 
 ### Power Apps
 
+### Estimated Time for this Lab
+
+This lab is estimated to take around 60 minutes. 
 
 ### What we will build
+
+In this lab we will build an API and receives a JSON payload with the Sales Order to be queries on SAP and sends the required information via Outlook using native SAP and Office 365 integrations. 
+
+Whenever this API is used, it triggers a Logic App (built with no code) that will analyze the payload, run a BAPI on SAP, process the response, build an HTML table and send it by email alongside with the BAPI JSON. 
+
+You can see a sample of the lab below: 
+
 {{< youtube wqMKEuQEmIA >}}

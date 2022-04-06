@@ -11,43 +11,35 @@
       <title>Environment Preparation</title>
       <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step1/</link>
       <pubDate>Fri, 25 Mar 2022 10:32:20 -0300</pubDate>
-      
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step1/</guid>
       <description>Before we start extracting data from SAP, we need to create a repository to hold the extracted data.
 In this example we will be using Azure Data Factory to extract the data and store it in a Blob Storage of a Datalake.
 This section will show the steps required to prepare the environment for that:
  Log on to the Azure Portal and look for Storage Accounts  Create a new Storage Account and provide the required information.</description>
     </item>
-    
     <item>
       <title>HANA Provider</title>
       <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step2/</link>
       <pubDate>Fri, 25 Mar 2022 10:32:20 -0300</pubDate>
-      
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step2/</guid>
       <description>Let&amp;rsquo;s create a new pipeline and extract data to the Blob Storage:
  On the Data Factory Studio, click on the Pencil icon on the left, click the Dataset Ellipsis and select New Dataset  For the datastore, we will search for SAP and select SAP HANA:  For the properties:   Name: SapHanaTable1 Create a New under Linked Service   Fill the required data for the linked service:   Name: SapHana1 Integration Runtime: SAPIntegrationRuntime Server Name: &amp;laquo;HANA IP&amp;raquo;:30215 Authentication Type: Basic User name: SAPHANADB Password: Password defined on the CAL setup phase Click on Test connection and if successful, click on Apply   Select the newly created SapHana1 linked service and click OK (we will not be selecting a table right now)   We are now communicating with SAP HANA.</description>
     </item>
-    
     <item>
       <title>SAP TABLE Provider</title>
       <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step3/</link>
       <pubDate>Fri, 25 Mar 2022 10:32:20 -0300</pubDate>
-      
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step3/</guid>
       <description>Let&amp;rsquo;s create a new pipeline and extract data to the Blob Storage:
  On the Data Factory Studio, click on the Pencil icon on the left, click the Dataset Ellipsis and select New Dataset  For the datastore, we will search for SAP and select SAP Table:  For the properties:   Name: SapTable1 Create a New under Linked Service   Fill the required data for the linked service:   Name: SapTable1 Integration Runtime: SAPIntegrationRuntime Server Name: &amp;laquo;HANA IP&amp;raquo; System Number: 00 Client Id: 100 Username: BPINST Password: Welcome1 Click on Test connection and if successful, click on Apply   Select the newly created SapTable1 linked service, select Table MATDOC and click OK   We are now communicating with SAP via Netweaver.</description>
     </item>
-    
     <item>
       <title>Extracting data</title>
       <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step4/</link>
       <pubDate>Fri, 25 Mar 2022 10:32:20 -0300</pubDate>
-      
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step4/</guid>
       <description>Let&amp;rsquo;s add some steps on our pipeline to extract data to the Blob Storage:
  On the Data Factory Studio, click on the adfsap_pipeline on the left, open the Move &amp;amp; Transform activity, and drag Copy data to the main panel:  For the Copy data activity, we will name it Hana2Blob, under General tab:  On the Source tab we will select the dataset we want to read data from.</description>
     </item>
-    
   </channel>
 </rss>

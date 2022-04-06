@@ -7,5 +7,33 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Tue, 08 Mar 2022 16:31:36 -0300</lastBuildDate><atom:link href="https://abicas.github.io/SapOnMicrosoftDemos/labs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automation and Integration</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/</link>
+      <pubDate>Thu, 10 Mar 2022 11:55:21 -0300</pubDate>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/</guid>
+      <description>Chapter X Some Chapter title Lorem Ipsum.</description>
+    </item>
+    <item>
+      <title>Data &amp; AI</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/</link>
+      <pubDate>Thu, 10 Mar 2022 11:55:21 -0300</pubDate>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/</guid>
+      <description>Chapter X Some Chapter title Lorem Ipsum.</description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/</link>
+      <pubDate>Thu, 10 Mar 2022 11:55:39 -0300</pubDate>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/</guid>
+      <description>Chapter X Some Chapter title Lorem Ipsum.</description>
+    </item>
+    <item>
+      <title>Infrastructure and Management</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/</link>
+      <pubDate>Thu, 10 Mar 2022 11:55:46 -0300</pubDate>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/</guid>
+      <description>Chapter X Some Chapter title Lorem Ipsum.</description>
+    </item>
   </channel>
 </rss>

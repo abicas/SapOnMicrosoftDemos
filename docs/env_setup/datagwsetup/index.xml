@@ -11,24 +11,20 @@
       <title>Remote Desktop Setup</title>
       <link>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/datagwsetup/step1/</link>
       <pubDate>Wed, 09 Mar 2022 11:22:24 -0300</pubDate>
-      
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/datagwsetup/step1/</guid>
       <description>In this section we will install the required components for Azure and Microsoft be able to connect to your SAP environment.
 This section is a summary of the guide Install data gateway and Connect to SAP systems.
 Connect to the Remote Desktop as on the previous step and using a browser on the Bastion Host, download 3 pieces of software (links might have changed, please check above guides for the most up-to-date links):</description>
     </item>
-    
     <item>
       <title>Azure Data Gateway Setup</title>
       <link>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/datagwsetup/step2/</link>
       <pubDate>Wed, 09 Mar 2022 11:22:24 -0300</pubDate>
-      
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/datagwsetup/step2/</guid>
       <description>In this section we will create the endpoint on Azure for the installed on-premises data gateway.
 This section is a summary of the guide Install data gateway and Connect to SAP systems.
 Connect to the Azure Portal and follow the steps below:
  Go to On-premises Data Gateways:  Select Add  Fill the required parameters. Make sure to Select the same region as used on the installation (East US) and Select the name of the gateway previously created that should be populated on the drop-down box.</description>
     </item>
-    
   </channel>
 </rss>

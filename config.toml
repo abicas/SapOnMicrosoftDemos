@@ -3,7 +3,7 @@ languageCode = "en-US"
 defaultContentLanguage = "en"
 
 title = "SAP on Azure - Tutorials and Guides"
-theme = "hugo-theme-learn"
+theme = "hugo-theme-relearn"
 themesdir = "themes"
 #metaDataFormat = "yaml"
 canonifyURLs = true
@@ -11,11 +11,14 @@ canonifyURLs = true
 publishDir = "docs"
 defaultContentLanguageInSubdir= true
 
+
 [params]
 #  editURL = "https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/"
   description = "SAP on Microsoft - Tutorials"
   author = "Alexandre Bicas"
-  showVisitedLinks = false
+  showVisitedLinks = true
+  alwaysopen = false
+  collapsibleMenu = true
   disableBreadcrumb = false
   disableNextPrev = false
   disableLandingPageButton = false
@@ -32,7 +35,7 @@ home = [ "HTML", "RSS", "JSON"]
 title = "SAP on Microsoft - Tutorials"
 weight = 1
 languageName = "English"
-landingPageURL = "/en"
+landingPageURL = "/"
 landingPageName = "<i class='fas fa-home'></i> Home"
 
 [[Languages.en.menu.shortcuts]]

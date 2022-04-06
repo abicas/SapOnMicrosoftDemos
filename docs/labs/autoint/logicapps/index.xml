@@ -11,33 +11,27 @@
       <title>Create a Logic App</title>
       <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/step1/</link>
       <pubDate>Thu, 10 Mar 2022 14:52:21 -0300</pubDate>
-      
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/step1/</guid>
       <description>In this step we will create a Logic App on Azure Portal.
  Go to Logic Apps Click on Add Fill the required parameters as the picture below  Subscription and Resource Group Name: SAPDemo Region: East US (same one used on the previous steps) Plan type: Consumption     </description>
     </item>
-    
     <item>
       <title>Create a Workflow</title>
       <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/step2/</link>
       <pubDate>Thu, 10 Mar 2022 14:52:21 -0300</pubDate>
-      
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/step2/</guid>
       <description>In this step we will create the Workflow on Azure Portal.
  Go to Logic Apps Click on your Logic App SAPDemo Go to Workflows and Add a new one as the parameters below:  Click on Designer and let&amp;rsquo;s start building the Workflow! As the first operation, which starts the flow, we will pick When a HTTP request is received  In order to customize the payload we expect, let&amp;rsquo;s Use a sample payload to generate schema  Sample payload: {&amp;quot;id&amp;quot;: &amp;quot;0000000728&amp;quot;}    This will generate a schema for the trigger  Now we will create our temp variable to hold the desired part of the SAP reponse.</description>
     </item>
-    
     <item>
       <title>Running the lab</title>
       <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/step3/</link>
       <pubDate>Thu, 10 Mar 2022 14:52:21 -0300</pubDate>
-      
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/step3/</guid>
       <description>In this step we will execute the Workflow created previously
 Go back to Overview, Enable Debug mode (will be used in the future) and copy the Workflow URL provided We need to invoke the API, so we can use an externall tool like Postman or use the embeded Run Trigger tool.
 For Postman:
  Method: POST URL: copied on the previous step Body: raw - JSON Body content: {&amp;quot;id&amp;quot;: &amp;quot;0000000728&amp;quot;} or {&amp;quot;id&amp;quot;: &amp;quot;0000001575&amp;quot;}  Note: SAP compares strings so have that in mind with leading zeroes and 10 total chars   Hit Send.</description>
     </item>
-    
   </channel>
 </rss>

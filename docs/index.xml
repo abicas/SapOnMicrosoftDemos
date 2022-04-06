@@ -8,210 +8,27 @@
     <language>en-US</language>
     <lastBuildDate>Tue, 08 Mar 2022 16:31:36 -0300</lastBuildDate><atom:link href="https://abicas.github.io/SapOnMicrosoftDemos/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Environment Preparation</title>
-      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step1/</link>
-      <pubDate>Fri, 25 Mar 2022 10:32:20 -0300</pubDate>
-      
-      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step1/</guid>
-      <description>Before we start extracting data from SAP, we need to create a repository to hold the extracted data.
-In this example we will be using Azure Data Factory to extract the data and store it in a Blob Storage of a Datalake.
-This section will show the steps required to prepare the environment for that:
- Log on to the Azure Portal and look for Storage Accounts  Create a new Storage Account and provide the required information.</description>
+      <title>Environment Setup</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/</link>
+      <pubDate>Tue, 08 Mar 2022 16:31:36 -0300</pubDate>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/</guid>
+      <description>Before we start building our labs we need to have provisioned a few resources:
+ An Azure subscription setup An S/4HANA environment Installation of gateway components  The following sections will guide you thru the steps to accomplish this and be ready to the labs.</description>
     </item>
-    
     <item>
-      <title>Setting up Azure Monitor for SAP</title>
-      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step1/</link>
-      <pubDate>Mon, 14 Mar 2022 14:22:13 -0300</pubDate>
-      
-      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step1/</guid>
-      <description>In order to have SAP monitoring, we need to spin up an instance of Azure Monitoring.
-This section will show the steps required for that to be accomplished:
- Log on to the Azure Portal and look for Azure Monitor for SAP  Create a new instance and provide the required information. Select the same region, vNet and subnet as SAP was deployed:   Region: East US vNET: SAPCALDefault-eastus Subnet: default   Do not worry about defining providers at this moment.</description>
+      <title>SAP on Microsoft Labs</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/</link>
+      <pubDate>Tue, 08 Mar 2022 16:31:36 -0300</pubDate>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/</guid>
+      <description>The following sections will be divided in different labs integrating several Microsoft services with SAP, such as:
+ Automation and Integration  Azure Logic Apps Power Platform - Power Virtual Agents Power Platform - Power Automate Power Platform - Power Apps   Data &amp;amp; AI  Office 365 Integration Azure Synapse Power Platform - Power BI Azure Machine Learning   Security  Azure Sentinel Azure AD   Infra &amp;amp; Management  Azure Monitoring Azure Backup High-Availability    The following sections will guide you thru the steps to accomplish this and be ready to the labs.</description>
     </item>
-    
     <item>
-      <title>Creating our Chatbot</title>
-      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step1/</link>
-      <pubDate>Thu, 10 Mar 2022 17:25:38 -0300</pubDate>
-      
-      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step1/</guid>
-      <description>In this section we will create our Chatbot on Microsoft Power Platform.
-Go to Office 365, authenticate and select Power Apps. On Power Apps, expand Chatbots, select Create and click on the Basic conversational bot button. Fill the information to create the bot:
- Name: SAP Bot Language: Deisred language (examples in Brazilian Portuguese with translation) Environment: US   Once the bot is created, go to Topics and click on New Topic Let&amp;rsquo;s rename the newly created topic from Untitled to PO Details (en-US) / Detalhes do Pedido (pt-BR) The bot needs know which phrases trigger this topic, so we will add some examples of questions users may pose to accomplish what they need:</description>
+      <title>Environment Cleanup</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/cleanup/</link>
+      <pubDate>Sat, 19 Mar 2022 09:19:24 -0300</pubDate>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/cleanup/</guid>
+      <description>Chapter X Some Chapter title Lorem Ipsum.</description>
     </item>
-    
-    <item>
-      <title>Create a Logic App</title>
-      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/step1/</link>
-      <pubDate>Thu, 10 Mar 2022 14:52:21 -0300</pubDate>
-      
-      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/step1/</guid>
-      <description>In this step we will create a Logic App on Azure Portal.
- Go to Logic Apps Click on Add Fill the required parameters as the picture below  Subscription and Resource Group Name: SAPDemo Region: East US (same one used on the previous steps) Plan type: Consumption     </description>
-    </item>
-    
-    <item>
-      <title>Remote Desktop Setup</title>
-      <link>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/datagwsetup/step1/</link>
-      <pubDate>Wed, 09 Mar 2022 11:22:24 -0300</pubDate>
-      
-      <guid>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/datagwsetup/step1/</guid>
-      <description>In this section we will install the required components for Azure and Microsoft be able to connect to your SAP environment.
-This section is a summary of the guide Install data gateway and Connect to SAP systems.
-Connect to the Remote Desktop as on the previous step and using a browser on the Bastion Host, download 3 pieces of software (links might have changed, please check above guides for the most up-to-date links):</description>
-    </item>
-    
-    <item>
-      <title>HANA Provider</title>
-      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step2/</link>
-      <pubDate>Fri, 25 Mar 2022 10:32:20 -0300</pubDate>
-      
-      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step2/</guid>
-      <description>Let&amp;rsquo;s create a new pipeline and extract data to the Blob Storage:
- On the Data Factory Studio, click on the Pencil icon on the left, click the Dataset Ellipsis and select New Dataset  For the datastore, we will search for SAP and select SAP HANA:  For the properties:   Name: SapHanaTable1 Create a New under Linked Service   Fill the required data for the linked service:   Name: SapHana1 Integration Runtime: SAPIntegrationRuntime Server Name: &amp;laquo;HANA IP&amp;raquo;:30215 Authentication Type: Basic User name: SAPHANADB Password: Password defined on the CAL setup phase Click on Test connection and if successful, click on Apply   Select the newly created SapHana1 linked service and click OK (we will not be selecting a table right now)   We are now communicating with SAP HANA.</description>
-    </item>
-    
-    <item>
-      <title>Setup Azure Backup</title>
-      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step1/</link>
-      <pubDate>Tue, 15 Mar 2022 15:55:06 -0300</pubDate>
-      
-      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step1/</guid>
-      <description>In order to have Azure Backup backing up SAP HANA databases, we need to setup the Azure Backup as well as the HANA Database Server.
-This section will show the steps required for that to be accomplished:
-SAP HANA Setup We need to connect to the SAP HANA Server and run a script that will prepare the database for Azure Backup.
- Log on to the Azure Portal and open a Cloud Shell (BASH)  We need to SSH to the server, using the SAP provided certificate key (can be downloaded from SAP CAL again), previously uploaded to the CloudShell and having permission as 400).</description>
-    </item>
-    
-    <item>
-      <title>HANA Provider</title>
-      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step2/</link>
-      <pubDate>Mon, 14 Mar 2022 14:22:13 -0300</pubDate>
-      
-      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step2/</guid>
-      <description>Let&amp;rsquo;s add a HANA Provider to collect metrics for us:
- On the Azure Monitor for SAP, go to Providers  Click Add  Let&amp;rsquo;s fill the required data:   Type: SAP HANA IP Address: SAP HANA Private IP Address Database tenant: SYSTEMDB SQL Port: 30215 Username: SAPHANADB Password: Password defined during deploy of SAP CAL   Wait for the Provider to be created and the data validated.  It takes about 10-15 minutes for information to be initially available on Azure Monitor.</description>
-    </item>
-    
-    <item>
-      <title>Linux Provider</title>
-      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step3/</link>
-      <pubDate>Mon, 14 Mar 2022 14:22:13 -0300</pubDate>
-      
-      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step3/</guid>
-      <description>Let&amp;rsquo;s add a HANA Provider to collect metrics for us:
-Node Exporter Agent Before we start, we need to add an agent to the monitored VM.
- Go to the Azure Portal and open a Cloud Shell. In the examples we used BASH as the interpreter.  Now we will upload the key that SAP CAL generated on the deployment so we can log on to the Linux OS. Click on the File Transfer icon and then Upload  Select the key which will be a *.</description>
-    </item>
-    
-    <item>
-      <title>Testing our Chatbot</title>
-      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step2/</link>
-      <pubDate>Thu, 10 Mar 2022 17:25:38 -0300</pubDate>
-      
-      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step2/</guid>
-      <description>In this section we will test and debug our Chatbot on Microsoft Power Platform.
-On the left side of the screen go to the Test bot and simulate a user conversation.
- IMPORTANT:  SAP expects a 10 char stirng with leading zeroes, so if you want to check order 728 you need to type 0000000728 Once we are doing a lab, we are not treating the input so type just the PO number with no other information, leading/trailing spaces, words, once we are passing the whole input to SAP.</description>
-    </item>
-    
-    <item>
-      <title>Create a Workflow</title>
-      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/step2/</link>
-      <pubDate>Thu, 10 Mar 2022 14:52:21 -0300</pubDate>
-      
-      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/step2/</guid>
-      <description>In this step we will create the Workflow on Azure Portal.
- Go to Logic Apps Click on your Logic App SAPDemo Go to Workflows and Add a new one as the parameters below:  Click on Designer and let&amp;rsquo;s start building the Workflow! As the first operation, which starts the flow, we will pick When a HTTP request is received  In order to customize the payload we expect, let&amp;rsquo;s Use a sample payload to generate schema  Sample payload: {&amp;quot;id&amp;quot;: &amp;quot;0000000728&amp;quot;}    This will generate a schema for the trigger  Now we will create our temp variable to hold the desired part of the SAP reponse.</description>
-    </item>
-    
-    <item>
-      <title>Azure Data Gateway Setup</title>
-      <link>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/datagwsetup/step2/</link>
-      <pubDate>Wed, 09 Mar 2022 11:22:24 -0300</pubDate>
-      
-      <guid>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/datagwsetup/step2/</guid>
-      <description>In this section we will create the endpoint on Azure for the installed on-premises data gateway.
-This section is a summary of the guide Install data gateway and Connect to SAP systems.
-Connect to the Azure Portal and follow the steps below:
- Go to On-premises Data Gateways:  Select Add  Fill the required parameters. Make sure to Select the same region as used on the installation (East US) and Select the name of the gateway previously created that should be populated on the drop-down box.</description>
-    </item>
-    
-    <item>
-      <title>SAP TABLE Provider</title>
-      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step3/</link>
-      <pubDate>Fri, 25 Mar 2022 10:32:20 -0300</pubDate>
-      
-      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step3/</guid>
-      <description>Let&amp;rsquo;s create a new pipeline and extract data to the Blob Storage:
- On the Data Factory Studio, click on the Pencil icon on the left, click the Dataset Ellipsis and select New Dataset  For the datastore, we will search for SAP and select SAP Table:  For the properties:   Name: SapTable1 Create a New under Linked Service   Fill the required data for the linked service:   Name: SapTable1 Integration Runtime: SAPIntegrationRuntime Server Name: &amp;laquo;HANA IP&amp;raquo; System Number: 00 Client Id: 100 Username: BPINST Password: Welcome1 Click on Test connection and if successful, click on Apply   Select the newly created SapTable1 linked service, select Table MATDOC and click OK   We are now communicating with SAP via Netweaver.</description>
-    </item>
-    
-    <item>
-      <title>Run a Backup</title>
-      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step2/</link>
-      <pubDate>Tue, 15 Mar 2022 15:55:06 -0300</pubDate>
-      
-      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step2/</guid>
-      <description>With Azure Backups configured and communicating with SAP HANA database, let&amp;rsquo;s execute a manual backup to test it.
-This section will show the steps required for that to be accomplished:
- Log on to the Azure Portal and click on Backup items and then SAP HANA in Azure VM  You should see a screen similar to this, with a Warning (initial backup pending) message. Right+Click the elipsis and select Backup Now for both HDB and SYSTEMDB.</description>
-    </item>
-    
-    <item>
-      <title>Publishing to Teams</title>
-      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step3/</link>
-      <pubDate>Thu, 10 Mar 2022 17:25:38 -0300</pubDate>
-      
-      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step3/</guid>
-      <description>In this section we will publish our Chatbot to Teams and test it.
-On the left side of the screen go to the Publish Publish the latest version. Once the bot is public, we will add it to our org&amp;rsquo;s Teams. Click on Go to Channels and then turn on Teams Channel After the publishing and channel activations succeeds, you should see the option to Open bot directly on Teams. On Teams, Add the Bot Run the same simulations as in the test bot.</description>
-    </item>
-    
-    <item>
-      <title>Running the lab</title>
-      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/step3/</link>
-      <pubDate>Thu, 10 Mar 2022 14:52:21 -0300</pubDate>
-      
-      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/step3/</guid>
-      <description>In this step we will execute the Workflow created previously
-Go back to Overview, Enable Debug mode (will be used in the future) and copy the Workflow URL provided We need to invoke the API, so we can use an externall tool like Postman or use the embeded Run Trigger tool.
-For Postman:
- Method: POST URL: copied on the previous step Body: raw - JSON Body content: {&amp;quot;id&amp;quot;: &amp;quot;0000000728&amp;quot;} or {&amp;quot;id&amp;quot;: &amp;quot;0000001575&amp;quot;}  Note: SAP compares strings so have that in mind with leading zeroes and 10 total chars   Hit Send.</description>
-    </item>
-    
-    <item>
-      <title>Run a Restore</title>
-      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step3/</link>
-      <pubDate>Tue, 15 Mar 2022 15:55:06 -0300</pubDate>
-      
-      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step3/</guid>
-      <description>Let&amp;rsquo;s change some data and then run a restore for a point-in-time previous to the change.
-This section will show the steps required for that to be accomplished:
-Changing some data  Go to the Bastion Host, and open the SAP GUI. Login with BPINST/Welcome1 default user.  On SAP GUI, go to TCODE MM02 to change a material.  For Material we will choose the CM-FL-V00 a Forklift. Click on the Checkmark.</description>
-    </item>
-    
-    <item>
-      <title>Extracting data</title>
-      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step4/</link>
-      <pubDate>Fri, 25 Mar 2022 10:32:20 -0300</pubDate>
-      
-      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step4/</guid>
-      <description>Let&amp;rsquo;s add some steps on our pipeline to extract data to the Blob Storage:
- On the Data Factory Studio, click on the adfsap_pipeline on the left, open the Move &amp;amp; Transform activity, and drag Copy data to the main panel:  For the Copy data activity, we will name it Hana2Blob, under General tab:  On the Source tab we will select the dataset we want to read data from.</description>
-    </item>
-    
-    <item>
-      <title>Creating and account</title>
-      <link>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/demogw/step1/</link>
-      <pubDate>Mon, 04 Apr 2022 09:17:53 -0300</pubDate>
-      
-      <guid>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/demogw/step1/</guid>
-      <description>This section will show how you can create and account in SAP Gateway Demo System and have access to the sample data models.
-  Go to the Signup page
-  Authenticate using your SAP credentials   Read and Accept the terms and click on Register   Wait for the email with user id (SXXXXXXXXXXX) and temporary password.   Log on using the temporary credentials to SAP Web GUI and change your password.</description>
-    </item>
-    
   </channel>
 </rss>

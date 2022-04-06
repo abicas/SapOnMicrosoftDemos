@@ -7,5 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Tue, 08 Mar 2022 17:27:06 -0300</lastBuildDate><atom:link href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/sap_cal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SAP CAL Account Setup</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/sap_cal/accsetup/</link>
+      <pubDate>Wed, 09 Mar 2022 09:55:28 -0300</pubDate>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/sap_cal/accsetup/</guid>
+      <description>First you need to create a free SAP Cloud Appliance Library (CAL) account.
+Go to https://cal.sap.com/ and click on Log On.
+On the Login page, select Register and fill the required information.
+Once you got your approval e-mail from SAP, proceed to the SAP CAL website and Log On with your credentials, then follow the steps below:
+ Go to Accounts and click on Create Account  Give it a name, select Microsoft Azure and fill the data with the information gathered.</description>
+    </item>
+    <item>
+      <title>Remote Desktop Access</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/sap_cal/rdpacc/</link>
+      <pubDate>Wed, 09 Mar 2022 09:55:28 -0300</pubDate>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/sap_cal/rdpacc/</guid>
+      <description>Let&amp;rsquo;s connect to an RDP session on the Bastion Host.
+Use the Public IP for the Remote Desktop provided on the Instance tab.
+ Default User: Administrator Default Password: The one used during the SAP deployment  Once connected you should see a screen similar to this. If the message says it is still under deployment, log off and wait a little bit longer. We will basically use 3 apps installed here:</description>
+    </item>
   </channel>
 </rss>

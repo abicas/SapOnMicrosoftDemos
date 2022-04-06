@@ -7,5 +7,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Thu, 10 Mar 2022 11:55:21 -0300</lastBuildDate><atom:link href="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Azure Data Factory</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/</link>
+      <pubDate>Mon, 14 Mar 2022 14:13:05 -0300</pubDate>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/</guid>
+      <description>Extracting SAP DATA with Azure Data Factory Estimated Time for this Lab This lab is estimated to take around 30 minutes.
+What we will build   </description>
+    </item>
   </channel>
 </rss>
