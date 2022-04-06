@@ -202,5 +202,16 @@ Changing some data  Go to the Bastion Host, and open the SAP GUI. Login with BPI
  On the Data Factory Studio, click on the adfsap_pipeline on the left, open the Move &amp;amp; Transform activity, and drag Copy data to the main panel:  For the Copy data activity, we will name it Hana2Blob, under General tab:  On the Source tab we will select the dataset we want to read data from.</description>
     </item>
     
+    <item>
+      <title>Creating and account</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/demogw/step1/</link>
+      <pubDate>Mon, 04 Apr 2022 09:17:53 -0300</pubDate>
+      
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/demogw/step1/</guid>
+      <description>This section will show how you can create and account in SAP Gateway Demo System and have access to the sample data models.
+  Go to the Signup page
+  Authenticate using your SAP credentials   Read and Accept the terms and click on Register   Wait for the email with user id (SXXXXXXXXXXX) and temporary password.   Log on using the temporary credentials to SAP Web GUI and change your password.</description>
+    </item>
+    
   </channel>
 </rss>
