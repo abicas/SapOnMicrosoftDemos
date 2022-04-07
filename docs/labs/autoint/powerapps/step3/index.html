@@ -7,8 +7,7 @@
     <meta name="generator" content="Relearn 3.4.1&#43;tip">
     <meta name="description" content="SAP on Microsoft - Tutorials">
     <meta name="author" content="Alexandre Bicas">
-    <title>Monitoring SAP :: SAP on Microsoft - Tutorials</title>
-    <link rel="alternate" type="application/rss&#43;xml" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/index.xml" title="SAP on Microsoft - Tutorials" />
+    <title>Enhance the App :: SAP on Microsoft - Tutorials</title>
     <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1649294994" rel="stylesheet">
     <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1649294994" rel="stylesheet">
     <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1649294994" rel="stylesheet">
@@ -36,17 +35,17 @@
     </script>
     <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1649294994"></script>
   </head>
-  <body class="mobile-support" data-url="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/">
+  <body class="mobile-support" data-url="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step3/">
     <div id="body" class="default-animation">
       <div id="sidebar-overlay"></div>
       <div id="toc-overlay"></div>
       <nav id="topbar" class="highlightable">
         <div>
           <div class="navigation">
-             <a class="nav nav-next" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step1/" title="Setting up Azure Monitor for SAP"><i class="fas fa-chevron-right fa-fw"></i></a>
+             <a class="nav nav-next" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step4/" title="Publish to Teams"><i class="fas fa-chevron-right fa-fw"></i></a>
           </div>
           <div class="navigation">
-             <a class="nav nav-prev" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/" title="Infrastructure and Management"><i class="fas fa-chevron-left fa-fw"></i></a>
+             <a class="nav nav-prev" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step2/" title="Create Power App"><i class="fas fa-chevron-left fa-fw"></i></a>
           </div>
           <div id="breadcrumbs">
             <span id="sidebar-toggle-span">
@@ -55,10 +54,11 @@
             <span id="toc-menu" title='Table of Contents'><i class="fas fa-list-alt fa-fw"></i></span>
             <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
               <meta itemprop="itemListOrder" content="Descending" />
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="4" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/"><span itemprop="name">SAP on Microsoft</span></a> > </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="3" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/"><span itemprop="name">SAP on Microsoft Labs</span></a> > </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="2" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/"><span itemprop="name">Infrastructure and Management</span></a> > </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="1" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/" aria-disabled="true"><span itemprop="name">Monitoring SAP</span></a></li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="5" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/"><span itemprop="name">SAP on Microsoft</span></a> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="4" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/"><span itemprop="name">SAP on Microsoft Labs</span></a> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="3" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/"><span itemprop="name">Automation and Integration</span></a> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="2" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/"><span itemprop="name">Power Apps</span></a> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="1" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step3/" aria-disabled="true"><span itemprop="name">Enhance the App</span></a></li>
             </ol>
           </div>
           <div class="default-animation progress">
@@ -67,9 +67,8 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#azure-monitoring-for-sap">Azure Monitoring for SAP</a></li>
-        <li><a href="#estimated-time-for-this-lab">Estimated Time for this Lab</a></li>
-        <li><a href="#what-we-will-build">What we will build</a></li>
+        <li><a href="#adding-a-category-filter">Adding a Category Filter</a></li>
+        <li><a href="#adding-more-data">Adding More Data</a></li>
       </ul>
     </li>
   </ul>
@@ -84,19 +83,71 @@
           </div>
           <article>
 
-<h1>Monitoring SAP</h1>
-<h3 id="azure-monitoring-for-sap">Azure Monitoring for SAP</h3>
-<p>One of the benefits of monitoring SAP on Azure is the integrated view of both Infrastructure metrics (like CPU, RAM and Disk) alongside HANA database metrics (like memory usage and memory growth), and Netweaver metrics like concurrent sessions and locks.</p>
-<p>This allows for a rapid response in case of an incident response as well as provinding a simpler and more integrated way of having the whole SAP performance picture in a glance.</p>
-<p>This lab is based on the <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/azure-monitor-sap-quickstart">Azure Monitor for SAP Quickstart</a> guide.</p>
-<h3 id="estimated-time-for-this-lab">Estimated Time for this Lab</h3>
-<p>This lab is estimated to take between 20 and 30 minutes.</p>
-<h3 id="what-we-will-build">What we will build</h3>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/SGfpUqr8cao" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
+<h1>Enhance the App</h1>
+<p>In this step we will add some filtering functionality to the app and consume data from related Suppliers API based on the selected item.</p>
+<h3 id="adding-a-category-filter">Adding a Category Filter</h3>
+<ol>
+<li>
+<p>Click on the <strong>+</strong> icon, open <strong>Input</strong>, drag and drop the <strong>Drop down</strong> component to the canvas, resize it and set the required parameters:</p>
+<ul>
+<li>Name = <strong>DropProduct</strong></li>
+<li>Items = <strong>Distinct(zProducts,Category)</strong></li>
+</ul>
+<p>The Items property is the content we want the component to have. In this example we will be selecting unique Category values from the zProduct collection. You can <strong>ALT+CLICK</strong> or <strong>OPTION+CLICK</strong> the button to test it.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log17.png?height=400" alt="Powerapp"></p>
+</li>
+<li>
+<p>Click on the <strong>+</strong> icon, open <strong>Input</strong>, drag and drop the <strong>Check box</strong> component to the canvas, name it <strong>Checkbox1</strong> and set its Text to <strong>Enable filter</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log18.png?height=400" alt="Powerapp"></p>
+</li>
+<li>
+<p>Now let&rsquo;s change the Items property of ther Gallery1 to display all items or only display filtered Items, depending on the selections for the checkbox and the dropdown:</p>
+<ul>
+<li>Items = <strong>If(Checkbox1.Value, SortByColumns(Filter(zProducts, Category = DropProduct.Selected.Result), &ldquo;Name&rdquo;), SortByColumns(zProducts, &ldquo;Name&rdquo;))</strong></li>
+</ul>
+<p>Here we are running a little script with a conditional statement. If checkbox is checked, it will filter zProduct based on the dropdown selected. Otherwise, it will display all items.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log19.png?height=400" alt="Powerapp"></p>
+</li>
+</ol>
+<p>We just added Filtering with almost no code at all. Click on the Play button to run the App and try the new components
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log20.png?height=400" alt="Powerapp">
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log27.png?height=400" alt="Powerapp"></p>
+<h3 id="adding-more-data">Adding More Data</h3>
+<p>Now that the app is running with Products data, let&rsquo;s add Suppliers Data to the app.</p>
+<p>The leyout used on this example is a suggestion but feel free to rearrange the components and customize layout of your app.</p>
+<ol>
+<li>
+<p>We will start by loading more data on the <strong>Reload Products</strong> button. Change the OnSelect property to the value below. It will create a new collection called zSuppliers with data from the BusinessPartners API.</p>
+<ul>
+<li>OnSelect = <strong>ClearCollect(zProducts, &lsquo;SAPODATA[Sample]Connector&rsquo;.ListProductSets().d.results); ClearCollect(zSuppliers, &lsquo;SAPODATA[Sample]Connector&rsquo;.ListBusinessPartner().d.results)</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log28.png?height=400" alt="Powerapp"></li>
+</ul>
+</li>
+<li>
+<p>In the same way we loaded more data on the step above, we will filter more data when selecting a product. Click on the <strong>arrow</strong> inside Gallery1 and change the OnSelect property to the value below. This will set a variable called zCurrentBP with the data from zSuppliers with the same SupplierID that the one in the product.</p>
+<ul>
+<li>OnSelect = <strong>Set(zSelected, Gallery1.Selected); Set (zCurrentBP, First(Filter(zSuppliers, BusinessPartnerID = Gallery1.Selected.SupplierID)))</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log29.png?height=400" alt="Powerapp"></li>
+</ul>
+</li>
+<li>
+<p>Add more labels like we did on the app creation and set its Text property to:</p>
+<ul>
+<li>Supplier Email = <strong>zCurrentBP.EmailAddress</strong></li>
+<li>Address = <strong>zCurrentBP.Address.Street&amp;&quot;, &ldquo;&amp;zCurrentBP.Address.Building&amp;&rdquo;, &ldquo;&amp;zCurrentBP.Address.PostalCode</strong></li>
+<li>Country = <strong>zCurrentBP.Address.Country</strong></li>
+<li>Phone = <strong>zCurrentBP.PhoneNumber</strong></li>
+<li>Website = <strong>zCurrentBP.WebAddress</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log30.png?height=400" alt="Powerapp"></li>
+</ul>
+</li>
+</ol>
+<p>You can click on the <strong>play</strong> button on the top right to run the app. Reload the product and see it getting data from distinct APIs in a single screen.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log00play.png?height=200" alt="Powerapp">
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log26.png?height=400" alt="Powerapp"></p>
+<p>Let&rsquo;s <strong>SAVE</strong> the App Click on the File menu:
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log21a.png?height=400" alt="Powerapp"></p>
+<p>Congratulations, on the next section we will publish the app to Teams.</p>
 
             <footer class="footline">
             </footer>
@@ -142,7 +193,7 @@
           <li data-nav-id="/env_setup/demogw/" title="SAP Gateway Demo System" class="dd-item"><input type="checkbox" id="section-1b6bf7a19a5eec70c5e08a51f553b8ac" class="toggle"/><label for="section-1b6bf7a19a5eec70c5e08a51f553b8ac" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/demogw/"><b></b>SAP Gateway Demo System<i class="fas fa-check read-icon"></i></a><ul>
           <li data-nav-id="/env_setup/demogw/step1/" title="Creating and account" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/demogw/step1/"><b>1. </b>Creating and account<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
           <li data-nav-id="/labs/" title="SAP on Microsoft Labs" class="dd-item parent"><input type="checkbox" id="section-769cb6d43dfc85e042ab942f9a6740fe" class="toggle" checked/><label for="section-769cb6d43dfc85e042ab942f9a6740fe" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/">SAP on Microsoft Labs<i class="fas fa-check read-icon"></i></a><ul>
-          <li data-nav-id="/labs/autoint/" title="Automation and Integration" class="dd-item"><input type="checkbox" id="section-4ce425e819471755ff25297eea0caa13" class="toggle"/><label for="section-4ce425e819471755ff25297eea0caa13" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/"><b> </b>Automation and Integration<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/autoint/" title="Automation and Integration" class="dd-item parent"><input type="checkbox" id="section-4ce425e819471755ff25297eea0caa13" class="toggle" checked/><label for="section-4ce425e819471755ff25297eea0caa13" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/"><b> </b>Automation and Integration<i class="fas fa-check read-icon"></i></a><ul>
           <li data-nav-id="/labs/autoint/logicapps/" title="Azure Logic Apps" class="dd-item"><input type="checkbox" id="section-82cbc536be01244731e961352b7bf3ab" class="toggle"/><label for="section-82cbc536be01244731e961352b7bf3ab" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/"><b> </b>Azure Logic Apps<i class="fas fa-check read-icon"></i></a><ul>
           <li data-nav-id="/labs/autoint/logicapps/step1/" title="Create a Logic App" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/step1/"><b>1. </b>Create a Logic App<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/labs/autoint/logicapps/step2/" title="Create a Workflow" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/step2/"><b>2. </b>Create a Workflow<i class="fas fa-check read-icon"></i></a></li>
@@ -151,10 +202,10 @@
           <li data-nav-id="/labs/autoint/virtualagents/step1/" title="Creating our Chatbot" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step1/"><b>1. </b>Creating our Chatbot<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/labs/autoint/virtualagents/step2/" title="Testing our Chatbot" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step2/"><b>2. </b>Testing our Chatbot<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/labs/autoint/virtualagents/step3/" title="Publishing to Teams" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step3/"><b>3. </b>Publishing to Teams<i class="fas fa-check read-icon"></i></a></li></ul></li>
-          <li data-nav-id="/labs/autoint/powerapps/" title="Power Apps" class="dd-item"><input type="checkbox" id="section-ed84f52bb888f920b87a856874cbaccc" class="toggle"/><label for="section-ed84f52bb888f920b87a856874cbaccc" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/"><b> </b>Power Apps<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/autoint/powerapps/" title="Power Apps" class="dd-item parent"><input type="checkbox" id="section-ed84f52bb888f920b87a856874cbaccc" class="toggle" checked/><label for="section-ed84f52bb888f920b87a856874cbaccc" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/"><b> </b>Power Apps<i class="fas fa-check read-icon"></i></a><ul>
           <li data-nav-id="/labs/autoint/powerapps/step1/" title="SAP Custom Connector" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step1/"><b>1. </b>SAP Custom Connector<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/labs/autoint/powerapps/step2/" title="Create Power App" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step2/"><b>2. </b>Create Power App<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/labs/autoint/powerapps/step3/" title="Enhance the App" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step3/"><b>3. </b>Enhance the App<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/autoint/powerapps/step3/" title="Enhance the App" class="dd-item active"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step3/"><b>3. </b>Enhance the App<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/labs/autoint/powerapps/step4/" title="Publish to Teams" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step4/"><b>4. </b>Publish to Teams<i class="fas fa-check read-icon"></i></a></li></ul></li>
           <li data-nav-id="/labs/autoint/automate/" title="Power Automate" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/automate/"><b> </b>Power Automate<i class="fas fa-check read-icon"></i></a></li></ul></li>
           <li data-nav-id="/labs/dataai/" title="Data &amp; AI" class="dd-item"><input type="checkbox" id="section-a707b1c9b6bd4e482a78a8ce24b9eb86" class="toggle"/><label for="section-a707b1c9b6bd4e482a78a8ce24b9eb86" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/"><b> </b>Data &amp; AI<i class="fas fa-check read-icon"></i></a><ul>
@@ -164,8 +215,8 @@
           <li data-nav-id="/labs/dataai/datafactory/step3/" title="SAP TABLE Provider" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step3/"><b>3. </b>SAP TABLE Provider<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/labs/dataai/datafactory/step4/" title="Extracting data" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step4/"><b>4. </b>Extracting data<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
           <li data-nav-id="/labs/security/" title="Security" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/"><b> </b>Security<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/labs/inframgmt/" title="Infrastructure and Management" class="dd-item parent"><input type="checkbox" id="section-8bc0407a0d8a1a32a579c92334004827" class="toggle" checked/><label for="section-8bc0407a0d8a1a32a579c92334004827" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/"><b> </b>Infrastructure and Management<i class="fas fa-check read-icon"></i></a><ul>
-          <li data-nav-id="/labs/inframgmt/monitoring/" title="Monitoring SAP" class="dd-item active parent"><input type="checkbox" id="section-007d20ec69cd510209aa2eebfacc774f" class="toggle" checked/><label for="section-007d20ec69cd510209aa2eebfacc774f" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/"><b></b>Monitoring SAP<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/inframgmt/" title="Infrastructure and Management" class="dd-item"><input type="checkbox" id="section-8bc0407a0d8a1a32a579c92334004827" class="toggle"/><label for="section-8bc0407a0d8a1a32a579c92334004827" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/"><b> </b>Infrastructure and Management<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/inframgmt/monitoring/" title="Monitoring SAP" class="dd-item"><input type="checkbox" id="section-007d20ec69cd510209aa2eebfacc774f" class="toggle"/><label for="section-007d20ec69cd510209aa2eebfacc774f" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/"><b></b>Monitoring SAP<i class="fas fa-check read-icon"></i></a><ul>
           <li data-nav-id="/labs/inframgmt/monitoring/step1/" title="Setting up Azure Monitor for SAP" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step1/"><b>1. </b>Setting up Azure Monitor for SAP<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/labs/inframgmt/monitoring/step2/" title="HANA Provider" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step2/"><b>2. </b>HANA Provider<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/labs/inframgmt/monitoring/step3/" title="Linux Provider" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step3/"><b>3. </b>Linux Provider<i class="fas fa-check read-icon"></i></a></li></ul></li>

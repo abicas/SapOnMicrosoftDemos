@@ -368,6 +368,7 @@ th {
     flex-shrink: 0;
     height: 100%;
     margin-left: 300px;
+    text-align: left;
     min-height: 100%;
     min-width: calc( 100% - 300px);
     max-width: calc( 100% - 300px);
@@ -452,7 +453,7 @@ th {
 #body-inner .chapter h3:first-of-type {
     font-weight: 200;
     margin-top: 0;
-    text-align: center;
+    text-align: left;
 }
 
 #body-inner .chapter h1 {
@@ -477,6 +478,7 @@ h2, h3, h4, h5, h6 {
     color: #4a4a4a; /* var(--MAIN-TITLES-TEXT-color) */
     font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; /* var(--MAIN-TITLES-TEXT-font) */
     letter-spacing: -1px;
+    text-align: left;
     text-rendering: optimizeLegibility;
 }
 
