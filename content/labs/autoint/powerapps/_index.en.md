@@ -20,4 +20,4 @@ Whenever this API is used, it triggers a Logic App (built with no code) that wil
 
 You can see a sample of the lab below: 
 
-{{< youtube wqMKEuQEmIA >}}
+{{< youtube YOIe_aw2VDw >}}
