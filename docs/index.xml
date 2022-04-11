@@ -13,7 +13,7 @@
       <pubDate>Tue, 08 Mar 2022 16:31:36 -0300</pubDate>
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/</guid>
       <description>Before we start building our labs we need to have provisioned a few resources:
- An Azure subscription setup An S/4HANA environment Installation of gateway components  The following sections will guide you thru the steps to accomplish this and be ready to the labs.</description>
+ An Azure subscription setup for SAP Cloud Appliance Library (SAP CAL) An existing S/4HANA environment or a trial deployed thru SAP CAL Installation of Microsoft Data Gateway components An account at the SAP Gateway Demo System for some integration examples  The following sections will guide you thru the steps to accomplish this and be ready to the labs.</description>
     </item>
     <item>
       <title>SAP on Microsoft Labs</title>

@@ -12,8 +12,16 @@ This is a free service for which we need to create and account and define creden
 
 ### What you will need
 
-1. Existing SAP Account ID/password
+1. Existing SAP Account ID/password (same one used on SAP CAL or create a new one)
 
 ### Expected duration
 
 This section is estimated to last no longer than 10 minutes
+
+### Additional Information and Links
+
+[Creating an Account](https://developers.sap.com/tutorials/gateway-demo-signup.html)
+
+[SAP Gateway Demo Login Screen](https://sapes5.sapdevcenter.com/sap/bc/gui/sap/its/webgui)
+
+[SAP Gateway Demo updates and news](https://blogs.sap.com/2017/12/05/new-sap-gateway-demo-system-available/)

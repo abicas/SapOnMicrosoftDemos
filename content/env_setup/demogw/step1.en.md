@@ -24,3 +24,8 @@ This section will show how you can create and account in SAP Gateway Demo System
 
 6. You should be able to see SAP GUI Web with your credentials. You can close the browser now. We will use the userid and password in the upcoming labs. 
 ![demogw](/images/demogw6.png?height=300)
+
+Congratulations ! You finished the setup of the environment for our labs to be created ! 
+
+Now select the desired lab on the left to continue. 
+

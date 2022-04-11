@@ -10,16 +10,16 @@
     <title>SAP on Microsoft :: SAP on Microsoft - Tutorials</title>
     <link rel="alternate" type="application/rss&#43;xml" href="https://abicas.github.io/SapOnMicrosoftDemos/index.xml" title="SAP on Microsoft - Tutorials" />
     <link rel="alternate" type="application/json" href="https://abicas.github.io/SapOnMicrosoftDemos/index.json" title="SAP on Microsoft - Tutorials" />
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1649423142" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1649423142" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1649423142" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1649423142" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1649423142" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1649423142" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1649423142" rel="stylesheet" id="variant-style">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1649423142" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1649423142" rel="stylesheet" media="print">
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1649423142"></script>
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1649697653" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1649697653" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1649697653" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1649697653" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1649697653" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1649697653" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1649697653" rel="stylesheet" id="variant-style">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1649697653" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1649697653" rel="stylesheet" media="print">
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1649697653"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -35,7 +35,7 @@
       var baseUriFull='https:\/\/abicas.github.io\/SapOnMicrosoftDemos/';
       variants.init( [ 'blue' ] );
     </script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1649423142"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1649697653"></script>
   </head>
   <body class="mobile-support" data-url="https://abicas.github.io/SapOnMicrosoftDemos/">
     <div id="body" class="default-animation">
@@ -65,10 +65,12 @@
   <ul>
     <li>
       <ul>
-        <li></li>
+        <li><a href="#intro-to-the-site">Intro to the site</a></li>
+        <li><a href="#navigating-the-site">Navigating the site</a></li>
         <li><a href="#requirements">Requirements</a></li>
         <li><a href="#running-the-labs">Running the Labs</a></li>
-        <li><a href="#all-set">All set</a></li>
+        <li><a href="#if-you-see-something-say-something">If you see something, say something</a></li>
+        <li><a href="#all-set--lets-go-">All set ! Let&rsquo;s go !</a></li>
       </ul>
     </li>
   </ul>
@@ -83,52 +85,58 @@
           </div>
           <article>
 
-<h1 id="sap-on-microsoft">SAP on Microsoft</h1>
-<h1 id="labs">labs</h1>
-<h4 id="welcome-to-the-sap-on-microsoft-labs">Welcome to the SAP on Microsoft Labs!</h4>
-<p>This website is aimed to provide step-by-step guidance on how to integrate SAP systems with Microsoft services and software.</p>
-<p>We know that for an environment like SAP, having a robust infrastrcuture is a must-have, but with Microsoft you can do much more!</p>
-<p>This website is deivided in 3 main sections:</p>
+<h1 id="welcome-to-the">Welcome to the</h1>
+<h1 id="sap-on-microsoft-labs">SAP on Microsoft Labs</h1>
+<h3 id="intro-to-the-site">Intro to the site</h3>
+<p>This website is aimed to provide step-by-step guidance on how to prepare an SAP environment on Azure and demonstrate how can you integrate your SAP systems with Microsoft services and softwares.</p>
+<p>We know that for an environment like SAP, having a robust infrasctructure is a must-have but with Microsoft you can do much more!</p>
+<p>This website is divided in 3 main sections:</p>
 <ul>
-<li>Environment Setup</li>
-<li>SAP on Microsoft Labs</li>
-<li>Environment Cleanup</li>
+<li><strong>Environment Setup</strong>: Where we will go thru the steps required to run the labs on the next sections. Please don&rsquo;t skip.</li>
+<li><strong>SAP on Microsoft Labs</strong>: Labs divided by category to create sample integrations between SAP and Microsoft</li>
+<li><strong>Environment Cleanup</strong>: SAP can get quite expensive if let running 24x7. Here we will cleanup the environment created on Setup phase.</li>
 </ul>
-<p>Both sections can be accesses on the left menu and each one will be divided into smaller chunks of steps.</p>
 <p>Each lab can be run individually from each other and are divided into sub-sections:</p>
 <ul>
-<li>Automation and Integration</li>
-<li>Data &amp; AI</li>
-<li>Security</li>
-<li>Infrastructure and Management</li>
+<li><strong>Automation and Integration</strong></li>
+<li><strong>Data &amp; AI</strong></li>
+<li><strong>Security</strong></li>
+<li><strong>Infrastructure and Management</strong></li>
 </ul>
-<p>On each lab introduction page, you will be presented by a demo video with the lab final result.</p>
+<p>On each lab introduction page, you will be presented a quickl introduction about the Microsoft technology involved, a video with the lab final result, estimated time for completion, and requirements.</p>
+<h3 id="navigating-the-site">Navigating the site</h3>
+<p>Navigation between sections can be accessed on the left menu and each one will be divided into smaller chunks of steps. Also on the top right of your screen you have the next/back buttons to allow for easier navigation.</p>
+<p><img src="https://abicas.github.io/SapOnMicrosoftDemos/images/navigation.png?height=250px" alt="menu"></p>
+<h3 id="requirements">Requirements</h3>
+<p>Before we start extending SAP, you need to have:</p>
+<ul>
+<li>An Azure subscription with enough credits for running the environment</li>
+<li>An Office365 subscription with access to Power Platform</li>
+</ul>
 
 <div class="box notices info">
     <div class="box-label"><i class="fas fa-info-circle fa-fw"></i> Info</div>
     <div class="box-content">
-<p>Some components used will depend on Trial licenses that expire after a given period of time. Before building up on top of those labs, make sure you do this in a properly licensed enviroment to avoid losing your work.</p>
+<p>Some components used will depend on Trial licenses that expire after a given period of time. Before building production content on top of those labs, make sure you do this in a properly licensed enviroment to avoid losing your work.</p>
 
     </div>
 </div>
-<h3 id="requirements">Requirements</h3>
-<p>Before we start extending SAP, you need to have:</p>
-<ul>
-<li>An Azure subscription with enough credits</li>
-<li>An Office365 subscription with access to Power Platform</li>
-</ul>
 
 <div class="box notices warning">
     <div class="box-label"><i class="fas fa-exclamation-triangle fa-fw"></i> Warning</div>
     <div class="box-content">
-<p>ATTENTION: Some VMs for SAP HANA used in this lab can become quite expensinve if you let it running. Make sure you define shutdown timers and in the end of your labs, go thru the Environment Cleanup section to remove unecessary resources</p>
+<p>ATTENTION: Some VMs for SAP HANA used in this lab can become quite expensive if you let it running 24x7. Make sure you define shutdown timers and in the end of your labs, go thru the Environment Cleanup section to remove unecessary resources.
+This lab is not responsible for costs related to its examples.</p>
 
     </div>
 </div>
 <h3 id="running-the-labs">Running the Labs</h3>
-<p>It is <strong>strongly recommended</strong> that you go thru Environment Setup before anything else, once the Labs assume the standards deployed in the previous section.</p>
-<p>Also for the labs themselves, <strong>follow the steps in the order they were designed to</strong> otherwise you risk having to startover from scratch.</p>
-<h3 id="all-set">All set</h3>
+<p>It is <strong>strongly recommended</strong> that you go thru Environment Setup before anything else once the Labs assume the standards deployed in the previous section. Each lab will have an introductiory page with the requirements, in case you want to jump right into a specific lab.</p>
+<p>Also, <strong>follow the steps in the order they were presented</strong> otherwise you risk having to startover from scratch.</p>
+<h3 id="if-you-see-something-say-something">If you see something, say something</h3>
+<p>This project is open source by nature and things can change pretty fast in the cloud environment.
+In case you see something wrong on the steps presented or something is not working as designed, feel free to contribute opening an issue or pushing a commit to <a href="https://github.com/abicas/SapOnMicrosoftDemos">our Github project page</a>.</p>
+<h3 id="all-set--lets-go-">All set ! Let&rsquo;s go !</h3>
 <p>Are you ready to get started?</p>
 <p>Click on the right arrow for next page or navigate using the left side menu.</p>
 
@@ -149,9 +157,9 @@
           <input data-search-input id="search-by" type="search" placeholder="Search...">
           <span data-search-clear=""><i class="fas fa-times"></i></span>
         </div>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1649423142"></script>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1649423142"></script>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1649423142"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1649697653"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1649697653"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1649697653"></script>
       </div>
       <div id="homelinks" class="default-animation">
         <ul>
@@ -163,7 +171,7 @@
       <div id="content-wrapper" class="highlightable">
         <ul class="topics collapsible-menu">
           <li data-nav-id="/env_setup/" title="Environment Setup" class="dd-item"><input type="checkbox" id="section-d038284c53e4747472fade1a7cff02fe" class="toggle"/><label for="section-d038284c53e4747472fade1a7cff02fe" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/">Environment Setup<i class="fas fa-check read-icon"></i></a><ul>
-          <li data-nav-id="/env_setup/azure_setup/" title="Azure Setup for SAP CAL" class="dd-item"><input type="checkbox" id="section-0b7a593fbf16d5dd32a751a7011f49d5" class="toggle"/><label for="section-0b7a593fbf16d5dd32a751a7011f49d5" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/"><b> </b>Azure Setup for SAP CAL<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/env_setup/azure_setup/" title="Azure Setup for SAP CAL" class="dd-item"><input type="checkbox" id="section-0b7a593fbf16d5dd32a751a7011f49d5" class="toggle"/><label for="section-0b7a593fbf16d5dd32a751a7011f49d5" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/"><b></b>Azure Setup for SAP CAL<i class="fas fa-check read-icon"></i></a><ul>
           <li data-nav-id="/env_setup/azure_setup/azuread/" title="Create and Azure Active Directory application" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/azuread/"><b>1. </b>Create and Azure Active Directory application<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/env_setup/azure_setup/adrole/" title="Assign Role to Application" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/adrole/"><b>2. </b>Assign Role to Application<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/env_setup/azure_setup/getinfo/" title="Get required information" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/getinfo/"><b>3. </b>Get required information<i class="fas fa-check read-icon"></i></a></li></ul></li>
@@ -212,10 +220,9 @@
         <div id="shortcuts">
           <div class="nav-title">More</div>
           <ul>
-            <li><a class="padding" href="https://github.com/matcornic/hugo-theme-learn"><i class='fab fa-fw fa-github'></i> GitHub repo</a></li>
-            <li><a class="padding" href="https://abicas.github.io/SapOnMicrosoftDemos/showcase"><i class='fas fa-fw fa-camera'></i> Showcases</a></li>
+            <li><a class="padding" href="https://github.com/abicas/SapOnMicrosoftDemos"><i class='fab fa-fw fa-github'></i> GitHub repo</a></li>
+            <li><a class="padding" href="https://www.youtube.com/playlist?list=PLkP2IANHFwhaEowIbQ-a51_E5Sqb-xrz-"><i class='fab fa-youtube' ></i> Youtube Playlist</a></li>
             <li><a class="padding" href="https://gohugo.io/"><i class='fas fa-fw fa-bookmark'></i> Hugo Documentation</a></li>
-            <li><a class="padding" href="https://abicas.github.io/SapOnMicrosoftDemos/credits"><i class='fas fa-fw fa-bullhorn'></i> Credits</a></li>
           </ul>
         </div>
         <div class="footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter"></div>
@@ -254,10 +261,10 @@
         </div>
       </div>
     </aside>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1649423142"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1649423142"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1649423142"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1649423142"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1649697653"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1649697653"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1649697653"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1649697653"></script>
     <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
     <script>
       function useMermaid( config ){
@@ -271,6 +278,6 @@
       }
       useMermaid( JSON.parse("{}") );
     </script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1649423142"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1649697653"></script>
   </body>
 </html>

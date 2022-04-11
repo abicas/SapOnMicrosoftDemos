@@ -6,6 +6,12 @@ chapter = false
 pre = "<b>2. </b>"
 +++
 
+In this section we will add permissions and a role to the app registrations, allowing it to perform actions on your Azure subscription on your behalf: 
+
+{{% notice warning %}}
+In order to be able to deploy on your subscription, permissions used here will be quite broad. Make sure you go thru cleanup section to remove it after the labs, to avoid incidental usage of those credentials for non-authorized access to your subscription. In production environments, you should go thru the SAP and Microsoft best practices and setup access with the minimum required permissions and controls. 
+{{% /notice %}}
+
 1. Navigate to the level of scope you wish to assign the application to. For example, to assign a role at the subscription scope, select All services, General and **Subscriptions**.  
 ![Subscriptions](/images/subscriptions1.png)
 2. Select the particular subscription to assign the application to.

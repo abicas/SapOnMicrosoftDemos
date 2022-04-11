@@ -5,7 +5,7 @@ weight = 5
 chapter = false
 pre = "<b>1. </b>"
 +++
-
+### Creating an SAP CAL account
 First you need to create a free [SAP Cloud Appliance Library (CAL)](https://cal.sap.com/) account. 
 
 Go to [https://cal.sap.com/](https://cal.sap.com/) and click on **Log On**. 
@@ -14,6 +14,8 @@ On the Login page, select **Register** and fill the required information.
 
 ![Register](/images/sapcal01.png?height=250px)
 
+
+### Granting Azure access
 Once you got your approval e-mail from SAP, proceed to the SAP CAL website and Log On with your credentials, then follow the steps below: 
 
 1. Go to **Accounts** and click on **Create Account**
@@ -25,7 +27,8 @@ Once you got your approval e-mail from SAP, proceed to the SAP CAL website and L
 
 Alright, now we have the proper access to deploy a S/4HANA in your subscription. 
 
-SAP CAL allows for a 30 day Trial of the Solutions available, where SAP licenses are waived for 30 days; only the cloud provider hosting fees apply. You can setup auto-shutdown and auto-terminate later on to make sure we keep costs low. 
+### Deploying SAP S/4HANA
+SAP CAL allows for a 30 day Trial of the Solutions available, where SAP licenses are waived; only the cloud provider hosting fees apply. You can setup auto-shutdown and auto-terminate later on to make sure we keep costs low. 
 
 In order to deploy a Trial S/4HANA in you subscription: 
 
@@ -64,7 +67,9 @@ When the solution is deployed and activated, click on the instance name and chec
 You can also access the **Getting Started Guide** under **Solution Info** tab as well make sure all the VMs are up and SAP was started properly and is communicating. 
 ![Solution](/images/sapcal18.png)
 
-All done ! You have an SAP S/4HANA running in your susbcription ! On the next section let's see how we can access it and key users/passwords/parameters for conection that will be required later on. 
+All done ! You have an SAP S/4HANA running in your susbcription ! 
+
+On the next section let's see how we can access it and key users/passwords/parameters for conection that will be required later on. 
 
 
 

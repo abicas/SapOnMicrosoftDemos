@@ -13,8 +13,15 @@ In this section we will create and account on SAP CAL, configure Azure permissio
 
 ### What you will need
 
-1. Parameters from previous step 
+1. Azure subscription setup and Parameters/Values from previous step
+2. An existing SAP CAL account or create a new one following the steps
 
 ### Expected duration
 
 This section is estimated to last around 2-3 hours, mostly depending on the SAP deployment itself. 
+
+### Additional Links and Infos
+
+For future reference, part of this content was developed by taking information from: 
+
+[SAP Cloud Appliance Library on Microsoft Docs](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/cal-s4h)

@@ -19,9 +19,9 @@ Connect to the [Azure Portal](https://portal.azure.com) and follow the steps bel
 3. Fill the required parameters. Make sure to **Select the same region as used on the installation (East US)** and **Select the name of the gateway** previously created that should be populated on the drop-down box. 
 ![DG03](/images/azdg03.png?height=450px)
 
-Congratulations, you just finished the setup of the environment for our labs to be created ! 
+Congratulations, you just setup communications between SAP and Azure in a secure and simple way. 
 
-Now select the desired lab on the left to continue. 
+Now, let's head to the SAP Gateway Demo System setup. 
 
 
 

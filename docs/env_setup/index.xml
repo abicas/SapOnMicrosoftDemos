@@ -12,8 +12,10 @@
       <link>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/</link>
       <pubDate>Tue, 08 Mar 2022 16:34:27 -0300</pubDate>
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/</guid>
-      <description>In order to allow for SAP to deploy an S/4HANA environment in your Azure subscription, we need to setup permissions for it.
-What you will need  Azure subscription Admin access A text file to make note of the required information on the next step  Expected duration This section is estimated to last no longer than 10 minutes</description>
+      <description>SAP has a platform called SAP Cloud Application Library (SAP CAL), designed to automatically deploys SAP software on cloud hyperscalers.
+In order to allow for SAP to deploy an S/4HANA environment in your Azure subscription, we need to setup permissions for it in your subscription.
+This section will go thru the steps required to setup your subscription
+What you will need  An existing Azure subscription with enough credits for the labs Administrator access on the subscription A temporary text file to make note of the required information related to endpoints and keys   Warning In order to be able to deploy on your subscription, permissions used here will be quite broad.</description>
     </item>
     <item>
       <title>SAP Cloud Appliance Library (CAL)</title>
@@ -30,7 +32,8 @@ In this section we will create and account on SAP CAL, configure Azure permissio
       <pubDate>Wed, 09 Mar 2022 11:21:23 -0300</pubDate>
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/datagwsetup/</guid>
       <description>Once SAP is installed and access is working, we need to install the required components to allow for Microsoft services to interact with SAP S/4HANA environments.
-What you will need  Sucessfull deployment of S/4HANA and access ready  Expected duration This section is estimated to last no longer than 30 minutes</description>
+This section will go thru the steps required to get this software installed and accessing Azure resources.
+What you will need  Sucessfull deployment of S/4HANA and access validated in the previous step  Expected duration This section is estimated to last no longer than 30 minutes</description>
     </item>
     <item>
       <title>SAP Gateway Demo System</title>

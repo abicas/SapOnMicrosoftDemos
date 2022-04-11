@@ -6,6 +6,8 @@ chapter = false
 pre = "<b>2. </b>"
 +++
 
+Once your SAP is deployed, you will need access to specific SAP tools in order to access it (like HANA Studio and SAP GUI). Those software come preinstalled on the Bastion Host deployed by SAP. 
+
 Let's connect to an RDP session on the Bastion Host. 
 
 Use the Public IP for the Remote Desktop provided on the **Instance** tab. 

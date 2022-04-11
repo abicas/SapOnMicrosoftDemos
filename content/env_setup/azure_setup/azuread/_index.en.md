@@ -6,6 +6,8 @@ chapter = false
 pre = "<b>1. </b>"
 +++
 
+First of all, we will need to create an Active Directory app registration that will be used by SAP CAL: 
+
 1. Sign in to your Azure Account through the [Azure Portal](https://portal.azure.com)
 2. Select **Azure Active Directory**
 3. Select **App Registrations**
@@ -15,5 +17,5 @@ pre = "<b>1. </b>"
 5. Provide a name, accept defaults and select **Register**
 ![Register](/images/app-reg3.png?height=450px)
 
-Now let's add a role to this application.
+So far this app registration can't do much. Now let's add a role to this application.
 
