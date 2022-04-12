@@ -28,12 +28,5 @@
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/</guid>
       <description>Chapter X Some Chapter title Lorem Ipsum.</description>
     </item>
-    <item>
-      <title>Infrastructure and Management</title>
-      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/</link>
-      <pubDate>Thu, 10 Mar 2022 11:55:46 -0300</pubDate>
-      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/</guid>
-      <description>Chapter X Some Chapter title Lorem Ipsum.</description>
-    </item>
   </channel>
 </rss>
