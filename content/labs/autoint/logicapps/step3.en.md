@@ -20,11 +20,11 @@ For Postman:
 - Body content: `{"id": "0000000728"}` or `{"id": "0000001575"}` 
     - Note: SAP compares strings so have that in mind with leading zeroes and 10 total chars
 - Hit Send.
-![Logic App](/images/logicapp28.png)
+![Logic App](/images/logicapp28.png?height=500px)
 
 For **Run Trigger** tool: 
 1. Click on **Run Trigger with payload** 
-![Logic App](/images/logicapp29.png)
+![Logic App](/images/logicapp29.png?height=100px)
 2. Fill the request: 
     - Method: **POST**
     - Content-Type: **application/json** 
@@ -33,7 +33,7 @@ For **Run Trigger** tool:
     - Click Run 
 ![Logic App](/images/logicapp30.png)
 3. When your workflow runs, you should receive an Output status = 200 
-![Logic App](/images/logicapp31.png)
+![Logic App](/images/logicapp31.png?height=300px)
 4. You can see the run status on the **Run History** tab
 ![Logic App](/images/logicapp32.png)
 5. And by selecting the desired Run, you can see step-by-step inputs and outputs of your workflow for debug.

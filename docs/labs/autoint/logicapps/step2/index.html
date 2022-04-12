@@ -8,16 +8,16 @@
     <meta name="description" content="SAP on Microsoft - Tutorials">
     <meta name="author" content="Alexandre Bicas">
     <title>Create a Workflow :: SAP on Microsoft - Tutorials</title>
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1649697653" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1649697653" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1649697653" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1649697653" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1649697653" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1649697653" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1649697653" rel="stylesheet" id="variant-style">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1649697653" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1649697653" rel="stylesheet" media="print">
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1649697653"></script>
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1649793727" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1649793727" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1649793727" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1649793727" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1649793727" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1649793727" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1649793727" rel="stylesheet" id="variant-style">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1649793727" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1649793727" rel="stylesheet" media="print">
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1649793727"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -33,7 +33,7 @@
       var baseUriFull='https:\/\/abicas.github.io\/SapOnMicrosoftDemos/';
       variants.init( [ 'blue' ] );
     </script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1649697653"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1649793727"></script>
   </head>
   <body class="mobile-support" data-url="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/step2/">
     <div id="body" class="default-animation">
@@ -74,20 +74,20 @@
 <li>Go to <strong>Logic Apps</strong></li>
 <li>Click on your Logic App <strong>SAPDemo</strong></li>
 <li>Go to <strong>Workflows</strong> and <strong>Add</strong> a new one as the parameters below:
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp02.png" alt="Logic App"></li>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp02.png?height=300px" alt="Logic App"></li>
 <li>Click on <strong>Designer</strong> and let&rsquo;s start building the Workflow!</li>
 <li>As the first operation, which starts the flow, we will pick <strong>When a HTTP request is received</strong>
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp03.png" alt="Logic App"></li>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp03.png?height=300px" alt="Logic App"></li>
 <li>In order to customize the payload we expect, let&rsquo;s <strong>Use a sample payload to generate schema</strong>
 <ul>
 <li>Sample payload: <code>{&quot;id&quot;: &quot;0000000728&quot;}</code>
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp04.png" alt="Logic App"></li>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp04.png?height=300px" alt="Logic App"></li>
 </ul>
 </li>
 <li>This will generate a schema for the trigger
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp05.png" alt="Logic App"></li>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp05.png?height=300px" alt="Logic App"></li>
 <li>Now we will create our temp variable to hold the desired part of the SAP reponse. Add a new action and type &ldquo;initialize&rdquo; on the search box. Select <strong>Initialize Variables</strong>
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp06.png" alt="Logic App"></li>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp06.png?height=300px" alt="Logic App"></li>
 <li>In this step, we will create na empty array to store the data:
 <ul>
 <li>Name: <strong>outputArray</strong></li>
@@ -112,7 +112,7 @@
 <li>AS SERVICE: <strong>50000</strong></li>
 <li>AS SYSTEM NUMBER: <strong>00</strong></li>
 <li>Accept other defaults and click <strong>Create</strong>
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp10.png" alt="Logic App"></li>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp10.png?height=300px" alt="Logic App"></li>
 </ul>
 </li>
 <li>Logic App will test the connection and you should see the <strong>Connected</strong> status
@@ -128,42 +128,42 @@
 </ul>
 </li>
 <li>Add a new <strong>Parse JSON</strong> action
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp15.png" alt="Logic App"></li>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp15.png?height=300px" alt="Logic App"></li>
 <li>In content use <strong>JsonResponse</strong> that will be passed by BAPI
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp16.png" alt="Logic App"></li>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp16.png?height=300px" alt="Logic App"></li>
 <li>As we did on the initial step, select <strong>Use sample payload to generate schema</strong> and use the following JSON sample
 <code>{&quot;STATUSINFO&quot;:[{&quot;DOC_NUMBER&quot;:&quot;0000000728&quot;,&quot;DOC_DATE&quot;:&quot;2018-11-06&quot;,&quot;PURCH_NO&quot;:&quot;xcwer&quot;,&quot;PRC_STAT_H&quot;:&quot;C&quot;,&quot;DLV_STAT_H&quot;:&quot;C&quot;,&quot;REQ_DATE_H&quot;:&quot;2018-11-06&quot;,&quot;DLV_BLOCK&quot;:&quot;&quot;,&quot;ITM_NUMBER&quot;:&quot;000010&quot;,&quot;MATERIAL&quot;:&quot;CM-FL-V01&quot;,&quot;SHORT_TEXT&quot;:&quot;Forklift&quot;,&quot;REQ_DATE&quot;:&quot;2018-11-21&quot;,&quot;REQ_QTY&quot;:1.0,&quot;CUM_CF_QTY&quot;:1.0,&quot;SALES_UNIT&quot;:&quot;ST&quot;,&quot;NET_VALUE&quot;:8000.0,&quot;CURRENCY&quot;:&quot;USD&quot;,&quot;NET_PRICE&quot;:8000.0,&quot;COND_P_UNT&quot;:1.0,&quot;COND_UNIT&quot;:&quot;ST&quot;,&quot;DLV_STAT_I&quot;:&quot;C&quot;,&quot;DELIV_NUMB&quot;:&quot;&quot;,&quot;DELIV_ITEM&quot;:&quot;000000&quot;,&quot;DELIV_DATE&quot;:&quot;&quot;,&quot;DLV_QTY&quot;:0.0,&quot;REF_QTY&quot;:0.0,&quot;S_UNIT_ISO&quot;:&quot;PCE&quot;,&quot;CD_UNT_ISO&quot;:&quot;PCE&quot;,&quot;CURR_ISO&quot;:&quot;USD&quot;,&quot;MATERIAL_EXTERNAL&quot;:&quot;&quot;,&quot;MATERIAL_GUID&quot;:&quot;&quot;,&quot;MATERIAL_VERSION&quot;:&quot;&quot;,&quot;PO_ITM_NO&quot;:&quot;&quot;,&quot;CREATION_DATE&quot;:&quot;&quot;,&quot;CREATION_TIME&quot;:&quot;00:00:00&quot;,&quot;S_UNIT_DLV&quot;:&quot;&quot;,&quot;DLV_UNIT_ISO&quot;:&quot;&quot;,&quot;REA_FOR_RE&quot;:&quot;70&quot;,&quot;PURCH_NO_C&quot;:&quot;xcwer&quot;,&quot;MATERIAL_LONG&quot;:&quot;CM-FL-V01&quot;},{&quot;DOC_NUMBER&quot;:&quot;0000000728&quot;,&quot;DOC_DATE&quot;:&quot;2018-11-06&quot;,&quot;PURCH_NO&quot;:&quot;xcwer&quot;,&quot;PRC_STAT_H&quot;:&quot;C&quot;,&quot;DLV_STAT_H&quot;:&quot;C&quot;,&quot;REQ_DATE_H&quot;:&quot;2018-11-06&quot;,&quot;DLV_BLOCK&quot;:&quot;&quot;,&quot;ITM_NUMBER&quot;:&quot;000020&quot;,&quot;MATERIAL&quot;:&quot;CM-FL-V00&quot;,&quot;SHORT_TEXT&quot;:&quot;Forklift&quot;,&quot;REQ_DATE&quot;:&quot;2018-11-06&quot;,&quot;REQ_QTY&quot;:7.0,&quot;CUM_CF_QTY&quot;:0.0,&quot;SALES_UNIT&quot;:&quot;ST&quot;,&quot;NET_VALUE&quot;:58800.0,&quot;CURRENCY&quot;:&quot;USD&quot;,&quot;NET_PRICE&quot;:8400.0,&quot;COND_P_UNT&quot;:1.0,&quot;COND_UNIT&quot;:&quot;ST&quot;,&quot;DLV_STAT_I&quot;:&quot;C&quot;,&quot;DELIV_NUMB&quot;:&quot;&quot;,&quot;DELIV_ITEM&quot;:&quot;000000&quot;,&quot;DELIV_DATE&quot;:&quot;&quot;,&quot;DLV_QTY&quot;:0.0,&quot;REF_QTY&quot;:0.0,&quot;S_UNIT_ISO&quot;:&quot;PCE&quot;,&quot;CD_UNT_ISO&quot;:&quot;PCE&quot;,&quot;CURR_ISO&quot;:&quot;USD&quot;,&quot;MATERIAL_EXTERNAL&quot;:&quot;&quot;,&quot;MATERIAL_GUID&quot;:&quot;&quot;,&quot;MATERIAL_VERSION&quot;:&quot;&quot;,&quot;PO_ITM_NO&quot;:&quot;&quot;,&quot;CREATION_DATE&quot;:&quot;&quot;,&quot;CREATION_TIME&quot;:&quot;00:00:00&quot;,&quot;S_UNIT_DLV&quot;:&quot;&quot;,&quot;DLV_UNIT_ISO&quot;:&quot;&quot;,&quot;REA_FOR_RE&quot;:&quot;70&quot;,&quot;PURCH_NO_C&quot;:&quot;xcwer&quot;,&quot;MATERIAL_LONG&quot;:&quot;CM-FL-V00&quot;}]}</code>
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp17.png" alt="Logic App"></li>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp17.png?height=300px" alt="Logic App"></li>
 <li>SAP Sales Order can have multiple Line Items, so we have to iterate in them. Add na <strong>For Each</strong> action and as parameter, <strong>STATUSINFO</strong> from Parse JSON previous action.
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp18.png" alt="Logic App"></li>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp18.png?height=300px" alt="Logic App"></li>
 <li>Inside the For Each loop add a <strong>Compose</strong> action. It will allow for us to pick desired fields for each line and build a JSON that suits our needs.
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp19.png" alt="Logic App"></li>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp19.png?height=300px" alt="Logic App"></li>
 <li>Build the desired JSON using the sample JSON below and replacing fields enclosed by <code>&lt;&gt;</code> using <strong>Dynamic Inputs</strong> as inputs (make sure you keep the commas)
 <code>{  &quot;Order&quot;: &lt;DOC_NUMBER&gt;, &quot;Date&quot;: &lt;DOC_DATE&gt;, &quot;Item&quot;: &lt;MATERIAL&gt;, &quot;Description&quot;: &lt;SHORT_TEXT&gt;, &quot;Quantity&quot;: &lt;REQ_QTY&gt;, &quot;Price&quot;: &lt;NET_PRICE&gt; } </code>
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp20.png" alt="Logic App"></li>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp20.png?height=300px" alt="Logic App"></li>
 <li>Inside the For Each loop, after Compose, add na action <strong>Append to array variable</strong>. Select <strong>outputArray</strong> previously initialized as empty and for Value <strong>Outputs</strong> from Compose action
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp21.png" alt="Logic App"></li>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp21.png?height=300px" alt="Logic App"></li>
 <li>Once For Each runs and populates outputArray with the desired data, we will convert it to an HTML table. Add a <strong>Create HTML table</strong> Action and use the <strong>outputArray</strong> as the data for the table.
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp22.png" alt="Logic App"></li>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp22.png?height=300px" alt="Logic App"></li>
 <li>Finally, we will add an action <strong>Send an email</strong> from <strong>Office 365 Outlook</strong>. You may need to connect Logic Apps with Office 365, by clicking on <strong>Change connection</strong> as did previously for SAP.
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp23.png" alt="Logic App"></li>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp23.png?height=300px" alt="Logic App"></li>
 <li>Let&rsquo;s now build the email template that will be used on every invocation
 <ul>
 <li>To: <strong>Destination email</strong></li>
 <li>Subject: <strong>Details for order <!-- raw HTML omitted --></strong> (replace with dynamic content)</li>
 <li>Body: as picture below
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp24.png" alt="Logic App"></li>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp24.png?height=300px" alt="Logic App"></li>
 </ul>
 </li>
 <li>As the API response we will add a <strong>Response</strong> action and return
 <ul>
 <li>Status Code: <strong>200</strong></li>
 <li>Body: <strong>JsonResponse</strong> from Dynamic inputs
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp25.png" alt="Logic App"></li>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp25.png?height=300px" alt="Logic App"></li>
 </ul>
 </li>
 <li>Don&rsquo;t forget to click <strong>SAVE</strong> !!!! ;)
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp26.png" alt="Logic App"></li>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/logicapp26.png?height=100px" alt="Logic App"></li>
 </ol>
 <p>If everything wen&rsquo;t fine, we are ready to test the lab we just built, with NO CODE at all !</p>
 
@@ -184,9 +184,9 @@
           <input data-search-input id="search-by" type="search" placeholder="Search...">
           <span data-search-clear=""><i class="fas fa-times"></i></span>
         </div>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1649697653"></script>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1649697653"></script>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1649697653"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1649793727"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1649793727"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1649793727"></script>
       </div>
       <div id="homelinks" class="default-animation">
         <ul>
@@ -288,10 +288,10 @@
         </div>
       </div>
     </aside>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1649697653"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1649697653"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1649697653"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1649697653"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1649793727"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1649793727"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1649793727"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1649793727"></script>
     <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
     <script>
       function useMermaid( config ){
@@ -305,6 +305,6 @@
       }
       useMermaid( JSON.parse("{}") );
     </script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1649697653"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1649793727"></script>
   </body>
 </html>

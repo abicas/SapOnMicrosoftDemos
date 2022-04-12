@@ -12,8 +12,8 @@
       <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/</link>
       <pubDate>Mon, 14 Mar 2022 14:13:05 -0300</pubDate>
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/</guid>
-      <description>Azure Monitoring for SAP One of the benefits of monitoring SAP on Azure is the integrated view of both Infrastructure metrics (like CPU, RAM and Disk) alongside HANA database metrics (like memory usage and memory growth), and Netweaver metrics like concurrent sessions and locks.
-This allows for a rapid response in case of an incident response as well as provinding a simpler and more integrated way of having the whole SAP performance picture in a glance.</description>
+      <description>Azure Monitor for SAP When you have critical applications and business processes relying on Azure resources, you&amp;rsquo;ll want to monitor those resources for their availability, performance, and operation.
+Azure Monitor for SAP Solutions is an Azure-native monitoring product for anyone running their SAP landscapes on Azure. With Azure Monitor for SAP Solutions, you can collect telemetry data from Azure infrastructure and databases in one central location and visually correlate the data for faster troubleshooting.</description>
     </item>
     <item>
       <title>Azure Backup for HANA</title>

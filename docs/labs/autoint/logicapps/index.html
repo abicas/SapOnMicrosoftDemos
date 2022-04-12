@@ -9,16 +9,16 @@
     <meta name="author" content="Alexandre Bicas">
     <title>Azure Logic Apps :: SAP on Microsoft - Tutorials</title>
     <link rel="alternate" type="application/rss&#43;xml" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/index.xml" title="SAP on Microsoft - Tutorials" />
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1649697653" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1649697653" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1649697653" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1649697653" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1649697653" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1649697653" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1649697653" rel="stylesheet" id="variant-style">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1649697653" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1649697653" rel="stylesheet" media="print">
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1649697653"></script>
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1649793727" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1649793727" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1649793727" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1649793727" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1649793727" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1649793727" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1649793727" rel="stylesheet" id="variant-style">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1649793727" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1649793727" rel="stylesheet" media="print">
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1649793727"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -34,7 +34,7 @@
       var baseUriFull='https:\/\/abicas.github.io\/SapOnMicrosoftDemos/';
       variants.init( [ 'blue' ] );
     </script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1649697653"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1649793727"></script>
   </head>
   <body class="mobile-support" data-url="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/">
     <div id="body" class="default-animation">
@@ -68,8 +68,9 @@
     <li>
       <ul>
         <li><a href="#azure-logic-apps">Azure Logic Apps</a></li>
-        <li><a href="#estimated-time-for-this-lab">Estimated Time for this Lab</a></li>
         <li><a href="#what-we-will-build">What we will build</a></li>
+        <li><a href="#estimated-time-for-this-lab">Estimated Time for this Lab</a></li>
+        <li><a href="#requirements">Requirements</a></li>
       </ul>
     </li>
   </ul>
@@ -86,8 +87,39 @@
 
 <h1>Azure Logic Apps</h1>
 <h3 id="azure-logic-apps">Azure Logic Apps</h3>
-<h3 id="estimated-time-for-this-lab">Estimated Time for this Lab</h3>
-<p>This lab is estimated to take between 30 and 60 minutes.</p>
+<p>Azure Logic Apps is a cloud-based platform for creating and running automated workflows that integrate your apps, data, services, and systems. With this platform, you can quickly develop highly scalable integration solutions for your enterprise and business-to-business (B2B) scenarios. As a member of Azure Integration Services, Azure Logic Apps simplifies the way that you connect legacy, modern, and cutting-edge systems across cloud, on premises, and hybrid environments.</p>
+<p>The following list describes just a few example tasks, business processes, and workloads that you can automate using the Azure Logic Apps service:</p>
+<ul>
+<li>
+<p>Schedule and send email notifications using Office 365 when a specific event happens, for example, an IDOC is received.</p>
+</li>
+<li>
+<p>Route and process customer orders across on-premises systems and cloud services.</p>
+</li>
+<li>
+<p>Move uploaded files from an SFTP or FTP server to Azure Storage and Datalakes.</p>
+</li>
+</ul>
+<p>All this can be accomplished with simple and Low Code-based flows that integrate Microsoft and non-Microsoft resources in a single, simple flow.</p>
+<p><img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sap-logicapp01.png?height=300px" alt="LAPS"></p>
+<p>To securely access and run operations on various data sources, you can use managed connectors in your workflows. Choose from many hundreds of connectors in an abundant and growing Azure ecosystem, for example:</p>
+<ul>
+<li>
+<p>Azure services such as Blob Storage and Service Bus</p>
+</li>
+<li>
+<p>Office 365 services such as Outlook, Excel, and SharePoint</p>
+</li>
+<li>
+<p>Database servers such as SQL and Oracle</p>
+</li>
+<li>
+<p>Enterprise systems such as SAP and IBM MQ</p>
+</li>
+<li>
+<p>File shares such as FTP and SFTP</p>
+</li>
+</ul>
 <h3 id="what-we-will-build">What we will build</h3>
 <p>In this lab we will build an API and receives a JSON payload with the Sales Order to be queries on SAP and sends the required information via Outlook using native SAP and Office 365 integrations.</p>
 <p>Whenever this API is used, it triggers a Logic App (built with no code) that will analyze the payload, run a BAPI on SAP, process the response, build an HTML table and send it by email alongside with the BAPI JSON.</p>
@@ -97,6 +129,15 @@
   <iframe src="https://www.youtube.com/embed/wqMKEuQEmIA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
+<h3 id="estimated-time-for-this-lab">Estimated Time for this Lab</h3>
+<p>This lab is estimated to take between 30 and 60 minutes.</p>
+<h3 id="requirements">Requirements</h3>
+<p>For this demo we will be using the following components from the Environment Setup:</p>
+<ol>
+<li>S/4HANA deployed from SAP CAL</li>
+<li>On-premises data gateway installed and configured</li>
+<li>Azure subscription</li>
+</ol>
 
             <footer class="footline">
             </footer>
@@ -115,9 +156,9 @@
           <input data-search-input id="search-by" type="search" placeholder="Search...">
           <span data-search-clear=""><i class="fas fa-times"></i></span>
         </div>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1649697653"></script>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1649697653"></script>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1649697653"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1649793727"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1649793727"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1649793727"></script>
       </div>
       <div id="homelinks" class="default-animation">
         <ul>
@@ -219,10 +260,10 @@
         </div>
       </div>
     </aside>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1649697653"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1649697653"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1649697653"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1649697653"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1649793727"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1649793727"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1649793727"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1649793727"></script>
     <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
     <script>
       function useMermaid( config ){
@@ -236,6 +277,6 @@
       }
       useMermaid( JSON.parse("{}") );
     </script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1649697653"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1649793727"></script>
   </body>
 </html>

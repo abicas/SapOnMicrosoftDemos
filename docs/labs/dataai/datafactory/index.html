@@ -9,16 +9,16 @@
     <meta name="author" content="Alexandre Bicas">
     <title>Azure Data Factory :: SAP on Microsoft - Tutorials</title>
     <link rel="alternate" type="application/rss&#43;xml" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/index.xml" title="SAP on Microsoft - Tutorials" />
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1649697653" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1649697653" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1649697653" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1649697653" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1649697653" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1649697653" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1649697653" rel="stylesheet" id="variant-style">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1649697653" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1649697653" rel="stylesheet" media="print">
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1649697653"></script>
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1649793727" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1649793727" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1649793727" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1649793727" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1649793727" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1649793727" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1649793727" rel="stylesheet" id="variant-style">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1649793727" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1649793727" rel="stylesheet" media="print">
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1649793727"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -34,7 +34,7 @@
       var baseUriFull='https:\/\/abicas.github.io\/SapOnMicrosoftDemos/';
       variants.init( [ 'blue' ] );
     </script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1649697653"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1649793727"></script>
   </head>
   <body class="mobile-support" data-url="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/">
     <div id="body" class="default-animation">
@@ -67,9 +67,11 @@
   <ul>
     <li>
       <ul>
+        <li><a href="#azure-data-factory">Azure Data Factory</a></li>
         <li><a href="#extracting-sap-data-with-azure-data-factory">Extracting SAP DATA with Azure Data Factory</a></li>
-        <li><a href="#estimated-time-for-this-lab">Estimated Time for this Lab</a></li>
         <li><a href="#what-we-will-build">What we will build</a></li>
+        <li><a href="#estimated-time-for-this-lab">Estimated Time for this Lab</a></li>
+        <li><a href="#requirements">Requirements</a></li>
       </ul>
     </li>
   </ul>
@@ -85,15 +87,42 @@
           <article>
 
 <h1>Azure Data Factory</h1>
+<h3 id="azure-data-factory">Azure Data Factory</h3>
+<p>In the world of big data, raw, unorganized data is often stored in relational, non-relational, and other storage systems. However, on its own, raw data doesn&rsquo;t have the proper context or meaning to provide meaningful insights to analysts, data scientists, or business decision makers.</p>
+<p>Big data requires a service that can orchestrate and operationalize processes to refine these enormous stores of raw data into actionable business insights. Azure Data Factory is a managed cloud service that&rsquo;s built for these complex hybrid extract-transform-load (ETL), extract-load-transform (ELT), and data integration projects.</p>
+<p>Azure Data Factory is Azure&rsquo;s cloud ETL service for scale-out serverless data integration and data transformation. It offers a code-free UI for intuitive authoring and single-pane-of-glass monitoring and management.</p>
+<p><img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf-sample1.png?height=300px" alt="ADF2"></p>
 <h3 id="extracting-sap-data-with-azure-data-factory">Extracting SAP DATA with Azure Data Factory</h3>
-<h3 id="estimated-time-for-this-lab">Estimated Time for this Lab</h3>
-<p>This lab is estimated to take around 30 minutes.</p>
+<p>You can copy data from SAP ECC and SAP BW to any supported sink data store. Specifically, the SAP ECC connector supports:</p>
+<p><img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf-sample.jpg?height=200px" alt="ADF2"></p>
+<ul>
+<li>Copying data from SAP ECC on SAP NetWeaver version 7.0 and later.</li>
+<li>Copying data from any objects exposed by SAP ECC OData services, such as:
+<ul>
+<li>SAP tables or views.</li>
+<li>Business Application Programming Interface [BAPI] objects.</li>
+<li>Data extractors.</li>
+<li>Data or intermediate documents (IDOCs) sent to SAP Process Integration (PI) that can be received as OData via relative adapters.</li>
+</ul>
+</li>
+<li>Copying data by using basic authentication.</li>
+</ul>
+<p><img src="https://abicas.github.io/SapOnMicrosoftDemos/images/adf-sample2.png?height=400px" alt="ADF2"></p>
 <h3 id="what-we-will-build">What we will build</h3>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/jDR5jbqMktw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
+<h3 id="estimated-time-for-this-lab">Estimated Time for this Lab</h3>
+<p>This lab is estimated to take around 30 minutes.</p>
+<h3 id="requirements">Requirements</h3>
+<p>For this demo we will be using the following components from the Environment Setup:</p>
+<ol>
+<li>S/4HANA deployed from SAP CAL</li>
+<li>On-premises data gateway installed and configured</li>
+<li>Azure subscription</li>
+</ol>
 
             <footer class="footline">
             </footer>
@@ -112,9 +141,9 @@
           <input data-search-input id="search-by" type="search" placeholder="Search...">
           <span data-search-clear=""><i class="fas fa-times"></i></span>
         </div>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1649697653"></script>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1649697653"></script>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1649697653"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1649793727"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1649793727"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1649793727"></script>
       </div>
       <div id="homelinks" class="default-animation">
         <ul>
@@ -216,10 +245,10 @@
         </div>
       </div>
     </aside>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1649697653"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1649697653"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1649697653"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1649697653"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1649793727"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1649793727"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1649793727"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1649793727"></script>
     <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
     <script>
       function useMermaid( config ){
@@ -233,6 +262,6 @@
       }
       useMermaid( JSON.parse("{}") );
     </script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1649697653"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1649793727"></script>
   </body>
 </html>

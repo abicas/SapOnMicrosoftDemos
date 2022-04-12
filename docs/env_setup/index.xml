@@ -32,8 +32,7 @@ In this section we will create and account on SAP CAL, configure Azure permissio
       <pubDate>Wed, 09 Mar 2022 11:21:23 -0300</pubDate>
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/datagwsetup/</guid>
       <description>Once SAP is installed and access is working, we need to install the required components to allow for Microsoft services to interact with SAP S/4HANA environments.
-This section will go thru the steps required to get this software installed and accessing Azure resources.
-What you will need  Sucessfull deployment of S/4HANA and access validated in the previous step  Expected duration This section is estimated to last no longer than 30 minutes</description>
+The on-premises data gateway acts as a bridge to provide quick and secure data transfer between on-premises data (data that isn&amp;rsquo;t in the cloud) and several Microsoft cloud services. These cloud services include Power BI, PowerApps, Power Automate, Azure Analysis Services, and Azure Logic Apps.</description>
     </item>
     <item>
       <title>SAP Gateway Demo System</title>

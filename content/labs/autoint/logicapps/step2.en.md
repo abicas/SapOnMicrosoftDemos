@@ -11,17 +11,17 @@ In this step we will create the Workflow  on [Azure Portal](https://portal.azure
 1. Go to **Logic Apps** 
 2. Click on your Logic App **SAPDemo**
 3. Go to **Workflows** and **Add** a new one as the parameters below: 
-![Logic App](/images/logicapp02.png)
+![Logic App](/images/logicapp02.png?height=300px)
 4. Click on **Designer** and let's start building the Workflow! 
 5. As the first operation, which starts the flow, we will pick **When a HTTP request is received**
-![Logic App](/images/logicapp03.png)
+![Logic App](/images/logicapp03.png?height=300px)
 6. In order to customize the payload we expect, let's **Use a sample payload to generate schema** 
     - Sample payload: `{"id": "0000000728"}`
-![Logic App](/images/logicapp04.png)
+![Logic App](/images/logicapp04.png?height=300px)
 7. This will generate a schema for the trigger
-![Logic App](/images/logicapp05.png)
+![Logic App](/images/logicapp05.png?height=300px)
 8. Now we will create our temp variable to hold the desired part of the SAP reponse. Add a new action and type "initialize" on the search box. Select **Initialize Variables**
-![Logic App](/images/logicapp06.png)
+![Logic App](/images/logicapp06.png?height=300px)
 9. In this step, we will create na empty array to store the data:
     - Name: **outputArray**
     - Type: **Array**
@@ -42,7 +42,7 @@ In this step we will create the Workflow  on [Azure Portal](https://portal.azure
 	- AS SERVICE: **50000**
 	- AS SYSTEM NUMBER: **00**
     - Accept other defaults and click **Create**
-![Logic App](/images/logicapp10.png)
+![Logic App](/images/logicapp10.png?height=300px)
 13. Logic App will test the connection and you should see the **Connected** status 
 ![Logic App](/images/logicapp11.png)
 14. Now let's setup the BAPI method to be invoked
@@ -53,16 +53,16 @@ In this step we will create the Workflow  on [Azure Portal](https://portal.azure
 ![Logic App](/images/logicapp12.png)
 ![Logic App](/images/logicapp14.png)
 15. Add a new **Parse JSON** action
-![Logic App](/images/logicapp15.png)
+![Logic App](/images/logicapp15.png?height=300px)
 16. In content use **JsonResponse** that will be passed by BAPI
-![Logic App](/images/logicapp16.png)
+![Logic App](/images/logicapp16.png?height=300px)
 17. As we did on the initial step, select **Use sample payload to generate schema** and use the following JSON sample
 `{"STATUSINFO":[{"DOC_NUMBER":"0000000728","DOC_DATE":"2018-11-06","PURCH_NO":"xcwer","PRC_STAT_H":"C","DLV_STAT_H":"C","REQ_DATE_H":"2018-11-06","DLV_BLOCK":"","ITM_NUMBER":"000010","MATERIAL":"CM-FL-V01","SHORT_TEXT":"Forklift","REQ_DATE":"2018-11-21","REQ_QTY":1.0,"CUM_CF_QTY":1.0,"SALES_UNIT":"ST","NET_VALUE":8000.0,"CURRENCY":"USD","NET_PRICE":8000.0,"COND_P_UNT":1.0,"COND_UNIT":"ST","DLV_STAT_I":"C","DELIV_NUMB":"","DELIV_ITEM":"000000","DELIV_DATE":"","DLV_QTY":0.0,"REF_QTY":0.0,"S_UNIT_ISO":"PCE","CD_UNT_ISO":"PCE","CURR_ISO":"USD","MATERIAL_EXTERNAL":"","MATERIAL_GUID":"","MATERIAL_VERSION":"","PO_ITM_NO":"","CREATION_DATE":"","CREATION_TIME":"00:00:00","S_UNIT_DLV":"","DLV_UNIT_ISO":"","REA_FOR_RE":"70","PURCH_NO_C":"xcwer","MATERIAL_LONG":"CM-FL-V01"},{"DOC_NUMBER":"0000000728","DOC_DATE":"2018-11-06","PURCH_NO":"xcwer","PRC_STAT_H":"C","DLV_STAT_H":"C","REQ_DATE_H":"2018-11-06","DLV_BLOCK":"","ITM_NUMBER":"000020","MATERIAL":"CM-FL-V00","SHORT_TEXT":"Forklift","REQ_DATE":"2018-11-06","REQ_QTY":7.0,"CUM_CF_QTY":0.0,"SALES_UNIT":"ST","NET_VALUE":58800.0,"CURRENCY":"USD","NET_PRICE":8400.0,"COND_P_UNT":1.0,"COND_UNIT":"ST","DLV_STAT_I":"C","DELIV_NUMB":"","DELIV_ITEM":"000000","DELIV_DATE":"","DLV_QTY":0.0,"REF_QTY":0.0,"S_UNIT_ISO":"PCE","CD_UNT_ISO":"PCE","CURR_ISO":"USD","MATERIAL_EXTERNAL":"","MATERIAL_GUID":"","MATERIAL_VERSION":"","PO_ITM_NO":"","CREATION_DATE":"","CREATION_TIME":"00:00:00","S_UNIT_DLV":"","DLV_UNIT_ISO":"","REA_FOR_RE":"70","PURCH_NO_C":"xcwer","MATERIAL_LONG":"CM-FL-V00"}]}`
-![Logic App](/images/logicapp17.png)
+![Logic App](/images/logicapp17.png?height=300px)
 18. SAP Sales Order can have multiple Line Items, so we have to iterate in them. Add na **For Each** action and as parameter, **STATUSINFO** from Parse JSON previous action.
-![Logic App](/images/logicapp18.png)
+![Logic App](/images/logicapp18.png?height=300px)
 19. Inside the For Each loop add a **Compose** action. It will allow for us to pick desired fields for each line and build a JSON that suits our needs.
-![Logic App](/images/logicapp19.png)
+![Logic App](/images/logicapp19.png?height=300px)
 20. Build the desired JSON using the sample JSON below and replacing fields enclosed by `<>` using **Dynamic Inputs** as inputs (make sure you keep the commas)
 `{ 
   "Order": <DOC_NUMBER>,
@@ -73,24 +73,24 @@ In this step we will create the Workflow  on [Azure Portal](https://portal.azure
   "Price": <NET_PRICE>
 }
 `
-![Logic App](/images/logicapp20.png)
+![Logic App](/images/logicapp20.png?height=300px)
 21. Inside the For Each loop, after Compose, add na action **Append to array variable**. Select **outputArray** previously initialized as empty and for Value **Outputs** from Compose action
-![Logic App](/images/logicapp21.png)
+![Logic App](/images/logicapp21.png?height=300px)
 22. Once For Each runs and populates outputArray with the desired data, we will convert it to an HTML table. Add a **Create HTML table** Action and use the **outputArray** as the data for the table. 
-![Logic App](/images/logicapp22.png)
+![Logic App](/images/logicapp22.png?height=300px)
 23. Finally, we will add an action **Send an email** from **Office 365 Outlook**. You may need to connect Logic Apps with Office 365, by clicking on **Change connection** as did previously for SAP. 
-![Logic App](/images/logicapp23.png)
+![Logic App](/images/logicapp23.png?height=300px)
 24. Let's now build the email template that will be used on every invocation
     - To: **Destination email** 
     - Subject: **Details for order <ID>** (replace with dynamic content)
     - Body: as picture below 
-![Logic App](/images/logicapp24.png)
+![Logic App](/images/logicapp24.png?height=300px)
 25. As the API response we will add a **Response** action and return
     - Status Code: **200**
     - Body: **JsonResponse** from Dynamic inputs
-![Logic App](/images/logicapp25.png)
+![Logic App](/images/logicapp25.png?height=300px)
 26. Don't forget to click **SAVE** !!!! ;) 
-![Logic App](/images/logicapp26.png)
+![Logic App](/images/logicapp26.png?height=100px)
 
 
 If everything wen't fine, we are ready to test the lab we just built, with NO CODE at all ! 

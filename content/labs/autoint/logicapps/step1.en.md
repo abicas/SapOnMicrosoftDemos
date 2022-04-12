@@ -15,5 +15,5 @@ In this step we will create a Logic App on [Azure Portal](https://portal.azure.c
     - Name: **SAPDemo** 
     - Region: **East US** (same one used on the previous steps)
     - Plan type: **Consumption** 
-![Logic App](/images/logicapp01.png)
+![Logic App](/images/logicapp01.png?height=500px)
 

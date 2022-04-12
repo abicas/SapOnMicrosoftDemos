@@ -9,6 +9,8 @@ The [SAP Cloud Appliance Library (CAL)](https://cal.sap.com/) offers a quick and
 
 It's an online library of latest, preconfigured, ready-to-use SAP solutions that can be instantly deployed into your own public cloud accounts.
 
+![SAPCAL](/images/sap-cal-diagram.jpg?height=300px)
+
 In this section we will create and account on SAP CAL, configure Azure permissions and deploy an S/4HANA environment on your subscription. 
 
 ### What you will need

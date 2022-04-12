@@ -12,27 +12,23 @@
       <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/</link>
       <pubDate>Thu, 10 Mar 2022 11:58:35 -0300</pubDate>
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/</guid>
-      <description>Azure Logic Apps Estimated Time for this Lab This lab is estimated to take between 30 and 60 minutes.
-What we will build In this lab we will build an API and receives a JSON payload with the Sales Order to be queries on SAP and sends the required information via Outlook using native SAP and Office 365 integrations.
-Whenever this API is used, it triggers a Logic App (built with no code) that will analyze the payload, run a BAPI on SAP, process the response, build an HTML table and send it by email alongside with the BAPI JSON.</description>
+      <description>Azure Logic Apps Azure Logic Apps is a cloud-based platform for creating and running automated workflows that integrate your apps, data, services, and systems. With this platform, you can quickly develop highly scalable integration solutions for your enterprise and business-to-business (B2B) scenarios. As a member of Azure Integration Services, Azure Logic Apps simplifies the way that you connect legacy, modern, and cutting-edge systems across cloud, on premises, and hybrid environments.</description>
     </item>
     <item>
       <title>Power Virtual Agent</title>
       <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/</link>
       <pubDate>Thu, 10 Mar 2022 11:58:35 -0300</pubDate>
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/</guid>
-      <description>Power Virtual Agent Estimated Time for this Lab This lab is estimated to take between 30 and 60 minutes.
-What we will build In this lab we will build an chatbot that answers Sales Order details, using Power Virtual Agents and publishing the bot to Microsoft Teams.
-Whenever this bot is invoked, it triggers a a flow that will call an SAP BAPI based on user inputs process the response, build an HTML table and send it back to the chatbot.</description>
+      <description>Power Virtual Agent Microsoft Power Virtual Agents lets you create powerful chatbots that can answer questions posed by your customers, other employees, or visitors to your website or service.
+These bots can be created easily without the need for data scientists or developers. Some of the ways that Power Virtual Agents bots have been used include:
+ Sales help and support issues Product or Purchase Order informations Employee health and vacation benefits Common employee questions for businesses, products, processes  All this integrated with live SAP data, allowing customers to access the information they need, on a simple, common, practical platform they are used to, avoiding the burden of context switching between multiples apps to accomplish a task.</description>
     </item>
     <item>
       <title>Power Apps</title>
       <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/</link>
       <pubDate>Thu, 10 Mar 2022 11:58:35 -0300</pubDate>
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/</guid>
-      <description>Power Apps Estimated Time for this Lab This lab is estimated to take around 60 minutes.
-What we will build In this lab we will build an API and receives a JSON payload with the Sales Order to be queries on SAP and sends the required information via Outlook using native SAP and Office 365 integrations.
-Whenever this API is used, it triggers a Logic App (built with no code) that will analyze the payload, run a BAPI on SAP, process the response, build an HTML table and send it by email alongside with the BAPI JSON.</description>
+      <description>Power Apps Power Apps is a suite of apps, services, and connectors, as well as a data platform, that provides a rapid development environment to build custom apps for your business needs. Using Power Apps, you can quickly build custom business apps that connect to your data stored either in the underlying data platform (Microsoft Dataverse) or in various online and on-premises data sources (such as SAP, SharePoint, Microsoft 365, Dynamics 365, SQL Server, and so on).</description>
     </item>
     <item>
       <title>Power Automate</title>
