@@ -20,9 +20,9 @@ Azure Monitor for SAP Solutions is an Azure-native monitoring product for anyone
       <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/</link>
       <pubDate>Thu, 10 Mar 2022 11:55:46 -0300</pubDate>
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/</guid>
-      <description>Azure Backup for HANA Include INTRO
-Estimated Time for this Lab This lab is estimated to take between 90 and 120 minutes, mostly due to backup and restores processes.
-What we will build   </description>
+      <description>Azure Backup for HANA SAP HANA databases are critical workloads that require a low recovery-point objective (RPO) and long-term retention. You can back up SAP HANA databases running on Azure virtual machines (VMs) by using Azure Backup.
+Azure Backup is Azure&amp;rsquo;s native backup solution, which is BackInt certified by SAP. This offering aligns with Azure Backup’s mantra of zero-infrastructure backups, eliminating the need to deploy and manage backup infrastructure.
+Benefits:</description>
     </item>
   </channel>
 </rss>

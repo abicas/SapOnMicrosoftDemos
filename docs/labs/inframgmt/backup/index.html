@@ -9,16 +9,16 @@
     <meta name="author" content="Alexandre Bicas">
     <title>Azure Backup for HANA :: SAP on Microsoft - Tutorials</title>
     <link rel="alternate" type="application/rss&#43;xml" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/index.xml" title="SAP on Microsoft - Tutorials" />
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1649793727" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1649793727" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1649793727" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1649793727" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1649793727" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1649793727" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1649793727" rel="stylesheet" id="variant-style">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1649793727" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1649793727" rel="stylesheet" media="print">
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1649793727"></script>
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1649794287" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1649794287" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1649794287" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1649794287" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1649794287" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1649794287" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1649794287" rel="stylesheet" id="variant-style">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1649794287" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1649794287" rel="stylesheet" media="print">
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1649794287"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -34,7 +34,7 @@
       var baseUriFull='https:\/\/abicas.github.io\/SapOnMicrosoftDemos/';
       variants.init( [ 'blue' ] );
     </script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1649793727"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1649794287"></script>
   </head>
   <body class="mobile-support" data-url="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/">
     <div id="body" class="default-animation">
@@ -68,8 +68,9 @@
     <li>
       <ul>
         <li><a href="#azure-backup-for-hana">Azure Backup for HANA</a></li>
-        <li><a href="#estimated-time-for-this-lab">Estimated Time for this Lab</a></li>
         <li><a href="#what-we-will-build">What we will build</a></li>
+        <li><a href="#estimated-time-for-this-lab">Estimated Time for this Lab</a></li>
+        <li><a href="#requirements">Requirements</a></li>
       </ul>
     </li>
   </ul>
@@ -86,15 +87,54 @@
 
 <h1>Azure Backup for HANA</h1>
 <h3 id="azure-backup-for-hana">Azure Backup for HANA</h3>
-<p>Include INTRO</p>
-<h3 id="estimated-time-for-this-lab">Estimated Time for this Lab</h3>
-<p>This lab is estimated to take between 90 and 120 minutes, mostly due to backup and restores processes.</p>
+<p>SAP HANA databases are critical workloads that require a low recovery-point objective (RPO) and long-term retention. You can back up SAP HANA databases running on Azure virtual machines (VMs) by using Azure Backup.</p>
+<p>Azure Backup is Azure&rsquo;s native backup solution, which is <a href="https://sapblobs.blob.core.windows.net/csd-live/azure-backup-backint-11-certificate-e34b4b20-5ea5-11ec-987d-359059e8f619">BackInt certified by SAP</a>. This offering aligns with Azure Backup’s mantra of zero-infrastructure backups, eliminating the need to deploy and manage backup infrastructure.</p>
+<p>Benefits:</p>
+<ul>
+<li>15-minute Recovery Point Objective (RPO): Recovery of critical data of up to 15 minutes is possible.</li>
+<li>One-click, point-in-time restores: Easy to restore production data on SAP HANA databases to alternate servers. Chaining of backups and catalogs to perform restores is all managed by Azure behind the scenes.</li>
+<li>Long-term retention: For rigorous compliance and audit needs, you can retain your backups for years, based on the retention duration, beyond which the recovery points will be pruned automatically by the built-in lifecycle management capability.</li>
+<li>Backup Management from Azure: Use Azure Backup’s management and monitoring capabilities for improved management experience.</li>
+</ul>
+<p><img src="https://abicas.github.io/SapOnMicrosoftDemos/images/bkpforhana-sample.png?height=500px" alt="bkpforhana"></p>
+<p>Sample Backup flow:</p>
+<ol>
+<li>
+<p>The scheduled backups are managed by crontab entries created on the HANA VM by Azure Backup, while the on-demand backups are directly triggered by the Azure Backup service.</p>
+</li>
+<li>
+<p>Once SAP HANA Backup Engine/Backint receives the backup request, it prepares the SAP HANA database for a backup by creating a save point, and moving data to underlying storage volumes.</p>
+</li>
+<li>
+<p>Backint then executes the read operation from the underlying data volumes – the index server and XS engine for the Tenant database and name server for the SYSTEMDB. Premium SSD disks can provide optimal I/O throughput for the backup streaming operation.</p>
+</li>
+<li>
+<p>To stream the backup data, Backint creates up to three pipes, which directly write to Azure Backup’s Recovery Services vault.</p>
+</li>
+<li>
+<p>Azure Backup attempts to achieve speeds up to 420 MB/sec for non-log backups and up to 100 MB/sec for log backups.</p>
+</li>
+<li>
+<p>Detailed logs are written to the backup.log and backint.log files on the SAP HANA instance.</p>
+</li>
+<li>
+<p>Once the backup streaming is complete, the catalog is streamed to the Recovery Services vault. If both the backup (full/differential/incremental/log) and the catalog for this backup are successfully streamed and saved into the Recovery Services vault, Azure Backup considers the backup operation is successful.</p>
+</li>
+</ol>
 <h3 id="what-we-will-build">What we will build</h3>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/jnnijsS8CKY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
+<h3 id="estimated-time-for-this-lab">Estimated Time for this Lab</h3>
+<p>This lab is estimated to take between 90 and 120 minutes, mostly due to backup and restores processes.</p>
+<h3 id="requirements">Requirements</h3>
+<p>For this demo we will be using the following components from the Environment Setup:</p>
+<ol>
+<li>S/4HANA deployed from SAP CAL</li>
+<li>Azure subscription</li>
+</ol>
 
             <footer class="footline">
             </footer>
@@ -113,9 +153,9 @@
           <input data-search-input id="search-by" type="search" placeholder="Search...">
           <span data-search-clear=""><i class="fas fa-times"></i></span>
         </div>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1649793727"></script>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1649793727"></script>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1649793727"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1649794287"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1649794287"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1649794287"></script>
       </div>
       <div id="homelinks" class="default-animation">
         <ul>
@@ -217,10 +257,10 @@
         </div>
       </div>
     </aside>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1649793727"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1649793727"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1649793727"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1649793727"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1649794287"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1649794287"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1649794287"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1649794287"></script>
     <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
     <script>
       function useMermaid( config ){
@@ -234,6 +274,6 @@
       }
       useMermaid( JSON.parse("{}") );
     </script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1649793727"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1649794287"></script>
   </body>
 </html>
