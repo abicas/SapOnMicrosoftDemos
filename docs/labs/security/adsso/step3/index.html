@@ -8,16 +8,16 @@
     <meta name="description" content="SAP on Microsoft - Tutorials">
     <meta name="author" content="Alexandre Bicas">
     <title>Testing SSO :: SAP on Microsoft - Tutorials</title>
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1649881887" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1649881887" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1649881887" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1649881887" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1649881887" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1649881887" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1649881887" rel="stylesheet" id="variant-style">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1649881887" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1649881887" rel="stylesheet" media="print">
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1649881887"></script>
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1649945813" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1649945813" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1649945813" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1649945813" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1649945813" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1649945813" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1649945813" rel="stylesheet" id="variant-style">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1649945813" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1649945813" rel="stylesheet" media="print">
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1649945813"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -33,7 +33,7 @@
       var baseUriFull='https:\/\/abicas.github.io\/SapOnMicrosoftDemos/';
       variants.init( [ 'blue' ] );
     </script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1649881887"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1649945813"></script>
   </head>
   <body class="mobile-support" data-url="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/step3/">
     <div id="body" class="default-animation">
@@ -45,13 +45,12 @@
              <a class="nav nav-next" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/" title="Infrastructure and Management"><i class="fas fa-chevron-right fa-fw"></i></a>
           </div>
           <div class="navigation">
-             <a class="nav nav-prev" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/step2/" title="Setup Active Directory"><i class="fas fa-chevron-left fa-fw"></i></a>
+             <a class="nav nav-prev" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/step2/" title="Setup Azure AD, Fiori &amp; SSO"><i class="fas fa-chevron-left fa-fw"></i></a>
           </div>
           <div id="breadcrumbs">
             <span id="sidebar-toggle-span">
               <a href="#" id="sidebar-toggle" title='Menu'><i class="fas fa-bars fa-fw"></i></a>
             </span>
-            <span id="toc-menu" title='Table of Contents'><i class="fas fa-list-alt fa-fw"></i></span>
             <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
               <meta itemprop="itemListOrder" content="Descending" />
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="5" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/"><span itemprop="name">SAP on Microsoft</span></a> > </li>
@@ -60,19 +59,6 @@
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="2" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/"><span itemprop="name">Single Sign On</span></a> > </li>
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="1" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/step3/" aria-disabled="true"><span itemprop="name">Testing SSO</span></a></li>
             </ol>
-          </div>
-          <div class="default-animation progress">
-            <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-            </div>
           </div>
         </div>
       </nav>
@@ -83,82 +69,23 @@
           <article>
 
 <h1>Testing SSO</h1>
-<p>Let&rsquo;s add a HANA Provider to collect metrics for us:</p>
-<h4 id="node-exporter-agent">Node Exporter Agent</h4>
-<p>Before we start, we need to add an agent to the monitored VM.</p>
+<p>Now that the configuration steps are done, we are ready to test the SSO in action.</p>
+<p>All the operations will be done on the Bastion Host once, even with internet access, name resolution and security certificates are generated using the internal network names by SAP CAL.</p>
 <ol>
-<li>Go to the Azure Portal and open a Cloud Shell. In the examples we used BASH as the interpreter.
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/am16.png?height=520px" alt="monitoring2"></li>
-<li>Now we will upload the key that SAP CAL generated on the deployment so we can log on to the Linux OS. Click on the <strong>File Transfer icon</strong>  and then <strong>Upload</strong>
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/am17.png?height=220px" alt="monitoring2"></li>
-<li>Select the key which will be a *.pem file, downladed from SAP CAL. If you do not remember or cannot find the file, go to <a href="https://cal.sap.com">SAP CAL</a>, select your instance, click on Download Key and download it again.
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/am18.png?height=220px" alt="monitoring2"></li>
-<li>Let&rsquo;s add permissions to the .PEM file uploaded on the <strong>Azure Cloud Shell</strong> (in this example the key is called demosap.pem)</li>
+<li>From the Bastion Host, open an internet browser window and navigate to <a href="https://vhcals4hcs.dummy.nodomain:44301/sap/bc/ui2/flp">https://vhcals4hcs.dummy.nodomain:44301/sap/bc/ui2/flp</a>. Confirm that it no longer asks for User and password, instead offering a choice of identity provider, in this case <strong>ADSAPDEMO</strong> as we specified on Azure AD. Click <strong>Continue</strong>.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sso-nw44.png?height=550px" alt="sso1"></li>
+<li>You should be redirected to the Microsoft AD portal. Provide the Azure AD email address as created on the previous steps.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sso-nw45.png?height=550px" alt="sso1"></li>
+<li>Use the initial password provided by Azure AD (and copied to a scratch area in the previous steps) if this is your first logon
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sso-nw46.png?height=550px" alt="sso1"></li>
+<li>If this is your first logon with this user, Azure AD will ask you to change your password.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sso-nw47.png?height=550px" alt="sso1"></li>
+<li>Once logon is sucessfull, you will be redirected by Azure AD to the SAP Fiori page. In the background, Azure AD exchanged security keys and certificates with SAP Fiori that now recognizes this access as a valid SAP user.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sso-nw48.png?height=150px" alt="sso1"></li>
+<li>Once SAP Fiori has launched, click on the top right icon, and make sure it is logged on using the right SAP user <strong>BPINST</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sso-nw49.png?height=150px" alt="sso1"></li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod <span style="color:#ae81ff">400</span> demosap.pem
-</span></span></code></pre></div><ol start="5">
-<li>With the key setup done, we can connect to the SAP HANA instance, usign the key as password for root:</li>
-</ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -i demosap.pem root@&lt;PUBLIC IP of HANA&gt;
-</span></span></code></pre></div><ol start="6">
-<li>Let&rsquo;s download the agent. Go to <a href="https://prometheus.io/download/">Prometheus Download Page</a> and copy the address for the latest <strong>Node Exporter</strong> for Linux
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/am19.png?height=220px" alt="monitoring2"></li>
-<li>Back to Azure Cloud Shell, we will download, extract the agent and copy it to /usr/bin.</li>
-</ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sid-hdb-s4h:~ <span style="color:#75715e"># wget https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz</span>
-</span></span><span style="display:flex;"><span>sid-hdb-s4h:~ <span style="color:#75715e"># tar xvzf node_exporter-1.3.1.linux-amd64.tar.gz </span>
-</span></span><span style="display:flex;"><span>node_exporter-1.3.1.linux-amd64/
-</span></span><span style="display:flex;"><span>node_exporter-1.3.1.linux-amd64/LICENSE
-</span></span><span style="display:flex;"><span>node_exporter-1.3.1.linux-amd64/NOTICE
-</span></span><span style="display:flex;"><span>node_exporter-1.3.1.linux-amd64/node_exporter
-</span></span><span style="display:flex;"><span>sid-hdb-s4h:~ <span style="color:#75715e"># cd node_exporter-1.3.1.linux-amd64/</span>
-</span></span><span style="display:flex;"><span>sid-hdb-s4h:~/node_exporter-1.3.1.linux-amd64 <span style="color:#75715e"># cp -pr node_exporter /usr/bin/</span>
-</span></span></code></pre></div><ol start="8">
-<li>Let&rsquo;s test the agent by invoking it:</li>
-</ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sid-hdb-s4h:~ <span style="color:#75715e"># node_exporter</span>
-</span></span><span style="display:flex;"><span>ts<span style="color:#f92672">=</span>2022-03-14T18:58:29.764Z caller<span style="color:#f92672">=</span>node_exporter.go:182 level<span style="color:#f92672">=</span>info msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Starting node_exporter&#34;</span> version<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;(version=1.3.1, branch=HEAD, revision=a2321e7b940ddcff26873612bccdf7cd4c42b6b6)&#34;</span>
-</span></span><span style="display:flex;"><span>ts<span style="color:#f92672">=</span>2022-03-14T18:58:29.764Z caller<span style="color:#f92672">=</span>node_exporter.go:183 level<span style="color:#f92672">=</span>info msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Build context&#34;</span> build_context<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;(go=go1.17.3, user=root@243aafa5525c, date=20211205-11:09:49)&#34;</span>
-</span></span><span style="display:flex;"><span>ts<span style="color:#f92672">=</span>2022-03-14T18:58:29.764Z caller<span style="color:#f92672">=</span>node_exporter.go:185 level<span style="color:#f92672">=</span>warn msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Node Exporter is running as root user. This exporter is designed to run as unpriviledged user, root is not required.&#34;</span>
-</span></span><span style="display:flex;"><span>ts<span style="color:#f92672">=</span>2022-03-14T18:58:29.765Z caller<span style="color:#f92672">=</span>filesystem_common.go:111 level<span style="color:#f92672">=</span>info collector<span style="color:#f92672">=</span>filesystem msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Parsed flag --collector.filesystem.mount-points-exclude&#34;</span> flag<span style="color:#f92672">=</span>^/<span style="color:#f92672">(</span>dev|proc|run/credentials/.+|sys|var/lib/docker/.+<span style="color:#f92672">)(</span>$|/<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>ts<span style="color:#f92672">=</span>2022-03-14T18:58:29.765Z caller<span style="color:#f92672">=</span>filesystem_common.go:113 level<span style="color:#f92672">=</span>info collector<span style="color:#f92672">=</span>filesystem msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Parsed flag --collector.filesystem.fs-types-exclude&#34;</span> flag<span style="color:#f92672">=</span>^<span style="color:#f92672">(</span>autofs|binfmt_misc|bpf|cgroup2?|configfs|debugfs|devpts|devtmpfs|fusectl|hugetlbfs|iso9660|mqueue|nsfs|overlay|proc|procfs|pstore|rpc_pipefs|securityfs|selinuxfs|squashfs|sysfs|tracefs<span style="color:#f92672">)</span>$
-</span></span><span style="display:flex;"><span>ts<span style="color:#f92672">=</span>2022-03-14T18:58:29.765Z caller<span style="color:#f92672">=</span>node_exporter.go:108 level<span style="color:#f92672">=</span>info msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Enabled collectors&#34;</span>
-</span></span><span style="display:flex;"><span>ts<span style="color:#f92672">=</span>2022-03-14T18:58:29.765Z caller<span style="color:#f92672">=</span>node_exporter.go:115 level<span style="color:#f92672">=</span>info collector<span style="color:#f92672">=</span>arp
-</span></span><span style="display:flex;"><span>ts<span style="color:#f92672">=</span>2022-03-14T18:58:29.765Z caller<span style="color:#f92672">=</span>node_exporter.go:115 level<span style="color:#f92672">=</span>info collector<span style="color:#f92672">=</span>bcache
-</span></span></code></pre></div><ol start="9">
-<li>On the <strong>Bastion Host</strong>, go to http://&laquo;SAP HANA Private IP&raquo;:9100/metrics
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/am20.png?height=420px" alt="monitoring2"></li>
-<li>Kill the node_exporter process with CTRL+C and start it in background</li>
-</ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nohup node_exporter &amp; 
-</span></span></code></pre></div><p>The agent is installed and communicating internally on the vNET. Let&rsquo;s add the provider now</p>
-<h4 id="linux-provider">Linux Provider</h4>
-<ol>
-<li>On the Azure Monitor for SAP, go to <strong>Providers</strong>
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/am05.png?height=450px" alt="monitoring1"></li>
-<li>Click <strong>Add</strong>
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/am06.png?height=100px" alt="monitoring1"></li>
-<li>Let&rsquo;s fill the required data:</li>
-</ol>
-<ul>
-<li>Type: <strong>OS Linux</strong></li>
-<li>Endpoint: <strong>http://internal_ip_address:9100/metrics</strong>
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/am21.png?height=500px" alt="monitoring1"></li>
-</ul>
-<ol start="4">
-<li>Wait until the provider is created and give it 10-15 minutes for data to start to flow.
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/am22.png?height=100px" alt="monitoring1"></li>
-<li>Go to <strong>Monitoring</strong>, select <strong>OS (Linux)</strong>, and pick the host.
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/am23.png?height=400px" alt="monitoring1"></li>
-</ol>
-<p>Congratulations, you just installed and finished the OS Linux Agent install.</p>
-<p>From here on, you should be able to see collected data directly from Linux:</p>
-<p>Overview with peak CPU and RAM, disk usage
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/am24.png?height=500px" alt="monitoring1"></p>
-<p>Historic CPU Monitoring
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/am25.png?height=500px" alt="monitoring1"></p>
-<p>Disk size and growth
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/am26.png?height=500px" alt="monitoring1"></p>
+<p>Congratulations ! You have enabled SSO between SAP Fiori and Microsoft Azure AD and now users can log in to SAP using their corporate credentials, MFA, and any other security rules defined by your organization.</p>
 
             <footer class="footline">
             </footer>
@@ -177,9 +104,9 @@
           <input data-search-input id="search-by" type="search" placeholder="Search...">
           <span data-search-clear=""><i class="fas fa-times"></i></span>
         </div>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1649881887"></script>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1649881887"></script>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1649881887"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1649945813"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1649945813"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1649945813"></script>
       </div>
       <div id="homelinks" class="default-animation">
         <ul>
@@ -228,7 +155,7 @@
           <li data-nav-id="/labs/security/" title="Security" class="dd-item parent"><input type="checkbox" id="section-3820b13c5cd19ff47113df386c178664" class="toggle" checked/><label for="section-3820b13c5cd19ff47113df386c178664" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/"><b> </b>Security<i class="fas fa-check read-icon"></i></a><ul>
           <li data-nav-id="/labs/security/adsso/" title="Single Sign On" class="dd-item parent"><input type="checkbox" id="section-2484f3721b66da31ad0d7ac4f154756c" class="toggle" checked/><label for="section-2484f3721b66da31ad0d7ac4f154756c" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/"><b></b>Single Sign On<i class="fas fa-check read-icon"></i></a><ul>
           <li data-nav-id="/labs/security/adsso/step1/" title="Setting up SAP" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/step1/"><b>1. </b>Setting up SAP<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/labs/security/adsso/step2/" title="Setup Active Directory" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/step2/"><b>2. </b>Setup Active Directory<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/security/adsso/step2/" title="Setup Azure AD, Fiori &amp; SSO" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/step2/"><b>2. </b>Setup Azure AD, Fiori &amp; SSO<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/labs/security/adsso/step3/" title="Testing SSO" class="dd-item active"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/step3/"><b>3. </b>Testing SSO<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
           <li data-nav-id="/labs/inframgmt/" title="Infrastructure and Management" class="dd-item"><input type="checkbox" id="section-8bc0407a0d8a1a32a579c92334004827" class="toggle"/><label for="section-8bc0407a0d8a1a32a579c92334004827" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/"><b> </b>Infrastructure and Management<i class="fas fa-check read-icon"></i></a><ul>
           <li data-nav-id="/labs/inframgmt/monitoring/" title="Monitoring SAP" class="dd-item"><input type="checkbox" id="section-007d20ec69cd510209aa2eebfacc774f" class="toggle"/><label for="section-007d20ec69cd510209aa2eebfacc774f" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/"><b></b>Monitoring SAP<i class="fas fa-check read-icon"></i></a><ul>
@@ -285,10 +212,10 @@
         </div>
       </div>
     </aside>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1649881887"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1649881887"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1649881887"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1649881887"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1649945813"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1649945813"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1649945813"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1649945813"></script>
     <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
     <script>
       function useMermaid( config ){
@@ -302,6 +229,6 @@
       }
       useMermaid( JSON.parse("{}") );
     </script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1649881887"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1649945813"></script>
   </body>
 </html>

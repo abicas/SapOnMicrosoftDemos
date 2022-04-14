@@ -17,7 +17,7 @@ This section will show the steps required for this to be accomplished:
 SAP Profile selection  Log on to the SAP BAstion host via Remote Desktop and look for open SAP GUI (SAP Logon) with user BPINST/Welcome1 Go to TCODE RZ10  We will change some parameters from the default SAP profile.</description>
     </item>
     <item>
-      <title>Setup Active Directory</title>
+      <title>Setup Azure AD, Fiori &amp; SSO</title>
       <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/step2/</link>
       <pubDate>Mon, 14 Mar 2022 14:22:13 -0300</pubDate>
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/step2/</guid>
@@ -29,9 +29,9 @@ SAP Profile selection  Log on to the SAP BAstion host via Remote Desktop and loo
       <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/step3/</link>
       <pubDate>Mon, 14 Mar 2022 14:22:13 -0300</pubDate>
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/step3/</guid>
-      <description>Let&amp;rsquo;s add a HANA Provider to collect metrics for us:
-Node Exporter Agent Before we start, we need to add an agent to the monitored VM.
- Go to the Azure Portal and open a Cloud Shell. In the examples we used BASH as the interpreter.  Now we will upload the key that SAP CAL generated on the deployment so we can log on to the Linux OS. Click on the File Transfer icon and then Upload  Select the key which will be a *.</description>
+      <description>Now that the configuration steps are done, we are ready to test the SSO in action.
+All the operations will be done on the Bastion Host once, even with internet access, name resolution and security certificates are generated using the internal network names by SAP CAL.
+ From the Bastion Host, open an internet browser window and navigate to https://vhcals4hcs.dummy.nodomain:44301/sap/bc/ui2/flp. Confirm that it no longer asks for User and password, instead offering a choice of identity provider, in this case ADSAPDEMO as we specified on Azure AD.</description>
     </item>
   </channel>
 </rss>

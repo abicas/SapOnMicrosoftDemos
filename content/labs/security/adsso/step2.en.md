@@ -1,5 +1,5 @@
 +++
-title = "Setup Active Directory"
+title = "Setup Azure AD, Fiori & SSO"
 date = 2022-03-14T14:22:13-03:00
 weight = 6
 chapter = false
