@@ -28,7 +28,10 @@
       <link>https://abicas.github.io/SapOnMicrosoftDemos/cleanup/</link>
       <pubDate>Sat, 19 Mar 2022 09:19:24 -0300</pubDate>
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/cleanup/</guid>
-      <description>Chapter X Some Chapter title Lorem Ipsum.</description>
+      <description>Now that you have done all the labs, it is important to cleanup deployed resources.
+Below we will see the steps required for this process:
+SAP CAL Cleanup This process will remove all resources deployed by SAP into your Azure Subscription. This is a destructive process and in case you need to recover this environment, you can redeploy from scratch until the end of the SAP CAL Trial.
+ Sign in to the SAP CAL and click on Log On.</description>
     </item>
   </channel>
 </rss>

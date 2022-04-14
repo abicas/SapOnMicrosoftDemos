@@ -7,7 +7,6 @@ chapter = false
 # Welcome to the 
 # SAP on Microsoft Labs 
 
-### Intro to the site
 This website is aimed to provide step-by-step guidance on how to prepare an SAP environment on Azure and demonstrate how can you integrate your SAP systems with Microsoft services and softwares. 
 
 We know that for an environment like SAP, having a robust infrasctructure is a must-have but with Microsoft you can do much more! 

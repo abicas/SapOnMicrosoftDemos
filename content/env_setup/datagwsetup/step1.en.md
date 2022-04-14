@@ -16,7 +16,7 @@ Connect to the Remote Desktop as on the previous step and using a browser on the
 - [On-premises data gateway](https://aka.ms/on-premises-data-gateway-installer)
 - [SAP Connector](https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-using-sap-connector#sap-client-library-prerequisites)
 
-Install the **.Net Framework** following the standard process.
+Install the **.Net Framework** following the standard process. Reboot the Bastion Host. 
 
 Install the **On-premises Data Gateway** and configure it: 
 

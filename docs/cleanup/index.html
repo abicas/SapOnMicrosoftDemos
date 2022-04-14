@@ -9,16 +9,16 @@
     <meta name="author" content="Alexandre Bicas">
     <title>Environment Cleanup :: SAP on Microsoft - Tutorials</title>
     <link rel="alternate" type="application/rss&#43;xml" href="https://abicas.github.io/SapOnMicrosoftDemos/cleanup/index.xml" title="SAP on Microsoft - Tutorials" />
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1649947720" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1649947720" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1649947720" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1649947720" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1649947720" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1649947720" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1649947720" rel="stylesheet" id="variant-style">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1649947720" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1649947720" rel="stylesheet" media="print">
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1649947720"></script>
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1649963077" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1649963077" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1649963077" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1649963077" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1649963077" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1649963077" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1649963077" rel="stylesheet" id="variant-style">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1649963077" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1649963077" rel="stylesheet" media="print">
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1649963077"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -34,7 +34,7 @@
       var baseUriFull='https:\/\/abicas.github.io\/SapOnMicrosoftDemos/';
       variants.init( [ 'blue' ] );
     </script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1649947720"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1649963077"></script>
   </head>
   <body class="mobile-support" data-url="https://abicas.github.io/SapOnMicrosoftDemos/cleanup/">
     <div id="body" class="default-animation">
@@ -66,9 +66,80 @@
           </div>
           <article class="chapter">
 
-<h3 id="chapter-x">Chapter X</h3>
-<h1 id="some-chapter-title">Some Chapter title</h1>
-<p>Lorem Ipsum.</p>
+<p>Now that you have done all the labs, it is important to cleanup deployed resources.</p>
+<p>Below we will see the steps required for this process:</p>
+<h2 id="sap-cal-cleanup">SAP CAL Cleanup</h2>
+<p>This process will remove all resources deployed by SAP into your Azure Subscription. This is a destructive process and in case you need to recover this environment, you can redeploy from scratch until the end of the SAP CAL Trial.</p>
+<ol>
+<li>Sign in to the <a href="https://cal.sap.com/">SAP CAL</a> and click on <strong>Log On</strong>.</li>
+<li>Go to <strong>Instances</strong>, click on the <strong>ellipsis button</strong> and select <strong>Terminate</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/delete01.png?height=300px" alt="del"></li>
+<li>Confirm the termination by clicking <strong>OK</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/delete02.png?height=100px" alt="del"></li>
+</ol>
+
+<div class="box notices info">
+    <div class="box-label"><i class="fas fa-info-circle fa-fw"></i> Info</div>
+    <div class="box-content">
+<p>This process can take up to 30 minutes.
+During the process the status will go from <strong>Active</strong> to <strong>Terminating</strong>.
+Once it is completed the status will change to <strong>Terminated</strong></p>
+
+    </div>
+</div>
+<p>Wait until the termination is complete to proceed on the Azure part.</p>
+<h2 id="azure-cleanup">Azure Cleanup</h2>
+<p>This process will remove all resources under the deleted reesource groups of your Azure Subscription. This is a destructive process with no recovery possible besides redeploying.</p>
+
+<div class="box notices warning">
+    <div class="box-label"><i class="fas fa-exclamation-triangle fa-fw"></i> Warning</div>
+    <div class="box-content">
+<p>Before proceeding, make sure SAP CAL resources have been removed and Instance status on SAP CAL is <strong>TERMINATED</strong> as per guidance above.</p>
+
+    </div>
+</div>
+<ol start="4">
+<li>
+<p>Sign in to your Azure Account through the <a href="https://portal.azure.com">Azure Portal</a></p>
+</li>
+<li>
+<p>Let&rsquo;s start by removing all the remaining resources deployed on the same SAP resource groups. Navigate to <strong>Resource Groups</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/delete03.png?height=150px" alt="del"></p>
+</li>
+<li>
+<p>Here you can see the existing resource groups.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/delete04.png?height=300px" alt="del"></p>
+</li>
+<li>
+<p>Click on the ones you want to delete (the ones created by SAP have SAPCAL in their names) and click on <strong>Delete resource group</strong>. On the panel on the right side, mark <strong>Apply force delete</strong> and write the name of the Resrouce Group to confirm. Click <strong>Delete</strong>.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/delete04b.png?height=150px" alt="del">
+<strong>REPEAT this process to all resource groups named SAPCAL or that you want to remove</strong></p>
+</li>
+<li>
+<p>Let&rsquo;s remove the SAP CAL access from the Active Directory, thus removing its privileges to launch any new workloads on Azure. Go to <strong>Azure Active Directory</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/delete05.png?height=200px" alt="del"></p>
+</li>
+<li>
+<p>Go to <strong>App registrations</strong> and open the one you created for SAP CAL
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/delete06.png?height=300px" alt="del"></p>
+</li>
+<li>
+<p>Select <strong>Delete</strong>. Once completed SAP CAL credentials will be invalid.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/delete07.png?height=500px" alt="del"></p>
+</li>
+</ol>
+<h2 id="sap-gateway-demo-system-cleanup">SAP Gateway Demo System Cleanup</h2>
+<p>Although not required, because it doesn&rsquo;t impact in costs, you can opt to delete your SAP Gateway Demo Account. This process will remove the access and delete the account. In case you need to have access to it again, you will have to register again from scratch.</p>
+<ol>
+<li>Go to the <a href="https://register.sapdevcenter.com/SUPSignForms/">ES5 Login page</a></li>
+<li>Click on the <strong>Delet Account</strong> button
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/delete08.png?height=500px" alt="del"></li>
+</ol>
+<h2 id="all-set">All set</h2>
+<p>All the resources have been deleted if the procedures were sucessfull.</p>
+<p>Thank you for having followed thru the labs and we sincerely hope they were of value for you and your business!</p>
+<p>This project is open source by nature and things can change pretty fast in the cloud environment.</p>
+<p>In case you see something wrong on the steps presented, something is not working as designed, or you wanna give a feedback, feel free to contribute opening an issue or pushing a commit to <a href="https://github.com/abicas/SapOnMicrosoftDemos">our Github project page</a>.</p>
 
             <footer class="footline">
             </footer>
@@ -87,9 +158,9 @@
           <input data-search-input id="search-by" type="search" placeholder="Search...">
           <span data-search-clear=""><i class="fas fa-times"></i></span>
         </div>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1649947720"></script>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1649947720"></script>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1649947720"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1649963077"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1649963077"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1649963077"></script>
       </div>
       <div id="homelinks" class="default-animation">
         <ul>
@@ -195,10 +266,10 @@
         </div>
       </div>
     </aside>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1649947720"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1649947720"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1649947720"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1649947720"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1649963077"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1649963077"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1649963077"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1649963077"></script>
     <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
     <script>
       function useMermaid( config ){
@@ -212,6 +283,6 @@
       }
       useMermaid( JSON.parse("{}") );
     </script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1649947720"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1649963077"></script>
   </body>
 </html>
