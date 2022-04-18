@@ -15,5 +15,12 @@
       <description>Azure Data Factory In the world of big data, raw, unorganized data is often stored in relational, non-relational, and other storage systems. However, on its own, raw data doesn&amp;rsquo;t have the proper context or meaning to provide meaningful insights to analysts, data scientists, or business decision makers.
 Big data requires a service that can orchestrate and operationalize processes to refine these enormous stores of raw data into actionable business insights. Azure Data Factory is a managed cloud service that&amp;rsquo;s built for these complex hybrid extract-transform-load (ETL), extract-load-transform (ELT), and data integration projects.</description>
     </item>
+    <item>
+      <title>Office365</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/office/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/office/</guid>
+      <description>Chapter X Some Chapter title Lorem Ipsum.</description>
+    </item>
   </channel>
 </rss>

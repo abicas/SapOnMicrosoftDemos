@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.97.2" />
+    <meta name="generator" content="Relearn 3.4.1&#43;tip">
+    <meta name="description" content="SAP on Microsoft - Tutorials">
+    <meta name="author" content="Alexandre Bicas">
+    <title>Building the LogicApp :: SAP on Microsoft - Tutorials</title>
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1650310283" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1650310283" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1650310283" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1650310283" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1650310283" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1650310283" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1650310283" rel="stylesheet" id="variant-style">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1650310283" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1650310283" rel="stylesheet" media="print">
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1650310283"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      var index_url="https://abicas.github.io/SapOnMicrosoftDemos/index.json";
+      var root_url="https://abicas.github.io/SapOnMicrosoftDemos/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      // some further base stuff
+      var baseUriFull='https:\/\/abicas.github.io\/SapOnMicrosoftDemos/';
+      variants.init( [ 'blue' ] );
+    </script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1650310283"></script>
+  </head>
+  <body class="mobile-support" data-url="https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/iot/step2/">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable">
+        <div>
+          <div class="navigation">
+             <a class="nav nav-next" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/iot/step3/" title="Testing the lab"><i class="fas fa-chevron-right fa-fw"></i></a>
+          </div>
+          <div class="navigation">
+             <a class="nav nav-prev" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/iot/step1/" title="IoT Hub Setup"><i class="fas fa-chevron-left fa-fw"></i></a>
+          </div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <meta itemprop="itemListOrder" content="Descending" />
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="4" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/"><span itemprop="name">SAP on Microsoft</span></a> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="3" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/"><span itemprop="name">SAP on Microsoft Labs</span></a> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="2" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/"><span itemprop="name">IoT</span></a> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="1" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/iot/step2/" aria-disabled="true"><span itemprop="name">Building the LogicApp</span></a></li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article>
+
+<h1>Building the LogicApp</h1>
+<p>Let&rsquo;s build a Logic App to consume the data and decide if this should be sent to SAP or not.</p>
+<ol>
+<li>Log on to the <a href="https://portal.azure.com">Azure Portal</a> and look for <strong>Logic Apps</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-19.png?height=150px" alt="iot"></li>
+<li>Create a new logic app with the following parameters:</li>
+</ol>
+<ul>
+<li>Resource Group = <strong>IoTRG</strong> (created on the previous step)</li>
+<li>Logic App Name = <strong>SAPIOTLABXXXX</strong> (must be unique on Azure. Replace XXXX with a set of 4 numbers, like SAPIOTLAB1234)</li>
+<li>Region = <strong>East US</strong></li>
+<li>Click on <strong>Review + create</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-20.png?height=400px" alt="iot"></li>
+</ul>
+<ol start="3">
+<li>Once the logic app is created, go to the <strong>Events</strong> on the left panel and select <strong>Logic Apps</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-22.png?height=400px" alt="iot"></li>
+<li>The Logic Apps Designer will open with an Azure Event Grid setup. Confirm the Active Directoy to be used, click Sign In and log in with your credentials.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-23.png?height=400px" alt="iot"></li>
+<li>Once logged in, you will see a green checkmark. Click <strong>Continue</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-24.png?height=300px" alt="iot"></li>
+<li>Let&rsquo;s configure the Source event. configure the parameters as below and click on <strong>Next Step</strong></li>
+</ol>
+<ul>
+<li>Resource Type = <strong>Microsoft.Devices.IoTHubs</strong></li>
+<li>Resource Name = Should be already populated, if not select your SAPIOTLAB IoT Hub</li>
+<li>Event Type = <strong>Microsoft.Devices.DeviceTelemetry</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-25.png?height=400px" alt="iot"></li>
+</ul>
+<ol start="7">
+<li>Search for <strong>Parse JSON</strong> and select <strong>Parse JSON</strong> as the next step
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-26.png?height=400px" alt="iot"></li>
+<li>In Content, use dynamic content and select <strong>Body</strong> from &ldquo;When a resource event occurs&rdquo;. Click on <strong>Use payload to generate schema</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-27.png?height=400px" alt="iot"></li>
+<li>Paste the sample payload below and click <strong>Done</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{	
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;&lt;Telemetry ID&gt;&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;topic&#34;</span>: <span style="color:#e6db74">&#34;/SUBSCRIPTIONS/&lt;Suscription ID&gt;/RESOURCEGROUPS/RG-AZUREIOT/PROVIDERS/MICROSOFT.DEVICES/IOTHUBS/ELBRUNOIOT&#34;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;subject&#34;</span>: <span style="color:#e6db74">&#34;devices/wioSquirrelFeeder&#34;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;eventType&#34;</span>: <span style="color:#e6db74">&#34;Microsoft.Devices.DeviceTelemetry&#34;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;data&#34;</span>: {
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;properties&#34;</span>: {},
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;systemProperties&#34;</span>: {
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;iothub-connection-device-id&#34;</span>: <span style="color:#e6db74">&#34;wioSquirrelFeeder&#34;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;iothub-connection-auth-method&#34;</span>: <span style="color:#e6db74">&#34;{\&#34;scope\&#34;:\&#34;device\&#34;,\&#34;type\&#34;:\&#34;sas\&#34;,\&#34;issuer\&#34;:\&#34;iothub\&#34;,\&#34;acceptingIpFilterRule\&#34;:null}&#34;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;iothub-connection-auth-generation-id&#34;</span>: <span style="color:#e6db74">&#34;637769331872294921&#34;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;iothub-enqueuedtime&#34;</span>: <span style="color:#e6db74">&#34;2022-03-02T15:27:08.4210000Z&#34;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;iothub-message-source&#34;</span>: <span style="color:#e6db74">&#34;Telemetry&#34;</span>
+</span></span><span style="display:flex;"><span>	},
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;body&#34;</span>: <span style="color:#e6db74">&#34;eyJhY3Rpb24iOiJhbmltYWwgZGV0ZWN0ZWQiLCJhbmltYWwiOiJzcXVpcnJlbCIsImZlZWRjb3VudCI6OCwiZmVlZGVyX3N0YXRlIjpmYWxzZSwicmFuZ2VfZGV0ZWN0ZWQiOjM3fQ==&#34;</span>
+</span></span><span style="display:flex;"><span>	},
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;dataVersion&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;metadataVersion&#34;</span>: <span style="color:#e6db74">&#34;1&#34;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;eventTime&#34;</span>: <span style="color:#e6db74">&#34;2022-03-02T15:27:08.421Z&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-28.png?height=300px" alt="iot">
+10. Add a new step after Parse JSON.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-29.png?height=400px" alt="iot">
+11. As you can see on the template above, the body for the document is base64 enconded. We need to convert it to string so we can handle the values sent by the device. Let&rsquo;s add a <strong>Compose</strong> operation to convert this format:
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-30.png?height=400px" alt="iot">
+12. On the <strong>Inputs</strong> field, we will use use dynamic content. Click on <strong>Expression</strong> and paste the expression below. Click <strong>OK</strong>
+<code>decodeBase64(string(body('Parse_JSON')?['data']?['body']))</code>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-31.png?height=400px" alt="iot">
+13. Add another <strong>Parse JSON</strong> step, and rename it to <strong>Parse BODY</strong>.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-32.png?height=250px" alt="iot">
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-33.png?height=170px" alt="iot">
+14. On Parse Body, select content and add the Dynamic content <strong>Outputs</strong> from the previous Compose step. Click on <strong>Use payload to generate schema</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-34.png?height=400px" alt="iot">
+15. Paste the sample payload below and click <strong>Done</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;messageId&#34;</span>:<span style="color:#ae81ff">5</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;deviceId&#34;</span>:<span style="color:#e6db74">&#34;Raspberry Pi Web Client&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;temperature&#34;</span>:<span style="color:#ae81ff">24.663457932335028</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;humidity&#34;</span>:<span style="color:#ae81ff">65.91259670696867</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ol start="16">
+<li>Now we can read the data sent by the device. Let&rsquo;s add the IF/THEN decision in the flow. Add a new step <strong>Condition</strong> (you can search for control)
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-35.png?height=400px" alt="iot"></li>
+<li>Let&rsquo;s define that temepratures above 29oC should trigger the IDOC to SAP to alert it. Add the field <strong>temperature</strong> from Parse Body&hellip;
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-36.png?height=400px" alt="iot"></li>
+<li>&hellip; and as condition select <strong>is greater than</strong> and <strong>29</strong> . CLick on <strong>Add Action</strong> under the True result.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-37.png?height=300px" alt="iot"></li>
+<li>Inside the True result, add a new <strong>Compose</strong> step
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-38.png?height=300px" alt="iot"></li>
+<li>Rename it to <strong>Build XML</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-39.png?height=300px" alt="iot"></li>
+<li>As input, paste the XML Template below. This is a sample IDOC tempalte from SAP for flight data. Although it has nothing to do with your example, our focus is not about configuring the SAP side but instead focus on transmitting the message to SAP. This IDOC is already defined on SAP and ready to be used, which fits our objectives.
+We will replace the 3 <strong>XXX</strong> values with Dynamic Content as the picture below</li>
+</ol>
+<ul>
+<li>AGENCYNUM = <strong>messageId</strong></li>
+<li>PASSNAME = <strong>temperature</strong></li>
+<li>PASSBIRTH = <strong>humidity</strong></li>
+<li>Make sure you do not leave spaces before or after the dynamic values</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;FLIGHTBOOKING_CREATEFROMDAT01&gt;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&lt;IDOC</span> <span style="color:#a6e22e">BEGIN=</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">&lt;EDI_DC40</span> <span style="color:#a6e22e">SEGMENT=</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&lt;TABNAM&gt;</span>EDI_DC40<span style="color:#f92672">&lt;/TABNAM&gt;</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&lt;MANDT&gt;</span>000<span style="color:#f92672">&lt;/MANDT&gt;</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&lt;DOCREL&gt;</span>750<span style="color:#f92672">&lt;/DOCREL&gt;</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&lt;STATUS&gt;</span>56<span style="color:#f92672">&lt;/STATUS&gt;</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&lt;DIRECT&gt;</span>2<span style="color:#f92672">&lt;/DIRECT&gt;</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&lt;OUTMOD/&gt;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&lt;IDOCTYP&gt;</span>FLIGHTBOOKING_CREATEFROMDAT01<span style="color:#f92672">&lt;/IDOCTYP&gt;</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&lt;CIMTYP/&gt;</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&lt;MESTYP&gt;</span>FLIGHTBOOKING_CREATEFROMDAT<span style="color:#f92672">&lt;/MESTYP&gt;</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&lt;SNDPOR&gt;</span>A000000002<span style="color:#f92672">&lt;/SNDPOR&gt;</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&lt;SNDPRT&gt;</span>LS<span style="color:#f92672">&lt;/SNDPRT&gt;</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&lt;SNDPRN&gt;</span>S4HCLNT100<span style="color:#f92672">&lt;/SNDPRN&gt;</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&lt;RCVPOR&gt;</span>A000000002<span style="color:#f92672">&lt;/RCVPOR&gt;</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&lt;RCVPRT&gt;</span>LS<span style="color:#f92672">&lt;/RCVPRT&gt;</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&lt;RCVPRN&gt;</span>S4HCLNT100<span style="color:#f92672">&lt;/RCVPRN&gt;</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&lt;CREDAT&gt;</span>20191001<span style="color:#f92672">&lt;/CREDAT&gt;</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&lt;CRETIM&gt;</span>090207<span style="color:#f92672">&lt;/CRETIM&gt;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">&lt;/EDI_DC40&gt;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">&lt;E1SBO_CRE</span> <span style="color:#a6e22e">SEGMENT=</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&lt;RESERVE_ONLY&gt;</span>X<span style="color:#f92672">&lt;/RESERVE_ONLY&gt;</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&lt;TEST_RUN&gt;</span>X<span style="color:#f92672">&lt;/TEST_RUN&gt;</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&lt;E1BPSBONEW</span> <span style="color:#a6e22e">SEGMENT=</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#f92672">&lt;AIRLINEID&gt;</span>AA<span style="color:#f92672">&lt;/AIRLINEID&gt;</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#f92672">&lt;CONNECTID&gt;</span>1234<span style="color:#f92672">&lt;/CONNECTID&gt;</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#f92672">&lt;FLIGHTDATE&gt;</span>01012022<span style="color:#f92672">&lt;/FLIGHTDATE&gt;</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#f92672">&lt;CUSTOMERID&gt;</span>00001234<span style="color:#f92672">&lt;/CUSTOMERID&gt;</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#f92672">&lt;CLASS&gt;</span>B<span style="color:#f92672">&lt;/CLASS&gt;</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#f92672">&lt;COUNTER&gt;</span>ALERT<span style="color:#f92672">&lt;/COUNTER&gt;</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#f92672">&lt;AGENCYNUM&gt;</span>XXX<span style="color:#f92672">&lt;/AGENCYNUM&gt;</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#f92672">&lt;PASSNAME&gt;</span>XXX<span style="color:#f92672">&lt;/PASSNAME&gt;</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#f92672">&lt;PASSBIRTH&gt;</span>XXX<span style="color:#f92672">&lt;/PASSBIRTH&gt;</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&lt;/E1BPSBONEW&gt;</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">&lt;E1BPPAREX/&gt;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">&lt;/E1SBO_CRE&gt;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&lt;/IDOC&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/FLIGHTBOOKING_CREATEFROMDAT01&gt;</span>
+</span></span></code></pre></div><p><img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-40.png" alt="iot">
+22. Finally, still inside the True result and under Build XML, let&rsquo;s add the last step so we can send data to SAP. Filter for <strong>message to SAP</strong> and select <strong>Send message to SAP</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-41.png?height=400px" alt="iot">
+23. We will need to configure the connection to SAP. use the following parameters:</p>
+<ul>
+<li>Connection Name = <strong>S4HANA</strong></li>
+<li>Data Gateway = Your subscrition and the gateway name you picked on the environment setup.</li>
+<li>Client = <strong>100</strong></li>
+<li>Authentication Type = <strong>Basic</strong></li>
+<li>SAP Username = <strong>BPINST</strong></li>
+<li>SAP Password = <strong>Welcome1</strong></li>
+<li>AS Host = <strong>Your SAP HANA Public IP address</strong> as displayed in SAP CAL</li>
+<li>AS Service = <strong>50000</strong></li>
+<li>AS System Number = <strong>00</strong></li>
+<li>Leave the remaining parameters as the default
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-45.png" alt="iot"></li>
+</ul>
+<ol start="24">
+<li>Under SAP Action we will define the IDOC template FLIGHTBOOKING_CREATEFROMDAT. In order to to this, click on the folder icon and on the arrow next to <strong>IDOC</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-46.png" alt="iot"></li>
+<li>Navigate on all the available IDOCs until <strong>FLIGHTBOOKING_CREATEFROMDAT</strong> is found and click on the arrow.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-47.png?height=300px" alt="iot"></li>
+<li>Again click on the arrow for the single item:
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-48.png" alt="iot"></li>
+<li>Scroll down to the last option. It should be version 755 or above. hover the mouse to the name and wait for the pop up to confirm. Click on the arrow.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-49.png" alt="iot"></li>
+<li>Finally select <strong>SEND</strong> as the action itself.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-50.png" alt="iot"></li>
+<li>In <strong>Input Message</strong> set <strong>Outputs</strong> as dynamic content from BUILD XML step
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-51.png" alt="iot"></li>
+<li>Click <strong>SAVE</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/iot-a-52.png" alt="iot"></li>
+</ol>
+<p>Allright, we have created an LogicApp to handle the input from the IoT Device and send it to SAP in case temperaature is higher than 29oC.</p>
+<p>On the next step we will test it and check on the SAP side for the message that can be later handled but ABAP code.</p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="sidebar" class="default-animation showVisitedLinks">
+      <div id="header-wrapper" class="default-animation">
+        <div id="header" class="default-animation">
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/MSAzure-logo.png">
+
+        </div>
+        <div class="searchbox default-animation">
+          <label for="search-by"><i class="fas fa-search"></i></label>
+          <input data-search-input id="search-by" type="search" placeholder="Search...">
+          <span data-search-clear=""><i class="fas fa-times"></i></span>
+        </div>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1650310283"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1650310283"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1650310283"></script>
+      </div>
+      <div id="homelinks" class="default-animation">
+        <ul>
+          <li>
+              <a class="padding" href="https://abicas.github.io/SapOnMicrosoftDemos/"><i class='fas fa-home'></i> Home</a>
+          </li>
+        </ul>
+      </div>
+      <div id="content-wrapper" class="highlightable">
+        <ul class="topics collapsible-menu">
+          <li data-nav-id="/env_setup/" title="Environment Setup" class="dd-item"><input type="checkbox" id="section-d038284c53e4747472fade1a7cff02fe" class="toggle"/><label for="section-d038284c53e4747472fade1a7cff02fe" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/">Environment Setup<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/env_setup/azure_setup/" title="Azure Setup for SAP CAL" class="dd-item"><input type="checkbox" id="section-0b7a593fbf16d5dd32a751a7011f49d5" class="toggle"/><label for="section-0b7a593fbf16d5dd32a751a7011f49d5" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/"><b></b>Azure Setup for SAP CAL<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/env_setup/azure_setup/azuread/" title="Create and Azure Active Directory application" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/azuread/"><b>1. </b>Create and Azure Active Directory application<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/env_setup/azure_setup/adrole/" title="Assign Role to Application" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/adrole/"><b>2. </b>Assign Role to Application<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/env_setup/azure_setup/getinfo/" title="Get required information" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/getinfo/"><b>3. </b>Get required information<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/env_setup/sap_cal/" title="SAP Cloud Appliance Library (CAL)" class="dd-item"><input type="checkbox" id="section-ed6488fa8433a8dcf8316785e5bb148b" class="toggle"/><label for="section-ed6488fa8433a8dcf8316785e5bb148b" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/sap_cal/">SAP Cloud Appliance Library (CAL)<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/env_setup/sap_cal/accsetup/" title="SAP CAL Account Setup" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/sap_cal/accsetup/"><b>1. </b>SAP CAL Account Setup<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/env_setup/sap_cal/rdpacc/" title="Remote Desktop Access" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/sap_cal/rdpacc/"><b>2. </b>Remote Desktop Access<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/env_setup/datagwsetup/" title="Microsoft On-premises Data Gateway Installation" class="dd-item"><input type="checkbox" id="section-7e2d06a158de7d166580123fced762da" class="toggle"/><label for="section-7e2d06a158de7d166580123fced762da" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/datagwsetup/"><b></b>Microsoft On-premises Data Gateway Installation<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/env_setup/datagwsetup/step1/" title="Remote Desktop Setup" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/datagwsetup/step1/"><b>1. </b>Remote Desktop Setup<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/env_setup/datagwsetup/step2/" title="Azure Data Gateway Setup" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/datagwsetup/step2/"><b>2. </b>Azure Data Gateway Setup<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/env_setup/demogw/" title="SAP Gateway Demo System" class="dd-item"><input type="checkbox" id="section-1b6bf7a19a5eec70c5e08a51f553b8ac" class="toggle"/><label for="section-1b6bf7a19a5eec70c5e08a51f553b8ac" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/demogw/"><b></b>SAP Gateway Demo System<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/env_setup/demogw/step1/" title="Creating and account" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/demogw/step1/"><b>1. </b>Creating and account<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/labs/" title="SAP on Microsoft Labs" class="dd-item parent"><input type="checkbox" id="section-769cb6d43dfc85e042ab942f9a6740fe" class="toggle" checked/><label for="section-769cb6d43dfc85e042ab942f9a6740fe" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/">SAP on Microsoft Labs<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/autoint/" title="Automation and Integration" class="dd-item"><input type="checkbox" id="section-4ce425e819471755ff25297eea0caa13" class="toggle"/><label for="section-4ce425e819471755ff25297eea0caa13" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/"><b> </b>Automation and Integration<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/autoint/logicapps/" title="Azure Logic Apps" class="dd-item"><input type="checkbox" id="section-82cbc536be01244731e961352b7bf3ab" class="toggle"/><label for="section-82cbc536be01244731e961352b7bf3ab" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/"><b> </b>Azure Logic Apps<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/autoint/logicapps/step1/" title="Create a Logic App" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/step1/"><b>1. </b>Create a Logic App<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/autoint/logicapps/step2/" title="Create a Workflow" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/step2/"><b>2. </b>Create a Workflow<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/autoint/logicapps/step3/" title="Running the lab" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/step3/"><b>3. </b>Running the lab<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/labs/autoint/virtualagents/" title="Power Virtual Agent" class="dd-item"><input type="checkbox" id="section-960a47f64ec289680476926f301ee652" class="toggle"/><label for="section-960a47f64ec289680476926f301ee652" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/"><b> </b>Power Virtual Agent<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/autoint/virtualagents/step1/" title="Creating our Chatbot" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step1/"><b>1. </b>Creating our Chatbot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/autoint/virtualagents/step2/" title="Testing our Chatbot" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step2/"><b>2. </b>Testing our Chatbot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/autoint/virtualagents/step3/" title="Publishing to Teams" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step3/"><b>3. </b>Publishing to Teams<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/labs/autoint/powerapps/" title="Power Apps" class="dd-item"><input type="checkbox" id="section-ed84f52bb888f920b87a856874cbaccc" class="toggle"/><label for="section-ed84f52bb888f920b87a856874cbaccc" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/"><b> </b>Power Apps<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/autoint/powerapps/step1/" title="SAP Custom Connector" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step1/"><b>1. </b>SAP Custom Connector<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/autoint/powerapps/step2/" title="Create Power App" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step2/"><b>2. </b>Create Power App<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/autoint/powerapps/step3/" title="Enhance the App" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step3/"><b>3. </b>Enhance the App<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/autoint/powerapps/step4/" title="Publish to Teams" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step4/"><b>4. </b>Publish to Teams<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/labs/autoint/automate/" title="Power Automate" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/automate/"><b> </b>Power Automate<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/autoint/powerbi/" title="Power BI" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerbi/"><b></b>Power BI<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/autoint/aibuilder/" title="AI Builder" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/aibuilder/"><b></b>AI Builder<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/labs/dataai/" title="Data &amp; AI" class="dd-item"><input type="checkbox" id="section-a707b1c9b6bd4e482a78a8ce24b9eb86" class="toggle"/><label for="section-a707b1c9b6bd4e482a78a8ce24b9eb86" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/"><b> </b>Data &amp; AI<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/dataai/datafactory/" title="Azure Data Factory" class="dd-item"><input type="checkbox" id="section-fb6b9113a496f53be959a7be5d5f34a2" class="toggle"/><label for="section-fb6b9113a496f53be959a7be5d5f34a2" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/"><b></b>Azure Data Factory<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/dataai/datafactory/step1/" title="Environment Preparation" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step1/"><b>1. </b>Environment Preparation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/dataai/datafactory/step2/" title="HANA Provider" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step2/"><b>2. </b>HANA Provider<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/dataai/datafactory/step3/" title="SAP TABLE Provider" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step3/"><b>3. </b>SAP TABLE Provider<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/dataai/datafactory/step4/" title="Extracting data" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step4/"><b>4. </b>Extracting data<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/labs/dataai/office/" title="Office365" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/office/"><b></b>Office365<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/labs/security/" title="Security" class="dd-item"><input type="checkbox" id="section-3820b13c5cd19ff47113df386c178664" class="toggle"/><label for="section-3820b13c5cd19ff47113df386c178664" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/"><b> </b>Security<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/security/adsso/" title="Single Sign On" class="dd-item"><input type="checkbox" id="section-2484f3721b66da31ad0d7ac4f154756c" class="toggle"/><label for="section-2484f3721b66da31ad0d7ac4f154756c" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/"><b></b>Single Sign On<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/security/adsso/step1/" title="Setting up SAP" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/step1/"><b>1. </b>Setting up SAP<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/security/adsso/step2/" title="Setup Azure AD, Fiori &amp; SSO" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/step2/"><b>2. </b>Setup Azure AD, Fiori &amp; SSO<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/security/adsso/step3/" title="Testing SSO" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/step3/"><b>3. </b>Testing SSO<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/labs/security/sentinel/" title="Sentinel" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/"><b></b>Sentinel<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/labs/inframgmt/" title="Infrastructure and Management" class="dd-item"><input type="checkbox" id="section-8bc0407a0d8a1a32a579c92334004827" class="toggle"/><label for="section-8bc0407a0d8a1a32a579c92334004827" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/"><b> </b>Infrastructure and Management<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/inframgmt/monitoring/" title="Monitoring SAP" class="dd-item"><input type="checkbox" id="section-007d20ec69cd510209aa2eebfacc774f" class="toggle"/><label for="section-007d20ec69cd510209aa2eebfacc774f" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/"><b></b>Monitoring SAP<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/inframgmt/monitoring/step1/" title="Setting up Azure Monitor for SAP" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step1/"><b>1. </b>Setting up Azure Monitor for SAP<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/inframgmt/monitoring/step2/" title="HANA Provider" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step2/"><b>2. </b>HANA Provider<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/inframgmt/monitoring/step3/" title="Linux Provider" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step3/"><b>3. </b>Linux Provider<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/labs/inframgmt/backup/" title="Azure Backup for HANA" class="dd-item"><input type="checkbox" id="section-3cd10696451b8f30146e4cdda9711f4d" class="toggle"/><label for="section-3cd10696451b8f30146e4cdda9711f4d" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/"><b> </b>Azure Backup for HANA<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/inframgmt/backup/step1/" title="Setup Azure Backup" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step1/"><b>1. </b>Setup Azure Backup<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/inframgmt/backup/step2/" title="Run a Backup" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step2/"><b>2. </b>Run a Backup<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/inframgmt/backup/step3/" title="Run a Restore" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step3/"><b>3. </b>Run a Restore<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/labs/iot/" title="IoT" class="dd-item parent"><input type="checkbox" id="section-d3c5e0e5673746c6eda54bd7d41dc895" class="toggle" checked/><label for="section-d3c5e0e5673746c6eda54bd7d41dc895" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/"><b></b>IoT<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/iot/iot/step1/" title="IoT Hub Setup" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/iot/step1/"><b></b>IoT Hub Setup<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/iot/iot/step2/" title="Building the LogicApp" class="dd-item active"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/iot/step2/"><b></b>Building the LogicApp<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/iot/iot/step3/" title="Testing the lab" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/iot/step3/"><b></b>Testing the lab<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/cleanup/" title="Environment Cleanup" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/cleanup/"><b> </b>Environment Cleanup<i class="fas fa-check read-icon"></i></a></li>
+        </ul>
+        <div id="shortcuts">
+          <div class="nav-title">More</div>
+          <ul>
+            <li><a class="padding" href="https://github.com/abicas/SapOnMicrosoftDemos"><i class='fab fa-fw fa-github'></i> GitHub repo</a></li>
+            <li><a class="padding" href="https://www.youtube.com/playlist?list=PLkP2IANHFwhaEowIbQ-a51_E5Sqb-xrz-"><i class='fab fa-youtube' ></i> Youtube Playlist</a></li>
+            <li><a class="padding" href="https://gohugo.io/"><i class='fas fa-fw fa-bookmark'></i> Hugo Documentation</a></li>
+          </ul>
+        </div>
+        <div class="footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter"></div>
+        <hr class="default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter"/>
+        <div id="prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVisitedLinks">
+          <ul>
+            <li id="select-language-container" class="footerLangSwitch">
+              <a class="padding select-container">
+                <i class="fas fa-language fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <select id="select-language" onchange="location = baseUri + this.value;">
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </a>
+            </li>
+            <li id="select-variant-container" class="footerVariantSwitch">
+              <a class="padding select-container">
+                <i class="fas fa-paint-brush fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <select id="select-variant" onchange="variants.changeVariant( this.value );">
+                    <option id="blue" value="blue" selected>Blue</option>
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </a>
+              <script>variants.markSelectedVariant();</script>
+            </li>
+            <li class="footerVisitedLinks showVisitedLinks"><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+          </ul>
+        </div>
+        <div id="footer" class="footerFooter showFooter">
+	    <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+        </div>
+      </div>
+    </aside>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1650310283"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1650310283"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1650310283"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1650310283"></script>
+    <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+    <script>
+      function useMermaid( config ){
+        if (typeof mermaid != 'undefined' && typeof mermaid.mermaidAPI != 'undefined') {
+          mermaid.initialize( Object.assign( { "securityLevel": "antiscript", "startOnLoad": false  }, config ) );
+          if( config.theme ){
+            var write_style = variants.findLoadedStylesheet( 'variant-style' );
+            write_style.setProperty( '--CONFIG-MERMAID-theme', config.theme );
+          }
+        }
+      }
+      useMermaid( JSON.parse("{}") );
+    </script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1650310283"></script>
+  </body>
+</html>

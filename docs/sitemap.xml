@@ -161,6 +161,9 @@
     <lastmod>2022-03-09T11:21:23-03:00</lastmod>
   </url>
   <url>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/iot/step1/</loc>
+  </url>
+  <url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step1/</loc>
   </url>
   <url>
@@ -175,6 +178,12 @@
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step2/</loc>
   </url>
   <url>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/</loc>
+  </url>
+  <url>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerbi/</loc>
+  </url>
+  <url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step4/</loc>
     <lastmod>2022-03-25T10:32:20-03:00</lastmod>
   </url>
@@ -187,7 +196,19 @@
     <lastmod>2022-03-14T14:22:13-03:00</lastmod>
   </url>
   <url>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/aibuilder/</loc>
+  </url>
+  <url>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/iot/step2/</loc>
+  </url>
+  <url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step3/</loc>
+  </url>
+  <url>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/office/</loc>
+  </url>
+  <url>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/</loc>
   </url>
   <url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/demogw/</loc>
@@ -195,6 +216,9 @@
   </url>
   <url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step4/</loc>
+  </url>
+  <url>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/iot/step3/</loc>
   </url>
   <url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/demogw/step1/</loc>

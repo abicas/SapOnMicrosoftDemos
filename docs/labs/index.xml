@@ -35,5 +35,13 @@
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/</guid>
       <description>Chapter X Some Chapter title Lorem Ipsum.</description>
     </item>
+    <item>
+      <title>IoT</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/</guid>
+      <description>Azure IoT The Internet of Things (IoT) is a network of physical devices that connect to and exchange data with other devices and services over the Internet or other network. There are currently over ten billion connected devices in the world and more are added every year. Anything that can be embedded with the necessary sensors and software can be connected over the internet.
+Azure IoT Hub is a managed service hosted in the cloud that acts as a central message hub for communication between an IoT application and its attached devices.</description>
+    </item>
   </channel>
 </rss>

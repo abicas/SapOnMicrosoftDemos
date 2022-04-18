@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IoT on SAP on Microsoft - Tutorials</title>
+    <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/</link>
+    <description>Recent content in IoT on SAP on Microsoft - Tutorials</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language><atom:link href="https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IoT Hub Setup</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/iot/step1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/iot/step1/</guid>
+      <description>Before we start sending data to SAP, we need to create an IoT Hub to receive the ioT telemetry data and process it as it arrives.
+This section will show the steps required to prepare the environment for that:
+Setting up Azure IoT Hub  Log on to the Azure Portal and look for Iot Hub  On IoT Hub page, select Create  Provide the required information. Select the same region that SAP was deployed:   Resource Group: IotRG (create new RG) IoT Hub Name: SAPIOTLAB (must be unique on Azure) Region: East US Click: Next: Networking&amp;gt;   Make sure we have Public Access setup so we can send data via internet.</description>
+    </item>
+    <item>
+      <title>Building the LogicApp</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/iot/step2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/iot/step2/</guid>
+      <description>Let&amp;rsquo;s build a Logic App to consume the data and decide if this should be sent to SAP or not.
+ Log on to the Azure Portal and look for Logic Apps  Create a new logic app with the following parameters:   Resource Group = IoTRG (created on the previous step) Logic App Name = SAPIOTLABXXXX (must be unique on Azure. Replace XXXX with a set of 4 numbers, like SAPIOTLAB1234) Region = East US Click on Review + create   Once the logic app is created, go to the Events on the left panel and select Logic Apps  The Logic Apps Designer will open with an Azure Event Grid setup.</description>
+    </item>
+    <item>
+      <title>Testing the lab</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/iot/step3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/iot/step3/</guid>
+      <description>Let&amp;rsquo;s build a Logic App to consume the data and decide if this should be sent to SAP or not.
+ Go to the Raspberry Pi Azure IoT Online Simulator and click Run. Once you see a couple of messages with temperature above 29oC, click Stop  On the Logic Apps page, go to Overview and check the Runs history for the executions. Each message should have executed the flow once.</description>
+    </item>
+  </channel>
+</rss>
