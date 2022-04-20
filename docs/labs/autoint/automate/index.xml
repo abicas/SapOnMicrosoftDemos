@@ -7,5 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Thu, 10 Mar 2022 11:58:35 -0300</lastBuildDate><atom:link href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/automate/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Office365 Flow</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/automate/office365flow/</link>
+      <pubDate>Thu, 10 Mar 2022 11:58:35 -0300</pubDate>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/automate/office365flow/</guid>
+      <description>Power Automate Power Automate is a service that helps you create automated workflows between your favorite apps and services to synchronize files, get notifications, collect data, and more.
+Here are a few examples of what you can do with Power Automate.
+ Automate business processes Send automatic reminders for past due tasks Move business data between systems on a schedule Connect to more than 500 data sources or any publicly available API You can even automate tasks on your local computer like computing data in Excel.</description>
+    </item>
   </channel>
 </rss>

@@ -32,4 +32,8 @@ Power Automate is a no-code automation platform that allows you to leverage prev
 ![pplat](/images/pplat05.png?height=500px)
 
 ### Enterprise Connectors
-Besides having mechanisms to access data, Power Platform [provides a rich set of powerfull connectors](https://powerautomate.microsoft.com/en-us/connectors/) to enhance the reach of what your solutions can do. 
+Besides having mechanisms to access data, Power Platform provides a [rich set of connectors](https://powerautomate.microsoft.com/en-us/connectors/) to enhance the reach of what your solutions can do.    
+
+On the following labs you will have the opportunity to build upon those technologies and natively integrating with SAP for user empowerment and processes optimizations. 
+
+

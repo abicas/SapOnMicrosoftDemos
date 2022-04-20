@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.97.2" />
+    <meta name="generator" content="Relearn 3.4.1&#43;tip">
+    <meta name="description" content="SAP on Microsoft - Tutorials">
+    <meta name="author" content="Alexandre Bicas">
+    <title>SAP Custom Connector :: SAP on Microsoft - Tutorials</title>
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1650485087" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1650485087" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1650485087" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1650485087" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1650485087" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1650485087" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1650485087" rel="stylesheet" id="variant-style">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1650485087" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1650485087" rel="stylesheet" media="print">
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1650485087"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      var index_url="https://abicas.github.io/SapOnMicrosoftDemos/index.json";
+      var root_url="https://abicas.github.io/SapOnMicrosoftDemos/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      // some further base stuff
+      var baseUriFull='https:\/\/abicas.github.io\/SapOnMicrosoftDemos/';
+      variants.init( [ 'blue' ] );
+    </script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1650485087"></script>
+  </head>
+  <body class="mobile-support" data-url="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/automate/office365flow/step1/">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable">
+        <div>
+          <div class="navigation">
+             <a class="nav nav-next" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/automate/office365flow/step2/" title="Preparing OneDrive"><i class="fas fa-chevron-right fa-fw"></i></a>
+          </div>
+          <div class="navigation">
+             <a class="nav nav-prev" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/automate/office365flow/" title="Office365 Flow"><i class="fas fa-chevron-left fa-fw"></i></a>
+          </div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <meta itemprop="itemListOrder" content="Descending" />
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="6" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/"><span itemprop="name">SAP on Microsoft</span></a> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="5" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/"><span itemprop="name">SAP on Microsoft Labs</span></a> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="4" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/"><span itemprop="name">Automation and Integration</span></a> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="3" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/automate/"><span itemprop="name">Power Automate</span></a> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="2" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/automate/office365flow/"><span itemprop="name">Office365 Flow</span></a> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="1" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/automate/office365flow/step1/" aria-disabled="true"><span itemprop="name">SAP Custom Connector</span></a></li>
+            </ol>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article>
+
+<h1>SAP Custom Connector</h1>
+
+<div class="box notices info">
+    <div class="box-label"><i class="fas fa-info-circle fa-fw"></i> Info</div>
+    <div class="box-content">
+<p>This is the same step performed on the Powerapps lab. In case you already created an SAP Custom Connector, you can skip to section #2 of the lab, otherwise, create the connector as per instructions below</p>
+
+    </div>
+</div>
+<p>In this step we will create a custom connector to SAP on <a href="https://www.office.com/">Power Apps</a>. Custom connectors are used when you have a specific data source for which you know how to handle the requests. In this example we will use a premade example for the SAP Gateway Demo System (configured on the setup phase, section 4 - in case you skipped this step, please stop and create your access to the SAP Gateway Demo).</p>
+<p>The steps required are:</p>
+<ol>
+<li>Go to <a href="https://www.office.com/">Office.com</a>.</li>
+<li>Click on the <strong>9 dots Icon on the Top Left</strong></li>
+<li>Select <strong>Power Apps</strong> (it can also be found under All Apps)
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log00.png?height=300" alt="Powerapp"></li>
+<li>In Power Apps, expand Data and click on <strong>Custom Connectors</strong>. Select <strong>New Connector</strong> and pick the <strong>Import from Github</strong> option
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log01.png?height=400" alt="Powerapp"></li>
+<li>Select <strong>Custom</strong>, branch <strong>master</strong> and Connector <strong>SAP-ODATA-DEMO</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log02.png?height=300" alt="Powerapp"></li>
+<li>Rename it to <strong>SAPGWDEMO</strong>, check the parameters and click on <strong>Security</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log03.png?height=400" alt="Powerapp"></li>
+<li>Make sure we are using <strong>Basic Authentication</strong> and click <strong>Definition</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log04.png?height=400" alt="Powerapp"></li>
+<li>This connector has already some preconfigured interfaces. Feel free to explore then to understand how it handles API calls and click on <strong>Create Connector</strong> to proceed.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log05.png?height=400" alt="Powerapp"></li>
+</ol>
+<p>Now you should have a custom connector configured, allowing you to access SAP Gateway ODATA APIs thru your Power Automate.
+On the next section we will create a Flow to use this data.</p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="sidebar" class="default-animation showVisitedLinks">
+      <div id="header-wrapper" class="default-animation">
+        <div id="header" class="default-animation">
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/MSAzure-logo.png">
+
+        </div>
+        <div class="searchbox default-animation">
+          <label for="search-by"><i class="fas fa-search"></i></label>
+          <input data-search-input id="search-by" type="search" placeholder="Search...">
+          <span data-search-clear=""><i class="fas fa-times"></i></span>
+        </div>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1650485087"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1650485087"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1650485087"></script>
+      </div>
+      <div id="homelinks" class="default-animation">
+        <ul>
+          <li>
+              <a class="padding" href="https://abicas.github.io/SapOnMicrosoftDemos/"><i class='fas fa-home'></i> Home</a>
+          </li>
+        </ul>
+      </div>
+      <div id="content-wrapper" class="highlightable">
+        <ul class="topics collapsible-menu">
+          <li data-nav-id="/env_setup/" title="Environment Setup" class="dd-item"><input type="checkbox" id="section-d038284c53e4747472fade1a7cff02fe" class="toggle"/><label for="section-d038284c53e4747472fade1a7cff02fe" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/">Environment Setup<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/env_setup/azure_setup/" title="Azure Setup for SAP CAL" class="dd-item"><input type="checkbox" id="section-0b7a593fbf16d5dd32a751a7011f49d5" class="toggle"/><label for="section-0b7a593fbf16d5dd32a751a7011f49d5" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/"><b></b>Azure Setup for SAP CAL<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/env_setup/azure_setup/azuread/" title="Create and Azure Active Directory application" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/azuread/"><b>1. </b>Create and Azure Active Directory application<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/env_setup/azure_setup/adrole/" title="Assign Role to Application" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/adrole/"><b>2. </b>Assign Role to Application<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/env_setup/azure_setup/getinfo/" title="Get required information" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/getinfo/"><b>3. </b>Get required information<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/env_setup/sap_cal/" title="SAP Cloud Appliance Library (CAL)" class="dd-item"><input type="checkbox" id="section-ed6488fa8433a8dcf8316785e5bb148b" class="toggle"/><label for="section-ed6488fa8433a8dcf8316785e5bb148b" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/sap_cal/">SAP Cloud Appliance Library (CAL)<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/env_setup/sap_cal/accsetup/" title="SAP CAL Account Setup" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/sap_cal/accsetup/"><b>1. </b>SAP CAL Account Setup<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/env_setup/sap_cal/rdpacc/" title="Remote Desktop Access" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/sap_cal/rdpacc/"><b>2. </b>Remote Desktop Access<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/env_setup/datagwsetup/" title="Microsoft On-premises Data Gateway Installation" class="dd-item"><input type="checkbox" id="section-7e2d06a158de7d166580123fced762da" class="toggle"/><label for="section-7e2d06a158de7d166580123fced762da" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/datagwsetup/"><b></b>Microsoft On-premises Data Gateway Installation<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/env_setup/datagwsetup/step1/" title="Remote Desktop Setup" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/datagwsetup/step1/"><b>1. </b>Remote Desktop Setup<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/env_setup/datagwsetup/step2/" title="Azure Data Gateway Setup" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/datagwsetup/step2/"><b>2. </b>Azure Data Gateway Setup<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/env_setup/demogw/" title="SAP Gateway Demo System" class="dd-item"><input type="checkbox" id="section-1b6bf7a19a5eec70c5e08a51f553b8ac" class="toggle"/><label for="section-1b6bf7a19a5eec70c5e08a51f553b8ac" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/demogw/"><b></b>SAP Gateway Demo System<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/env_setup/demogw/step1/" title="Creating and account" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/demogw/step1/"><b>1. </b>Creating and account<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/labs/" title="SAP on Microsoft Labs" class="dd-item parent"><input type="checkbox" id="section-769cb6d43dfc85e042ab942f9a6740fe" class="toggle" checked/><label for="section-769cb6d43dfc85e042ab942f9a6740fe" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/">SAP on Microsoft Labs<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/autoint/" title="Automation and Integration" class="dd-item parent"><input type="checkbox" id="section-4ce425e819471755ff25297eea0caa13" class="toggle" checked/><label for="section-4ce425e819471755ff25297eea0caa13" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/"><b> </b>Automation and Integration<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/autoint/logicapps/" title="Azure Logic Apps" class="dd-item"><input type="checkbox" id="section-82cbc536be01244731e961352b7bf3ab" class="toggle"/><label for="section-82cbc536be01244731e961352b7bf3ab" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/"><b> </b>Azure Logic Apps<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/autoint/logicapps/step1/" title="Create a Logic App" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/step1/"><b>1. </b>Create a Logic App<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/autoint/logicapps/step2/" title="Create a Workflow" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/step2/"><b>2. </b>Create a Workflow<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/autoint/logicapps/step3/" title="Running the lab" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/step3/"><b>3. </b>Running the lab<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/labs/autoint/virtualagents/" title="Power Virtual Agent" class="dd-item"><input type="checkbox" id="section-960a47f64ec289680476926f301ee652" class="toggle"/><label for="section-960a47f64ec289680476926f301ee652" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/"><b> </b>Power Virtual Agent<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/autoint/virtualagents/step1/" title="Creating our Chatbot" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step1/"><b>1. </b>Creating our Chatbot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/autoint/virtualagents/step2/" title="Testing our Chatbot" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step2/"><b>2. </b>Testing our Chatbot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/autoint/virtualagents/step3/" title="Publishing to Teams" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step3/"><b>3. </b>Publishing to Teams<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/labs/autoint/powerapps/" title="Power Apps" class="dd-item"><input type="checkbox" id="section-ed84f52bb888f920b87a856874cbaccc" class="toggle"/><label for="section-ed84f52bb888f920b87a856874cbaccc" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/"><b> </b>Power Apps<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/autoint/powerapps/step1/" title="SAP Custom Connector" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step1/"><b>1. </b>SAP Custom Connector<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/autoint/powerapps/step2/" title="Create Power App" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step2/"><b>2. </b>Create Power App<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/autoint/powerapps/step3/" title="Enhance the App" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step3/"><b>3. </b>Enhance the App<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/autoint/powerapps/step4/" title="Publish to Teams" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step4/"><b>4. </b>Publish to Teams<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/labs/autoint/automate/" title="Power Automate" class="dd-item parent"><input type="checkbox" id="section-55351716145a33f365a6e7856fe5b79a" class="toggle" checked/><label for="section-55351716145a33f365a6e7856fe5b79a" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/automate/"><b> </b>Power Automate<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/autoint/automate/office365flow/" title="Office365 Flow" class="dd-item parent"><input type="checkbox" id="section-5e9fc419c5779ac9f260cd97aa9b7461" class="toggle" checked/><label for="section-5e9fc419c5779ac9f260cd97aa9b7461" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/automate/office365flow/"><b> </b>Office365 Flow<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/autoint/automate/office365flow/step1/" title="SAP Custom Connector" class="dd-item active"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/automate/office365flow/step1/"><b>1. </b>SAP Custom Connector<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/autoint/automate/office365flow/step2/" title="Preparing OneDrive" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/automate/office365flow/step2/"><b>2. </b>Preparing OneDrive<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/autoint/automate/office365flow/step3/" title="Building the Flow" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/automate/office365flow/step3/"><b>3. </b>Building the Flow<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/autoint/automate/office365flow/step4/" title="Testing the Automation" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/automate/office365flow/step4/"><b>4. </b>Testing the Automation<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/labs/autoint/powerbi/" title="Power BI" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerbi/"><b></b>Power BI<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/autoint/aibuilder/" title="AI Builder" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/aibuilder/"><b></b>AI Builder<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/labs/dataai/" title="Data &amp; AI" class="dd-item"><input type="checkbox" id="section-a707b1c9b6bd4e482a78a8ce24b9eb86" class="toggle"/><label for="section-a707b1c9b6bd4e482a78a8ce24b9eb86" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/"><b> </b>Data &amp; AI<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/dataai/datafactory/" title="Azure Data Factory" class="dd-item"><input type="checkbox" id="section-fb6b9113a496f53be959a7be5d5f34a2" class="toggle"/><label for="section-fb6b9113a496f53be959a7be5d5f34a2" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/"><b></b>Azure Data Factory<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/dataai/datafactory/step1/" title="Environment Preparation" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step1/"><b>1. </b>Environment Preparation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/dataai/datafactory/step2/" title="HANA Provider" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step2/"><b>2. </b>HANA Provider<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/dataai/datafactory/step3/" title="SAP TABLE Provider" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step3/"><b>3. </b>SAP TABLE Provider<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/dataai/datafactory/step4/" title="Extracting data" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step4/"><b>4. </b>Extracting data<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/labs/dataai/office/" title="Office365" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/office/"><b></b>Office365<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/labs/security/" title="Security" class="dd-item"><input type="checkbox" id="section-3820b13c5cd19ff47113df386c178664" class="toggle"/><label for="section-3820b13c5cd19ff47113df386c178664" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/"><b> </b>Security<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/security/adsso/" title="Single Sign On" class="dd-item"><input type="checkbox" id="section-2484f3721b66da31ad0d7ac4f154756c" class="toggle"/><label for="section-2484f3721b66da31ad0d7ac4f154756c" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/"><b></b>Single Sign On<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/security/adsso/step1/" title="Setting up SAP" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/step1/"><b>1. </b>Setting up SAP<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/security/adsso/step2/" title="Setup Azure AD, Fiori &amp; SSO" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/step2/"><b>2. </b>Setup Azure AD, Fiori &amp; SSO<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/security/adsso/step3/" title="Testing SSO" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/step3/"><b>3. </b>Testing SSO<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/labs/security/sentinel/" title="Sentinel" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/"><b></b>Sentinel<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/labs/inframgmt/" title="Infrastructure and Management" class="dd-item"><input type="checkbox" id="section-8bc0407a0d8a1a32a579c92334004827" class="toggle"/><label for="section-8bc0407a0d8a1a32a579c92334004827" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/"><b> </b>Infrastructure and Management<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/inframgmt/monitoring/" title="Monitoring SAP" class="dd-item"><input type="checkbox" id="section-007d20ec69cd510209aa2eebfacc774f" class="toggle"/><label for="section-007d20ec69cd510209aa2eebfacc774f" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/"><b></b>Monitoring SAP<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/inframgmt/monitoring/step1/" title="Setting up Azure Monitor for SAP" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step1/"><b>1. </b>Setting up Azure Monitor for SAP<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/inframgmt/monitoring/step2/" title="HANA Provider" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step2/"><b>2. </b>HANA Provider<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/inframgmt/monitoring/step3/" title="Linux Provider" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step3/"><b>3. </b>Linux Provider<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/labs/inframgmt/backup/" title="Azure Backup for HANA" class="dd-item"><input type="checkbox" id="section-3cd10696451b8f30146e4cdda9711f4d" class="toggle"/><label for="section-3cd10696451b8f30146e4cdda9711f4d" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/"><b> </b>Azure Backup for HANA<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/inframgmt/backup/step1/" title="Setup Azure Backup" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step1/"><b>1. </b>Setup Azure Backup<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/inframgmt/backup/step2/" title="Run a Backup" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step2/"><b>2. </b>Run a Backup<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/inframgmt/backup/step3/" title="Run a Restore" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step3/"><b>3. </b>Run a Restore<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/labs/iot/" title="IoT" class="dd-item"><input type="checkbox" id="section-d3c5e0e5673746c6eda54bd7d41dc895" class="toggle"/><label for="section-d3c5e0e5673746c6eda54bd7d41dc895" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/"><b></b>IoT<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/iot/iot/" title="Azure IoT &amp; Logic Apps" class="dd-item"><input type="checkbox" id="section-e3a3ab861988b67961036a0539eef18b" class="toggle"/><label for="section-e3a3ab861988b67961036a0539eef18b" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/iot/"><b></b>Azure IoT &amp; Logic Apps<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/iot/iot/step1/" title="IoT Hub Setup" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/iot/step1/"><b></b>IoT Hub Setup<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/iot/iot/step2/" title="Building the LogicApp" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/iot/step2/"><b></b>Building the LogicApp<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/iot/iot/step3/" title="Testing the lab" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/iot/step3/"><b></b>Testing the lab<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li></ul></li>
+          <li data-nav-id="/cleanup/" title="Environment Cleanup" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/cleanup/"><b> </b>Environment Cleanup<i class="fas fa-check read-icon"></i></a></li>
+        </ul>
+        <div id="shortcuts">
+          <div class="nav-title">More</div>
+          <ul>
+            <li><a class="padding" href="https://github.com/abicas/SapOnMicrosoftDemos"><i class='fab fa-fw fa-github'></i> GitHub repo</a></li>
+            <li><a class="padding" href="https://www.youtube.com/playlist?list=PLkP2IANHFwhaEowIbQ-a51_E5Sqb-xrz-"><i class='fab fa-youtube' ></i> Youtube Playlist</a></li>
+            <li><a class="padding" href="https://gohugo.io/"><i class='fas fa-fw fa-bookmark'></i> Hugo Documentation</a></li>
+          </ul>
+        </div>
+        <div class="footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter"></div>
+        <hr class="default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter"/>
+        <div id="prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVisitedLinks">
+          <ul>
+            <li id="select-language-container" class="footerLangSwitch">
+              <a class="padding select-container">
+                <i class="fas fa-language fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <select id="select-language" onchange="location = baseUri + this.value;">
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </a>
+            </li>
+            <li id="select-variant-container" class="footerVariantSwitch">
+              <a class="padding select-container">
+                <i class="fas fa-paint-brush fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <select id="select-variant" onchange="variants.changeVariant( this.value );">
+                    <option id="blue" value="blue" selected>Blue</option>
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </a>
+              <script>variants.markSelectedVariant();</script>
+            </li>
+            <li class="footerVisitedLinks showVisitedLinks"><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+          </ul>
+        </div>
+        <div id="footer" class="footerFooter showFooter">
+	    <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+        </div>
+      </div>
+    </aside>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1650485087"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1650485087"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1650485087"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1650485087"></script>
+    <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+    <script>
+      function useMermaid( config ){
+        if (typeof mermaid != 'undefined' && typeof mermaid.mermaidAPI != 'undefined') {
+          mermaid.initialize( Object.assign( { "securityLevel": "antiscript", "startOnLoad": false  }, config ) );
+          if( config.theme ){
+            var write_style = variants.findLoadedStylesheet( 'variant-style' );
+            write_style.setProperty( '--CONFIG-MERMAID-theme', config.theme );
+          }
+        }
+      }
+      useMermaid( JSON.parse("{}") );
+    </script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1650485087"></script>
+  </body>
+</html>
