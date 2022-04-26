@@ -19,28 +19,28 @@
       <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/</link>
       <pubDate>Thu, 10 Mar 2022 11:55:21 -0300</pubDate>
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/</guid>
-      <description>Chapter X Some Chapter title Lorem Ipsum.</description>
+      <description>For any organization to succeed in a world of unprecedented uncertainty, a new level of agility is required. Core to that agility is the ability to quickly gain insights from data at any scale, power ultra-low latency applications that deliver personalized experiences, and empower all users in an organization, regardless of size. This requires a computing platform that provides limitless scale, performance, and possibilities for what can be achieved with data.</description>
     </item>
     <item>
       <title>Security</title>
       <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/</link>
       <pubDate>Thu, 10 Mar 2022 11:55:39 -0300</pubDate>
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/</guid>
-      <description>Chapter X Some Chapter title Lorem Ipsum.</description>
+      <description>The massive shift toward remote and hybrid work over the last two years has prompted many security professionals to reassess where siloed security may create vulnerabilities.For that reason, Zero Trust has become the gold standard for enterprise security. An effective Zero Trust approach requires comprehensive security—a holistic solution that covers all users, devices, and endpoints with central visibility. And any security solution you entrust with protecting your organization should be vetted by trusted industry sources.</description>
     </item>
     <item>
       <title>Infrastructure and Management</title>
       <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/</link>
       <pubDate>Thu, 10 Mar 2022 11:55:46 -0300</pubDate>
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/</guid>
-      <description>Chapter X Some Chapter title Lorem Ipsum.</description>
+      <description>The Azure cloud platform is more than 200 products and cloud services designed to help you bring new solutions to life—to solve today’s challenges and create the future. Build, run, and manage applications across multiple clouds, on-premises, and at the edge, with the tools and frameworks of your choice.</description>
     </item>
     <item>
       <title>IoT</title>
       <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/</guid>
-      <description></description>
+      <description>What is Azure IoT? Internet of Things or IoT refers to a collection of managed and platform services across edge and cloud that connect, monitor, and control billions of IoT assets. It also includes security and operating systems for devices and equipment, along with data and analytics that help businesses to build, deploy, and manage IoT applications. When discussing the Internet of Things, we consider how these services work together across three components:</description>
     </item>
   </channel>
 </rss>

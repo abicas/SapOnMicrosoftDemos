@@ -9,16 +9,16 @@
     <meta name="author" content="Alexandre Bicas">
     <title>IoT :: SAP on Microsoft - Tutorials</title>
     <link rel="alternate" type="application/rss&#43;xml" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/index.xml" title="SAP on Microsoft - Tutorials" />
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1650998120" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1650998120" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1650998120" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1650998120" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1650998120" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1650998120" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1650998120" rel="stylesheet" id="variant-style">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1650998120" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1650998120" rel="stylesheet" media="print">
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1650998120"></script>
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1651000626" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1651000626" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1651000626" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1651000626" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1651000626" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1651000626" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1651000626" rel="stylesheet" id="variant-style">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1651000626" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1651000626" rel="stylesheet" media="print">
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1651000626"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -34,7 +34,7 @@
       var baseUriFull='https:\/\/abicas.github.io\/SapOnMicrosoftDemos/';
       variants.init( [ 'blue' ] );
     </script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1650998120"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1651000626"></script>
   </head>
   <body class="mobile-support" data-url="https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/">
     <div id="body" class="default-animation">
@@ -52,12 +52,26 @@
             <span id="sidebar-toggle-span">
               <a href="#" id="sidebar-toggle" title='Menu'><i class="fas fa-bars fa-fw"></i></a>
             </span>
+            <span id="toc-menu" title='Table of Contents'><i class="fas fa-list-alt fa-fw"></i></span>
             <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
               <meta itemprop="itemListOrder" content="Descending" />
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="3" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/"><span itemprop="name">SAP on Microsoft</span></a> > </li>
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="2" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/"><span itemprop="name">SAP on Microsoft Labs</span></a> > </li>
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="1" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/" aria-disabled="true"><span itemprop="name">IoT</span></a></li>
             </ol>
+          </div>
+          <div class="default-animation progress">
+            <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#what-is-azure-iot">What is Azure IoT?</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
           </div>
         </div>
       </nav>
@@ -68,6 +82,15 @@
           <article>
 
 <h1>IoT</h1>
+<h3 id="what-is-azure-iot">What is Azure IoT?</h3>
+<p>Internet of Things or IoT refers to a collection of managed and platform services across edge and cloud that connect, monitor, and control billions of IoT assets. It also includes security and operating systems for devices and equipment, along with data and analytics that help businesses to build, deploy, and manage IoT applications. When discussing the Internet of Things, we consider how these services work together across three components:</p>
+<ul>
+<li>Things: The physical objects, or things, such as industrial equipment, devices, or sensors, that connect to the cloud persistently or intermittently.</li>
+<li>Insights: Information collected by the things, which is analyzed and turned into actionable knowledge either by people or AI.</li>
+<li>Actions: The way people respond to those insights and connect them to their business, as well as the systems and tools they use.</li>
+</ul>
+<p>Cloud and edge computing are coming together as never before, leading to huge opportunities for developers and businesses around the world. Digital twins, mixed reality, and autonomous systems are at the core of a massive wave of innovation from which our customers are already benefitting.</p>
+<p>To learn more about Azure IoT Solutions and products check <a href="https://azure.microsoft.com/en-us/overview/iot/#products">this link</a>.</p>
 
             <footer class="footline">
             </footer>
@@ -86,9 +109,9 @@
           <input data-search-input id="search-by" type="search" placeholder="Search...">
           <span data-search-clear=""><i class="fas fa-times"></i></span>
         </div>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1650998120"></script>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1650998120"></script>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1650998120"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1651000626"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1651000626"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1651000626"></script>
       </div>
       <div id="homelinks" class="default-animation">
         <ul>
@@ -213,10 +236,10 @@
         </div>
       </div>
     </aside>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1650998120"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1650998120"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1650998120"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1650998120"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1651000626"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1651000626"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1651000626"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1651000626"></script>
     <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
     <script>
       function useMermaid( config ){
@@ -230,6 +253,6 @@
       }
       useMermaid( JSON.parse("{}") );
     </script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1650998120"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1651000626"></script>
   </body>
 </html>
