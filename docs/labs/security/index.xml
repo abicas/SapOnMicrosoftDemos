@@ -16,11 +16,11 @@
 Azure AD can be used to provide SSO capabilities to SAP, either on the cloud (BTP, SCP, Sucess Factors, among many other solutions) or on your on-premises environment, all while using the same corporate standards for security, like password complexity, Multi-Factor Authentication, Conditional Login, &amp;hellip;</description>
     </item>
     <item>
-      <title>Sentinel</title>
+      <title>Microsoft Sentinel</title>
       <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/</guid>
-      <description>Chapter X Some Chapter title Lorem Ipsum.</description>
+      <description>COMING SOON Please check back in a few days &amp;hellip;</description>
     </item>
   </channel>
 </rss>

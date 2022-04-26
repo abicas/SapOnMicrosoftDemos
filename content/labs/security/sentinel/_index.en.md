@@ -1,12 +1,10 @@
 +++
 chapter = false
 pre = "<b></b>"
-title = "Sentinel"
+title = "Microsoft Sentinel"
 weight = 9
 +++
 
-### Chapter X
+# COMING SOON
 
-# Some Chapter title
-
-Lorem Ipsum.
+Please check back in a few days ... 

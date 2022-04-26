@@ -81,6 +81,10 @@
     <lastmod>2022-03-25T10:32:20-03:00</lastmod>
   </url>
   <url>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/azureautomation/step1/</loc>
+    <lastmod>2022-03-15T15:55:06-03:00</lastmod>
+  </url>
+  <url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step1/</loc>
     <lastmod>2022-03-15T15:55:06-03:00</lastmod>
   </url>
@@ -137,6 +141,10 @@
     <lastmod>2022-03-15T15:55:06-03:00</lastmod>
   </url>
   <url>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/azureautomation/step2/</loc>
+    <lastmod>2022-03-15T15:55:06-03:00</lastmod>
+  </url>
+  <url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/step3/</loc>
     <lastmod>2022-03-10T17:25:38-03:00</lastmod>
   </url>
@@ -178,6 +186,10 @@
     <lastmod>2022-03-15T15:55:06-03:00</lastmod>
   </url>
   <url>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/azureautomation/step3/</loc>
+    <lastmod>2022-03-15T15:55:06-03:00</lastmod>
+  </url>
+  <url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/</loc>
     <lastmod>2022-03-10T11:55:46-03:00</lastmod>
   </url>
@@ -205,6 +217,10 @@
     <lastmod>2022-03-19T09:19:24-03:00</lastmod>
   </url>
   <url>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/azureautomation/step4/</loc>
+    <lastmod>2022-03-15T15:55:06-03:00</lastmod>
+  </url>
+  <url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/step3/</loc>
     <lastmod>2022-03-14T14:22:13-03:00</lastmod>
   </url>
@@ -221,14 +237,19 @@
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step3/</loc>
   </url>
   <url>
-    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/office/</loc>
-  </url>
-  <url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/</loc>
   </url>
   <url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/demogw/</loc>
     <lastmod>2022-04-04T09:17:38-03:00</lastmod>
+  </url>
+  <url>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/azureautomation/</loc>
+    <lastmod>2022-03-15T15:55:06-03:00</lastmod>
+  </url>
+  <url>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/azureautomation/step5/</loc>
+    <lastmod>2022-03-15T15:55:06-03:00</lastmod>
   </url>
   <url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step4/</loc>
