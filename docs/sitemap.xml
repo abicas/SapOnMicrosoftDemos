@@ -153,15 +153,11 @@
     <lastmod>2022-03-10T14:52:21-03:00</lastmod>
   </url>
   <url>
-    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/automate/office365flow/</loc>
-    <lastmod>2022-03-10T11:58:35-03:00</lastmod>
-  </url>
-  <url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/</loc>
     <lastmod>2022-03-10T11:58:35-03:00</lastmod>
   </url>
   <url>
-    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/automate/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/</loc>
     <lastmod>2022-03-10T11:58:35-03:00</lastmod>
   </url>
   <url>
@@ -176,7 +172,7 @@
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/iot/step1/</loc>
   </url>
   <url>
-    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/automate/office365flow/step1/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/step1/</loc>
   </url>
   <url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step1/</loc>
@@ -188,6 +184,10 @@
   <url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/azureautomation/step3/</loc>
     <lastmod>2022-03-15T15:55:06-03:00</lastmod>
+  </url>
+  <url>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/automate/</loc>
+    <lastmod>2022-03-10T11:58:35-03:00</lastmod>
   </url>
   <url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/</loc>
@@ -206,7 +206,7 @@
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerbi/</loc>
   </url>
   <url>
-    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/automate/office365flow/step2/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/step2/</loc>
   </url>
   <url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/step4/</loc>
@@ -228,7 +228,7 @@
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/aibuilder/</loc>
   </url>
   <url>
-    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/automate/office365flow/step3/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/step3/</loc>
   </url>
   <url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/iot/step2/</loc>
@@ -255,7 +255,7 @@
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step4/</loc>
   </url>
   <url>
-    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/automate/office365flow/step4/</loc>
+    <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/step4/</loc>
   </url>
   <url>
     <loc>https://abicas.github.io/SapOnMicrosoftDemos/labs/iot/iot/step3/</loc>

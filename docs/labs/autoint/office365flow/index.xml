@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Power Automate Flow on SAP on Microsoft - Tutorials</title>
+    <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/</link>
+    <description>Recent content in Power Automate Flow on SAP on Microsoft - Tutorials</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 10 Mar 2022 11:58:35 -0300</lastBuildDate><atom:link href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SAP Custom Connector</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/step1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/step1/</guid>
+      <description>Info This is the same step performed on the Powerapps lab. In case you already created an SAP Custom Connector, you can skip to section #2 of the lab, otherwise, create the connector as per instructions below
+  In this step we will create a custom connector to SAP on Power Apps. Custom connectors are used when you have a specific data source for which you know how to handle the requests.</description>
+    </item>
+    <item>
+      <title>Preparing OneDrive</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/step2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/step2/</guid>
+      <description>In this step we will setup an One Drive folder to run our lab.
+The steps required are:
+ Go to Office.com. Click on the 9 dots Icon on the Top Left Select One Drive (it can also be found under All Apps)  Under My Files. Select New and pick the Folder option.   Name: Excel2SAP   Download the sample spreadsheet. This is the product list we will automatically create into SAP.</description>
+    </item>
+    <item>
+      <title>Building the Flow</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/step3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/step3/</guid>
+      <description>In this step we will create the automation required to create products automatically on SAP via ODATA.
+The steps required are:
+ Go to Office.com. Click on the 9 dots Icon on the Top Left Select Power Apps (it can also be found under All Apps)  Go to Flows. Select New flow and pick the Instant cloud flow option.  Select the flow properties:   Name: Excel2SAPGateway Trigger: Manually trigger a flow Click Create   On the newly created flow, click on the New Step button to add a new step.</description>
+    </item>
+    <item>
+      <title>Testing the Automation</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/step4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/step4/</guid>
+      <description>In this step we will test what we have built.
+The steps required are:
+ After saving the flow (last step on section #3), click on Test on the top right corner  Select Manually and click Test  Click Continue  Finally click on Run flow  You will be redirected to the results page. Status should be Your flow is running (this test takes around 15s).  You can see the status on each step, and clicking them you can see the details of inputs and outputs of each step.</description>
+    </item>
+  </channel>
+</rss>

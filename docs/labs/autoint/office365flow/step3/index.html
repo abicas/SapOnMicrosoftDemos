@@ -7,8 +7,7 @@
     <meta name="generator" content="Relearn 3.4.1&#43;tip">
     <meta name="description" content="SAP on Microsoft - Tutorials">
     <meta name="author" content="Alexandre Bicas">
-    <title>Create and Azure Active Directory application :: SAP on Microsoft - Tutorials</title>
-    <link rel="alternate" type="application/rss&#43;xml" href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/azuread/index.xml" title="SAP on Microsoft - Tutorials" />
+    <title>Building the Flow :: SAP on Microsoft - Tutorials</title>
     <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1651004142" rel="stylesheet">
     <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1651004142" rel="stylesheet">
     <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1651004142" rel="stylesheet">
@@ -36,17 +35,17 @@
     </script>
     <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1651004142"></script>
   </head>
-  <body class="mobile-support" data-url="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/azuread/">
+  <body class="mobile-support" data-url="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/step3/">
     <div id="body" class="default-animation">
       <div id="sidebar-overlay"></div>
       <div id="toc-overlay"></div>
       <nav id="topbar" class="highlightable">
         <div>
           <div class="navigation">
-             <a class="nav nav-next" href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/adrole/" title="Assign Role to Application"><i class="fas fa-chevron-right fa-fw"></i></a>
+             <a class="nav nav-next" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/step4/" title="Testing the Automation"><i class="fas fa-chevron-right fa-fw"></i></a>
           </div>
           <div class="navigation">
-             <a class="nav nav-prev" href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/" title="Azure Setup for SAP CAL"><i class="fas fa-chevron-left fa-fw"></i></a>
+             <a class="nav nav-prev" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/step2/" title="Preparing OneDrive"><i class="fas fa-chevron-left fa-fw"></i></a>
           </div>
           <div id="breadcrumbs">
             <span id="sidebar-toggle-span">
@@ -54,10 +53,11 @@
             </span>
             <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
               <meta itemprop="itemListOrder" content="Descending" />
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="4" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/"><span itemprop="name">SAP on Microsoft</span></a> > </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="3" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/"><span itemprop="name">Environment Setup</span></a> > </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="2" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/"><span itemprop="name">Azure Setup for SAP CAL</span></a> > </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="1" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/azuread/" aria-disabled="true"><span itemprop="name">Create and Azure Active Directory application</span></a></li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="5" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/"><span itemprop="name">SAP on Microsoft</span></a> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="4" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/"><span itemprop="name">SAP on Microsoft Labs</span></a> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="3" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/"><span itemprop="name">Automation and Integration</span></a> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="2" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/"><span itemprop="name">Power Automate Flow</span></a> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="1" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/step3/" aria-disabled="true"><span itemprop="name">Building the Flow</span></a></li>
             </ol>
           </div>
         </div>
@@ -68,19 +68,86 @@
           </div>
           <article>
 
-<h1>Create and Azure Active Directory application</h1>
-<p>First of all, we will need to create an Active Directory app registration that will be used by SAP CAL:</p>
+<h1>Building the Flow</h1>
+<p>In this step we will create the automation required to create products automatically on SAP via ODATA.</p>
+<p>The steps required are:</p>
 <ol>
-<li>Sign in to your Azure Account through the <a href="https://portal.azure.com">Azure Portal</a></li>
-<li>Select <strong>Azure Active Directory</strong></li>
-<li>Select <strong>App Registrations</strong>
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/app-reg1.png" alt="App Registrations"></li>
-<li>Select <strong>New Registration</strong>
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/app-reg2.png?height=100px" alt="New Registration"></li>
-<li>Provide a name, accept defaults and select <strong>Register</strong>
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/app-reg3.png?height=450px" alt="Register"></li>
+<li>Go to <a href="https://www.office.com/">Office.com</a>.</li>
+<li>Click on the <strong>9 dots Icon on the Top Left</strong></li>
+<li>Select <strong>Power Apps</strong> (it can also be found under All Apps)
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log00.png?height=300" alt="Powerapp"></li>
+<li>Go to <strong>Flows</strong>. Select <strong>New flow</strong> and pick the <strong>Instant cloud flow</strong> option.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/auto1-1.png?height=400" alt="auto0"></li>
+<li>Select the flow properties:</li>
 </ol>
-<p>So far this app registration can&rsquo;t do much. Now let&rsquo;s add a role to this application.</p>
+<ul>
+<li>Name: <strong>Excel2SAPGateway</strong></li>
+<li>Trigger: <strong>Manually trigger a flow</strong></li>
+<li>Click <strong>Create</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/auto1-2.png?height=400" alt="auto0"></li>
+</ul>
+<ol start="6">
+<li>On the newly created flow, click on the <strong>New Step</strong> button to add a new step.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/auto1-3.png?height=100" alt="auto0"></li>
+<li>Filter by <strong>Excel Online</strong>, pick <strong>Excel Online (Business)</strong> and in Actions <strong>List rows present in a table</strong> (make sure you pick the Business version so it works with your Ofice365)
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/auto1-4.png?height=400" alt="auto0"></li>
+<li>Fill the parameters for the Excel file to be used as input:</li>
+</ol>
+<ul>
+<li>Location: <strong>OnceDrive for Business</strong></li>
+<li>Document library: <strong>OneDrive</strong></li>
+<li>File: Navigate to <strong>/Excel2SAP/NewProductList.xlsx</strong></li>
+<li>Table:  <strong>NEWPRODUCTS</strong></li>
+<li>Click on <strong>New Step</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/auto1-5.png?height=400" alt="auto0"></li>
+</ul>
+<ol start="9">
+<li>Let&rsquo;s get the SAP credentials for the SAP gateway. Go to <strong>Custom</strong> and pick the <strong>SAPGWDEMO</strong> connector created on step #1.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/auto1-7.png?height=400" alt="auto0"></li>
+<li>Under Actions, pick <strong>Get product</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/auto1-8.png?height=400" alt="auto0"></li>
+<li>In the Get product Action, fill the required fields:</li>
+</ol>
+<ul>
+<li>id: <strong>HT-1002</strong> (must be an existing product under SAP Fiori ES5 Demo System)</li>
+<li>x-csrf-token: <strong>fetch</strong> (we will query and store the token for access later on)
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/auto1-9.png?height=400" alt="auto0"></li>
+</ul>
+<ol start="12">
+<li>Now we are ready to scan the Excel file and line by line act upon the data. Add a new step, under <strong>Control</strong> called <strong>Apply to each</strong>.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/auto1-10.png?height=400" alt="auto0"></li>
+<li>Pick <strong>value</strong> from Dynamic content, under <strong>List rows present in a table</strong>. Add a new action.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/auto1-11.png?height=400" alt="auto0"></li>
+<li>Under <strong>Custom</strong>, pick <strong>SAPGWDEMO</strong> connector (inside the Apply to each loop)
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/auto1-12.png?height=400" alt="auto0"></li>
+<li>Pick the <strong>Add product</strong> action
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/auto1-13.png?height=400" alt="auto0"></li>
+<li>Fill the <strong>x-csrf-token</strong> with the Dynamic content from <strong>Get product</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/auto1-14.png?height=400" alt="auto0"></li>
+<li>Fill <strong>x-ms-cookie-header</strong> with the <strong>Expression</strong> below, and click <strong>OK</strong>:
+<code>replace(outputs('Get_product')['headers']['Set-Cookie'],',',';')</code>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/auto1-15.png?height=400" alt="auto0"></li>
+<li>Fill the remaining parameters with the values:</li>
+</ol>
+<ul>
+<li>ProductID: Dynamic Content <strong>Product ID</strong> from List rows present in a table</li>
+<li>Type Code: <strong>Product</strong> (fixed value)</li>
+<li>Category: Dynamic Content <strong>Product ID</strong> from List rows present in a table</li>
+<li>Name: Dynamic Content <strong>Product ID</strong> from List rows present in a table</li>
+<li>SupplierID: <strong>0100000046</strong> (fixed value)</li>
+<li>Product Tax Code: <strong>1</strong> (fixed value)</li>
+<li>Currency Code: <strong>United States Dollar</strong> (fixed value)</li>
+<li>Price: Dynamic Content <strong>Price(USD)</strong> from List rows present in a table</li>
+<li>Description: Dynamic Content <strong>Description</strong> from List rows present in a table</li>
+<li>Unit of Measure: <strong>each</strong> (fixed value)
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/auto1-16.png?height=400" alt="auto0"></li>
+</ul>
+<ol start="19">
+<li>Our flow is ready ! Click <strong>SAVE</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/auto1-17.png?height=400" alt="auto0"></li>
+</ol>
+<p>Now you should have it all setup to test the Power Automate flow.</p>
+<p>On the next section we will execute the test and see the data on SAP.</p>
 
             <footer class="footline">
             </footer>
@@ -112,9 +179,9 @@
       </div>
       <div id="content-wrapper" class="highlightable">
         <ul class="topics collapsible-menu">
-          <li data-nav-id="/env_setup/" title="Environment Setup" class="dd-item parent"><input type="checkbox" id="section-d038284c53e4747472fade1a7cff02fe" class="toggle" checked/><label for="section-d038284c53e4747472fade1a7cff02fe" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/">Environment Setup<i class="fas fa-check read-icon"></i></a><ul>
-          <li data-nav-id="/env_setup/azure_setup/" title="Azure Setup for SAP CAL" class="dd-item parent"><input type="checkbox" id="section-0b7a593fbf16d5dd32a751a7011f49d5" class="toggle" checked/><label for="section-0b7a593fbf16d5dd32a751a7011f49d5" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/"><b></b>Azure Setup for SAP CAL<i class="fas fa-check read-icon"></i></a><ul>
-          <li data-nav-id="/env_setup/azure_setup/azuread/" title="Create and Azure Active Directory application" class="dd-item active"><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/azuread/"><b>1. </b>Create and Azure Active Directory application<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/env_setup/" title="Environment Setup" class="dd-item"><input type="checkbox" id="section-d038284c53e4747472fade1a7cff02fe" class="toggle"/><label for="section-d038284c53e4747472fade1a7cff02fe" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/">Environment Setup<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/env_setup/azure_setup/" title="Azure Setup for SAP CAL" class="dd-item"><input type="checkbox" id="section-0b7a593fbf16d5dd32a751a7011f49d5" class="toggle"/><label for="section-0b7a593fbf16d5dd32a751a7011f49d5" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/"><b></b>Azure Setup for SAP CAL<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/env_setup/azure_setup/azuread/" title="Create and Azure Active Directory application" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/azuread/"><b>1. </b>Create and Azure Active Directory application<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/env_setup/azure_setup/adrole/" title="Assign Role to Application" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/adrole/"><b>2. </b>Assign Role to Application<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/env_setup/azure_setup/getinfo/" title="Get required information" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/getinfo/"><b>3. </b>Get required information<i class="fas fa-check read-icon"></i></a></li></ul></li>
           <li data-nav-id="/env_setup/sap_cal/" title="SAP Cloud Appliance Library (CAL)" class="dd-item"><input type="checkbox" id="section-ed6488fa8433a8dcf8316785e5bb148b" class="toggle"/><label for="section-ed6488fa8433a8dcf8316785e5bb148b" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/sap_cal/">SAP Cloud Appliance Library (CAL)<i class="fas fa-check read-icon"></i></a><ul>
@@ -125,8 +192,8 @@
           <li data-nav-id="/env_setup/datagwsetup/step2/" title="Azure Data Gateway Setup" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/datagwsetup/step2/"><b>2. </b>Azure Data Gateway Setup<i class="fas fa-check read-icon"></i></a></li></ul></li>
           <li data-nav-id="/env_setup/demogw/" title="SAP Gateway Demo System" class="dd-item"><input type="checkbox" id="section-1b6bf7a19a5eec70c5e08a51f553b8ac" class="toggle"/><label for="section-1b6bf7a19a5eec70c5e08a51f553b8ac" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/demogw/"><b></b>SAP Gateway Demo System<i class="fas fa-check read-icon"></i></a><ul>
           <li data-nav-id="/env_setup/demogw/step1/" title="Creating and account" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/env_setup/demogw/step1/"><b>1. </b>Creating and account<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
-          <li data-nav-id="/labs/" title="SAP on Microsoft Labs" class="dd-item"><input type="checkbox" id="section-769cb6d43dfc85e042ab942f9a6740fe" class="toggle"/><label for="section-769cb6d43dfc85e042ab942f9a6740fe" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/">SAP on Microsoft Labs<i class="fas fa-check read-icon"></i></a><ul>
-          <li data-nav-id="/labs/autoint/" title="Automation and Integration" class="dd-item"><input type="checkbox" id="section-4ce425e819471755ff25297eea0caa13" class="toggle"/><label for="section-4ce425e819471755ff25297eea0caa13" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/"><b> </b>Automation and Integration<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/" title="SAP on Microsoft Labs" class="dd-item parent"><input type="checkbox" id="section-769cb6d43dfc85e042ab942f9a6740fe" class="toggle" checked/><label for="section-769cb6d43dfc85e042ab942f9a6740fe" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/">SAP on Microsoft Labs<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/autoint/" title="Automation and Integration" class="dd-item parent"><input type="checkbox" id="section-4ce425e819471755ff25297eea0caa13" class="toggle" checked/><label for="section-4ce425e819471755ff25297eea0caa13" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/"><b> </b>Automation and Integration<i class="fas fa-check read-icon"></i></a><ul>
           <li data-nav-id="/labs/autoint/logicapps/" title="Azure Logic Apps" class="dd-item"><input type="checkbox" id="section-82cbc536be01244731e961352b7bf3ab" class="toggle"/><label for="section-82cbc536be01244731e961352b7bf3ab" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/"><b> </b>Azure Logic Apps<i class="fas fa-check read-icon"></i></a><ul>
           <li data-nav-id="/labs/autoint/logicapps/step1/" title="Create a Logic App" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/step1/"><b>1. </b>Create a Logic App<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/labs/autoint/logicapps/step2/" title="Create a Workflow" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/logicapps/step2/"><b>2. </b>Create a Workflow<i class="fas fa-check read-icon"></i></a></li>
@@ -140,10 +207,10 @@
           <li data-nav-id="/labs/autoint/powerapps/step2/" title="Create Power App" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step2/"><b>2. </b>Create Power App<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/labs/autoint/powerapps/step3/" title="Enhance the App" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step3/"><b>3. </b>Enhance the App<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/labs/autoint/powerapps/step4/" title="Publish to Teams" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step4/"><b>4. </b>Publish to Teams<i class="fas fa-check read-icon"></i></a></li></ul></li>
-          <li data-nav-id="/labs/autoint/office365flow/" title="Power Automate Flow" class="dd-item"><input type="checkbox" id="section-d65e5b9e717dcf96fbab0831b7ed5dad" class="toggle"/><label for="section-d65e5b9e717dcf96fbab0831b7ed5dad" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/"><b> </b>Power Automate Flow<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/autoint/office365flow/" title="Power Automate Flow" class="dd-item parent"><input type="checkbox" id="section-d65e5b9e717dcf96fbab0831b7ed5dad" class="toggle" checked/><label for="section-d65e5b9e717dcf96fbab0831b7ed5dad" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/"><b> </b>Power Automate Flow<i class="fas fa-check read-icon"></i></a><ul>
           <li data-nav-id="/labs/autoint/office365flow/step1/" title="SAP Custom Connector" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/step1/"><b>1. </b>SAP Custom Connector<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/labs/autoint/office365flow/step2/" title="Preparing OneDrive" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/step2/"><b>2. </b>Preparing OneDrive<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/labs/autoint/office365flow/step3/" title="Building the Flow" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/step3/"><b>3. </b>Building the Flow<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/autoint/office365flow/step3/" title="Building the Flow" class="dd-item active"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/step3/"><b>3. </b>Building the Flow<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/labs/autoint/office365flow/step4/" title="Testing the Automation" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/step4/"><b>4. </b>Testing the Automation<i class="fas fa-check read-icon"></i></a></li></ul></li>
           <li data-nav-id="/labs/autoint/automate/" title="Power Automate RPA" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/automate/"><b> </b>Power Automate RPA<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/labs/autoint/powerbi/" title="Power BI" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerbi/"><b></b>Power BI<i class="fas fa-check read-icon"></i></a></li>
