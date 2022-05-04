@@ -31,7 +31,7 @@ The most common uses for Power BI Desktop are as follows:
 
 ### What we will build
 
-{{< youtube p6lYWcSEbfk >}}
+{{< youtube m_8xI1bBZno >}}
 
 ### Estimated Time for this Lab
 
