@@ -77,19 +77,19 @@ Let's create some charts:
     - Open the downloaded **product_names.xlsx** file
 ![PBI1](/images/pbiq17.png)
 
-4. Pick the **Sheet1** and click **Load** 
+4. Pick the **Table1** and click **Load** 
 ![PBI1](/images/pbiq18.png)
 
 5. If we try to select data from multiple sources, it will return an error, because we didn't create a relationship between the two. 
 ![PBI1](/images/pbiq19.png)
 
-6. Click on **Manage relationships**, then on **New** and pick the Queries and the **PRODUCTID** field for both. Now Power BI knows how to join those two queries. 
+6. Click on **Manage relationships**, then on **New** and pick the **Query1** and **Table1** and the **PRODUCTID** field for both. Now Power BI knows how to join those two queries. 
 ![PBI1](/images/pbiq20.png)
 
 7. On the Visualizations Pane, click the **Stacked horizontal bar**. Drag the fields on the right side to the Visualization parameters as in the picture below: 
-    - Y-axir = **Column2** 
-    - X-axis = **QUANTITY**
-    - Legend = **COUNTRY**
+    - Y-axir = **NAME**  (from Table1)
+    - X-axis = **QUANTITY** (from Query1)
+    - Legend = **COUNTRY** (from Query1)
 ![PBI1](/images/pbiq21.png)
 
 8. Finally let's add a Q&A for custom questions in natural language. Click on the **Q&A** visualization and drag it to the report. Click on **Turn on Q&A**. 
@@ -106,3 +106,4 @@ Conghratulations! We just build the first report using SAP HANA data! Feel free 
     Your browser does not support the video tag.  
 </video>
 {{< /rawhtml >}}
+
