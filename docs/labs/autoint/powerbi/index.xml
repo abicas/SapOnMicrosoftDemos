@@ -25,13 +25,15 @@ The steps required are:
 Datasource setup  Open Power BI desktop, open a new Report. Click on the Get Data and select More  Select Database and pick SAP HANA database. Click Connect  On the connection parameters set:  Server = vhcals4hcs.dummy.nodomain Port = Custom and 30215 Data connectivity = DirectQuery Click OK    On the SAP HANA credentials set, click on the Database on the left panel and set:  Username = SAPHANADB Password = The one set during SAP CAL deployment Uncheck Validate Server Certificate Click Connect    We are ready to select the datasource.</description>
     </item>
     <item>
-      <title>From HANA Tables</title>
+      <title>From HANA Custom Query</title>
       <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerbi/step3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerbi/step3/</guid>
-      <description>In this step we will add some filtering functionality to the app and consume data from related Suppliers API based on the selected item.
-Adding a Category Filter   Click on the + icon, open Input, drag and drop the Drop down component to the canvas, resize it and set the required parameters:
- Name = DropProduct Items = Distinct(zProducts,Category)  The Items property is the content we want the component to have.</description>
+      <description>In this step we will read data from SAP HANA custom query and cross this information with external data.
+The steps required are:
+Datasource setup   Open Power BI desktop, open a new Report.
+  Click on the Get Data and select More. Select Database and pick SAP HANA database. Click Connect   On the connection parameters set:
+ Server = vhcals4hcs.dummy.nodomain Port = Custom and 30215 Data connectivity = DirectQuery Open Advanced Options Paste the following query  SELECT S.</description>
     </item>
   </channel>
 </rss>

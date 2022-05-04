@@ -7,17 +7,17 @@
     <meta name="generator" content="Relearn 3.4.1&#43;tip">
     <meta name="description" content="SAP on Microsoft - Tutorials">
     <meta name="author" content="Alexandre Bicas">
-    <title>From HANA Tables :: SAP on Microsoft - Tutorials</title>
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1651666110" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1651666110" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1651666110" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1651666110" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1651666110" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1651666110" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1651666110" rel="stylesheet" id="variant-style">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1651666110" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1651666110" rel="stylesheet" media="print">
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1651666110"></script>
+    <title>From HANA Custom Query :: SAP on Microsoft - Tutorials</title>
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1651674221" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1651674221" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1651674221" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1651674221" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1651674221" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1651674221" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1651674221" rel="stylesheet" id="variant-style">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1651674221" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1651674221" rel="stylesheet" media="print">
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1651674221"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -33,7 +33,7 @@
       var baseUriFull='https:\/\/abicas.github.io\/SapOnMicrosoftDemos/';
       variants.init( [ 'blue' ] );
     </script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1651666110"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1651674221"></script>
   </head>
   <body class="mobile-support" data-url="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerbi/step3/">
     <div id="body" class="default-animation">
@@ -58,7 +58,7 @@
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="4" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/"><span itemprop="name">SAP on Microsoft Labs</span></a> > </li>
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="3" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/"><span itemprop="name">Automation and Integration</span></a> > </li>
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="2" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerbi/"><span itemprop="name">Power BI</span></a> > </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="1" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerbi/step3/" aria-disabled="true"><span itemprop="name">From HANA Tables</span></a></li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="1" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerbi/step3/" aria-disabled="true"><span itemprop="name">From HANA Custom Query</span></a></li>
             </ol>
           </div>
           <div class="default-animation progress">
@@ -67,8 +67,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#adding-a-category-filter">Adding a Category Filter</a></li>
-        <li><a href="#adding-more-data">Adding More Data</a></li>
+        <li></li>
       </ul>
     </li>
   </ul>
@@ -83,71 +82,141 @@
           </div>
           <article>
 
-<h1>From HANA Tables</h1>
-<p>In this step we will add some filtering functionality to the app and consume data from related Suppliers API based on the selected item.</p>
-<h3 id="adding-a-category-filter">Adding a Category Filter</h3>
+<h1>From HANA Custom Query</h1>
+<p>In this step we will read data from SAP HANA custom query and cross this information with external data.</p>
+<p>The steps required are:</p>
+<h4 id="datasource-setup">Datasource setup</h4>
 <ol>
 <li>
-<p>Click on the <strong>+</strong> icon, open <strong>Input</strong>, drag and drop the <strong>Drop down</strong> component to the canvas, resize it and set the required parameters:</p>
-<ul>
-<li>Name = <strong>DropProduct</strong></li>
-<li>Items = <strong>Distinct(zProducts,Category)</strong></li>
-</ul>
-<p>The Items property is the content we want the component to have. In this example we will be selecting unique Category values from the zProduct collection. You can <strong>ALT+CLICK</strong> or <strong>OPTION+CLICK</strong> the button to test it.
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log17.png?height=400" alt="Powerapp"></p>
+<p>Open Power BI desktop, open a new Report.</p>
 </li>
 <li>
-<p>Click on the <strong>+</strong> icon, open <strong>Input</strong>, drag and drop the <strong>Check box</strong> component to the canvas, name it <strong>Checkbox1</strong> and set its Text to <strong>Enable filter</strong>
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log18.png?height=400" alt="Powerapp"></p>
+<p>Click on the <strong>Get Data</strong> and select <strong>More</strong>. Select <strong>Database</strong> and pick <strong>SAP HANA database</strong>. Click <strong>Connect</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/pbiq10.png" alt="PBI1"></p>
 </li>
 <li>
-<p>Now let&rsquo;s change the Items property of ther Gallery1 to display all items or only display filtered Items, depending on the selections for the checkbox and the dropdown:</p>
+<p>On the connection parameters set:</p>
 <ul>
-<li>Items = <strong>If(Checkbox1.Value, SortByColumns(Filter(zProducts, Category = DropProduct.Selected.Result), &ldquo;Name&rdquo;), SortByColumns(zProducts, &ldquo;Name&rdquo;))</strong></li>
+<li>Server = <strong>vhcals4hcs.dummy.nodomain</strong></li>
+<li>Port = <strong>Custom</strong> and <strong>30215</strong></li>
+<li>Data connectivity = <strong>DirectQuery</strong></li>
+<li>Open <strong>Advanced Options</strong></li>
+<li>Paste the following query</li>
 </ul>
-<p>Here we are running a little script with a conditional statement. If checkbox is checked, it will filter zProduct based on the dropdown selected. Otherwise, it will display all items.
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log19.png?height=400" alt="Powerapp"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> S.SALESORDERID, PD.PRODUCTID, P.COMPANYNAME, PD.PRICE , I.QUANTITY, PD.CATEGORY, I.NETAMOUNT, S.BILLINGSTATUS, S.DELIVERYSTATUS , A.COUNTRY, A.LATITUDE, A.LONGITUDE, A.CITY
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> SAP_HANA_DEMO.<span style="color:#e6db74">&#34;sap.hana.democontent.epm.data::MD.BusinessPartner&#34;</span> <span style="color:#66d9ef">as</span> P <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span> 
+</span></span><span style="display:flex;"><span>SAP_HANA_DEMO.<span style="color:#e6db74">&#34;sap.hana.democontent.epm.data::SO.Header&#34;</span> <span style="color:#66d9ef">as</span> S 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ON</span> P.PARTNERID <span style="color:#f92672">=</span> S.<span style="color:#e6db74">&#34;PARTNER.PARTNERID&#34;</span>  <span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span> 
+</span></span><span style="display:flex;"><span>SAP_HANA_DEMO.<span style="color:#e6db74">&#34;sap.hana.democontent.epm.data::MD.Addresses&#34;</span> <span style="color:#66d9ef">as</span> A <span style="color:#66d9ef">ON</span>
+</span></span><span style="display:flex;"><span>A.ADDRESSID <span style="color:#f92672">=</span> P.<span style="color:#e6db74">&#34;ADDRESSES.ADDRESSID&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span> SAP_HANA_DEMO.<span style="color:#e6db74">&#34;sap.hana.democontent.epm.data::SO.Item&#34;</span> <span style="color:#66d9ef">as</span> I <span style="color:#66d9ef">ON</span>
+</span></span><span style="display:flex;"><span>S.SALESORDERID <span style="color:#f92672">=</span> I.SALESORDERID
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span> SAP_HANA_DEMO.<span style="color:#e6db74">&#34;sap.hana.democontent.epm.data::MD.Products&#34;</span> <span style="color:#66d9ef">as</span> PD <span style="color:#66d9ef">ON</span>
+</span></span><span style="display:flex;"><span>PD.PRODUCTID <span style="color:#f92672">=</span> I.<span style="color:#e6db74">&#34;PRODUCT.PRODUCTID&#34;</span>
+</span></span></code></pre></div><ul>
+<li>Click <strong>OK</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/pbiq11.png" alt="PBI1"></li>
+</ul>
+</li>
+<li>
+<p>On the SAP HANA credentials set, click on the <strong>Database</strong> on the left panel and set:</p>
+<ul>
+<li>Username = <strong>SAPHANADB</strong></li>
+<li>Password = <strong>The one set during SAP CAL deployment</strong></li>
+<li>Uncheck <strong>Validate Server Certificate</strong></li>
+<li>Click <strong>Connect</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/pbi16.png" alt="PBI1"></li>
+</ul>
+</li>
+<li>
+<p>Once we provided a valid query, we won&rsquo;t need to select the datasource. Feel free to explore the sample query data. Click <strong>Load</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/pbiq12.png" alt="PBI1"></p>
+</li>
+<li>
+<p>Before we start, let&rsquo;s remove summarizations from <strong>LATITUDE</strong> and <strong>LONGITUDE</strong> fields. For both fields:</p>
+<ul>
+<li>Click on the field on the right panel</li>
+<li>Go to <strong>Column tools</strong></li>
+<li>On <strong>Summarization</strong> pick <strong>Don&rsquo;t Summarize</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/pbiq13.png" alt="PBI1"></li>
+</ul>
 </li>
 </ol>
-<p>We just added Filtering with almost no code at all. Click on the Play button to run the App and try the new components
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log20.png?height=400" alt="Powerapp">
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log27.png?height=400" alt="Powerapp"></p>
-<h3 id="adding-more-data">Adding More Data</h3>
-<p>Now that the app is running with Products data, let&rsquo;s add Suppliers Data to the app.</p>
-<p>The leyout used on this example is a suggestion but feel free to rearrange the components and customize layout of your app.</p>
+<p>Now we are ready to start building the visualizations !</p>
+<h4 id="building-the-visualizations">Building the visualizations</h4>
+<p>Let&rsquo;s create some charts:</p>
 <ol>
 <li>
-<p>We will start by loading more data on the <strong>Reload Products</strong> button. Change the OnSelect property to the value below. It will create a new collection called zSuppliers with data from the BusinessPartners API.</p>
+<p>On the Visualizations Pane, click the <strong>Table</strong>. Drag the fields on the right side to the Visualization parameters as in the picture below:</p>
 <ul>
-<li>OnSelect = <strong>ClearCollect(zProducts, &lsquo;SAPODATA[Sample]Connector&rsquo;.ListProductSets().d.results); ClearCollect(zSuppliers, &lsquo;SAPODATA[Sample]Connector&rsquo;.ListBusinessPartner().d.results)</strong>
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log28.png?height=400" alt="Powerapp"></li>
+<li>Columns = <strong>CATEGORY</strong> and <strong>NETAMOUNT</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/pbiq14.png" alt="PBI1"></li>
 </ul>
 </li>
 <li>
-<p>In the same way we loaded more data on the step above, we will filter more data when selecting a product. Click on the <strong>arrow</strong> inside Gallery1 and change the OnSelect property to the value below. This will set a variable called zCurrentBP with the data from zSuppliers with the same SupplierID that the one in the product.</p>
+<p>On the Visualizations Pane, click the <strong>Donut icon</strong>. Drag the fields on the right side to the Visualization parameters as in the picture below:</p>
 <ul>
-<li>OnSelect = <strong>Set(zSelected, Gallery1.Selected); Set (zCurrentBP, First(Filter(zSuppliers, BusinessPartnerID = Gallery1.Selected.SupplierID)))</strong>
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log29.png?height=400" alt="Powerapp"></li>
+<li>Legend = <strong>CATEGORY</strong></li>
+<li>Values = <strong>NETMAOUNT</strong></li>
+<li>Tooltips = <strong>QUANTITY</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/pbiq15.png" alt="PBI1"></li>
 </ul>
 </li>
 <li>
-<p>Add more labels like we did on the app creation and set its Text property to:</p>
+<p>On the Visualizations Pane, click the <strong>Map</strong>. Drag the fields on the right side to the Visualization parameters as in the picture below:</p>
 <ul>
-<li>Supplier Email = <strong>zCurrentBP.EmailAddress</strong></li>
-<li>Address = <strong>zCurrentBP.Address.Street&amp;&quot;, &ldquo;&amp;zCurrentBP.Address.Building&amp;&rdquo;, &ldquo;&amp;zCurrentBP.Address.PostalCode</strong></li>
-<li>Country = <strong>zCurrentBP.Address.Country</strong></li>
-<li>Phone = <strong>zCurrentBP.PhoneNumber</strong></li>
-<li>Website = <strong>zCurrentBP.WebAddress</strong>
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log30.png?height=400" alt="Powerapp"></li>
+<li>Location = <strong>COUNTRY</strong></li>
+<li>Bubble Size = <strong>QUANTITY</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/pbiq16.png" alt="PBI1"></li>
 </ul>
+</li>
+<li>
+<p>Now let&rsquo;s import some external data. In this lab we will use an Excel file with the Product Names for each PRODUCTID field.</p>
+<ul>
+<li>On the Bastion Host, <strong>Download</strong> the <a href="https://abicas.github.io/SapOnMicrosoftDemos/images/product_names.xlsx">Excel Sample File</a></li>
+<li>Select <strong>Excel workbook</strong></li>
+<li>Open the downloaded <strong>product_names.xlsx</strong> file
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/pbiq17.png" alt="PBI1"></li>
+</ul>
+</li>
+<li>
+<p>Pick the <strong>Sheet1</strong> and click <strong>Load</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/pbiq18.png" alt="PBI1"></p>
+</li>
+<li>
+<p>If we try to select data from multiple sources, it will return an error, because we didn&rsquo;t create a relationship between the two.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/pbiq19.png" alt="PBI1"></p>
+</li>
+<li>
+<p>Click on <strong>Manage relationships</strong>, then on <strong>New</strong> and pick the Queries and the <strong>PRODUCTID</strong> field for both. Now Power BI knows how to join those two queries.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/pbiq20.png" alt="PBI1"></p>
+</li>
+<li>
+<p>On the Visualizations Pane, click the <strong>Stacked horizontal bar</strong>. Drag the fields on the right side to the Visualization parameters as in the picture below:</p>
+<ul>
+<li>Y-axir = <strong>Column2</strong></li>
+<li>X-axis = <strong>QUANTITY</strong></li>
+<li>Legend = <strong>COUNTRY</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/pbiq21.png" alt="PBI1"></li>
+</ul>
+</li>
+<li>
+<p>Finally let&rsquo;s add a Q&amp;A for custom questions in natural language. Click on the <strong>Q&amp;A</strong> visualization and drag it to the report. Click on <strong>Turn on Q&amp;A</strong>.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/pbiq22.png" alt="PBI1"></p>
+</li>
+<li>
+<p>Test the Q&amp;A using nautral language: <strong>What is the Quantity and netamount of PC from DE</strong>
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/pbiq23.png" alt="PBI1"></p>
 </li>
 </ol>
-<p>You can click on the <strong>play</strong> button on the top right to run the app. Reload the product and see it getting data from distinct APIs in a single screen.
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log00play.png?height=200" alt="Powerapp">
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log26.png?height=400" alt="Powerapp"></p>
-<p>Let&rsquo;s <strong>SAVE</strong> the App Click on the File menu:
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/log21a.png?height=400" alt="Powerapp"></p>
-<p>Congratulations, on the next section we will publish the app to Teams.</p>
+<p>Conghratulations! We just build the first report using SAP HANA data! Feel free to explore the data and the drill-down capabilities of the integrated visualizations like in the video below:</p>
+
+ 
+<video width=100% controls autoplay>
+    <source src="https://abicas.github.io/SapOnMicrosoftDemos/images/HANATables.mp4" type="video/mp4">
+    Your browser does not support the video tag.  
+</video>
+
 
             <footer class="footline">
             </footer>
@@ -166,9 +235,9 @@
           <input data-search-input id="search-by" type="search" placeholder="Search...">
           <span data-search-clear=""><i class="fas fa-times"></i></span>
         </div>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1651666110"></script>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1651666110"></script>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1651666110"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1651674221"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1651674221"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1651674221"></script>
       </div>
       <div id="homelinks" class="default-animation">
         <ul>
@@ -216,7 +285,7 @@
           <li data-nav-id="/labs/autoint/powerbi/" title="Power BI" class="dd-item parent"><input type="checkbox" id="section-0fee04623d65544492604554a2f4f25d" class="toggle" checked/><label for="section-0fee04623d65544492604554a2f4f25d" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerbi/"><b></b>Power BI<i class="fas fa-check read-icon"></i></a><ul>
           <li data-nav-id="/labs/autoint/powerbi/step1/" title="HANA Demo DB Setup " class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerbi/step1/"><b>1. </b>HANA Demo DB Setup <i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/labs/autoint/powerbi/step2/" title="From HANA Objects" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerbi/step2/"><b>2. </b>From HANA Objects<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/labs/autoint/powerbi/step3/" title="From HANA Tables" class="dd-item active"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerbi/step3/"><b>3. </b>From HANA Tables<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/labs/autoint/powerbi/step3/" title="From HANA Custom Query" class="dd-item active"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerbi/step3/"><b>3. </b>From HANA Custom Query<i class="fas fa-check read-icon"></i></a></li></ul></li>
           <li data-nav-id="/labs/autoint/aibuilder/" title="AI Builder" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/aibuilder/"><b></b>AI Builder<i class="fas fa-check read-icon"></i></a></li></ul></li>
           <li data-nav-id="/labs/dataai/" title="Data &amp; AI" class="dd-item"><input type="checkbox" id="section-a707b1c9b6bd4e482a78a8ce24b9eb86" class="toggle"/><label for="section-a707b1c9b6bd4e482a78a8ce24b9eb86" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/"><b> </b>Data &amp; AI<i class="fas fa-check read-icon"></i></a><ul>
           <li data-nav-id="/labs/dataai/datafactory/" title="Azure Data Factory" class="dd-item"><input type="checkbox" id="section-fb6b9113a496f53be959a7be5d5f34a2" class="toggle"/><label for="section-fb6b9113a496f53be959a7be5d5f34a2" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/dataai/datafactory/"><b></b>Azure Data Factory<i class="fas fa-check read-icon"></i></a><ul>
@@ -296,10 +365,10 @@
         </div>
       </div>
     </aside>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1651666110"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1651666110"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1651666110"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1651666110"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1651674221"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1651674221"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1651674221"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1651674221"></script>
     <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
     <script>
       function useMermaid( config ){
@@ -313,6 +382,6 @@
       }
       useMermaid( JSON.parse("{}") );
     </script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1651666110"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1651674221"></script>
   </body>
 </html>
