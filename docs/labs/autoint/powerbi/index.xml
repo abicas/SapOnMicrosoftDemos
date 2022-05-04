@@ -6,5 +6,32 @@
     <description>Recent content in Power BI on SAP on Microsoft - Tutorials</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language><atom:link href="https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerbi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HANA Demo DB Setup </title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerbi/step1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerbi/step1/</guid>
+      <description>Before we start generating insights from SAP HANA, we need to import a demo content provided by SAP called SHINE. In this step we will import the package, run the demo app and populate the database with demo data. We will also install Power BI Desktop app so we can start working with the SAP data in the next sections.
+Loading Sample data model (SHINE) The steps required are:
+  Go to the Bastion host.</description>
+    </item>
+    <item>
+      <title>From HANA Objects</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerbi/step2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerbi/step2/</guid>
+      <description>In this step we will read data from SAP HANA published objects from the SHINE package imported on the #1.
+The steps required are:
+Datasource setup  Open Power BI desktop, open a new Report. Click on the Get Data and select More  Select Database and pick SAP HANA database. Click Connect  On the connection parameters set:  Server = vhcals4hcs.dummy.nodomain Port = Custom and 30215 Data connectivity = DirectQuery Click OK    On the SAP HANA credentials set, click on the Database on the left panel and set:  Username = SAPHANADB Password = The one set during SAP CAL deployment Uncheck Validate Server Certificate Click Connect    We are ready to select the datasource.</description>
+    </item>
+    <item>
+      <title>From HANA Tables</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerbi/step3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerbi/step3/</guid>
+      <description>In this step we will add some filtering functionality to the app and consume data from related Suppliers API based on the selected item.
+Adding a Category Filter   Click on the + icon, open Input, drag and drop the Drop down component to the canvas, resize it and set the required parameters:
+ Name = DropProduct Items = Distinct(zProducts,Category)  The Items property is the content we want the component to have.</description>
+    </item>
   </channel>
 </rss>
