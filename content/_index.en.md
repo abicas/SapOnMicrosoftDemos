@@ -4,8 +4,7 @@ date = 2022-03-08T16:31:36-03:00
 weight = 1
 chapter = false
 +++
-# Welcome to the 
-# SAP on Microsoft Labs 
+# Welcome to the ![SAP on Microsoft Labs](/images/SAPONMICROSOFTLABS-LOGO.png?height=250px)
 
 This website is aimed to provide step-by-step guidance on how to prepare an SAP environment on Azure and demonstrate how can you integrate your SAP systems with Microsoft services and softwares. 
 
