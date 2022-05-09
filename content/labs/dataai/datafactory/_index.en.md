@@ -34,6 +34,10 @@ You can copy data from SAP ECC and SAP BW to any supported sink data store. Spec
 
 ### What we will build
 
+In this lab we will prepare Azure Data Factory (ADF) to connect to SAP and then extract the Materials master data to a file to a Blob in our datalake. 
+
+The video below shows an example of what we will do, creating a simple ADF pipeline to extract SAP data (and directly from SAP HANA as well, run it on-demand, and checking the file content that was exported to a blob storage. 
+
 {{< youtube jDR5jbqMktw >}}
 
 ### Estimated Time for this Lab

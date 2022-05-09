@@ -30,6 +30,10 @@ This lab is based on the [Azure Monitor for SAP Quickstart](https://docs.microso
 
 ### What we will build
 
+In this lab we will setup Azure Monitoring and connect it to SAP HANA and the Linux operating system underneath it, to collect metrics and counters. 
+
+The video below shows the sample data that can be seen using the correlated data from all the sources. 
+
 {{< youtube SGfpUqr8cao >}}
 
 ### Estimated Time for this Lab

@@ -28,6 +28,8 @@ This lab is based on the [Azure Active Directory single sign-on (SSO) integratio
 
 ### What we will build
 
+In this lab we will integrate SAP Netweaver/Fiori logon with Azure Active Directory and demosntrate how to logon using an Azure AD user linked to an SAP user. 
+
 {{< youtube 8IyqdcN9d9Q >}}
 
 ### Estimated Time for this Lab

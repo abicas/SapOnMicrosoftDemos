@@ -31,6 +31,10 @@ The most common uses for Power BI Desktop are as follows:
 
 ### What we will build
 
+In this lab we will import a demo database to SAP HANA and then build visualizations on top of this data. 
+
+The video below shows the examples we will build, using realtime SAP HANA data to build powerfull reports with insightfull drill downs. 
+
 {{< youtube m_8xI1bBZno >}}
 
 ### Estimated Time for this Lab

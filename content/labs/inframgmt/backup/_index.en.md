@@ -37,6 +37,10 @@ Sample Backup flow:
 
 ### What we will build
 
+In this lab we will configure and run a backup directly from HANA (backint) to Azure Backup and then restore the database. 
+
+The video below shows a backup running, data being changed, a restore and then the data back to its original state after the restore. 
+
 {{< youtube jnnijsS8CKY >}}
 
 ### Estimated Time for this Lab

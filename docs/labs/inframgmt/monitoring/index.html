@@ -9,16 +9,16 @@
     <meta name="author" content="Alexandre Bicas">
     <title>Monitoring SAP :: SAP on Microsoft - Tutorials</title>
     <link rel="alternate" type="application/rss&#43;xml" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/index.xml" title="SAP on Microsoft - Tutorials" />
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1652113029" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1652113029" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1652113029" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1652113029" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1652113029" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1652113029" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1652113029" rel="stylesheet" id="variant-style">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1652113029" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1652113029" rel="stylesheet" media="print">
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1652113029"></script>
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1652115037" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1652115037" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1652115037" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1652115037" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1652115037" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1652115037" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1652115037" rel="stylesheet" id="variant-style">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1652115037" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1652115037" rel="stylesheet" media="print">
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1652115037"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -34,7 +34,7 @@
       var baseUriFull='https:\/\/abicas.github.io\/SapOnMicrosoftDemos/';
       variants.init( [ 'blue' ] );
     </script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1652113029"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1652115037"></script>
   </head>
   <body class="mobile-support" data-url="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/">
     <div id="body" class="default-animation">
@@ -102,6 +102,8 @@
 <p>This allows for a rapid response in case of an incident response as well as providing a simpler and more integrated way of having the whole SAP performance picture in a glance.</p>
 <p>This lab is based on the <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/azure-monitor-sap-quickstart">Azure Monitor for SAP Quickstart</a> guide.</p>
 <h3 id="what-we-will-build">What we will build</h3>
+<p>In this lab we will setup Azure Monitoring and connect it to SAP HANA and the Linux operating system underneath it, to collect metrics and counters.</p>
+<p>The video below shows the sample data that can be seen using the correlated data from all the sources.</p>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/SGfpUqr8cao" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
@@ -133,9 +135,9 @@
           <input data-search-input id="search-by" type="search" placeholder="Search...">
           <span data-search-clear=""><i class="fas fa-times"></i></span>
         </div>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1652113029"></script>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1652113029"></script>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1652113029"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1652115037"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1652115037"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1652115037"></script>
       </div>
       <div id="homelinks" class="default-animation">
         <ul>
@@ -263,10 +265,10 @@
         </div>
       </div>
     </aside>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1652113029"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1652113029"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1652113029"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1652113029"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1652115037"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1652115037"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1652115037"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1652115037"></script>
     <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
     <script>
       function useMermaid( config ){
@@ -280,6 +282,6 @@
       }
       useMermaid( JSON.parse("{}") );
     </script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1652113029"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1652115037"></script>
   </body>
 </html>

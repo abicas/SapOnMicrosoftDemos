@@ -44,6 +44,10 @@ Azure Automation supports management throughout the lifecycle of your infrastruc
 
 ### What we will build
 
+In this lab we will prepare and run the runbooks to start and stop an SAP environment, automatically selecting VMs by tags. 
+
+The video below shows the runbooks, tags and shows de start and stop of the resources via Azure Automation. 
+
 {{< youtube p6lYWcSEbfk >}}
 
 ### Estimated Time for this Lab
