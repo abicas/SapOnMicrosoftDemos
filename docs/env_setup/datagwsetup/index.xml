@@ -24,7 +24,7 @@ Connect to the Remote Desktop as on the previous step and using a browser on the
       <description>In this section we will create the endpoint on Azure for the installed on-premises data gateway.
 This section is a summary of the guide Install data gateway and Connect to SAP systems.
 Connect to the Azure Portal and follow the steps below:
- Go to On-premises Data Gateways:  Select Add  Fill the required parameters. Make sure to Select the same region as used on the installation (East US) and Select the name of the gateway previously created that should be populated on the drop-down box.</description>
+Go to On-premises Data Gateways: Select Add Fill the required parameters. Make sure to Select the same region as used on the installation (East US) and Select the name of the gateway previously created that should be populated on the drop-down box.</description>
     </item>
   </channel>
 </rss>

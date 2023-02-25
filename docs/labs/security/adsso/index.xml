@@ -14,7 +14,7 @@
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/step1/</guid>
       <description>Before we start integrating SAP with Azure Active Directory for SSO, we need to setup SAP to allow this communication to happen.
 This section will show the steps required for this to be accomplished:
-SAP Profile selection  Log on to the SAP BAstion host via Remote Desktop and look for open SAP GUI (SAP Logon) with user BPINST/Welcome1 Go to TCODE RZ10  We will change some parameters from the default SAP profile.</description>
+SAP Profile selection Log on to the SAP BAstion host via Remote Desktop and look for open SAP GUI (SAP Logon) with user BPINST/Welcome1 Go to TCODE RZ10 We will change some parameters from the default SAP profile.</description>
     </item>
     <item>
       <title>Setup Azure AD, Fiori &amp; SSO</title>
@@ -22,7 +22,7 @@ SAP Profile selection  Log on to the SAP BAstion host via Remote Desktop and loo
       <pubDate>Mon, 14 Mar 2022 14:22:13 -0300</pubDate>
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/step2/</guid>
       <description>Now we will start to configure Azure Active Directory to be a provider for SAP. This will be a back and forth process where we configure AD, go to SAP to configure it, and return to finish AD configuration.
- Go to Azure Portal and select Azure Active Directory   Setting Up Active Directory In case you don&amp;rsquo;t have an AD configured already on your subscription, keep going. To use existing AD, jump to step #6.</description>
+Go to Azure Portal and select Azure Active Directory Setting Up Active Directory In case you don&amp;rsquo;t have an AD configured already on your subscription, keep going. To use existing AD, jump to step #6.</description>
     </item>
     <item>
       <title>Testing SSO</title>
@@ -31,7 +31,7 @@ SAP Profile selection  Log on to the SAP BAstion host via Remote Desktop and loo
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/step3/</guid>
       <description>Now that the configuration steps are done, we are ready to test the SSO in action.
 All the operations will be done on the Bastion Host once, even with internet access, name resolution and security certificates are generated using the internal network names by SAP CAL.
- From the Bastion Host, open an internet browser window and navigate to https://vhcals4hcs.dummy.nodomain:44301/sap/bc/ui2/flp. Confirm that it no longer asks for User and password, instead offering a choice of identity provider, in this case ADSAPDEMO as we specified on Azure AD.</description>
+From the Bastion Host, open an internet browser window and navigate to https://vhcals4hcs.dummy.nodomain:44301/sap/bc/ui2/flp. Confirm that it no longer asks for User and password, instead offering a choice of identity provider, in this case ADSAPDEMO as we specified on Azure AD.</description>
     </item>
   </channel>
 </rss>

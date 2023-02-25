@@ -13,7 +13,7 @@
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerbi/step1/</guid>
       <description>Before we start generating insights from SAP HANA, we need to import a demo content provided by SAP called SHINE. In this step we will import the package, run the demo app and populate the database with demo data. We will also install Power BI Desktop app so we can start working with the SAP data in the next sections.
 Loading Sample data model (SHINE) The steps required are:
-  Go to the Bastion host.</description>
+Go to the Bastion host.</description>
     </item>
     <item>
       <title>From HANA Objects</title>
@@ -22,7 +22,7 @@ Loading Sample data model (SHINE) The steps required are:
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerbi/step2/</guid>
       <description>In this step we will read data from SAP HANA published objects from the SHINE package imported on the #1.
 The steps required are:
-Datasource setup  Open Power BI desktop, open a new Report. Click on the Get Data and select More  Select Database and pick SAP HANA database. Click Connect  On the connection parameters set:  Server = vhcals4hcs.dummy.nodomain Port = Custom and 30215 Data connectivity = DirectQuery Click OK    On the SAP HANA credentials set, click on the Database on the left panel and set:  Username = SAPHANADB Password = The one set during SAP CAL deployment Uncheck Validate Server Certificate Click Connect    We are ready to select the datasource.</description>
+Datasource setup Open Power BI desktop, open a new Report. Click on the Get Data and select More Select Database and pick SAP HANA database. Click Connect On the connection parameters set: Server = vhcals4hcs.dummy.nodomain Port = Custom and 30215 Data connectivity = DirectQuery Click OK On the SAP HANA credentials set, click on the Database on the left panel and set: Username = SAPHANADB Password = The one set during SAP CAL deployment Uncheck Validate Server Certificate Click Connect We are ready to select the datasource.</description>
     </item>
     <item>
       <title>From HANA Custom Query</title>
@@ -31,9 +31,9 @@ Datasource setup  Open Power BI desktop, open a new Report. Click on the Get Dat
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerbi/step3/</guid>
       <description>In this step we will read data from SAP HANA custom query and cross this information with external data.
 The steps required are:
-Datasource setup   Open Power BI desktop, open a new Report.
-  Click on the Get Data and select More. Select Database and pick SAP HANA database. Click Connect   On the connection parameters set:
- Server = vhcals4hcs.dummy.nodomain Port = Custom and 30215 Data connectivity = DirectQuery Open Advanced Options Paste the following query  SELECT S.</description>
+Datasource setup Open Power BI desktop, open a new Report.
+Click on the Get Data and select More. Select Database and pick SAP HANA database. Click Connect On the connection parameters set:
+Server = vhcals4hcs.dummy.nodomain Port = Custom and 30215 Data connectivity = DirectQuery Open Advanced Options Paste the following query SELECT S.</description>
     </item>
   </channel>
 </rss>

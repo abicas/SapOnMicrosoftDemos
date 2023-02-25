@@ -15,7 +15,7 @@
       <description>In order to have Azure Backup backing up SAP HANA databases, we need to setup the Azure Backup as well as the HANA Database Server.
 This section will show the steps required for that to be accomplished:
 SAP HANA Setup We need to connect to the SAP HANA Server and run a script that will prepare the database for Azure Backup.
- Log on to the Azure Portal and open a Cloud Shell (BASH)  We need to SSH to the server, using the SAP provided certificate key (can be downloaded from SAP CAL again), previously uploaded to the CloudShell and having permission as 400).</description>
+Log on to the Azure Portal and open a Cloud Shell (BASH) We need to SSH to the server, using the SAP provided certificate key (can be downloaded from SAP CAL again), previously uploaded to the CloudShell and having permission as 400).</description>
     </item>
     <item>
       <title>Run a Backup</title>
@@ -24,7 +24,7 @@ SAP HANA Setup We need to connect to the SAP HANA Server and run a script that w
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step2/</guid>
       <description>With Azure Backups configured and communicating with SAP HANA database, let&amp;rsquo;s execute a manual backup to test it.
 This section will show the steps required for that to be accomplished:
- Log on to the Azure Portal and click on Backup items and then SAP HANA in Azure VM  You should see a screen similar to this, with a Warning (initial backup pending) message. Right+Click the elipsis and select Backup Now for both HDB and SYSTEMDB.</description>
+Log on to the Azure Portal and click on Backup items and then SAP HANA in Azure VM You should see a screen similar to this, with a Warning (initial backup pending) message. Right+Click the elipsis and select Backup Now for both HDB and SYSTEMDB.</description>
     </item>
     <item>
       <title>Run a Restore</title>
@@ -33,7 +33,7 @@ This section will show the steps required for that to be accomplished:
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/backup/step3/</guid>
       <description>Let&amp;rsquo;s change some data and then run a restore for a point-in-time previous to the change.
 This section will show the steps required for that to be accomplished:
-Changing some data  Go to the Bastion Host, and open the SAP GUI. Login with BPINST/Welcome1 default user.  On SAP GUI, go to TCODE MM02 to change a material.  For Material we will choose the CM-FL-V00 a Forklift. Click on the Checkmark.</description>
+Changing some data Go to the Bastion Host, and open the SAP GUI. Login with BPINST/Welcome1 default user. On SAP GUI, go to TCODE MM02 to change a material. For Material we will choose the CM-FL-V00 a Forklift. Click on the Checkmark. For Plant we will choose the 1710 a Forklift.</description>
     </item>
   </channel>
 </rss>

@@ -21,7 +21,7 @@
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/virtualagents/</guid>
       <description>Power Virtual Agent Microsoft Power Virtual Agents lets you create powerful chatbots that can answer questions posed by your customers, other employees, or visitors to your website or service.
 These bots can be created easily without the need for data scientists or developers. Some of the ways that Power Virtual Agents bots have been used include:
- Sales help and support issues Product or Purchase Order informations Employee health and vacation benefits Common employee questions for businesses, products, processes  All this integrated with live SAP data, allowing customers to access the information they need, on a simple, common, practical platform they are used to, avoiding the burden of context switching between multiples apps to accomplish a task.</description>
+Sales help and support issues Product or Purchase Order informations Employee health and vacation benefits Common employee questions for businesses, products, processes All this integrated with live SAP data, allowing customers to access the information they need, on a simple, common, practical platform they are used to, avoiding the burden of context switching between multiples apps to accomplish a task.</description>
     </item>
     <item>
       <title>Power Apps</title>
@@ -37,7 +37,7 @@ These bots can be created easily without the need for data scientists or develop
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/</guid>
       <description>Power Automate Power Automate is a service that helps you create automated workflows between your favorite apps and services to synchronize files, get notifications, collect data, and more.
 Here are a few examples of what you can do with Power Automate.
- Automate business processes Send automatic reminders for past due tasks Move business data between systems on a schedule Connect to more than 500 data sources or any publicly available API You can even automate tasks on your local computer like computing data in Excel.</description>
+Automate business processes Send automatic reminders for past due tasks Move business data between systems on a schedule Connect to more than 500 data sources or any publicly available API You can even automate tasks on your local computer like computing data in Excel.</description>
     </item>
     <item>
       <title>Power Automate RPA</title>

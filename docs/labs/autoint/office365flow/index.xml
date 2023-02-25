@@ -13,7 +13,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/step1/</guid>
       <description>Info This is the same step performed on the Powerapps lab. In case you already created an SAP Custom Connector, you can skip to section #2 of the lab, otherwise, create the connector as per instructions below
-  In this step we will create a custom connector to SAP on Power Apps. Custom connectors are used when you have a specific data source for which you know how to handle the requests.</description>
+In this step we will create a custom connector to SAP on Power Apps. Custom connectors are used when you have a specific data source for which you know how to handle the requests.</description>
     </item>
     <item>
       <title>Preparing OneDrive</title>
@@ -22,7 +22,7 @@
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/step2/</guid>
       <description>In this step we will setup an One Drive folder to run our lab.
 The steps required are:
- Go to Office.com. Click on the 9 dots Icon on the Top Left Select One Drive (it can also be found under All Apps)  Under My Files. Select New and pick the Folder option.   Name: Excel2SAP   Download the sample spreadsheet. This is the product list we will automatically create into SAP.</description>
+Go to Office.com. Click on the 9 dots Icon on the Top Left Select One Drive (it can also be found under All Apps) Under My Files. Select New and pick the Folder option. Name: Excel2SAP Download the sample spreadsheet. This is the product list we will automatically create into SAP. Open it and change the yellow cells following the template provided: Category: Pick from the dropdown Name: *XXX-9999 Price: 0000-9999 The other fields are automated with formulas, so no need to change them.</description>
     </item>
     <item>
       <title>Building the Flow</title>
@@ -31,7 +31,7 @@ The steps required are:
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/step3/</guid>
       <description>In this step we will create the automation required to create products automatically on SAP via ODATA.
 The steps required are:
- Go to Office.com. Click on the 9 dots Icon on the Top Left Select Power Apps (it can also be found under All Apps)  Go to Flows. Select New flow and pick the Instant cloud flow option.  Select the flow properties:   Name: Excel2SAPGateway Trigger: Manually trigger a flow Click Create   On the newly created flow, click on the New Step button to add a new step.</description>
+Go to Office.com. Click on the 9 dots Icon on the Top Left Select Power Apps (it can also be found under All Apps) Go to Flows. Select New flow and pick the Instant cloud flow option. Select the flow properties: Name: Excel2SAPGateway Trigger: Manually trigger a flow Click Create On the newly created flow, click on the New Step button to add a new step.</description>
     </item>
     <item>
       <title>Testing the Automation</title>
@@ -40,7 +40,7 @@ The steps required are:
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/office365flow/step4/</guid>
       <description>In this step we will test what we have built.
 The steps required are:
- After saving the flow (last step on section #3), click on Test on the top right corner  Select Manually and click Test  Click Continue  Finally click on Run flow  You will be redirected to the results page. Status should be Your flow is running (this test takes around 15s).  You can see the status on each step, and clicking them you can see the details of inputs and outputs of each step.</description>
+After saving the flow (last step on section #3), click on Test on the top right corner Select Manually and click Test Click Continue Finally click on Run flow You will be redirected to the results page. Status should be Your flow is running (this test takes around 15s). You can see the status on each step, and clicking them you can see the details of inputs and outputs of each step.</description>
     </item>
   </channel>
 </rss>

@@ -15,7 +15,7 @@
       <description>SAP has a platform called SAP Cloud Application Library (SAP CAL), designed to automatically deploys SAP software on cloud hyperscalers.
 In order to allow for SAP to deploy an S/4HANA environment in your Azure subscription, we need to setup permissions for it in your subscription.
 This section will go thru the steps required to setup your subscription
-What you will need  An existing Azure subscription with enough credits for the labs Administrator access on the subscription A temporary text file to make note of the required information related to endpoints and keys   Warning In order to be able to deploy on your subscription, permissions used here will be quite broad.</description>
+What you will need An existing Azure subscription with enough credits for the labs Administrator access on the subscription A temporary text file to make note of the required information related to endpoints and keys Warning In order to be able to deploy on your subscription, permissions used here will be quite broad.</description>
     </item>
     <item>
       <title>SAP Cloud Appliance Library (CAL)</title>

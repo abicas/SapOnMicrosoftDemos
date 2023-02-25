@@ -14,7 +14,7 @@
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/azureautomation/step1/</guid>
       <description>In order to have Azure Automation gracefully managing SAP Worklaods, we need to setup the Azure Automate and import some runbooks.
 This section will show the steps required for that to be accomplished:
-Azure Automation Setup  Log on to the Azure Portal and go to Automation Accounts  Create an Automation Account with the following parameters:   Resource Group: Pick the SAPCAL-XXXXXXXX created by SAP CAL so we can cleanup properly.</description>
+Azure Automation Setup Log on to the Azure Portal and go to Automation Accounts Create an Automation Account with the following parameters: Resource Group: Pick the SAPCAL-XXXXXXXX created by SAP CAL so we can cleanup properly. Account Name: SAPAutomationAcc Region: East US (same as SAP) Click Review and Create and then in Create Go to the newly create SAPAutomationAcc Importing Modules Let&amp;rsquo;s add a Module to run PowerShell commands with SAP.</description>
     </item>
     <item>
       <title>Setup VM Tags</title>
@@ -23,7 +23,7 @@ Azure Automation Setup  Log on to the Azure Portal and go to Automation Accounts
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/azureautomation/step2/</guid>
       <description>In order for Azure Automation to be able to identify the correct VMs that need to be started or stopped, we need to add a few Tags to them. This example is aimed at a simple scenario like the one deployed by SAP CAL or a DEV environment. Please see the complete documentation for more information.
 This section will show the steps required for that to be accomplished:
-Adding Tags  Log on to the Azure Portal, go to Virtual Machines and select the HANA VM (XXXX-SAP1)  Click on Tags on the left pane and add the following:   SAPApplicationInstanceNumber: 1 SAPApplicationInstanceType: SAP_ASCS SAPDBMSType: HANA SAPHANAInstanceNumber: 02 SAPHANASID: HDB SAPSystemSID: S4H Click Apply   Go back to the Virtual Machines page and select the App server VM (XXX-SAP2)  Click on Tags on the left pane and add the following:   SAPApplicationInstanceNumber: 1 SAPApplicationInstanceType: SAP_J SAPSystemSID: S4H Click Apply   Congratulations, you have finished configuring the VMs with tags so that Azure Automation can correctly coordinate the operations to start/stop SAP.</description>
+Adding Tags Log on to the Azure Portal, go to Virtual Machines and select the HANA VM (XXXX-SAP1) Click on Tags on the left pane and add the following: SAPApplicationInstanceNumber: 1 SAPApplicationInstanceType: SAP_ASCS SAPDBMSType: HANA SAPHANAInstanceNumber: 02 SAPHANASID: HDB SAPSystemSID: S4H Click Apply Go back to the Virtual Machines page and select the App server VM (XXX-SAP2) Click on Tags on the left pane and add the following: SAPApplicationInstanceNumber: 1 SAPApplicationInstanceType: SAP_J SAPSystemSID: S4H Click Apply Congratulations, you have finished configuring the VMs with tags so that Azure Automation can correctly coordinate the operations to start/stop SAP.</description>
     </item>
     <item>
       <title>Starting SAP</title>
@@ -32,8 +32,9 @@ Adding Tags  Log on to the Azure Portal, go to Virtual Machines and select the H
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/azureautomation/step3/</guid>
       <description>Warning This assumes that your SAP envinronment is deployed but suspended, with VMs in Stopped state.
 In case your SAP is running, go to SAP CAL and suspend the environment so we can start it with the runbook.
-  With Azure Automation configured and the VMs tagged, we can execute the main runbook to start SAP
-This section will show the steps required for that to be accomplished:</description>
+With Azure Automation configured and the VMs tagged, we can execute the main runbook to start SAP
+This section will show the steps required for that to be accomplished:
+Executing the Start-SAPSystem Runbook Go to the Azure Automation Account SAPAutomationAcc and select Runbooks on the left panel.</description>
     </item>
     <item>
       <title>Stopping SAP</title>
@@ -42,7 +43,7 @@ This section will show the steps required for that to be accomplished:</descript
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/azureautomation/step4/</guid>
       <description>Warning This assumes that your SAP envinronment is deployed and running, with VMs in Running state.
 In case your SAP is stopped check the previous step (#3) on this section so you can start it or start it using SAP CAL.
-  With Azure Automation configured and the VMs tagged, we can execute the main runbook to stop SAP
+With Azure Automation configured and the VMs tagged, we can execute the main runbook to stop SAP
 This section will show the steps required for that to be accomplished:</description>
     </item>
     <item>
@@ -52,8 +53,8 @@ This section will show the steps required for that to be accomplished:</descript
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/azureautomation/step5/</guid>
       <description>With Azure Automation configured, the VMs tagged, and the Runbooks tested, we can schedule their execution for scheduled automation.
 This section will show the steps required for that to be accomplished:
- Info In this example we will show you how to schedule the Stop-SAPSystem runbook. You can follow the same steps for other runbooks and SIDs.
-   Go to the Azure Automation Account SAPAutomationAcc and select Schedules on the left panel.</description>
+Info In this example we will show you how to schedule the Stop-SAPSystem runbook. You can follow the same steps for other runbooks and SIDs.
+Go to the Azure Automation Account SAPAutomationAcc and select Schedules on the left panel. Click on Add a schedule.</description>
     </item>
   </channel>
 </rss>

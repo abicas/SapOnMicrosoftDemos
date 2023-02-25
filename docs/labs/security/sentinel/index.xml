@@ -5,6 +5,33 @@
     <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/</link>
     <description>Recent content in Microsoft Sentinel on SAP on Microsoft - Tutorials</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language><atom:link href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-US</language>
+    <lastBuildDate>Mon, 14 Mar 2022 14:22:13 -0300</lastBuildDate><atom:link href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create Sentinel</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step1/</link>
+      <pubDate>Mon, 14 Mar 2022 14:22:13 -0300</pubDate>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step1/</guid>
+      <description>Before we start integrating SAP with Microsoft Sentinel, we need to setup components to allow this communication to happen.
+This section will show the steps required for this to be accomplished:
+Setting up Log Analytics Go to Azure Portal, click on Create Resource and look for Log Analytics Workspaces Click Create Fill in the required informations: Subscription: SELECT YOUR SUBSCRIPTION Resource Group: SAP CAL Resource Group Name: SAPLogAnalyticsWorkspace Region: East US Click on Review + create and then Create Creating a Microsoft Sentinel workspace Go to Azure Portal, click on Create Resource and look for Microsoft Sentinel Click Create Select the previously created SAPLogAnalyticsWorkspace and click Add If this is your first Microsoft Sentinel, accept the Trial On the Get Started click on go to Content Hub so we can add SAP log model to Sentinel Look for SAP, select the Solution and click Install On the next screen, click Create Fill in the required informations: Subscription: SELECT YOUR SUBSCRIPTION Resource Group: SAP CAL Resource Group Deployment Target Workspace: SAPLogAnalyticsWorkspace Click on Review + create and then Create Alright!</description>
+    </item>
+    <item>
+      <title>Setup SAP</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step2/</link>
+      <pubDate>Mon, 14 Mar 2022 14:22:13 -0300</pubDate>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step2/</guid>
+      <description>Now we will prepare and configure SAP to send the logs to Sentinel Agent, which will be deployed later on.
+Downloading SAP Change Requests Log on to the SAP S/4HANA host via SSH (or Putty) ssh -i SAPCALKey.pem root@S4HANAIP On the host console, create a directory and download the Change Requests: cd mkdir CRs cd CRs wget -q https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/SAP/CR/K900271.NPL wget -q https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/SAP/CR/R900271.NPL wget -q https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/SAP/CR/K900202.NPL wget -q https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/SAP/CR/R900202.NPL wget -q https://raw.</description>
+    </item>
+    <item>
+      <title>Testing SSO</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step3/</link>
+      <pubDate>Mon, 14 Mar 2022 14:22:13 -0300</pubDate>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step3/</guid>
+      <description>Now that the configuration steps are done, we are ready to test the SSO in action.
+All the operations will be done on the Bastion Host once, even with internet access, name resolution and security certificates are generated using the internal network names by SAP CAL.
+From the Bastion Host, open an internet browser window and navigate to https://vhcals4hcs.dummy.nodomain:44301/sap/bc/ui2/flp. Confirm that it no longer asks for User and password, instead offering a choice of identity provider, in this case ADSAPDEMO as we specified on Azure AD.</description>
+    </item>
   </channel>
 </rss>

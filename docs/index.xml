@@ -13,7 +13,7 @@
       <pubDate>Tue, 08 Mar 2022 16:31:36 -0300</pubDate>
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/</guid>
       <description>Before we start building our labs we need to have provisioned a few resources:
- An Azure subscription setup for SAP Cloud Appliance Library (SAP CAL) An existing S/4HANA environment or a trial deployed thru SAP CAL Installation of Microsoft Data Gateway components An account at the SAP Gateway Demo System for some integration examples  The following sections will guide you thru the steps to accomplish this and be ready to the labs.</description>
+An Azure subscription setup for SAP Cloud Appliance Library (SAP CAL) An existing S/4HANA environment or a trial deployed thru SAP CAL Installation of Microsoft Data Gateway components An account at the SAP Gateway Demo System for some integration examples The following sections will guide you thru the steps to accomplish this and be ready to the labs.</description>
     </item>
     <item>
       <title>SAP on Microsoft Labs</title>
@@ -21,7 +21,7 @@
       <pubDate>Tue, 08 Mar 2022 16:31:36 -0300</pubDate>
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/</guid>
       <description>The following sections will be divided in different labs integrating several Microsoft services with SAP, such as:
- Automation and Integration  Azure Logic Apps Power Platform - Power Virtual Agents Power Platform - Power Automate Power Platform - Power Apps   Data &amp;amp; AI  Office 365 Integration Azure Synapse Power Platform - Power BI Azure Machine Learning   Security  Azure Sentinel Azure AD   Infra &amp;amp; Management  Azure Monitoring Azure Backup High-Availability    The following sections will guide you thru the steps to accomplish this and be ready to the labs.</description>
+Automation and Integration Azure Logic Apps Power Platform - Power Virtual Agents Power Platform - Power Automate Power Platform - Power Apps Data &amp;amp; AI Office 365 Integration Azure Synapse Power Platform - Power BI Azure Machine Learning Security Azure Sentinel Azure AD Infra &amp;amp; Management Azure Monitoring Azure Backup High-Availability The following sections will guide you thru the steps to accomplish this and be ready to the labs.</description>
     </item>
     <item>
       <title>Environment Cleanup</title>
@@ -31,7 +31,7 @@
       <description>Now that you have done all the labs, it is important to cleanup deployed resources.
 Below we will see the steps required for this process:
 SAP CAL Cleanup This process will remove all resources deployed by SAP into your Azure Subscription. This is a destructive process and in case you need to recover this environment, you can redeploy from scratch until the end of the SAP CAL Trial.
- Sign in to the SAP CAL and click on Log On.</description>
+Sign in to the SAP CAL and click on Log On.</description>
     </item>
   </channel>
 </rss>

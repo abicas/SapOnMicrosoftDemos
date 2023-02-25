@@ -16,7 +16,7 @@
 Go to https://cal.sap.com/ and click on Log On.
 On the Login page, select Register and fill the required information.
 Granting Azure access Once you got your approval e-mail from SAP, proceed to the SAP CAL website and Log On with your credentials, then follow the steps below:
- Go to Accounts and click on Create Account  Give it a name, select Microsoft Azure and fill the data with the information gathered.</description>
+Go to Accounts and click on Create Account Give it a name, select Microsoft Azure and fill the data with the information gathered.</description>
     </item>
     <item>
       <title>Remote Desktop Access</title>
@@ -26,7 +26,7 @@ Granting Azure access Once you got your approval e-mail from SAP, proceed to the
       <description>Once your SAP is deployed, you will need access to specific SAP tools in order to access it (like HANA Studio and SAP GUI). Those software come preinstalled on the Bastion Host deployed by SAP.
 Let&amp;rsquo;s connect to an RDP session on the Bastion Host.
 Use the Public IP for the Remote Desktop provided on the Instance tab.
- Default User: Administrator Default Password: The one used during the SAP deployment  Once connected you should see a screen similar to this.</description>
+Default User: Administrator Default Password: The one used during the SAP deployment Once connected you should see a screen similar to this.</description>
     </item>
   </channel>
 </rss>

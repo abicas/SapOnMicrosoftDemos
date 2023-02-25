@@ -3,22 +3,22 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.97.2" />
+    <meta name="generator" content="Hugo 0.110.0">
     <meta name="generator" content="Relearn 3.4.1&#43;tip">
     <meta name="description" content="SAP on Microsoft - Tutorials">
     <meta name="author" content="Alexandre Bicas">
     <title>Microsoft Sentinel :: SAP on Microsoft - Tutorials</title>
     <link rel="alternate" type="application/rss&#43;xml" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/index.xml" title="SAP on Microsoft - Tutorials" />
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1652115037" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1652115037" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1652115037" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1652115037" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1652115037" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1652115037" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1652115037" rel="stylesheet" id="variant-style">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1652115037" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1652115037" rel="stylesheet" media="print">
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1652115037"></script>
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1677333876" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1677333876" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1677333876" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1677333876" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1677333876" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1677333876" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1677333876" rel="stylesheet" id="variant-style">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1677333876" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1677333876" rel="stylesheet" media="print">
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1677333876"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -34,7 +34,7 @@
       var baseUriFull='https:\/\/abicas.github.io\/SapOnMicrosoftDemos/';
       variants.init( [ 'blue' ] );
     </script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1652115037"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1677333876"></script>
   </head>
   <body class="mobile-support" data-url="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/">
     <div id="body" class="default-animation">
@@ -43,7 +43,7 @@
       <nav id="topbar" class="highlightable">
         <div>
           <div class="navigation">
-             <a class="nav nav-next" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/" title="Infrastructure and Management"><i class="fas fa-chevron-right fa-fw"></i></a>
+             <a class="nav nav-next" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step1/" title="Create Sentinel"><i class="fas fa-chevron-right fa-fw"></i></a>
           </div>
           <div class="navigation">
              <a class="nav nav-prev" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/step3/" title="Testing SSO"><i class="fas fa-chevron-left fa-fw"></i></a>
@@ -52,6 +52,7 @@
             <span id="sidebar-toggle-span">
               <a href="#" id="sidebar-toggle" title='Menu'><i class="fas fa-bars fa-fw"></i></a>
             </span>
+            <span id="toc-menu" title='Table of Contents'><i class="fas fa-list-alt fa-fw"></i></span>
             <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
               <meta itemprop="itemListOrder" content="Descending" />
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="4" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/"><span itemprop="name">SAP on Microsoft</span></a> > </li>
@@ -59,6 +60,22 @@
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="2" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/"><span itemprop="name">Security</span></a> > </li>
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="1" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/" aria-disabled="true"><span itemprop="name">Microsoft Sentinel</span></a></li>
             </ol>
+          </div>
+          <div class="default-animation progress">
+            <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#microsoft-sentinel">Microsoft Sentinel</a></li>
+        <li><a href="#what-we-will-build">What we will build</a></li>
+        <li><a href="#estimated-time-for-this-lab">Estimated Time for this Lab</a></li>
+        <li><a href="#requirements">Requirements</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
           </div>
         </div>
       </nav>
@@ -69,8 +86,37 @@
           <article>
 
 <h1>Microsoft Sentinel</h1>
-<h1 id="coming-soon">COMING SOON</h1>
-<p>Please check back in a few days &hellip;</p>
+<h3 id="microsoft-sentinel">Microsoft Sentinel</h3>
+<p>Microsoft Sentinel, also known as Azure Sentinel, is a cloud-native security information and event management (SIEM) service provided by Microsoft. It is designed to help organizations collect, analyze, and respond to security threats across their entire enterprise.</p>
+<p>Microsoft Sentinel uses artificial intelligence and machine learning to identify potential security threats and offers a central location for monitoring security events and responding to incidents. It can collect data from a variety of sources, including Azure services, on-premises systems, third-party applications, and security devices.</p>
+<p>The platform also provides security orchestration and automated response (SOAR) capabilities, which allow security teams to automate common response tasks and streamline incident response workflows. Additionally, Sentinel integrates with other Microsoft security services, such as Azure Active Directory and Microsoft Defender, to provide a comprehensive security solution.</p>
+<p><img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sso-sample.png?height=300px" alt="SSO"></p>
+<p>The general SSO flow can be seen below:</p>
+<p><img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sso-flow.png?height=300px" alt="SSO"></p>
+<ol>
+<li>User access URL protected by SSO. In the example we will use SAP Fiori</li>
+<li>SAP Fiori, redirects to the SSO provider (Azure) login screen</li>
+<li>User provides authentication details (username/password) from AD</li>
+<li>Credentials are generated and exchanged</li>
+<li>Authenticated users have credentials generated and sent to SAP Fiori</li>
+<li>SAP Fiori checks the credentials and allows access to itself</li>
+</ol>
+<p>This lab is based on the <a href="https://learn.microsoft.com/en-us/azure/sentinel/sap/deployment-overview">Deploy Microsoft Sentinel solution for SAP® applications</a> tutorial.</p>
+<h3 id="what-we-will-build">What we will build</h3>
+<p>In this lab we will integrate SAP S/4HANA with Microsoft Sentinel and demonstrate how we can identify secuerity incidents from within SAP.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/8IyqdcN9d9Q" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h3 id="estimated-time-for-this-lab">Estimated Time for this Lab</h3>
+<p>This lab is estimated to take between 120 minutes.</p>
+<h3 id="requirements">Requirements</h3>
+<p>For this demo we will be using the following components from the Environment Setup:</p>
+<ol>
+<li>S/4HANA deployed from SAP CAL</li>
+<li>Azure subscription</li>
+</ol>
 
             <footer class="footline">
             </footer>
@@ -89,9 +135,9 @@
           <input data-search-input id="search-by" type="search" placeholder="Search...">
           <span data-search-clear=""><i class="fas fa-times"></i></span>
         </div>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1652115037"></script>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1652115037"></script>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1652115037"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1677333876"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1677333876"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1677333876"></script>
       </div>
       <div id="homelinks" class="default-animation">
         <ul>
@@ -152,7 +198,10 @@
           <li data-nav-id="/labs/security/adsso/step1/" title="Setting up SAP" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/step1/"><b>1. </b>Setting up SAP<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/labs/security/adsso/step2/" title="Setup Azure AD, Fiori &amp; SSO" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/step2/"><b>2. </b>Setup Azure AD, Fiori &amp; SSO<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/labs/security/adsso/step3/" title="Testing SSO" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/adsso/step3/"><b>3. </b>Testing SSO<i class="fas fa-check read-icon"></i></a></li></ul></li>
-          <li data-nav-id="/labs/security/sentinel/" title="Microsoft Sentinel" class="dd-item active"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/"><b></b>Microsoft Sentinel<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/labs/security/sentinel/" title="Microsoft Sentinel" class="dd-item active"><input type="checkbox" id="section-8417e2e82f4397531d212c48ba172913" class="toggle"/><label for="section-8417e2e82f4397531d212c48ba172913" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/"><b></b>Microsoft Sentinel<i class="fas fa-check read-icon"></i></a><ul>
+          <li data-nav-id="/labs/security/sentinel/step1/" title="Create Sentinel" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step1/"><b>1. </b>Create Sentinel<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/security/sentinel/step2/" title="Setup SAP" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step2/"><b>2. </b>Setup SAP<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/security/sentinel/step3/" title="Testing SSO" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step3/"><b>3. </b>Testing SSO<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
           <li data-nav-id="/labs/inframgmt/" title="Infrastructure and Management" class="dd-item"><input type="checkbox" id="section-8bc0407a0d8a1a32a579c92334004827" class="toggle"/><label for="section-8bc0407a0d8a1a32a579c92334004827" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/"><b> </b>Infrastructure and Management<i class="fas fa-check read-icon"></i></a><ul>
           <li data-nav-id="/labs/inframgmt/monitoring/" title="Monitoring SAP" class="dd-item"><input type="checkbox" id="section-007d20ec69cd510209aa2eebfacc774f" class="toggle"/><label for="section-007d20ec69cd510209aa2eebfacc774f" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/"><b></b>Monitoring SAP<i class="fas fa-check read-icon"></i></a><ul>
           <li data-nav-id="/labs/inframgmt/monitoring/step1/" title="Setting up Azure Monitor for SAP" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step1/"><b>1. </b>Setting up Azure Monitor for SAP<i class="fas fa-check read-icon"></i></a></li>
@@ -219,10 +268,10 @@
         </div>
       </div>
     </aside>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1652115037"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1652115037"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1652115037"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1652115037"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1677333876"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1677333876"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1677333876"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1677333876"></script>
     <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
     <script>
       function useMermaid( config ){
@@ -236,6 +285,6 @@
       }
       useMermaid( JSON.parse("{}") );
     </script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1652115037"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1677333876"></script>
   </body>
 </html>

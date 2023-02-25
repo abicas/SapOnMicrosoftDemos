@@ -21,7 +21,7 @@
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step2/</guid>
       <description>In this step we will create a an App from scratch and consume data from SAP APIs via the Custom Conenctor from step #1.
 The steps required are:
- Go to Office.com. Click on the 9 dots Icon on the Top Left Select Power Apps (it can also be found under All Apps)  In Power Apps, click on Create and select Black app  Select Blank Canvas App  Name it SAPDemoApp and select Tablet format.</description>
+Go to Office.com. Click on the 9 dots Icon on the Top Left Select Power Apps (it can also be found under All Apps) In Power Apps, click on Create and select Black app Select Blank Canvas App Name it SAPDemoApp and select Tablet format.</description>
     </item>
     <item>
       <title>Enhance the App</title>
@@ -29,8 +29,8 @@ The steps required are:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step3/</guid>
       <description>In this step we will add some filtering functionality to the app and consume data from related Suppliers API based on the selected item.
-Adding a Category Filter   Click on the + icon, open Input, drag and drop the Drop down component to the canvas, resize it and set the required parameters:
- Name = DropProduct Items = Distinct(zProducts,Category)  The Items property is the content we want the component to have.</description>
+Adding a Category Filter Click on the + icon, open Input, drag and drop the Drop down component to the canvas, resize it and set the required parameters:
+Name = DropProduct Items = Distinct(zProducts,Category) The Items property is the content we want the component to have. In this example we will be selecting unique Category values from the zProduct collection.</description>
     </item>
     <item>
       <title>Publish to Teams</title>
@@ -38,7 +38,7 @@ Adding a Category Filter   Click on the + icon, open Input, drag and drop the Dr
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/autoint/powerapps/step4/</guid>
       <description>In this step we will publish the app to Teams. Once the app is saved, it will be a few simple steps to integrate it to all users under your organization.
-  After the app being Saved, click on the Publish button   Another option is to click on the Apps menu, selecting the App, clicking the elippsis and selecting Add to Teams   It will ask for a confirmation, Click Add to Teams   Go to Teams and select the app on the left menu.</description>
+After the app being Saved, click on the Publish button Another option is to click on the Apps menu, selecting the App, clicking the elippsis and selecting Add to Teams It will ask for a confirmation, Click Add to Teams Go to Teams and select the app on the left menu.</description>
     </item>
   </channel>
 </rss>

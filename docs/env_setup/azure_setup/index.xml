@@ -13,7 +13,7 @@
       <pubDate>Tue, 08 Mar 2022 16:34:27 -0300</pubDate>
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/azuread/</guid>
       <description>First of all, we will need to create an Active Directory app registration that will be used by SAP CAL:
- Sign in to your Azure Account through the Azure Portal Select Azure Active Directory Select App Registrations  Select New Registration  Provide a name, accept defaults and select Register   So far this app registration can&amp;rsquo;t do much. Now let&amp;rsquo;s add a role to this application.</description>
+Sign in to your Azure Account through the Azure Portal Select Azure Active Directory Select App Registrations Select New Registration Provide a name, accept defaults and select Register So far this app registration can&amp;rsquo;t do much. Now let&amp;rsquo;s add a role to this application.</description>
     </item>
     <item>
       <title>Assign Role to Application</title>
@@ -21,7 +21,7 @@
       <pubDate>Tue, 08 Mar 2022 16:49:27 -0300</pubDate>
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/env_setup/azure_setup/adrole/</guid>
       <description>In this section we will add permissions and a role to the app registrations, allowing it to perform actions on your Azure subscription on your behalf:
- Warning In order to be able to deploy on your subscription, permissions used here will be quite broad. Make sure you go thru cleanup section to remove it after the labs, to avoid incidental usage of those credentials for non-authorized access to your subscription.</description>
+Warning In order to be able to deploy on your subscription, permissions used here will be quite broad. Make sure you go thru cleanup section to remove it after the labs, to avoid incidental usage of those credentials for non-authorized access to your subscription. In production environments, you should go thru the SAP and Microsoft best practices and setup access with the minimum required permissions and controls.</description>
     </item>
     <item>
       <title>Get required information</title>
@@ -31,7 +31,7 @@
       <description>In order to allow for SAP CAL to access your subscription, you will need some parameters. This section will explain where to find them.
 Copy those values to a temp text document so you can easily copy and paste later on.
 Go to your Azure Portal and follow the steps below:
- Go to Subscriptions and copy the Subscription ID  Select Azure Active Directory. Select Properties. Copy Tenant ID.  Still on Azure Active Directory, go to App registrations and select your application.</description>
+Go to Subscriptions and copy the Subscription ID Select Azure Active Directory. Select Properties. Copy Tenant ID. Still on Azure Active Directory, go to App registrations and select your application.</description>
     </item>
   </channel>
 </rss>
