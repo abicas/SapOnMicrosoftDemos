@@ -7,17 +7,17 @@
     <meta name="generator" content="Relearn 3.4.1&#43;tip">
     <meta name="description" content="SAP on Microsoft - Tutorials">
     <meta name="author" content="Alexandre Bicas">
-    <title>Testing SSO :: SAP on Microsoft - Tutorials</title>
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1677333891" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1677333891" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1677333891" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1677333891" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1677333891" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1677333891" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1677333891" rel="stylesheet" id="variant-style">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1677333891" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1677333891" rel="stylesheet" media="print">
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1677333891"></script>
+    <title>Deploy Sentinel SAP Agent :: SAP on Microsoft - Tutorials</title>
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1677519483" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1677519483" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1677519483" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1677519483" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1677519483" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1677519483" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1677519483" rel="stylesheet" id="variant-style">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1677519483" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1677519483" rel="stylesheet" media="print">
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1677519483"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -33,7 +33,7 @@
       var baseUriFull='https:\/\/abicas.github.io\/SapOnMicrosoftDemos/';
       variants.init( [ 'blue' ] );
     </script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1677333891"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1677519483"></script>
   </head>
   <body class="mobile-support" data-url="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step3/">
     <div id="body" class="default-animation">
@@ -42,7 +42,7 @@
       <nav id="topbar" class="highlightable">
         <div>
           <div class="navigation">
-             <a class="nav nav-next" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/" title="Infrastructure and Management"><i class="fas fa-chevron-right fa-fw"></i></a>
+             <a class="nav nav-next" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step4/" title="Detecting 1st vulnerability"><i class="fas fa-chevron-right fa-fw"></i></a>
           </div>
           <div class="navigation">
              <a class="nav nav-prev" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step2/" title="Setup SAP"><i class="fas fa-chevron-left fa-fw"></i></a>
@@ -51,14 +51,28 @@
             <span id="sidebar-toggle-span">
               <a href="#" id="sidebar-toggle" title='Menu'><i class="fas fa-bars fa-fw"></i></a>
             </span>
+            <span id="toc-menu" title='Table of Contents'><i class="fas fa-list-alt fa-fw"></i></span>
             <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
               <meta itemprop="itemListOrder" content="Descending" />
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="5" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/"><span itemprop="name">SAP on Microsoft</span></a> > </li>
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="4" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/"><span itemprop="name">SAP on Microsoft Labs</span></a> > </li>
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="3" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/"><span itemprop="name">Security</span></a> > </li>
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="2" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/"><span itemprop="name">Microsoft Sentinel</span></a> > </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="1" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step3/" aria-disabled="true"><span itemprop="name">Testing SSO</span></a></li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="1" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step3/" aria-disabled="true"><span itemprop="name">Deploy Sentinel SAP Agent</span></a></li>
             </ol>
+          </div>
+          <div class="default-animation progress">
+            <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
           </div>
         </div>
       </nav>
@@ -68,24 +82,102 @@
           </div>
           <article>
 
-<h1>Testing SSO</h1>
-<p>Now that the configuration steps are done, we are ready to test the SSO in action.</p>
-<p>All the operations will be done on the Bastion Host once, even with internet access, name resolution and security certificates are generated using the internal network names by SAP CAL.</p>
+<h1>Deploy Sentinel SAP Agent</h1>
+<p>Now that the configuration steps are done, we are ready to deploy the agent that will gather SAP logs and dispatch them to Azure Sentinel.</p>
+
+<div class="box notices warning">
+    <div class="box-label"><i class="fas fa-exclamation-triangle fa-fw"></i> Warning</div>
+    <div class="box-content">
+<p><strong>SAP SOFTWARE DOWNLOAD</strong></p>
+<p>In order to be able to deploy the agent, we will need to download <a href="https://aka.ms/sap-sdk-download">SAP Netweaver SDK</a> directly from SAP Downloads. Although it doesn&rsquo;t have a cost, it will require an SAP user with software download permissions.</p>
+<p>Please before continuing make sure you have an SAP user with proper permissions to download the required software or you won&rsquo;t be able to continue.</p>
+
+    </div>
+</div>
+<h4 id="downloading-sap-netweaver-sdk">Downloading SAP Netweaver SDK</h4>
+<p>This download operation should be performed on your computer with your credentials to download SAP Software.</p>
 <ol>
-<li>From the Bastion Host, open an internet browser window and navigate to <a href="https://vhcals4hcs.dummy.nodomain:44301/sap/bc/ui2/flp">https://vhcals4hcs.dummy.nodomain:44301/sap/bc/ui2/flp</a>. Confirm that it no longer asks for User and password, instead offering a choice of identity provider, in this case <strong>ADSAPDEMO</strong> as we specified on Azure AD. Click <strong>Continue</strong>.
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sso-nw44.png?height=550px" alt="sso1"></li>
-<li>You should be redirected to the Microsoft AD portal. Provide the Azure AD email address as created on the previous steps.
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sso-nw45.png?height=550px" alt="sso1"></li>
-<li>Use the initial password provided by Azure AD (and copied to a scratch area in the previous steps) if this is your first logon
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sso-nw46.png?height=550px" alt="sso1"></li>
-<li>If this is your first logon with this user, Azure AD will ask you to change your password.
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sso-nw47.png?height=550px" alt="sso1"></li>
-<li>Once logon is sucessfull, you will be redirected by Azure AD to the SAP Fiori page. In the background, Azure AD exchanged security keys and certificates with SAP Fiori that now recognizes this access as a valid SAP user.
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sso-nw48.png?height=150px" alt="sso1"></li>
-<li>Once SAP Fiori has launched, click on the top right icon, and make sure it is logged on using the right SAP user <strong>BPINST</strong>
-<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sso-nw49.png?height=150px" alt="sso1"></li>
+<li>Go to <a href="https://aka.ms/sap-sdk-download">SAP Support Lauchpad for downloading SAP Netweaver for SDK</a>. This link should bring you directly to the required download page.</li>
+<li>Login with your SAP S-User credentials
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sent9-1.png?height=350px" alt="sso1"></li>
+<li>Click on the <strong>SAP NW RFC SDK</strong> file
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sent9-2.png?height=350px" alt="sso1"></li>
+<li>On the Download tab, select <strong>LINUX ON X86_64 BIT</strong> on the version and click on the <em><em>nwrfc</em>.zip</em>* file. Download should start automatically.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sent9-3.png?height=350px" alt="sso1"></li>
 </ol>
-<p>Congratulations ! You have enabled SSO between SAP Fiori and Microsoft Azure AD and now users can log in to SAP using their corporate credentials, MFA, and any other security rules defined by your organization.</p>
+<h4 id="uploading-the-sap-netweaver-sdk">Uploading the SAP Netweaver SDK</h4>
+<p>In this lab we will use the S/4HANA server itself to host the agent, so we can save on some costs. In a real world scenario you should deploy this agent in a separate VM for more security and isolation.</p>
+<ol>
+<li>Open a prompt/shell and go to the directory where you downloaded the SDK file.</li>
+<li>Copy the file to the root folder of the S/4HANA VM, using PuttySCP or SCP itself</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>scp -i &lt;YOUR PEM FILE&gt;.pem nwrfc750P_11-70002752.zip root@&lt;S/4HANA IP&gt;:/root
+</span></span></code></pre></div><h4 id="deploying-the-agent">Deploying the Agent</h4>
+<p>In this lab we will provide the SAP password for SENTINELUSR in a config file for simplicty and costs. In a real world scenario you should use an Azure Key Vault to safely store credentials as explained in this <a href="https://learn.microsoft.com/en-us/azure/sentinel/sap/deploy-data-connector-agent-container?tabs=managed-identity">article</a></p>
+<ol>
+<li>Gather 2 values from the SAP Log Analytics workspace we created on step #1: Workspace ID and Primary Key. They will be required on the setup
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sent5-2.png?height=450px" alt="sso1"></li>
+<li>Open an SSH to the SAP S/4HANA server as root</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>ssh -i &lt;YOUR PEM FILE&gt;.pem root@&lt;S/4HANA IP&gt;
+</span></span></code></pre></div><ol start="3">
+<li>Once logged in, download the installation script and set the execute permissions</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>wget https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/SAP/sapcon-sentinel-kickstart.sh
+</span></span><span style="display:flex;"><span>chmod +x ./sapcon-sentinel-kickstart.sh
+</span></span></code></pre></div><ol start="4">
+<li>Run the script</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>./sapcon-sentinel-kickstart.sh --keymode cfgf
+</span></span></code></pre></div><p>So far your installation should be looking like this:
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sent5-1.png?height=550px" alt="sso1"></p>
+<ol start="5">
+<li>In the installation script:</li>
+</ol>
+<ul>
+<li>Agree with the terms, by pressing <!-- raw HTML omitted --></li>
+<li>Wait for it to download and install the required files and docker image</li>
+<li>Fill in the parameters:
+<ul>
+<li>ABAP Server Hostname: <strong>&lt;S/4HANA INTERNAL IP&gt;</strong></li>
+<li>System Number: <strong>00</strong></li>
+<li>SID: <strong>S4H</strong></li>
+<li>Client Number: <strong>100</strong></li>
+<li>SAP Username: <strong>SENTINELUSR</strong></li>
+<li>SAP Password: <strong>Microsoft01</strong></li>
+<li>Log Analytics Workspace ID: <strong>&lt;WorkspaceID gathered in step 1&gt;</strong></li>
+<li>Log Analytics Public Key: <strong>&lt;Primary key from step 1&gt;</strong></li>
+</ul>
+</li>
+</ul>
+<p><img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sent5-3.png?height=550px" alt="sso1"></p>
+<ol start="6">
+<li>As a final step, let&rsquo;s configure the docker agent container to restart automatically:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>docker update --restart unless-stopped sapcon-S4H
+</span></span></code></pre></div><p><img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sent5-4.png" alt="sso1"></p>
+<p>A few useful docker commands:</p>
+<ul>
+<li>List running containers: docker ps -a</li>
+<li>View logs: docker logs sapcon-S4H</li>
+<li>View logs continuously: docker logs -f sapcon-S4H</li>
+<li>Stop the connector: docker stop sapcon-S4H</li>
+<li>Start the connector: docker start sapcon-S4H</li>
+</ul>
+<ol start="7">
+<li>
+<p>Give a few minutes (5 should be enough) so logs start flowing and Sentinel is able to gather them and move over to the Azure Portal to see if everything is working.
+Go to Sentinel, select the Log Analytics we created, click on Data Connectors and hit refresh while filtering for SAP.<br>
+If everything is working, you should see 1 agent connected and a green checkmark on the left side of Microsoft Sentinel for SAP.<br>
+Head over to the connector page to see more details
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sent5-5.png" alt="sso1"></p>
+</li>
+<li>
+<p>On the connector page, you will be able to see the logs starting to be received, which logs have already been accounted for (green ones) and on the <strong>Next steps</strong> tab on the right, by the bottom of the page you will be able to see Analytics templates, with template queries for most common security risks with SAP. We will work with them on the next steps.
+<img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sent5-6.png" alt="sso1"></p>
+</li>
+</ol>
+<p>Allright ! Now the agent is properly acessing SAP and pushing logs to Azure Sentinel. Let&rsquo;s head over to Sentinel to see some logs and start creating alerts and incidents.</p>
 
             <footer class="footline">
             </footer>
@@ -104,9 +196,9 @@
           <input data-search-input id="search-by" type="search" placeholder="Search...">
           <span data-search-clear=""><i class="fas fa-times"></i></span>
         </div>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1677333891"></script>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1677333891"></script>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1677333891"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1677519483"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1677519483"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1677519483"></script>
       </div>
       <div id="homelinks" class="default-animation">
         <ul>
@@ -170,7 +262,8 @@
           <li data-nav-id="/labs/security/sentinel/" title="Microsoft Sentinel" class="dd-item parent"><input type="checkbox" id="section-8417e2e82f4397531d212c48ba172913" class="toggle" checked/><label for="section-8417e2e82f4397531d212c48ba172913" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/"><b></b>Microsoft Sentinel<i class="fas fa-check read-icon"></i></a><ul>
           <li data-nav-id="/labs/security/sentinel/step1/" title="Create Sentinel" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step1/"><b>1. </b>Create Sentinel<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/labs/security/sentinel/step2/" title="Setup SAP" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step2/"><b>2. </b>Setup SAP<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/labs/security/sentinel/step3/" title="Testing SSO" class="dd-item active"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step3/"><b>3. </b>Testing SSO<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/labs/security/sentinel/step3/" title="Deploy Sentinel SAP Agent" class="dd-item active"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step3/"><b>3. </b>Deploy Sentinel SAP Agent<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/security/sentinel/step4/" title="Detecting 1st vulnerability" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step4/"><b>3. </b>Detecting 1st vulnerability<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
           <li data-nav-id="/labs/inframgmt/" title="Infrastructure and Management" class="dd-item"><input type="checkbox" id="section-8bc0407a0d8a1a32a579c92334004827" class="toggle"/><label for="section-8bc0407a0d8a1a32a579c92334004827" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/"><b> </b>Infrastructure and Management<i class="fas fa-check read-icon"></i></a><ul>
           <li data-nav-id="/labs/inframgmt/monitoring/" title="Monitoring SAP" class="dd-item"><input type="checkbox" id="section-007d20ec69cd510209aa2eebfacc774f" class="toggle"/><label for="section-007d20ec69cd510209aa2eebfacc774f" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/"><b></b>Monitoring SAP<i class="fas fa-check read-icon"></i></a><ul>
           <li data-nav-id="/labs/inframgmt/monitoring/step1/" title="Setting up Azure Monitor for SAP" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step1/"><b>1. </b>Setting up Azure Monitor for SAP<i class="fas fa-check read-icon"></i></a></li>
@@ -237,10 +330,10 @@
         </div>
       </div>
     </aside>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1677333891"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1677333891"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1677333891"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1677333891"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1677519483"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1677519483"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1677519483"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1677519483"></script>
     <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
     <script>
       function useMermaid( config ){
@@ -254,6 +347,6 @@
       }
       useMermaid( JSON.parse("{}") );
     </script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1677333891"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1677519483"></script>
   </body>
 </html>

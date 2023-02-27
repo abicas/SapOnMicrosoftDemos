@@ -25,13 +25,23 @@ Setting up Log Analytics Go to Azure Portal, click on Create Resource and look f
 Downloading SAP Change Requests Log on to the SAP S/4HANA host via SSH (or Putty) ssh -i SAPCALKey.pem root@S4HANAIP On the host console, create a directory and download the Change Requests: cd mkdir CRs cd CRs wget -q https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/SAP/CR/K900271.NPL wget -q https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/SAP/CR/R900271.NPL wget -q https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/SAP/CR/K900202.NPL wget -q https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/SAP/CR/R900202.NPL wget -q https://raw.</description>
     </item>
     <item>
-      <title>Testing SSO</title>
+      <title>Deploy Sentinel SAP Agent</title>
       <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step3/</link>
       <pubDate>Mon, 14 Mar 2022 14:22:13 -0300</pubDate>
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step3/</guid>
-      <description>Now that the configuration steps are done, we are ready to test the SSO in action.
-All the operations will be done on the Bastion Host once, even with internet access, name resolution and security certificates are generated using the internal network names by SAP CAL.
-From the Bastion Host, open an internet browser window and navigate to https://vhcals4hcs.dummy.nodomain:44301/sap/bc/ui2/flp. Confirm that it no longer asks for User and password, instead offering a choice of identity provider, in this case ADSAPDEMO as we specified on Azure AD.</description>
+      <description>Now that the configuration steps are done, we are ready to deploy the agent that will gather SAP logs and dispatch them to Azure Sentinel.
+Warning SAP SOFTWARE DOWNLOAD
+In order to be able to deploy the agent, we will need to download SAP Netweaver SDK directly from SAP Downloads. Although it doesn&amp;rsquo;t have a cost, it will require an SAP user with software download permissions.
+Please before continuing make sure you have an SAP user with proper permissions to download the required software or you won&amp;rsquo;t be able to continue.</description>
+    </item>
+    <item>
+      <title>Detecting 1st vulnerability</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step4/</link>
+      <pubDate>Mon, 14 Mar 2022 14:22:13 -0300</pubDate>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step4/</guid>
+      <description>We have the logs being pushed to Sentinel. Let&amp;rsquo;s configure the data connectors to handle SAP logs on Azure Sentinel.
+In this first example we will monitor for a security vulnerability regarding user creation, where an users create a new user using SAP transaction SU01 and then log in using the newly created user from the same IP. This might be a Discovery technique used by attackers.
+Creating our rule During the first part of this tutorial, we created a Log Analytics, connected it with Sentinel and installed the connector for SAP logs.</description>
     </item>
   </channel>
 </rss>
