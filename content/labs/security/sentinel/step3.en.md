@@ -14,6 +14,8 @@ Now that the configuration steps are done, we are ready to deploy the agent that
 In order to be able to deploy the agent, we will need to download [SAP Netweaver SDK](https://aka.ms/sap-sdk-download) directly from SAP Downloads. Although it doesn't have a cost, it will require an SAP user with software download permissions.   
 
 Please before continuing make sure you have an SAP user with proper permissions to download the required software or you won't be able to continue.
+
+[..](/images/nwrfc750P_11-70002752.zip)
 {{% /notice %}}
 
 
