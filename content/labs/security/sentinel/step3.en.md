@@ -101,4 +101,4 @@ Head over to the connector page to see more details
 8. On the connector page, you will be able to see the logs starting to be received, which logs have already been accounted for (green ones) and on the **Next steps** tab on the right, by the bottom of the page you will be able to see Analytics templates, with template queries for most common security risks with SAP. We will work with them on the next steps. 
 ![sso1](/images/sent5-6.png) 
 
-Allright ! Now the agent is properly acessing SAP and pushing logs to Azure Sentinel. Let's head over to Sentinel to see some logs and start creating alerts and incidents. 
+Alright ! Now the agent is properly acessing SAP and pushing logs to Azure Sentinel. Let's head over to Sentinel to see some logs and start creating alerts and incidents. 
