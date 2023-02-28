@@ -9,16 +9,16 @@
     <meta name="author" content="Alexandre Bicas">
     <title>Microsoft Sentinel :: SAP on Microsoft - Tutorials</title>
     <link rel="alternate" type="application/rss&#43;xml" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/index.xml" title="SAP on Microsoft - Tutorials" />
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1677529932" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1677529932" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1677529932" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1677529932" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1677529932" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1677529932" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1677529932" rel="stylesheet" id="variant-style">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1677529932" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1677529932" rel="stylesheet" media="print">
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1677529932"></script>
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1677601984" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1677601984" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1677601984" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1677601984" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1677601984" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1677601984" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1677601984" rel="stylesheet" id="variant-style">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1677601984" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1677601984" rel="stylesheet" media="print">
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1677601984"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -34,7 +34,7 @@
       var baseUriFull='https:\/\/abicas.github.io\/SapOnMicrosoftDemos/';
       variants.init( [ 'blue' ] );
     </script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1677529932"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1677601984"></script>
   </head>
   <body class="mobile-support" data-url="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/">
     <div id="body" class="default-animation">
@@ -109,10 +109,10 @@
 <p>For more details on the detected by Azure Sentinel for SAP, please check the updated <a href="https://learn.microsoft.com/en-us/azure/sentinel/sap/sap-solution-security-content">Product Documentation</a>.</p>
 <p>The steps required to setup this lab are based on the <a href="https://learn.microsoft.com/en-us/azure/sentinel/sap/deployment-overview">Deploy Microsoft Sentinel solution for SAP® applications</a> tutorial.</p>
 <h3 id="what-we-will-build">What we will build</h3>
-<p>In this lab we will integrate SAP S/4HANA with Microsoft Sentinel and demonstrate how we can identify secuerity incidents from within SAP. We will generate a couple of suspect activities on SAP and see it being reflected as security incidents that can be further automated.</p>
+<p>In this lab we will integrate SAP S/4HANA with Microsoft Sentinel and demonstrate how we can identify secuerity incidents from within SAP. We will generate a couple of suspect activities on SAP and see it being reflected as security incidents. We then will augment those incidents by leveraging Logic Apps and OpenAI GPT3 to add relevant comments and simplify and guide the first line responders.</p>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/8IyqdcN9d9Q" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+  <iframe src="https://www.youtube.com/embed/eTmjDQ_-rpY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
 <h3 id="estimated-time-for-this-lab">Estimated Time for this Lab</h3>
@@ -152,9 +152,9 @@ Please before continuing make sure you have an SAP user with proper permissions 
           <input data-search-input id="search-by" type="search" placeholder="Search...">
           <span data-search-clear=""><i class="fas fa-times"></i></span>
         </div>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1677529932"></script>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1677529932"></script>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1677529932"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1677601984"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1677601984"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1677601984"></script>
       </div>
       <div id="homelinks" class="default-animation">
         <ul>
@@ -219,7 +219,8 @@ Please before continuing make sure you have an SAP user with proper permissions 
           <li data-nav-id="/labs/security/sentinel/step1/" title="Create Sentinel" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step1/"><b>1. </b>Create Sentinel<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/labs/security/sentinel/step2/" title="Setup SAP" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step2/"><b>2. </b>Setup SAP<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/labs/security/sentinel/step3/" title="Deploy Sentinel SAP Agent" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step3/"><b>3. </b>Deploy Sentinel SAP Agent<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/labs/security/sentinel/step4/" title="Detecting 1st vulnerability" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step4/"><b>3. </b>Detecting 1st vulnerability<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/labs/security/sentinel/step4/" title="Detecting a simple incident" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step4/"><b>3. </b>Detecting a simple incident<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/security/sentinel/step5/" title="Augmenting an Incident with GPT3" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step5/"><b>3. </b>Augmenting an Incident with GPT3<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
           <li data-nav-id="/labs/inframgmt/" title="Infrastructure and Management" class="dd-item"><input type="checkbox" id="section-8bc0407a0d8a1a32a579c92334004827" class="toggle"/><label for="section-8bc0407a0d8a1a32a579c92334004827" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/"><b> </b>Infrastructure and Management<i class="fas fa-check read-icon"></i></a><ul>
           <li data-nav-id="/labs/inframgmt/monitoring/" title="Monitoring SAP" class="dd-item"><input type="checkbox" id="section-007d20ec69cd510209aa2eebfacc774f" class="toggle"/><label for="section-007d20ec69cd510209aa2eebfacc774f" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/"><b></b>Monitoring SAP<i class="fas fa-check read-icon"></i></a><ul>
           <li data-nav-id="/labs/inframgmt/monitoring/step1/" title="Setting up Azure Monitor for SAP" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step1/"><b>1. </b>Setting up Azure Monitor for SAP<i class="fas fa-check read-icon"></i></a></li>
@@ -286,10 +287,10 @@ Please before continuing make sure you have an SAP user with proper permissions 
         </div>
       </div>
     </aside>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1677529932"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1677529932"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1677529932"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1677529932"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1677601984"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1677601984"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1677601984"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1677601984"></script>
     <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
     <script>
       function useMermaid( config ){
@@ -303,6 +304,6 @@ Please before continuing make sure you have an SAP user with proper permissions 
       }
       useMermaid( JSON.parse("{}") );
     </script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1677529932"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1677601984"></script>
   </body>
 </html>

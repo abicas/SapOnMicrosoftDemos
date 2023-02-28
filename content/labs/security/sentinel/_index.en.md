@@ -31,9 +31,9 @@ The steps required to setup this lab are based on the [Deploy Microsoft Sentinel
 
 ### What we will build
 
-In this lab we will integrate SAP S/4HANA with Microsoft Sentinel and demonstrate how we can identify secuerity incidents from within SAP. We will generate a couple of suspect activities on SAP and see it being reflected as security incidents that can be further automated. 
+In this lab we will integrate SAP S/4HANA with Microsoft Sentinel and demonstrate how we can identify secuerity incidents from within SAP. We will generate a couple of suspect activities on SAP and see it being reflected as security incidents. We then will augment those incidents by leveraging Logic Apps and OpenAI GPT3 to add relevant comments and simplify and guide the first line responders. 
 
-{{< youtube 8IyqdcN9d9Q >}}
+{{< youtube eTmjDQ_-rpY >}}
 
 ### Estimated Time for this Lab
 

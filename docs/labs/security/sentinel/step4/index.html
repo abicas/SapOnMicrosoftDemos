@@ -7,17 +7,17 @@
     <meta name="generator" content="Relearn 3.4.1&#43;tip">
     <meta name="description" content="SAP on Microsoft - Tutorials">
     <meta name="author" content="Alexandre Bicas">
-    <title>Detecting 1st vulnerability :: SAP on Microsoft - Tutorials</title>
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1677529932" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1677529932" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1677529932" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1677529932" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1677529932" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1677529932" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1677529932" rel="stylesheet" id="variant-style">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1677529932" rel="stylesheet">
-    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1677529932" rel="stylesheet" media="print">
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1677529932"></script>
+    <title>Detecting a simple incident :: SAP on Microsoft - Tutorials</title>
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/nucleus.css?1677601983" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/fontawesome-all.min.css?1677601983" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/featherlight.min.css?1677601983" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/perfect-scrollbar.min.css?1677601983" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/auto-complete.css?1677601983" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme.css?1677601983" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/theme-blue.css?1677601983" rel="stylesheet" id="variant-style">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/variant.css?1677601983" rel="stylesheet">
+    <link href="https://abicas.github.io/SapOnMicrosoftDemos/css/print.css?1677601983" rel="stylesheet" media="print">
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/variant.js?1677601983"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -33,7 +33,7 @@
       var baseUriFull='https:\/\/abicas.github.io\/SapOnMicrosoftDemos/';
       variants.init( [ 'blue' ] );
     </script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1677529932"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.min.js?1677601983"></script>
   </head>
   <body class="mobile-support" data-url="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step4/">
     <div id="body" class="default-animation">
@@ -42,7 +42,7 @@
       <nav id="topbar" class="highlightable">
         <div>
           <div class="navigation">
-             <a class="nav nav-next" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/" title="Infrastructure and Management"><i class="fas fa-chevron-right fa-fw"></i></a>
+             <a class="nav nav-next" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step5/" title="Augmenting an Incident with GPT3"><i class="fas fa-chevron-right fa-fw"></i></a>
           </div>
           <div class="navigation">
              <a class="nav nav-prev" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step3/" title="Deploy Sentinel SAP Agent"><i class="fas fa-chevron-left fa-fw"></i></a>
@@ -58,7 +58,7 @@
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="4" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/"><span itemprop="name">SAP on Microsoft Labs</span></a> > </li>
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="3" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/"><span itemprop="name">Security</span></a> > </li>
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="2" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/"><span itemprop="name">Microsoft Sentinel</span></a> > </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="1" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step4/" aria-disabled="true"><span itemprop="name">Detecting 1st vulnerability</span></a></li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><meta itemprop="position" content="1" /><a itemprop="item" href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step4/" aria-disabled="true"><span itemprop="name">Detecting a simple incident</span></a></li>
             </ol>
           </div>
           <div class="default-animation progress">
@@ -82,7 +82,7 @@
           </div>
           <article>
 
-<h1>Detecting 1st vulnerability</h1>
+<h1>Detecting a simple incident</h1>
 <p>We have the logs being pushed to Sentinel. Let&rsquo;s configure the data connectors to handle SAP logs on Azure Sentinel.</p>
 <p>In this first example we will monitor for a security vulnerability regarding user creation, where an users create a new user using SAP transaction SU01 and then log in using the newly created user from the same IP. This might be a Discovery technique used by attackers.</p>
 <h4 id="creating-our-rule">Creating our rule</h4>
@@ -171,7 +171,7 @@
 <img src="https://abicas.github.io/SapOnMicrosoftDemos/images/sent6-19.png?height=450px" alt="sso1"></p>
 </li>
 </ol>
-<p>Allright! In this simple example we were able to create a rule and trigger a simple incident from SAP all the way to Sentinel ! Congrats !</p>
+<p>Congratulations! In this simple example we were able to create a rule and trigger a simple incident from SAP all the way to Sentinel ! Congrats !</p>
 <p>On the next example we will go for more elaborate Rules.</p>
 
             <footer class="footline">
@@ -191,9 +191,9 @@
           <input data-search-input id="search-by" type="search" placeholder="Search...">
           <span data-search-clear=""><i class="fas fa-times"></i></span>
         </div>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1677529932"></script>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1677529932"></script>
-        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1677529932"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/lunr.min.js?1677601983"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/auto-complete.js?1677601983"></script>
+        <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/search.js?1677601983"></script>
       </div>
       <div id="homelinks" class="default-animation">
         <ul>
@@ -258,7 +258,8 @@
           <li data-nav-id="/labs/security/sentinel/step1/" title="Create Sentinel" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step1/"><b>1. </b>Create Sentinel<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/labs/security/sentinel/step2/" title="Setup SAP" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step2/"><b>2. </b>Setup SAP<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/labs/security/sentinel/step3/" title="Deploy Sentinel SAP Agent" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step3/"><b>3. </b>Deploy Sentinel SAP Agent<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/labs/security/sentinel/step4/" title="Detecting 1st vulnerability" class="dd-item active"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step4/"><b>3. </b>Detecting 1st vulnerability<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/labs/security/sentinel/step4/" title="Detecting a simple incident" class="dd-item active"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step4/"><b>3. </b>Detecting a simple incident<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/labs/security/sentinel/step5/" title="Augmenting an Incident with GPT3" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step5/"><b>3. </b>Augmenting an Incident with GPT3<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
           <li data-nav-id="/labs/inframgmt/" title="Infrastructure and Management" class="dd-item"><input type="checkbox" id="section-8bc0407a0d8a1a32a579c92334004827" class="toggle"/><label for="section-8bc0407a0d8a1a32a579c92334004827" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/"><b> </b>Infrastructure and Management<i class="fas fa-check read-icon"></i></a><ul>
           <li data-nav-id="/labs/inframgmt/monitoring/" title="Monitoring SAP" class="dd-item"><input type="checkbox" id="section-007d20ec69cd510209aa2eebfacc774f" class="toggle"/><label for="section-007d20ec69cd510209aa2eebfacc774f" ></label><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/"><b></b>Monitoring SAP<i class="fas fa-check read-icon"></i></a><ul>
           <li data-nav-id="/labs/inframgmt/monitoring/step1/" title="Setting up Azure Monitor for SAP" class="dd-item"><a href="https://abicas.github.io/SapOnMicrosoftDemos/labs/inframgmt/monitoring/step1/"><b>1. </b>Setting up Azure Monitor for SAP<i class="fas fa-check read-icon"></i></a></li>
@@ -325,10 +326,10 @@
         </div>
       </div>
     </aside>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1677529932"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1677529932"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1677529932"></script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1677529932"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/clipboard.min.js?1677601983"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/perfect-scrollbar.min.js?1677601983"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/featherlight.min.js?1677601983"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/jquery.svg.pan.zoom.js?1677601983"></script>
     <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
     <script>
       function useMermaid( config ){
@@ -342,6 +343,6 @@
       }
       useMermaid( JSON.parse("{}") );
     </script>
-    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1677529932"></script>
+    <script src="https://abicas.github.io/SapOnMicrosoftDemos/js/theme.js?1677601983"></script>
   </body>
 </html>

@@ -35,13 +35,24 @@ In order to be able to deploy the agent, we will need to download SAP Netweaver 
 Please before continuing make sure you have an SAP user with proper permissions to download the required software or you won&amp;rsquo;t be able to continue.</description>
     </item>
     <item>
-      <title>Detecting 1st vulnerability</title>
+      <title>Detecting a simple incident</title>
       <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step4/</link>
       <pubDate>Mon, 14 Mar 2022 14:22:13 -0300</pubDate>
       <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step4/</guid>
       <description>We have the logs being pushed to Sentinel. Let&amp;rsquo;s configure the data connectors to handle SAP logs on Azure Sentinel.
 In this first example we will monitor for a security vulnerability regarding user creation, where an users create a new user using SAP transaction SU01 and then log in using the newly created user from the same IP. This might be a Discovery technique used by attackers.
 Creating our rule During the first part of this tutorial, we created a Log Analytics, connected it with Sentinel and installed the connector for SAP logs.</description>
+    </item>
+    <item>
+      <title>Augmenting an Incident with GPT3</title>
+      <link>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step5/</link>
+      <pubDate>Mon, 14 Mar 2022 14:22:13 -0300</pubDate>
+      <guid>https://abicas.github.io/SapOnMicrosoftDemos/labs/security/sentinel/step5/</guid>
+      <description>In the previous example we identified a security incident from SAP.
+In this demo we will build an automation to augment the incident with more information derived from GPT3.
+This demo depends on the steps we executed on the previous chapter. Don&amp;rsquo;t skip it
+Setting up permissions The SAPCAL resource group has a set of permissions that require some adjustments so we can create atuomations.
+In this step we will setup those permissions correctly so Sentinel can use its resources.</description>
     </item>
   </channel>
 </rss>

@@ -1,5 +1,5 @@
 +++
-title = "Detecting 1st vulnerability"
+title = "Detecting a simple incident"
 date = 2022-03-14T14:22:13-03:00
 weight = 10
 chapter = false
@@ -79,6 +79,6 @@ Now that we have a rule created to watch for a user creating and using a new use
 ![sso1](/images/sent6-19.png?height=450px) 
 
 
-Allright! In this simple example we were able to create a rule and trigger a simple incident from SAP all the way to Sentinel ! Congrats ! 
+Congratulations! In this simple example we were able to create a rule and trigger a simple incident from SAP all the way to Sentinel ! Congrats ! 
 
 On the next example we will go for more elaborate Rules. 
